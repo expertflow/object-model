@@ -235,3 +235,14 @@ Version 1.5.4
  =========================================================================================
  Version 1.8.0
  -- added CHANNEL_SESSION_STARTED in NotificationType enum
+ 
+
+ =========================================================================================
+
+ Version 1.8.1
+
+-- added VoiceMessage Entity
+
+-- Add VOICE in MessageType enum
+
+-- Add START_VIOCE & END_VOICE in MessageIntent enum
