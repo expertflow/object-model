@@ -6,5 +6,6 @@ public enum ChannelTypeEnum {
     WHATSAPP,
     SMS,
     WEB,
+    VOICE,
     GENERIC
 }
