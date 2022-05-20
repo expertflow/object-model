@@ -8,7 +8,6 @@ import java.util.List;
 import org.bson.types.ObjectId;
 
 public class FormData implements Serializable {
-
     @JsonSerialize(using = ToStringSerializer.class)
     private ObjectId id;
     @JsonSerialize(using = ToStringSerializer.class)

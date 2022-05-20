@@ -3,7 +3,7 @@ package com.ef.cim.objectmodel;
 public class NotificationMessage extends MessageBody {
     private NotificationType notificationType;
 
-    public NotificationMessage(){
+    public NotificationMessage() {
         super(MessageType.NOTIFICATION);
     }
 
@@ -17,10 +17,7 @@ public class NotificationMessage extends MessageBody {
 
     @Override
     public String toString() {
-        return "NotificationMessage{" +
-                "type=" + type +
-                ", markdownText='" + markdownText + '\'' +
-                ", notificationType=" + notificationType +
-                '}';
+        return "NotificationMessage{" + "type=" + type + ", markdownText='" + markdownText + '\'' +
+                ", notificationType=" + notificationType + '}';
     }
 }

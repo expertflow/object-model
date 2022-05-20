@@ -67,11 +67,17 @@ public class TopicParticipant implements Serializable {
         return this.joiningTime;
     }
 
-    public boolean getIsActive() { return this.isActive; }
+    public boolean getIsActive() {
+        return this.isActive;
+    }
 
-    public TopicParticipantState getState() { return this.state; }
+    public TopicParticipantState getState() {
+        return this.state;
+    }
 
-    public Timestamp getStateChangedOn() { return this.stateChangedOn; }
+    public Timestamp getStateChangedOn() {
+        return this.stateChangedOn;
+    }
 
 
     // Setters
@@ -108,9 +114,13 @@ public class TopicParticipant implements Serializable {
         this.isActive = active;
     }
 
-    public void setState(TopicParticipantState topicParticipantState) { this.state = topicParticipantState; }
+    public void setState(TopicParticipantState topicParticipantState) {
+        this.state = topicParticipantState;
+    }
 
-    public void setStateChangedOn(Timestamp timestamp) { this.stateChangedOn = timestamp; }
+    public void setStateChangedOn(Timestamp timestamp) {
+        this.stateChangedOn = timestamp;
+    }
 
 
     /***

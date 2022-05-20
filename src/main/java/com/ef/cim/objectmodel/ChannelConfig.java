@@ -14,7 +14,7 @@ public class ChannelConfig implements Serializable {
     private UUID id;
     @NotNull(message = "Channel Mode is mandatory")
     private ChannelMode channelMode;
-//    @NotNull(message = "SelfServiceBot is mandatory")
+    //    @NotNull(message = "SelfServiceBot is mandatory")
     private String conversationBot;
     @NotNull(message = "Response SLA is mandatory")
     private int responseSla;

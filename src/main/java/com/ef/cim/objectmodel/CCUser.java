@@ -35,7 +35,6 @@ public class CCUser implements Participant {
     }
 
 
-
     @Override
     public UUID getId() {
         return this.id;

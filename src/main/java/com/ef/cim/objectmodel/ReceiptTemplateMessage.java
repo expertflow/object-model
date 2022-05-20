@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class ReceiptTemplateMessage extends StructuredMessage {
-
     private final String templateType;
     private Boolean sharable;
     private String recipientName;
@@ -23,10 +22,17 @@ public class ReceiptTemplateMessage extends StructuredMessage {
         this.templateType = "receipt";
     }
 
-    public ReceiptTemplateMessage(@JsonProperty("sharable") Boolean sharable,@JsonProperty("recipientName") String recipientName,
-            @JsonProperty("merchantName")String merchantName,@JsonProperty("orderNumber") String orderNumber,@JsonProperty("currency") String currency,@JsonProperty("paymentMethode") String paymentMethode,@JsonProperty("timestamp") String timestamp,
-            @JsonProperty("elements") List<ReceiptElement> elements,@JsonProperty("address") Address address,@JsonProperty("summary") ReceiptSummary summary,
-            @JsonProperty("adjustments") List<ReceiptAdjustment> adjustments) {
+    public ReceiptTemplateMessage(@JsonProperty("sharable") Boolean sharable,
+                                  @JsonProperty("recipientName") String recipientName,
+                                  @JsonProperty("merchantName") String merchantName,
+                                  @JsonProperty("orderNumber") String orderNumber,
+                                  @JsonProperty("currency") String currency,
+                                  @JsonProperty("paymentMethode") String paymentMethode,
+                                  @JsonProperty("timestamp") String timestamp,
+                                  @JsonProperty("elements") List<ReceiptElement> elements,
+                                  @JsonProperty("address") Address address,
+                                  @JsonProperty("summary") ReceiptSummary summary,
+                                  @JsonProperty("adjustments") List<ReceiptAdjustment> adjustments) {
         super(MessageType.RECEIPT);
         this.templateType = "receipt";
         this.sharable = sharable;

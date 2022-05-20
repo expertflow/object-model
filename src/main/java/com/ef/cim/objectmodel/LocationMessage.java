@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.Valid;
 
 public class LocationMessage extends StructuredMessage {
-
     @Valid
     private Location location;
 

@@ -5,7 +5,6 @@ import java.io.Serializable;
 import javax.validation.constraints.NotBlank;
 
 public class Button implements Serializable {
-
     @NotBlank(message = "button title is mandatory")
     private String title;
     @NotBlank(message = "button payload is mandatory")

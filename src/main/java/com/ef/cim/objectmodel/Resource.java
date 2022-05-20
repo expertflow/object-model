@@ -28,6 +28,7 @@ public class Resource {
     public boolean removeScope(String scope) {
         return this.scopes.remove(scope);
     }
+
     public UUID getRsid() {
         return rsid;
     }
@@ -42,5 +43,14 @@ public class Resource {
 
     public void setRsname(String rsname) {
         this.rsname = rsname;
+    }
+
+    @Override
+    public String toString() {
+        return "Resource{" +
+                "rsid=" + rsid +
+                ", rsname='" + rsname + '\'' +
+                ", scopes=" + scopes +
+                '}';
     }
 }

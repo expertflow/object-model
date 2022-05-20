@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import java.util.List;
 
 public class Component {
-
     private ComponentType type;
     private JsonNode additionalComponentDetails;
     private List<Parameter> parameters;
@@ -13,7 +12,7 @@ public class Component {
     }
 
     public Component(ComponentType type, JsonNode additionalComponentDetails,
-            List<Parameter> parameters) {
+                     List<Parameter> parameters) {
         this.type = type;
         this.additionalComponentDetails = additionalComponentDetails;
         this.parameters = parameters;

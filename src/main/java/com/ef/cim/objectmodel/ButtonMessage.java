@@ -6,7 +6,6 @@ import java.util.List;
 import javax.validation.Valid;
 
 public class ButtonMessage extends StructuredMessage {
-
     @Valid
     private List<Button> buttons;
     private ButtonMessageType buttonMessageType;
@@ -20,7 +19,8 @@ public class ButtonMessage extends StructuredMessage {
         this.buttonMessageType = buttonMessageType;
     }
 
-    public ButtonMessage(@JsonProperty("buttons")List<Button> buttons,@JsonProperty("buttonMessageType") ButtonMessageType buttonMessageType) {
+    public ButtonMessage(@JsonProperty("buttons") List<Button> buttons,
+                         @JsonProperty("buttonMessageType") ButtonMessageType buttonMessageType) {
         super(MessageType.BUTTON);
         this.buttons = buttons;
         this.buttonMessageType = buttonMessageType;

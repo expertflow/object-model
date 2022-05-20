@@ -1,7 +1,6 @@
 package com.ef.cim.objectmodel;
 
 public class ReceiptSummary {
-
     private long subtotal;
     private long shippingCost;
     private long totalTax;

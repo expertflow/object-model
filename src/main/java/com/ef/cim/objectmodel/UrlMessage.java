@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.constraints.NotBlank;
 
 public class UrlMessage extends StructuredMessage {
-
     @NotBlank
     private String mediaUrl;
 

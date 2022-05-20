@@ -1,6 +1,5 @@
 package com.ef.cim.objectmodel;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class Location {

@@ -25,6 +25,5 @@ public enum CimEventName {
     CISCO_VOICE_EVENT,
     WRAPUP_APPLIED,
     TASK_STATE_CHANGED,
-    REVOKE_RESOURCE,
-
+    REVOKE_RESOURCE
 }

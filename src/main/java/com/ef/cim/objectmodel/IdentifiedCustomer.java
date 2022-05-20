@@ -7,7 +7,6 @@ public class IdentifiedCustomer implements Serializable {
     private Customer associatedCustomer;
     private UUID lastAssignedAgent;
 
-
     public Customer getAssociatedCustomer() {
         return associatedCustomer;
     }

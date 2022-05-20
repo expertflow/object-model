@@ -6,7 +6,6 @@ import java.util.List;
 import javax.validation.Valid;
 
 public class Contact {
-
     @Valid
     private Name name;
     private List<Phone> phones;

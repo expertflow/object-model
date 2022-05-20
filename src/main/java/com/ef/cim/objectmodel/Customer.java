@@ -9,51 +9,48 @@ import java.util.Map;
 import javax.validation.constraints.NotEmpty;
 
 public class Customer implements Serializable {
-
     private String _id;
     @NotEmpty(message = "Customer First Name is Mandatory")
     private String firstName;
-    private List <String> phoneNumber;
+    private List<String> phoneNumber;
     @NotEmpty(message = "Is Anonymous Flag is Mandatory")
     private boolean isAnonymous;
     private int __v;
 
 
-   private Map<String, Object> additionalDetail = new HashMap<>();
+    private Map<String, Object> additionalDetail = new HashMap<>();
 
-   @JsonAnySetter
-   public void setAdditionalDetail(String key, Object value) {
-      additionalDetail.put(key, value);
-   }
+    @JsonAnySetter
+    public void setAdditionalDetail(String key, Object value) {
+        additionalDetail.put(key, value);
+    }
 
-   @JsonAnyGetter
+    @JsonAnyGetter
     public Map<String, Object> getAdditionalDetail() {
         return additionalDetail;
     }
 
 
-
-   // Default Constructor
+    // Default Constructor
     public Customer() {
 
     }
 
-   public String  get_id() {
-      return _id;
-   }
+    public String get_id() {
+        return _id;
+    }
 
-   public void set_id(String _id) {
-      this._id = _id;
-   }
+    public void set_id(String _id) {
+        this._id = _id;
+    }
 
-   public String getFirstName() {
-      return firstName;
-   }
+    public String getFirstName() {
+        return firstName;
+    }
 
-   public void setFirstName(String firstName) {
-      this.firstName = firstName;
-   }
-
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
     public List<String> getPhoneNumber() {
         return phoneNumber;
@@ -64,21 +61,30 @@ public class Customer implements Serializable {
     }
 
     public boolean getIsAnonymous() {
-      return isAnonymous;
-   }
+        return isAnonymous;
+    }
 
-   public void setIsAnonymous(boolean anonymous) {
-      isAnonymous = anonymous;
-   }
+    public void setIsAnonymous(boolean anonymous) {
+        isAnonymous = anonymous;
+    }
 
-   public int get__v() {
-      return __v;
-   }
+    public int get__v() {
+        return __v;
+    }
 
-   public void set__v(int __v) {
-      this.__v = __v;
-   }
+    public void set__v(int __v) {
+        this.__v = __v;
+    }
 
-
-
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "_id='" + _id + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", isAnonymous=" + isAnonymous +
+                ", __v=" + __v +
+                ", additionalDetail=" + additionalDetail +
+                '}';
+    }
 }

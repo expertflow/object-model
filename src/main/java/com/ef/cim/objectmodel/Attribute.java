@@ -1,15 +1,14 @@
 package com.ef.cim.objectmodel;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 public class Attribute implements Serializable {
-
     private String key;
     private ValueType type;
     private Object value;
 
-    public Attribute() {}
+    public Attribute() {
+    }
 
     public String getKey() {
         return key;

@@ -36,4 +36,15 @@ public class DeliveryNotification extends MessageBody {
     public void setReasonCode(int reasonCode) {
         this.reasonCode = reasonCode;
     }
+
+    @Override
+    public String toString() {
+        return "DeliveryNotification{" +
+                "messageID=" + messageID +
+                ", status=" + status +
+                ", reasonCode=" + reasonCode +
+                ", type=" + type +
+                ", markdownText='" + markdownText + '\'' +
+                '}';
+    }
 }

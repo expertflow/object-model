@@ -2,8 +2,7 @@ package com.ef.cim.objectmodel;
 
 import java.io.Serializable;
 
-public class
-RoutingPolicy implements Serializable {
+public class RoutingPolicy implements Serializable {
     private AgentSelectionPolicy agentSelectionPolicy;
     private boolean routeToLastAgent;
     private RoutingMode routingMode;
@@ -52,12 +51,8 @@ RoutingPolicy implements Serializable {
 
     @Override
     public String toString() {
-        return "RoutingPolicy{" +
-                "agentSelectionPolicy=" + agentSelectionPolicy +
-                ", routeToLastAgent=" + routeToLastAgent +
-                ", routingMode=" + routingMode +
-                ", routingObjectId=" + routingObjectId +
-                ", agentRequestTtl=" + agentRequestTtl +
-                '}';
+        return "RoutingPolicy{" + "agentSelectionPolicy=" + agentSelectionPolicy + ", routeToLastAgent=" +
+                routeToLastAgent + ", routingMode=" + routingMode + ", routingObjectId=" + routingObjectId +
+                ", agentRequestTtl=" + agentRequestTtl + '}';
     }
 }

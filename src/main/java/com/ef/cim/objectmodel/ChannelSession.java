@@ -17,10 +17,7 @@ import org.springframework.data.annotation.Id;
  * using more than one channels e.g. whatsapp and web, two channel sessions associated with the two
  * channels will be started for this customer.
  */
-
-
 public class ChannelSession implements Participant {
-
     @Id
     private UUID id;
 
@@ -97,9 +94,13 @@ public class ChannelSession implements Participant {
         this.channel = channel;
     }
 
-    public Customer getCustomer() { return customer; }
+    public Customer getCustomer() {
+        return customer;
+    }
 
-    public void setCustomer(Customer customer) { this.customer = customer; }
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
     public boolean isActive() {
         return isActive;

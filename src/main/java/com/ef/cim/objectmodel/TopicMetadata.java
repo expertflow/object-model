@@ -30,4 +30,12 @@ public class TopicMetadata implements Serializable {
     public void setLastUsedChannelSession(ChannelSession lastUsedChannelSession) {
         this.lastUsedChannelSession = lastUsedChannelSession;
     }
+
+    @Override
+    public String toString() {
+        return "TopicMetadata{" +
+                "botId='" + botId + '\'' +
+                ", lastUsedChannelSession=" + lastUsedChannelSession +
+                '}';
+    }
 }

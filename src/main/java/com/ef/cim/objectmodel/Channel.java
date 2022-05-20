@@ -16,7 +16,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document(collection = "Channel")
 public class Channel implements Serializable {
-
     @JsonSerialize(using = ToStringSerializer.class)
     @Id
     private ObjectId id;
@@ -47,7 +46,7 @@ public class Channel implements Serializable {
     }
 
     public Channel(String name, String serviceIdentifier, ChannelConfig channelConfig,
-            ChannelConnector channelConnector, Tenant tenant, ChannelType channelType) {
+                   ChannelConnector channelConnector, Tenant tenant, ChannelType channelType) {
         this.id = new ObjectId();
         this.name = name;
         this.serviceIdentifier = serviceIdentifier;

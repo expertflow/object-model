@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class StructuredMessage extends MessageBody {
-
     protected JsonNode additionalDetails;
 
     // Constructor --> Args: markdownText - from parent class

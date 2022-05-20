@@ -3,12 +3,10 @@ package com.ef.cim.objectmodel;
 import javax.validation.constraints.NotBlank;
 
 public class Language {
-
     @NotBlank(message = "language code is mandatory")
     private String code;
     @NotBlank(message = "language policy is mandatory")
     private String policy;
-
 
     public Language() {
     }
@@ -17,6 +15,7 @@ public class Language {
         this.code = code;
         this.policy = policy;
     }
+
     public String getCode() {
         return code;
     }

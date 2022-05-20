@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "forms")
 public class Form implements Serializable {
     @Id
-    @JsonSerialize(using= ToStringSerializer.class)
+    @JsonSerialize(using = ToStringSerializer.class)
     private ObjectId id;
     private String formTitle;
     private String formDescription;

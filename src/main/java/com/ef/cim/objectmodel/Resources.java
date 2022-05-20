@@ -15,4 +15,11 @@ public class Resources {
     public void setResources(List<Resource> Resources) {
         this.Resources = Resources;
     }
+
+    @Override
+    public String toString() {
+        return "Resources{" +
+                "Resources=" + Resources +
+                '}';
+    }
 }

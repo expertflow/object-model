@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ContactMessage extends StructuredMessage {
-
     private List<Contact> contacts;
-
 
     // Default Constructor
     public ContactMessage() {

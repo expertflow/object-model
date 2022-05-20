@@ -35,10 +35,20 @@ public class Tenant implements Serializable {
         this.name = name;
     }
 
-    public void setId(UUID id) { this.id = id; }
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     /*
   public void setRealmID(KeyCloakRealm realm) {
     this.realm = realm;
   }*/
+
+    @Override
+    public String toString() {
+        return "Tenant{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

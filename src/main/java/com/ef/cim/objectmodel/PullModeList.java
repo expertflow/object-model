@@ -1,7 +1,6 @@
 package com.ef.cim.objectmodel;
 
 public class PullModeList {
-
     private String id;
     private String name;
     private String description;
@@ -29,5 +28,14 @@ public class PullModeList {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "PullModeList{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import javax.validation.constraints.NotBlank;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -41,15 +40,6 @@ public class ChannelConnector implements Serializable {
         this.name = name;
     }
 
-    //    public UndefinedObject getChannelLogo() {
-//        return channelLogo;
-//    }
-
-//    public void setChannelLogo(UndefinedObject channelLogo) {
-//        this.channelLogo = channelLogo;
-//    }
-
-
     public Tenant getTenant() {
         return tenant;
     }
@@ -58,7 +48,9 @@ public class ChannelConnector implements Serializable {
         this.tenant = tenant;
     }
 
-    public void setId(ObjectId id) { this.id = id; }
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
 
     public ChannelProviderInterface getChannelProviderInterface() {
         return channelProviderInterface;

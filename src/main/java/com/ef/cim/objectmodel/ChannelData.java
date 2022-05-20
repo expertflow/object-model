@@ -10,8 +10,6 @@ import javax.validation.constraints.NotBlank;
  * example on web channel we have browser id, language e.t.c This is the <strong>parent</strong>
  * object for more specific channels' data objects. e.g. WebChannelData.
  */
-
-
 public class ChannelData implements Serializable {
     @NotBlank(message = "channelCustomerIdentifier is mandatory")
     private String channelCustomerIdentifier;
@@ -56,9 +54,11 @@ public class ChannelData implements Serializable {
     public void addAdditionalAttribute(Attribute attribute) {
         this.additionalAttributes.add(attribute);
     }
+
     public void removeAdditionalAttribute(KeyValuePair keyValuePair) {
         this.additionalAttributes.remove(keyValuePair);
     }
+
     public void removeAdditionalAttribute(int index) {
         this.additionalAttributes.remove(index);
     }

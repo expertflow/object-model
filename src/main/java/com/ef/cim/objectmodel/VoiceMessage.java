@@ -2,12 +2,11 @@ package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-public class VoiceMessage extends  MessageBody {
-
+public class VoiceMessage extends MessageBody {
     private String agentId;
     private JsonNode dialog;
 
-    public VoiceMessage(){
+    public VoiceMessage() {
         super(MessageType.VOICE);
     }
 

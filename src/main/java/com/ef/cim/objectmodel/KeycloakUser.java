@@ -101,8 +101,8 @@ public class KeycloakUser {
             return false;
         }
         KeycloakUser that = (KeycloakUser) o;
-        return id.equals(that.id) && firstName.equals(that.firstName) &&
-                lastName.equals(that.lastName) && Objects.equals(roles, that.roles);
+        return id.equals(that.id) && firstName.equals(that.firstName) && lastName.equals(that.lastName) &&
+                Objects.equals(roles, that.roles);
     }
 
     @Override
@@ -112,11 +112,7 @@ public class KeycloakUser {
 
     @Override
     public String toString() {
-        return "KeycloakUser{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", roles=" + roles +
-                '}';
+        return "KeycloakUser{" + "id=" + id + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' +
+                ", roles=" + roles + '}';
     }
 }

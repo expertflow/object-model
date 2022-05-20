@@ -32,4 +32,13 @@ public class Team {
     public void setTenant(Tenant tenant) {
         this.tenant = tenant;
     }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", tenant=" + tenant +
+                '}';
+    }
 }

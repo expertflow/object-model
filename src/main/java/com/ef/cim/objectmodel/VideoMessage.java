@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.Valid;
 
 public class VideoMessage extends MultimediaMessage {
-
     // Constructor
-    public VideoMessage(@JsonProperty("caption") String caption,@JsonProperty("attachment") @Valid Attachment attachment) {
+    public VideoMessage(@JsonProperty("caption") String caption,
+                        @JsonProperty("attachment") @Valid Attachment attachment) {
         super(MessageType.VIDEO, caption, attachment);
     }
 

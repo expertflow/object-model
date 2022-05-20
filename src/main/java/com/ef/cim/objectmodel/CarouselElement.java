@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarouselElement {
-
     private String text;
     private String url;
     private List<Button> buttons;
@@ -21,7 +20,7 @@ public class CarouselElement {
     }
 
     public CarouselElement(String text, String url, List<Button> buttons,
-            DefaultAction defaultAction, JsonNode additionalCarouselElementDetails) {
+                           DefaultAction defaultAction, JsonNode additionalCarouselElementDetails) {
         this.text = text;
         this.url = url;
         this.buttons = buttons;

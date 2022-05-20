@@ -13,5 +13,6 @@ import java.util.UUID;
 })
 public interface Participant extends Serializable {
     UUID getId();
+
     String getDisplayName();
 }

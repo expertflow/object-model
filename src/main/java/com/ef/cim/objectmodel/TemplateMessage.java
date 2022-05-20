@@ -7,7 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
 public class TemplateMessage extends StructuredMessage {
-
     @NotBlank(message = "namespace of the template is mandatory")
     private String namespace;
     @NotBlank(message = "name of the template is mandatory")
@@ -21,8 +20,9 @@ public class TemplateMessage extends StructuredMessage {
         this.components = new ArrayList<>();
     }
 
-    public TemplateMessage(@JsonProperty("namespace") String namespace,@JsonProperty("name") String name,@JsonProperty("language") Language language,
-            @JsonProperty("components") List<Component> components) {
+    public TemplateMessage(@JsonProperty("namespace") String namespace, @JsonProperty("name") String name,
+                           @JsonProperty("language") Language language,
+                           @JsonProperty("components") List<Component> components) {
         super(MessageType.TEMPLATE);
         this.namespace = namespace;
         this.name = name;

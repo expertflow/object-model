@@ -1,7 +1,6 @@
 package com.ef.cim.objectmodel;
 
 public class DefaultAction {
-
     private String type;
     private String url;
 

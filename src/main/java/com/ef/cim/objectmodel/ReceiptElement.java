@@ -1,7 +1,6 @@
 package com.ef.cim.objectmodel;
 
 public class ReceiptElement {
-
     private String title;
     private String subtitle;
     private long quantity;
@@ -9,12 +8,11 @@ public class ReceiptElement {
     private String currency;
     private String imageUrl;
 
-
     public ReceiptElement() {
     }
 
     public ReceiptElement(String title, String subtitle, long quantity, long price, String currency,
-            String imageUrl) {
+                          String imageUrl) {
         this.title = title;
         this.subtitle = subtitle;
         this.quantity = quantity;

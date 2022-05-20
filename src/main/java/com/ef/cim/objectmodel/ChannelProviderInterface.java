@@ -9,7 +9,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 
 public class ChannelProviderInterface {
-
     @JsonSerialize(using = ToStringSerializer.class)
     @Id
     private ObjectId id;

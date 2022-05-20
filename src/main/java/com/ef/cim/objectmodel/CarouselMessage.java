@@ -8,7 +8,6 @@ import java.util.List;
  * A {@code CarousalMessage} object represents the body of a message that is of CAROUSAL type
  */
 public class CarouselMessage extends StructuredMessage {
-
     private CarouselMessageType carouselMessageType;
     private List<CarouselElement> elements;
 
@@ -21,8 +20,8 @@ public class CarouselMessage extends StructuredMessage {
         this.carouselMessageType = carouselMessageType;
     }
 
-    public CarouselMessage(@JsonProperty("carouselMessageType")CarouselMessageType carouselMessageType,
-            @JsonProperty("elements")List<CarouselElement> elements) {
+    public CarouselMessage(@JsonProperty("carouselMessageType") CarouselMessageType carouselMessageType,
+                           @JsonProperty("elements") List<CarouselElement> elements) {
         super(MessageType.CAROUSEL);
         this.carouselMessageType = carouselMessageType;
         this.elements = elements;

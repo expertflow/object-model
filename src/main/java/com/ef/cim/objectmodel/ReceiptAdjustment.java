@@ -1,7 +1,6 @@
 package com.ef.cim.objectmodel;
 
 public class ReceiptAdjustment {
-
     private String name;
     private long amount;
 

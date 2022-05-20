@@ -3,7 +3,6 @@ package com.ef.cim.objectmodel;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.io.Serializable;
-import java.util.UUID;
 import javax.validation.constraints.NotBlank;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -15,7 +14,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document(collection = "ChannelType")
 public class ChannelType implements Serializable {
-
     @JsonSerialize(using = ToStringSerializer.class)
     @Id
     private ObjectId id;

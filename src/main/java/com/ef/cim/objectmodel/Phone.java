@@ -3,7 +3,6 @@ package com.ef.cim.objectmodel;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class Phone {
-
     private String phone;
     private JsonNode additionalPhoneDetails;
 

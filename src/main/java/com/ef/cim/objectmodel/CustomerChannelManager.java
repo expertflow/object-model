@@ -33,4 +33,12 @@ public class CustomerChannelManager implements Participant {
     public void setDisplayName(String displayName) {
         this.displayName = displayName;
     }
+
+    @Override
+    public String toString() {
+        return "CustomerChannelManager{" +
+                "id=" + id +
+                ", displayName='" + displayName + '\'' +
+                '}';
+    }
 }
