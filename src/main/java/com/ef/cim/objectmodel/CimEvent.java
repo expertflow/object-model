@@ -11,6 +11,8 @@ public class CimEvent implements Serializable {
     private CimEventName name;
     private CimEventType type;
     private Timestamp timestamp;
+
+    private UUID conversationId;
     private Object data;
 
     public CimEvent() {
@@ -18,11 +20,12 @@ public class CimEvent implements Serializable {
         this.id = UUID.randomUUID();
     }
 
-    public CimEvent(Object data, CimEventName name, CimEventType type) {
+    public CimEvent(Object data, CimEventName name, CimEventType type, UUID conversationId) {
         this.id = UUID.randomUUID();
         this.data = data;
         this.name = name;
         this.type = type;
+        this.conversationId= conversationId;
         this.timestamp = new Timestamp(System.currentTimeMillis());
     }
 
@@ -50,4 +53,12 @@ public class CimEvent implements Serializable {
     public void setTimestamp(Timestamp timestamp) { this.timestamp = timestamp; }
 
     public void setData(Object data) { this.data = data; }
+
+    public UUID getConversationId() {
+        return conversationId;
+    }
+
+    public void setConversationId(UUID conversationId) {
+        this.conversationId = conversationId;
+    }
 }

@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class CustomerTopic implements Serializable {
+public class Conversation implements Serializable {
     private final UUID id;
     private Customer customer;
-    private List<TopicParticipant> participants;
+    private List<ConversationParticipant> participants;
     private TopicState state;
     private ChannelSession channelSession;
     private Timestamp creationTime;
@@ -17,13 +17,13 @@ public class CustomerTopic implements Serializable {
 
 
     // Default Constructor
-    public CustomerTopic() {
+    public Conversation() {
         this.id = UUID.randomUUID();
         this.participants = new ArrayList<>();
         this.metadata = new TopicMetadata();
     }
 
-    public CustomerTopic(UUID topicId, TopicState state, ChannelSession channelSession) {
+    public Conversation(UUID topicId, TopicState state, ChannelSession channelSession) {
         this.id = topicId;
         this.customer = channelSession.getCustomer();
         this.state = state;
@@ -38,7 +38,7 @@ public class CustomerTopic implements Serializable {
         return this.id;
     }
 
-    public List<TopicParticipant> getParticipants() {
+    public List<ConversationParticipant> getParticipants() {
         return this.participants;
     }
 
@@ -47,7 +47,7 @@ public class CustomerTopic implements Serializable {
     }
 
     // Setters
-    public void setParticipants(List<TopicParticipant> participants) {
+    public void setParticipants(List<ConversationParticipant> participants) {
         this.participants = participants;
     }
 
@@ -63,14 +63,14 @@ public class CustomerTopic implements Serializable {
         this.customer = customer;
     }
 
-    public void addParticipant(TopicParticipant participant) {
+    public void addParticipant(ConversationParticipant participant) {
         if (this.participants == null) {
-            this.participants = new ArrayList<TopicParticipant>();
+            this.participants = new ArrayList<ConversationParticipant>();
         }
         this.participants.add(participant);
     }
 
-    public void removeParticipant(TopicParticipant participant) {
+    public void removeParticipant(ConversationParticipant participant) {
         if (this.participants != null) {
             this.participants.remove(participant);
         }
@@ -109,7 +109,7 @@ public class CustomerTopic implements Serializable {
 
     @Override
     public String toString() {
-        return "CustomerTopic{" +
+        return "Conversation{" +
                 "id=" + id +
                 ", customer=" + customer +
                 ", participants=" + participants +

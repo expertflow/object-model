@@ -1,19 +1,18 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.UUID;
 
-public class TopicMonitor implements Participant {
+public class ConversationMonitor implements Participant {
     private UUID id;
     private final String displayName;
 
     private final String participantType;
 
     // Default Constructor
-    public TopicMonitor() {
+    public ConversationMonitor() {
         this.id = UUID.randomUUID();
-        this.displayName = "Topic Monitor: " + this.id.toString();
-        this.participantType = "TopicMonitor";
+        this.displayName = "Conversation Monitor: " + this.id.toString();
+        this.participantType = "ConversationMonitor";
     }
 
     public UUID getId() {

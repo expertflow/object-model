@@ -3,24 +3,24 @@ package com.ef.cim.objectmodel;
 import java.util.List;
 import java.util.UUID;
 
-public class TopicEvents {
+public class ConversationEvents {
 
     private final UUID id;
-    private UUID topicId;
+    private UUID conversationId;
     private List<CimEvent> cimEvents;
 
     // Getters
-    public TopicEvents(UUID id) { this.id = id; }
+    public ConversationEvents(UUID id) { this.id = id; }
 
     public UUID getId() { return id; }
 
-    public UUID getTopicId() { return topicId; }
+    public UUID getConversationId() { return conversationId; }
 
     public List<CimEvent> getCimEvents() { return cimEvents; }
 
     // Setters
 
-    public void setTopicId(UUID topicId) { this.topicId = topicId; }
+    public void setConversationId(UUID conversationId) { this.conversationId = conversationId; }
 
     public void setCimEvents(List<CimEvent> cimEvents) { this.cimEvents = cimEvents; }
 }

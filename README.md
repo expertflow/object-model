@@ -251,3 +251,17 @@ Version 1.5.4
  Version 1.8.2
 
  -- added VOICE in ChannelTypeEnum
+
+
+ ==========================================================================================
+ 
+ Version 1.8.3
+ 
+ -- The following objects have been renamed from 'topic' to 'conversation'
+ CustomerTopic to Conversation,
+ TopicEvents to ConversationEvents,
+ TopicMonitor to ConversationMonitor,
+ TopicParticipant to ConversationParticipant,
+ TopicParticipantState to ConversationParticipantState,
+ 
+ -- added 'conversationId' in the CimEvent Class 

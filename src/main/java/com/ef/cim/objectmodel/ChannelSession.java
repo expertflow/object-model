@@ -39,7 +39,7 @@ public class ChannelSession implements Participant {
     @NotNull(message = "Is Active is Mandatory")
     private boolean isActive;
     @NotBlank
-    private UUID topicId;
+    private UUID conversationId;
     private ChannelSessionState state;
 
 
@@ -201,21 +201,21 @@ public class ChannelSession implements Participant {
     }
 
     /**
-     * Getter for topicId
+     * Getter for conversationId
      *
-     * @return topicId
+     * @return conversationId
      */
-    public UUID getTopicId() {
-        return topicId;
+    public UUID getConversationId() {
+        return conversationId;
     }
 
     /**
-     * Setter for topicId
+     * Setter for conversationId
      *
-     * @param topicId topicId
+     * @param conversationId conversationId
      */
-    public void setTopicId(UUID topicId) {
-        this.topicId = topicId;
+    public void setConversationId(UUID conversationId) {
+        this.conversationId = conversationId;
     }
 
     public String getParticipantType() {
@@ -302,7 +302,7 @@ public class ChannelSession implements Participant {
                 ", latestIntent='" + latestIntent + '\'' +
                 ", customerPresence=" + customerPresence +
                 ", isActive=" + isActive +
-                ", topicId=" + topicId +
+                ", conversationId=" + conversationId +
                 ", state=" + state +
                 '}';
     }
