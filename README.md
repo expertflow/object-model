@@ -255,7 +255,7 @@ Version 1.5.4
 
  ==========================================================================================
  
- Version 1.8.3
+ Version 1.8.4
  
  -- The following objects have been renamed from 'topic' to 'conversation'
  CustomerTopic to Conversation,
