@@ -257,3 +257,10 @@ Version 1.5.4
 Version 1.8.3
 
 -- ToString methods added for few models and code formatted
+
+=========================================================================================
+
+Version 1.8.4
+
+-- AssociatedMrd object added.
+-- CCUser model updated.

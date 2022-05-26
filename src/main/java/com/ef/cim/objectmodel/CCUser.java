@@ -19,9 +19,11 @@ public class CCUser implements Participant {
     private KeycloakUser keycloakUser;
     private List<AssociatedRoutingAttribute> associatedRoutingAttributes;
     private String participantType;
+    private List<AssociatedMrd> associatedMrds;
 
     public CCUser() {
         this.associatedRoutingAttributes = new ArrayList<>();
+        this.associatedMrds = new ArrayList<>();
         this.participantType = "CCUser";
     }
 
@@ -76,6 +78,25 @@ public class CCUser implements Participant {
         return this.associatedRoutingAttributes.remove(associatedRoutingAttribute);
     }
 
+    public boolean containsAssociatedMrd(AssociatedMrd associatedMrd) {
+        return this.associatedMrds.contains(associatedMrd);
+    }
+
+    public boolean addAssociatedMrd(AssociatedMrd associatedMrd) {
+        return this.associatedMrds.add(associatedMrd);
+    }
+
+    public boolean removeAssociatedMrd(AssociatedMrd associatedMrd) {
+        return this.associatedMrds.remove(associatedMrd);
+    }
+    public List<AssociatedMrd> getAssociatedMrds() {
+        return associatedMrds;
+    }
+
+    public void setAssociatedMrds(List<AssociatedMrd> associatedMrds) {
+        this.associatedMrds = associatedMrds;
+    }
+
     public String getParticipantType() {
         return participantType;
     }
@@ -104,6 +125,7 @@ public class CCUser implements Participant {
                 ", keycloakUser=" + keycloakUser +
                 ", associatedRoutingAttributes=" + associatedRoutingAttributes +
                 ", participantType='" + participantType + '\'' +
+                ", associatedMrds=" + associatedMrds +
                 '}';
     }
 }
