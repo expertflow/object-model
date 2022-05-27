@@ -16,5 +16,4 @@ public class AssociatedMrd {
     @NotNull
     private String mrdId;
     private int maxAgentTask;
-    private int maxMrdRequest;
 }
