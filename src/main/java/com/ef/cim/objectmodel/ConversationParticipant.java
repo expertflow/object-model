@@ -5,23 +5,23 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-public class TopicParticipant implements Serializable {
+public class ConversationParticipant implements Serializable {
     private final UUID id;
     private ParticipantType type;
     private ParticipantRole role;
     private Participant participant;
     private Timestamp joiningTime;
     private String token;
-    private UUID topicId;
+    private UUID conversationId;
     private boolean isActive;
     private UserCredentials userCredentials; // Class UserCredentials Empty | not in object model
-    private TopicParticipantState state;
+    private ConversationParticipantState state;
     private Timestamp stateChangedOn;
 
     // Constructor
-    public TopicParticipant(@JsonProperty("type") ParticipantType type,
-                            @JsonProperty("role") ParticipantRole role,
-                            @JsonProperty("participant") Participant participant) {
+    public ConversationParticipant(@JsonProperty("type") ParticipantType type,
+                                   @JsonProperty("role") ParticipantRole role,
+                                   @JsonProperty("participant") Participant participant) {
         this.id = UUID.randomUUID();
         this.type = type;
         this.role = role;
@@ -67,17 +67,11 @@ public class TopicParticipant implements Serializable {
         return this.joiningTime;
     }
 
-    public boolean getIsActive() {
-        return this.isActive;
-    }
+    public boolean getIsActive() { return this.isActive; }
 
-    public TopicParticipantState getState() {
-        return this.state;
-    }
+    public ConversationParticipantState getState() { return this.state; }
 
-    public Timestamp getStateChangedOn() {
-        return this.stateChangedOn;
-    }
+    public Timestamp getStateChangedOn() { return this.stateChangedOn; }
 
 
     // Setters
@@ -102,41 +96,38 @@ public class TopicParticipant implements Serializable {
         this.userCredentials = userCredentials;
     }
 
-    public UUID getTopicId() {
-        return topicId;
+    public UUID getConversationId() {
+        return conversationId;
     }
 
-    public void setTopicId(UUID topicId) {
-        this.topicId = topicId;
+    public void setConversationId(UUID conversationId) {
+        this.conversationId = conversationId;
     }
 
     public void setIsActive(boolean active) {
         this.isActive = active;
     }
 
-    public void setState(TopicParticipantState topicParticipantState) {
-        this.state = topicParticipantState;
-    }
+    public void setState(ConversationParticipantState conversationParticipantState) { this.state =
+            conversationParticipantState; }
 
-    public void setStateChangedOn(Timestamp timestamp) {
-        this.stateChangedOn = timestamp;
-    }
+    public void setStateChangedOn(Timestamp timestamp) { this.stateChangedOn = timestamp; }
 
 
     /***
-     * String Representation of TopicParticipant
+     * String Representation of Conversation
      * @return String
      */
     @Override
     public String toString() {
-        return "TopicParticipant{" +
+        return "ConversationParticipant{" +
                 "id=" + id +
                 ", type=" + type +
                 ", role=" + role +
                 ", participant=" + participant +
                 ", joiningTime=" + joiningTime +
                 ", token='" + token + '\'' +
-                ", topicId=" + topicId +
+                ", conversationId=" + conversationId +
                 ", isActive=" + isActive +
                 ", userCredentials=" + userCredentials +
                 ", state=" + state +

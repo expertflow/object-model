@@ -1,6 +1,6 @@
 package com.ef.cim.objectmodel;
 
-public enum TopicParticipantState {
+public enum ConversationParticipantState {
     SUBSCRIBED,
     UNSUBSCRIBED
 }
