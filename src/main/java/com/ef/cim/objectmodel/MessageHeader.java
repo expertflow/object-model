@@ -9,7 +9,7 @@ import java.util.UUID;
 import javax.validation.Valid;
 
 public class MessageHeader implements Serializable {
-    private TopicParticipant sender;
+    private ConversationParticipant sender;
     @Valid
     private ChannelData channelData;
     private LanguageCode language; // Class LanguageCode Empty | not in object model
@@ -28,12 +28,12 @@ public class MessageHeader implements Serializable {
     }
 
     // Getters
-    public TopicParticipant getSender() {
+    public ConversationParticipant getSender() {
         return this.sender;
     }
 
     // Setters
-    public void setSender(TopicParticipant sender) {
+    public void setSender(ConversationParticipant sender) {
         this.sender = sender;
     }
 
