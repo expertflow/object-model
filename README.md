@@ -264,3 +264,12 @@ Version 1.8.5
 
 -- AssociatedMrd object added.
 -- CCUser model updated.
+
+=========================================================================================
+
+Version 1.8.6
+
+-- conversationData added in Conversation.
+-- endTime added in Conversation.
+-- CONVERSATION_DATA_CHANGED added in CimEventName.
+-- EXTERNAL added in RoutingMode.
