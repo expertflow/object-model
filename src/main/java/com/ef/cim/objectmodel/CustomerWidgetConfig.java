@@ -12,7 +12,7 @@ public class CustomerWidgetConfig {
     private ObjectId id;
     @Id
     private String widgetIdentifier;
-    private WidgetTheme theme;
+    private String theme;
     private String title;
     private String subTitle;
     private boolean enableFontResize;
@@ -43,11 +43,11 @@ public class CustomerWidgetConfig {
         this.widgetIdentifier = widgetIdentifier;
     }
 
-    public WidgetTheme getTheme() {
+    public String getTheme() {
         return theme;
     }
 
-    public void setTheme(WidgetTheme theme) {
+    public void setTheme(String theme) {
         this.theme = theme;
     }
 

@@ -273,3 +273,11 @@ Version 1.8.6
 -- endTime added in Conversation.
 -- CONVERSATION_DATA_CHANGED added in CimEventName.
 -- EXTERNAL added in RoutingMode.
+
+===========================================================================================
+
+Version 1.8.7
+
+
+-- type of 'theme' changed from WidgetTheme to String in CustomerWidgetConfig.
+-- WidgetTheme removed.
