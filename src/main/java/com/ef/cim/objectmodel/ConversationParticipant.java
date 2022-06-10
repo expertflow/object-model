@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 public class ConversationParticipant implements Serializable {
-    private final UUID id;
+    private UUID id;
     private ParticipantType type;
     private ParticipantRole role;
     private Participant participant;
@@ -37,6 +37,10 @@ public class ConversationParticipant implements Serializable {
     // Getters
     public UUID getId() {
         return this.id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public ParticipantType getType() {

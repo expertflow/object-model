@@ -1,42 +1,21 @@
 package com.ef.cim.objectmodel;
 
 import java.util.UUID;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString
 public class ConversationMonitor implements Participant {
     private UUID id;
-    private final String displayName;
+    private String displayName;
+    private String participantType;
 
-    private final String participantType;
-
-    // Default Constructor
     public ConversationMonitor() {
         this.id = UUID.randomUUID();
-        this.displayName = "Conversation Monitor: " + this.id.toString();
+        this.displayName = "Conversation Monitor: " + this.id;
         this.participantType = "ConversationMonitor";
-    }
-
-    public UUID getId() {
-        return this.id;
-    }
-
-    public String getDisplayName() {
-        return this.displayName;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getParticipantType() {
-        return participantType;
-    }
-
-    @Override
-    public String toString() {
-        return "TopicMonitor{" +
-                "id=" + id +
-                ", displayName='" + displayName + '\'' +
-                ", participantType='" + participantType + '\'' +
-                '}';
     }
 }
