@@ -290,3 +290,18 @@ Version 1.8.8
 -- Getter Setters added in ConversationMontior
 
 -- Setter added for id in ConversationParticipant
+
+
+===========================================================================================
+Version 1.8.9
+
+Following objects moved from RE to object Model.
+
+AgentState
+ReasonCode
+AgentMrdState
+AgentPresence
+Enums
+MediaRoutingDomain
+TaskDto
+TaskStat
