@@ -2,11 +2,13 @@ package com.ef.cim.objectmodel;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
  * The type Agent mrd state.
  */
+@NoArgsConstructor
 @ToString
 public class AgentMrdState {
     /**
@@ -27,11 +29,9 @@ public class AgentMrdState {
     private Timestamp lastReadyStateChangeTime;
 
     /**
-     * Instantiates a new Agent mrd state.
+     * The maximum tasks this agent can accept against this MRD.
      */
-    public AgentMrdState() {
-
-    }
+    private int maxAgentTasks;
 
     /**
      * Parameterized Constructor.
@@ -46,6 +46,7 @@ public class AgentMrdState {
 
         LocalDateTime longTimeAgo = LocalDateTime.of(1990, 4, 2, 12, 1);
         this.lastReadyStateChangeTime = Timestamp.valueOf(longTimeAgo);
+        this.maxAgentTasks = mrd.getMaxRequests();
     }
 
     /**
@@ -123,5 +124,13 @@ public class AgentMrdState {
      */
     public void setLastReadyStateChangeTime(Timestamp lastReadyStateChangeTime) {
         this.lastReadyStateChangeTime = lastReadyStateChangeTime;
+    }
+
+    public int getMaxAgentTasks() {
+        return maxAgentTasks;
+    }
+
+    public void setMaxAgentTasks(int maxAgentTasks) {
+        this.maxAgentTasks = maxAgentTasks;
     }
 }

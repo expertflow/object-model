@@ -6,15 +6,17 @@ import com.ef.cim.objectmodel.TaskState;
 import java.io.Serializable;
 import java.util.UUID;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 /**
  * The type Task dto.
  */
+@NoArgsConstructor
+@ToString
 @Getter
 @Setter
-@ToString
 public class TaskDto implements Serializable {
     /**
      * The ID.
