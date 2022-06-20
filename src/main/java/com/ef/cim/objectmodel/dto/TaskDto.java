@@ -50,4 +50,12 @@ public class TaskDto implements Serializable {
      * The Enqueue time.
      */
     private Long enqueueTime;
+    /**
+     * The Answer time.
+     */
+    private Long answerTime;
+    /**
+     * The Handle time.
+     */
+    private Long handleTime;
 }
