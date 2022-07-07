@@ -19,5 +19,6 @@ public enum MessageType {
     URL,
     RECEIPT,
     TEMPLATE,
-    VOICE
+    VOICE,
+    WRAPUP
 }

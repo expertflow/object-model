@@ -305,3 +305,8 @@ Enums
 MediaRoutingDomain
 TaskDto
 TaskStat
+
+=============================================================================================
+Version 1.9.1
+
+added new messageType 'WrapUpMessage'
