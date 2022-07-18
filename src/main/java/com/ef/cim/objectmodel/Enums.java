@@ -61,7 +61,11 @@ public class Enums {
         /**
          * Cancelled task state reason code.
          */
-        CANCELLED
+        CANCELLED,
+        /**
+         * Agent logout task state reason code.
+         */
+        AGENT_LOGOUT
     }
 
     /**
