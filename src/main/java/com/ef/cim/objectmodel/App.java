@@ -1,6 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import java.util.UUID;
+import com.ef.cim.objectmodel.common.Utils;
 
 // TODO: Overall, follow javadoc comment conventions.
 
@@ -9,14 +9,15 @@ import java.util.UUID;
  * external apps
  */
 public class App implements Participant {
-    private final UUID id;
+    private final String id;
     private String displayName;
 
     /**
      * Default Constructor Gives a unique identifying number to an {@code App} object.
      */
     public App() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
+        ;
     }
 
     /**
@@ -24,7 +25,7 @@ public class App implements Participant {
      *
      * @return {@code java.util.UUID}
      */
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 

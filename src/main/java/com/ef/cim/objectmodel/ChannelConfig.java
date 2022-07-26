@@ -1,9 +1,11 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import java.util.UUID;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import sun.nio.ch.Util;
 
 /**
  * A {@code ChannelConfig} object represents the configurations for a specific channel (e.g. mode,
@@ -11,7 +13,8 @@ import javax.validation.constraints.NotNull;
  */
 @Valid
 public class ChannelConfig implements Serializable {
-    private UUID id;
+
+    private String id;
     @NotNull(message = "Channel Mode is mandatory")
     private ChannelMode channelMode;
     //    @NotNull(message = "SelfServiceBot is mandatory")
@@ -31,7 +34,7 @@ public class ChannelConfig implements Serializable {
      * Default Constructor, Initializes all the objects except Strings and primitive types
      */
     public ChannelConfig() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.customerIdentificationCriteria = new UndefinedObject();
         this.routingPolicy = new RoutingPolicy();
     }
@@ -41,11 +44,11 @@ public class ChannelConfig implements Serializable {
      *
      * @return {@code String}
      */
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 

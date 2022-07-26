@@ -1,27 +1,27 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.UUID;
 
 public class CimEvent implements Serializable {
 
 
-    private UUID id;
+    private String id;
     private CimEventName name;
     private CimEventType type;
     private Timestamp timestamp;
 
-    private UUID conversationId;
+    private String conversationId;
     private Object data;
 
     public CimEvent() {
 
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
     }
 
-    public CimEvent(Object data, CimEventName name, CimEventType type, UUID conversationId) {
-        this.id = UUID.randomUUID();
+    public CimEvent(Object data, CimEventName name, CimEventType type, String conversationId) {
+        this.id = Utils.getObjectId();
         this.data = data;
         this.name = name;
         this.type = type;
@@ -29,12 +29,12 @@ public class CimEvent implements Serializable {
         this.timestamp = new Timestamp(System.currentTimeMillis());
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
     // Getters
-    public UUID getId() { return id; }
+    public String getId() { return id; }
 
 
     public CimEventName getName() { return name; }
@@ -54,11 +54,11 @@ public class CimEvent implements Serializable {
 
     public void setData(Object data) { this.data = data; }
 
-    public UUID getConversationId() {
+    public String getConversationId() {
         return conversationId;
     }
 
-    public void setConversationId(UUID conversationId) {
+    public void setConversationId(String conversationId) {
         this.conversationId = conversationId;
     }
 }

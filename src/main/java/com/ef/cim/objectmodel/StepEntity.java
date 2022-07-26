@@ -1,9 +1,9 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 import javax.validation.constraints.Min;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +19,7 @@ public class StepEntity {
     /**
      * The ID.
      */
-    private UUID id;
+    private String id;
     /**
      * The Expressions.
      */
@@ -34,7 +34,7 @@ public class StepEntity {
      * Instantiates a new Step entity.
      */
     public StepEntity() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.expressions = new ArrayList<>();
     }
 

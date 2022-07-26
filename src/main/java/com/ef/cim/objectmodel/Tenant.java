@@ -1,21 +1,21 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
-import java.util.UUID;
 
 public class Tenant implements Serializable {
-    private UUID id;
+    private String id;
     private String name;
 //  private KeyCloakRealm realm; // Class KeyCloakRealm Empty | not in object model
 
     // Default Constructor
     public Tenant() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         //  this.realm = new KeyCloakRealm();
     }
 
     // Getters
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -35,7 +35,7 @@ public class Tenant implements Serializable {
         this.name = name;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 

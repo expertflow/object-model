@@ -2,7 +2,6 @@ package com.ef.cim.objectmodel;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -68,7 +67,7 @@ public class PrecisionQueueEntity {
      * @param stepId the step id
      * @return the boolean
      */
-    public boolean containsStep(UUID stepId) {
+    public boolean containsStep(String stepId) {
         for (StepEntity step : this.steps) {
             if (step.getId().equals(stepId)) {
                 return true;
@@ -106,7 +105,7 @@ public class PrecisionQueueEntity {
      * @param id the id
      * @return the boolean
      */
-    public boolean deleteStepById(UUID id) {
+    public boolean deleteStepById(String id) {
         int index = findStepIndex(id);
         if (index > -1) {
             this.steps.remove(index);
@@ -121,7 +120,7 @@ public class PrecisionQueueEntity {
      * @param id the id
      * @return the int
      */
-    private int findStepIndex(UUID id) {
+    private int findStepIndex(String id) {
         for (int i = 0; i < steps.size(); i++) {
             if (steps.get(i).getId().equals(id)) {
                 return i;

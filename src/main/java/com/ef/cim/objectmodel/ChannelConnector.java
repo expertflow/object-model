@@ -1,7 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,9 +12,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "ChannelConnector")
 public class ChannelConnector implements Serializable {
-    @JsonSerialize(using = ToStringSerializer.class)
+
     @Id
-    private ObjectId id;
+    private String id;
     @NotBlank
     private String name;
     @DBRef
@@ -24,11 +23,11 @@ public class ChannelConnector implements Serializable {
     private Tenant tenant;
 
     public ChannelConnector() {
-        this.id = new ObjectId();
+        this.id = Utils.getObjectId();
         this.channelProviderConfigs = new ArrayList<>();
     }
 
-    public ObjectId getId() {
+    public String getId() {
         return id;
     }
 
@@ -48,7 +47,7 @@ public class ChannelConnector implements Serializable {
         this.tenant = tenant;
     }
 
-    public void setId(ObjectId id) {
+    public void setId(String id) {
         this.id = id;
     }
 

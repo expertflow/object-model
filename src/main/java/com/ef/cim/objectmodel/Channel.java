@@ -1,11 +1,9 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -16,9 +14,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document(collection = "Channel")
 public class Channel implements Serializable {
-    @JsonSerialize(using = ToStringSerializer.class)
+
     @Id
-    private ObjectId id;
+    private String id;
     @NotBlank
     private String name;
     // Class ServiceIdentifier Empty | not in object model yet
@@ -38,7 +36,7 @@ public class Channel implements Serializable {
      * member objects except the Strings
      */
     public Channel() {
-        this.id = new ObjectId();
+        this.id = Utils.getObjectId();
         this.tenant = new Tenant();
         this.channelConfig = new ChannelConfig();
         this.channelConnector = new ChannelConnector();
@@ -47,7 +45,7 @@ public class Channel implements Serializable {
 
     public Channel(String name, String serviceIdentifier, ChannelConfig channelConfig,
                    ChannelConnector channelConnector, Tenant tenant, ChannelType channelType) {
-        this.id = new ObjectId();
+        this.id = Utils.getObjectId();
         this.name = name;
         this.serviceIdentifier = serviceIdentifier;
         this.channelConfig = channelConfig;
@@ -61,7 +59,7 @@ public class Channel implements Serializable {
      *
      * @return {@code UUID}
      */
-    public ObjectId getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -70,7 +68,7 @@ public class Channel implements Serializable {
      *
      * @param id UUID object
      */
-    public void setId(ObjectId id) {
+    public void setId(String id) {
         this.id = id;
     }
 

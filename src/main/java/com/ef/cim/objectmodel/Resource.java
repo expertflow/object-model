@@ -1,10 +1,9 @@
 package com.ef.cim.objectmodel;
 
 import java.util.List;
-import java.util.UUID;
 
 public class Resource {
-    private UUID rsid;
+    private String rsid;
     private String rsname;
     private List<String> scopes;
 
@@ -29,11 +28,11 @@ public class Resource {
         return this.scopes.remove(scope);
     }
 
-    public UUID getRsid() {
+    public String getRsid() {
         return rsid;
     }
 
-    public void setRsid(UUID rsid) {
+    public void setRsid(String rsid) {
         this.rsid = rsid;
     }
 

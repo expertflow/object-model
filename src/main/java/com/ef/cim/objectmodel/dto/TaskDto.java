@@ -4,7 +4,6 @@ import com.ef.cim.objectmodel.ChannelSession;
 import com.ef.cim.objectmodel.MediaRoutingDomain;
 import com.ef.cim.objectmodel.TaskState;
 import java.io.Serializable;
-import java.util.UUID;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,7 +20,7 @@ public class TaskDto implements Serializable {
     /**
      * The ID.
      */
-    private UUID id;
+    private String id;
     /**
      * The Channel session.
      */
@@ -45,7 +44,7 @@ public class TaskDto implements Serializable {
     /**
      * The Assigned to.
      */
-    private UUID assignedTo;
+    private String assignedTo;
     /**
      * The Enqueue time.
      */

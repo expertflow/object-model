@@ -1,18 +1,18 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.UUID;
 
 public class ConversationParticipant implements Serializable {
-    private UUID id;
+    private String id;
     private ParticipantType type;
     private ParticipantRole role;
     private Participant participant;
     private Timestamp joiningTime;
     private String token;
-    private UUID conversationId;
+    private String conversationId;
     private boolean isActive;
     private UserCredentials userCredentials; // Class UserCredentials Empty | not in object model
     private ConversationParticipantState state;
@@ -22,7 +22,7 @@ public class ConversationParticipant implements Serializable {
     public ConversationParticipant(@JsonProperty("type") ParticipantType type,
                                    @JsonProperty("role") ParticipantRole role,
                                    @JsonProperty("participant") Participant participant) {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.type = type;
         this.role = role;
         this.participant = participant;
@@ -35,11 +35,11 @@ public class ConversationParticipant implements Serializable {
     }
 
     // Getters
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -100,11 +100,11 @@ public class ConversationParticipant implements Serializable {
         this.userCredentials = userCredentials;
     }
 
-    public UUID getConversationId() {
+    public String getConversationId() {
         return conversationId;
     }
 
-    public void setConversationId(UUID conversationId) {
+    public void setConversationId(String conversationId) {
         this.conversationId = conversationId;
     }
 

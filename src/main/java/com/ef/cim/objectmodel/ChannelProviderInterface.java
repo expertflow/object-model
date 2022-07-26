@@ -1,7 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import com.ef.cim.objectmodel.common.Utils;
 import java.util.List;
 import javax.validation.constraints.NotBlank;
 import org.bson.types.ObjectId;
@@ -9,9 +8,10 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 
 public class ChannelProviderInterface {
-    @JsonSerialize(using = ToStringSerializer.class)
+
+
     @Id
-    private ObjectId id;
+    private String id;
     private String name;
     @DBRef
     private List<ChannelType> supportedChannelTypes;
@@ -20,14 +20,14 @@ public class ChannelProviderInterface {
     private List<AttributeSchema> channelProviderConfigSchema;
 
     public ChannelProviderInterface() {
-        this.id = new ObjectId();
+        this.id = Utils.getObjectId();
     }
 
-    public ObjectId getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(ObjectId id) {
+    public void setId(String id) {
         this.id = id;
     }
 

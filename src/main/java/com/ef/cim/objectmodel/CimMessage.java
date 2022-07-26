@@ -1,28 +1,28 @@
 package com.ef.cim.objectmodel;
 
-import java.util.UUID;
+import com.ef.cim.objectmodel.common.Utils;
 import javax.validation.Valid;
 
 public class CimMessage implements ICimMessage {
-    private final UUID id;
+    private final String id;
     @Valid
     private MessageHeader header;
     @Valid
     private MessageBody body;
 
     public CimMessage() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
     }
 
     // Constructor --> Args: header, body
     public CimMessage(MessageHeader header, MessageBody body) {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.header = header;
         this.body = body;
     }
 
     // Getters
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 

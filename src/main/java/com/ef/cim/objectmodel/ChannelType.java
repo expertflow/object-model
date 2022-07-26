@@ -1,7 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import javax.validation.constraints.NotBlank;
 import org.bson.types.ObjectId;
@@ -14,9 +13,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document(collection = "ChannelType")
 public class ChannelType implements Serializable {
-    @JsonSerialize(using = ToStringSerializer.class)
+
+
     @Id
-    private ObjectId id;
+    private String id;
     @Indexed(unique = true)
     @NotBlank
     private String name;
@@ -29,7 +29,7 @@ public class ChannelType implements Serializable {
      * interactive flag as {@code false}
      */
     public ChannelType() {
-        this.id = new ObjectId();
+        this.id = Utils.getObjectId();
         this.isInteractive = false;
     }
 
@@ -38,7 +38,7 @@ public class ChannelType implements Serializable {
      *
      * @return {@code UUID}
      */
-    public ObjectId getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -79,7 +79,7 @@ public class ChannelType implements Serializable {
     }
 
 
-    public void setId(ObjectId id) {
+    public void setId(String id) {
         this.id = id;
     }
 

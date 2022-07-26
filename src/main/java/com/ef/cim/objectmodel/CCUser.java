@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
@@ -13,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(value = "agents")
 public class CCUser implements Participant {
     @Id
-    private UUID id;
+    private String id;
     @NotNull
     @Valid
     private KeycloakUser keycloakUser;
@@ -38,11 +37,11 @@ public class CCUser implements Participant {
 
 
     @Override
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 

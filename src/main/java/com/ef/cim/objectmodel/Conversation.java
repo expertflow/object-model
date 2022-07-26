@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -10,12 +11,13 @@ import java.util.UUID;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.bson.types.ObjectId;
 
 @Getter
 @Setter
 @ToString
 public class Conversation implements Serializable {
-    private final UUID id;
+    private final String id;
     private Customer customer;
     private List<ConversationParticipant> participants;
     private TopicState state;
@@ -26,12 +28,12 @@ public class Conversation implements Serializable {
     private TopicMetadata metadata;
 
     public Conversation() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.participants = new ArrayList<>();
         this.metadata = new TopicMetadata();
     }
 
-    public Conversation(UUID topicId, TopicState state, ChannelSession channelSession) {
+    public Conversation(String topicId, TopicState state, ChannelSession channelSession) {
         this.id = topicId;
         this.customer = channelSession.getCustomer();
         this.state = state;

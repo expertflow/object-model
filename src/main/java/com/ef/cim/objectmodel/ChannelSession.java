@@ -1,12 +1,11 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 
@@ -19,7 +18,7 @@ import org.springframework.data.annotation.Id;
  */
 public class ChannelSession implements Participant {
     @Id
-    private UUID id;
+    private String id;
 
     //@JsonIgnore
     private String participantType;
@@ -35,8 +34,7 @@ public class ChannelSession implements Participant {
     private UndefinedObject customerPresence;
     @NotNull(message = "Is Active is Mandatory")
     private boolean isActive;
-    @NotBlank
-    private UUID conversationId;
+    private String conversationId;
     private ChannelSessionState state;
 
 
@@ -46,7 +44,7 @@ public class ChannelSession implements Participant {
      * session active flag to {@code false}
      */
     public ChannelSession() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.channel = new Channel();
         this.customer = new Customer();
         this.customerSuggestions = new ArrayList<Customer>();
@@ -56,7 +54,7 @@ public class ChannelSession implements Participant {
         this.participantType = "ChannelSession";
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -66,7 +64,7 @@ public class ChannelSession implements Participant {
      * @return {@code UUID}
      */
     @Override
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -206,7 +204,7 @@ public class ChannelSession implements Participant {
      *
      * @return conversationId
      */
-    public UUID getConversationId() {
+    public String getConversationId() {
         return conversationId;
     }
 
@@ -215,7 +213,7 @@ public class ChannelSession implements Participant {
      *
      * @param conversationId conversationId
      */
-    public void setConversationId(UUID conversationId) {
+    public void setConversationId(String conversationId) {
         this.conversationId = conversationId;
     }
 

@@ -1,22 +1,22 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.util.UUID;
 
 public class DeliveryNotification extends MessageBody {
-    private final UUID messageID;
+    private final String messageID;
     private DeliveryStatus status;
     private int reasonCode;
 
     // Constructor 1
     public DeliveryNotification(@JsonProperty("status") DeliveryStatus status) {
         super(MessageType.DELIVERYNOTIFICATION);
-        this.messageID = UUID.randomUUID();
+        this.messageID = Utils.getObjectId();
         this.status = status;
     }
 
     // Getters
-    public UUID getMessageID() {
+    public String getMessageID() {
         return this.messageID;
     }
 

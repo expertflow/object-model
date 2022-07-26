@@ -1,6 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import java.util.UUID;
+import com.ef.cim.objectmodel.common.Utils;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -15,7 +15,7 @@ public class ReasonCode {
     /**
      * The ID.
      */
-    private final UUID id;
+    private final String id;
     /**
      * The Name.
      */
@@ -29,7 +29,7 @@ public class ReasonCode {
      * Instantiates a new Reason code.
      */
     public ReasonCode() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
     }
 
     /**
@@ -39,7 +39,7 @@ public class ReasonCode {
      * @param type the type
      */
     public ReasonCode(String name, Enums.ReasonCodeType type) {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.name = name;
         this.type = type;
     }

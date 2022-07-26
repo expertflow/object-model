@@ -3,12 +3,10 @@ package com.ef.cim.objectmodel;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 import javax.validation.constraints.NotNull;
 
 public class KeycloakUser {
-    @NotNull
-    private UUID id;
+    private String id;
     @NotNull
     private String firstName;
     @NotNull
@@ -24,11 +22,11 @@ public class KeycloakUser {
         roles = new ArrayList<>();
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
