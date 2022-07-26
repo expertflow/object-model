@@ -2,10 +2,9 @@ package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
-import java.util.UUID;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import sun.nio.ch.Util;
+
 
 /**
  * A {@code ChannelConfig} object represents the configurations for a specific channel (e.g. mode,
