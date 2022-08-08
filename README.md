@@ -310,3 +310,7 @@ TaskStat
 Version 1.9.1
 
 added new messageType 'WrapUpMessage'
+
+=============================================================================================
+Version 1.9.8
+added CommentMessage, CommentType, ItemType and MessageType. All for Facebook connector
