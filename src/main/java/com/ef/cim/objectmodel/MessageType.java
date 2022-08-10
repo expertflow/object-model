@@ -20,5 +20,6 @@ public enum MessageType {
     RECEIPT,
     TEMPLATE,
     VOICE,
-    WRAPUP
+    WRAPUP,
+    COMMENT
 }
