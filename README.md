@@ -314,3 +314,6 @@ added new messageType 'WrapUpMessage'
 =============================================================================================
 Version 1.9.8
 added CommentMessage, CommentType, ItemType and MessageType. All for Facebook connector
+=============================================================================================
+Version 1.9.9
+added CommentMessage, CommentType, ItemType and MessageType. All for Facebook connector
