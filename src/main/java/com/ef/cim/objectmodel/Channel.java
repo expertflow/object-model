@@ -4,6 +4,7 @@ import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -23,6 +24,8 @@ public class Channel implements Serializable {
     @NotBlank(message = "serviceIdentifier can not be blank")
     @Indexed(unique = true)
     private String serviceIdentifier;
+    @NotNull
+    private boolean defaultOutbound;
     private Tenant tenant;
     @Valid
     private ChannelConfig channelConfig;
@@ -41,6 +44,7 @@ public class Channel implements Serializable {
         this.channelConfig = new ChannelConfig();
         this.channelConnector = new ChannelConnector();
         this.channelType = new ChannelType();
+        this.defaultOutbound = false;
     }
 
     public Channel(String name, String serviceIdentifier, ChannelConfig channelConfig,
@@ -184,6 +188,14 @@ public class Channel implements Serializable {
 
     public void setChannelType(ChannelType channelType) {
         this.channelType = channelType;
+    }
+
+    public boolean isDefaultOutbound() {
+        return defaultOutbound;
+    }
+
+    public void setDefaultOutbound(boolean defaultOutbound) {
+        this.defaultOutbound = defaultOutbound;
     }
 
     /***

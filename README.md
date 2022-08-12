@@ -317,3 +317,6 @@ added CommentMessage, CommentType, ItemType and MessageType. All for Facebook co
 =============================================================================================
 Version 1.9.9
 added CommentMessage, CommentType, ItemType and MessageType. All for Facebook connector
+=============================================================================================
+Version 1.10.0
+added 'defaultOutbound' attribute in Channel Class
