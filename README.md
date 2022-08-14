@@ -320,3 +320,7 @@ added CommentMessage, CommentType, ItemType and MessageType. All for Facebook co
 =============================================================================================
 Version 1.10.0
 added 'defaultOutbound' attribute in Channel Class
+=============================================================================================
+Version 1.10.1
+added 'AGENT_OUTBOUND' in MessageIntent
+removed 'channelTypeCode' from ChannelData
