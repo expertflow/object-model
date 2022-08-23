@@ -68,22 +68,13 @@ public class Channel implements Serializable {
     }
 
     /**
-     * Set's Id field of Chanel as UUID
+     * Set's id field of Chanel as UUID
      *
      * @param id UUID object
      */
     public void setId(String id) {
         this.id = id;
     }
-
-    /**
-     * Returns the type of the channel
-     *
-     * @return {@code ChannelType}
-     */
-    /** public ChannelType getType() {
-     return this.type;
-     }*/
 
     /**
      * Returns the name of the channel
@@ -104,15 +95,6 @@ public class Channel implements Serializable {
     }
 
     /**
-     * Returns the tenant of the channel
-     *
-     * @return {@code Tenant}
-     */
-    /** public Tenant getTenant() {
-     return this.tenant;
-     }*/
-
-    /**
      * Returns the service identifier of the channel
      *
      * @return {@code ServiceIdentifier}
@@ -120,15 +102,6 @@ public class Channel implements Serializable {
     public String getServiceIdentifier() {
         return this.serviceIdentifier;
     }
-
-    /**
-     * Sets the type of the channel
-     *
-     * @param type, object of type {@code ChannelType}
-     */
-    /** public void setType(ChannelType type) {
-     this.type = type;
-     }*/
 
     /**
      * Sets the service identifier of the channel
@@ -147,15 +120,6 @@ public class Channel implements Serializable {
     public ChannelConfig getChannelConfig() {
         return this.channelConfig;
     }
-
-    /**
-     * Sets the tenant of the channel
-     *
-     * @param tenant, object of type {@code Tenant}
-     */
-    /** public void setTenant(Tenant tenant) {
-     this.tenant = tenant;
-     }*/
 
     /**
      * Sets the configurations of the channel
@@ -204,14 +168,16 @@ public class Channel implements Serializable {
      */
     @Override
     public String toString() {
-        return "Channel{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", serviceIdentifier='" + serviceIdentifier + '\'' +
-                ", tenant=" + tenant +
-                ", channelConfig=" + channelConfig +
-                ", channelConnector=" + channelConnector +
-                ", channelType=" + channelType +
-                '}';
+        final StringBuilder sb = new StringBuilder("Channel{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", serviceIdentifier='").append(serviceIdentifier).append('\'');
+        sb.append(", defaultOutbound=").append(defaultOutbound);
+        sb.append(", tenant=").append(tenant);
+        sb.append(", channelConfig=").append(channelConfig);
+        sb.append(", channelConnector=").append(channelConnector);
+        sb.append(", channelType=").append(channelType);
+        sb.append('}');
+        return sb.toString();
     }
 }
