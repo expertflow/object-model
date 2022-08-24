@@ -327,6 +327,6 @@ removed 'channelTypeCode' from ChannelData
 =============================================================================================
 Version 1.10.2
 updated VoiceMessage Type
-added 'CALL_LEG_STARTED' and 'CALL_LEG_ENDED' in MessageIntent
+added 'CALL_LEG_STARTED' and 'CALL_LEG_ENDED' in MessageIntent and CimEventName
 removed 'START_VOICE' and 'END_VOICE'
 added 'STARTED' in Enums
