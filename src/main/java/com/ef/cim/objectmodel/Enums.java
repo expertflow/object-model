@@ -9,6 +9,10 @@ public class Enums {
      */
     public enum TaskStateName {
         /**
+         * Started task state name.
+         */
+        STARTED,
+        /**
          * Queued task state name.
          */
         QUEUED,

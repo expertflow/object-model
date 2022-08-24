@@ -324,3 +324,9 @@ added 'defaultOutbound' attribute in Channel Class
 Version 1.10.1
 added 'AGENT_OUTBOUND' in MessageIntent
 removed 'channelTypeCode' from ChannelData
+=============================================================================================
+Version 1.10.2
+updated VoiceMessage Type
+added 'CALL_LEG_STARTED' and 'CALL_LEG_ENDED' in MessageIntent
+removed 'START_VOICE' and 'END_VOICE'
+added 'STARTED' in Enums
