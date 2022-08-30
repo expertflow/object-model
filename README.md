@@ -324,3 +324,8 @@ added 'defaultOutbound' attribute in Channel Class
 Version 1.10.1
 added 'AGENT_OUTBOUND' in MessageIntent
 removed 'channelTypeCode' from ChannelData
+=============================================================================================
+Version 1.10.4
+updated ChannelSessionState in ChannelSession
+added ReasonCodeEnum
+added ChannelSessionStateEnum
