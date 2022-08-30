@@ -4,10 +4,12 @@ package com.ef.cim.objectmodel;
  * Contains all the enums used in the project.
  */
 public class Enums {
+
     /**
      * Names of a Task State.
      */
     public enum TaskStateName {
+        STARTED,
         /**
          * Queued task state name.
          */

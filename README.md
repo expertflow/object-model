@@ -329,3 +329,6 @@ Version 1.10.4
 updated ChannelSessionState in ChannelSession
 added ReasonCodeEnum
 added ChannelSessionStateEnum
+=============================================================================================
+Version 1.10.5
+added 'STARTED' in Enums
