@@ -21,6 +21,7 @@ import javax.validation.constraints.NotNull;
         @Type(value = UrlMessage.class, name = "URL"), @Type(value = StickerMessage.class, name = "STICKER"),
         @Type(value = ReceiptTemplateMessage.class, name = "RECEIPT"),@Type(value = WrapUpMessage.class, name = "WRAPUP"),
         @Type(value = TemplateMessage.class, name = "TEMPLATE"),
+        @Type(value = ActionMessageBody.class, name = "ACTION"),
         @Type(value = CommentMessage.class, name = "COMMENT")})
 public class MessageBody implements Serializable {
     @NotNull
