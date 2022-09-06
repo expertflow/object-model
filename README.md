@@ -332,3 +332,6 @@ added ChannelSessionStateEnum
 =============================================================================================
 Version 1.10.5
 added 'STARTED' in Enums
+=============================================================================================
+Version 1.10.9
+removed commentType from CommentMessage. Also deleted CommentType.java class
