@@ -362,3 +362,10 @@ removed commentType from CommentMessage. Also deleted CommentType.java class
 Version 1.11.1
 - updated attribute `channelSesson` to `channelSessonId` in `AgentOutboundDto`
 - removed `agentId` from `AgentOutboundDto`
+
+
+==============================================================================================
+
+Version 1.11.2
+- updated `AgentOutboundDto`
+- added `agentId` in `AgentOutboundDto`

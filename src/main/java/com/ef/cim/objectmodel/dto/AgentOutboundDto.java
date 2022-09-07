@@ -13,4 +13,5 @@ import lombok.ToString;
 @ToString
 public class AgentOutboundDto {
     private String channelSessionId;
+    private String agentId;
 }
