@@ -12,6 +12,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class AgentOutboundDto {
-    private String channelSession;
-    private String agent;
+    private String channelSessionId;
+    private String agentId;
 }

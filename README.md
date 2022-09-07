@@ -312,26 +312,60 @@ Version 1.9.1
 added new messageType 'WrapUpMessage'
 
 =============================================================================================
+
+
 Version 1.9.8
 added CommentMessage, CommentType, ItemType and MessageType. All for Facebook connector
+
+
 =============================================================================================
+
+
 Version 1.9.9
 added CommentMessage, CommentType, ItemType and MessageType. All for Facebook connector
+
+
 =============================================================================================
+
+
 Version 1.10.0
 added 'defaultOutbound' attribute in Channel Class
+
+
 =============================================================================================
+
+
 Version 1.10.1
 added 'AGENT_OUTBOUND' in MessageIntent
 removed 'channelTypeCode' from ChannelData
+
+
 =============================================================================================
+
 Version 1.10.4
 updated ChannelSessionState in ChannelSession
 added ReasonCodeEnum
 added ChannelSessionStateEnum
+
+
 =============================================================================================
+
 Version 1.10.5
 added 'STARTED' in Enums
 =============================================================================================
+
 Version 1.10.9
 removed commentType from CommentMessage. Also deleted CommentType.java class
+
+=============================================================================================
+
+Version 1.11.1
+- updated attribute `channelSesson` to `channelSessonId` in `AgentOutboundDto`
+- removed `agentId` from `AgentOutboundDto`
+
+
+==============================================================================================
+
+Version 1.11.2
+- updated `AgentOutboundDto`
+- added `agentId` in `AgentOutboundDto`
