@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel;
 
 public enum CimEventName {
+    AGENT_OUTBOUND,
     ACTION_MESSAGE,
     CUSTOMER_MESSAGE,
     AGENT_MESSAGE,

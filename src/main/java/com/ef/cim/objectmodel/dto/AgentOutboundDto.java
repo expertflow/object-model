@@ -1,7 +1,5 @@
 package com.ef.cim.objectmodel.dto;
 
-import com.ef.cim.objectmodel.CCUser;
-import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +11,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class AgentSubUnSubDTO implements Serializable {
-    private CCUser ccUser;
-    private String reason;
+public class AgentOutboundDto {
+    private String channelSession;
+    private String agent;
 }
