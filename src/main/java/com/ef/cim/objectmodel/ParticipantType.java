@@ -1,7 +1,7 @@
 package com.ef.cim.objectmodel;
 
 public enum ParticipantType {
-    CONTROLLER,
+    MONITOR,
     CUSTOMER,
     AGENT,
     BOT,
