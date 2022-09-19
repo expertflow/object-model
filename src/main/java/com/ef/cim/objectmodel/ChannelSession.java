@@ -47,7 +47,7 @@ public class ChannelSession implements Participant {
         this.id = Utils.getObjectId();
         this.channel = new Channel();
         this.customer = new Customer();
-        this.customerSuggestions = new ArrayList<Customer>();
+        this.customerSuggestions = new ArrayList<>();
         this.channelData = new ChannelData();
         this.customerPresence = new UndefinedObject();
         this.isActive = true;
@@ -71,7 +71,7 @@ public class ChannelSession implements Participant {
     @Override
     @JsonIgnore
     public String getDisplayName() {
-        return "ChannelSession:" + this.id.toString();
+        return "ChannelSession:" + this.id;
     }
 
     /**
