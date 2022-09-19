@@ -4,10 +4,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 import javax.validation.Valid;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString
 public class ButtonMessage extends StructuredMessage {
     @Valid
-    private List<Button> buttons;
+    private List<Button> buttons = new ArrayList<>();
     private ButtonMessageType buttonMessageType;
 
     /**
@@ -15,33 +21,13 @@ public class ButtonMessage extends StructuredMessage {
      */
     public ButtonMessage(@JsonProperty("buttonMessageType") ButtonMessageType buttonMessageType) {
         super(MessageType.BUTTON);
-        buttons = new ArrayList<>();
         this.buttonMessageType = buttonMessageType;
     }
 
-    public ButtonMessage(@JsonProperty("buttons") List<Button> buttons,
-                         @JsonProperty("buttonMessageType") ButtonMessageType buttonMessageType) {
+    public ButtonMessage(List<Button> buttons, ButtonMessageType buttonMessageType) {
         super(MessageType.BUTTON);
         this.buttons = buttons;
         this.buttonMessageType = buttonMessageType;
-    }
-
-    /**
-     * Returns the list of buttons
-     *
-     * @return {@code List<Button>}
-     */
-    public List<Button> getButtons() {
-        return this.buttons;
-    }
-
-    /**
-     * Sets the list of buttons
-     *
-     * @param buttons, object of type {@code List<Button>}
-     */
-    public void setButtons(List<Button> buttons) {
-        this.buttons = buttons;
     }
 
     /**
@@ -51,7 +37,7 @@ public class ButtonMessage extends StructuredMessage {
      */
     public void addButton(Button button) {
         if (this.buttons == null) {
-            this.buttons = new ArrayList<Button>();
+            this.buttons = new ArrayList<>();
         }
 
         this.buttons.add(button);
@@ -77,30 +63,5 @@ public class ButtonMessage extends StructuredMessage {
         if (this.buttons != null) {
             this.buttons.remove(index);
         }
-    }
-
-    public ButtonMessageType getButtonMessageType() {
-        return this.buttonMessageType;
-    }
-
-
-    public void setButtonMessageType(ButtonMessageType buttonMessageType) {
-        this.buttonMessageType = buttonMessageType;
-    }
-
-    /**
-     * Converts the {@code ButtonMessage} object to string.
-     *
-     * @return {@code String}
-     */
-    @Override
-    public String toString() {
-        return "ButtonMessage{" +
-                "buttons=" + buttons +
-                ", buttonMessageType=" + buttonMessageType +
-                ", type=" + type +
-                ", markdownText='" + markdownText + '\'' +
-                ", additionalDetails=" + additionalDetails +
-                '}';
     }
 }
