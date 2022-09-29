@@ -6,5 +6,6 @@ public enum MessageIntent {
     END_CHAT,
     START_VOICE,
     END_VOICE,
-    AGENT_OUTBOUND
+    AGENT_OUTBOUND,
+    NETWORK_DISCONNECT
 }

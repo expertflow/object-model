@@ -369,3 +369,8 @@ Version 1.11.1
 Version 1.11.2
 - updated `AgentOutboundDto`
 - added `agentId` in `AgentOutboundDto`
+
+==============================================================================================
+
+Version 1.11.7
+- added `NETWORK_DISCONNECT` in MessageIntent Enum
