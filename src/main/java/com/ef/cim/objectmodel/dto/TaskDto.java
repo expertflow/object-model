@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel.dto;
 
 import com.ef.cim.objectmodel.ChannelSession;
+import com.ef.cim.objectmodel.Enums;
 import com.ef.cim.objectmodel.MediaRoutingDomain;
 import com.ef.cim.objectmodel.TaskState;
 import java.io.Serializable;
@@ -41,6 +42,10 @@ public class TaskDto implements Serializable {
      * The State.
      */
     private TaskState state;
+    /**
+     * The Type.
+     */
+    private Enums.TaskType type;
     /**
      * The Assigned to.
      */
