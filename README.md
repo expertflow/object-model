@@ -374,3 +374,8 @@ Version 1.11.2
 
 Version 1.11.7
 - added `NETWORK_DISCONNECT` in MessageIntent Enum
+
+==============================================================================================
+
+Version 1.11.9
+- added `CONSULT_TRANSFERRED` and `CONSULT_CONFERENCED` in NotificationType
