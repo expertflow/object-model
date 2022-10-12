@@ -4,12 +4,19 @@ package com.ef.cim.objectmodel;
  * Contains all the enums used in the project.
  */
 public class Enums {
-    public enum TaskType {
+    public enum TaskTypeDirection {
         CONSULT,
         CONSULT_TRANSFER,
         CONSULT_CONFERENCE,
+        DIRECT_TRANSFER,
+        DIRECT_CONFERENCE,
         INBOUND,
         OUTBOUND
+    }
+
+    public enum TaskTypeMode {
+        AGENT,
+        QUEUE
     }
 
     /**

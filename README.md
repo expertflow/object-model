@@ -379,3 +379,8 @@ Version 1.11.7
 
 Version 1.11.9
 - added `CONSULT_TRANSFERRED` and `CONSULT_CONFERENCED` in NotificationType
+
+==============================================================================================
+
+Version 1.12.0
+- refer to the story http://project.expertflow.com:8080/browse/CIM-7418 and it's subtasks
