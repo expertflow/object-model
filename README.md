@@ -384,3 +384,9 @@ Version 1.11.9
 
 Version 1.12.0
 - refer to the story http://project.expertflow.com:8080/browse/CIM-7418 and it's subtasks
+
+==============================================================================================
+
+Version 1.12.1
+- added `DIRECT_TRANSFER` and `NO_AGENT_AVAILABLE` in NotificationType
+- updated `CONSULT_TRANSFERRED` to `CONSULT_TRANSFER` and `CONSULT_CONFERENCED` to `CONSULT_CONFERENCE`
