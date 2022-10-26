@@ -398,3 +398,8 @@ Version 1.12.0
 Version 1.12.1
 - added `DIRECT_TRANSFER` and `NO_AGENT_AVAILABLE` in NotificationType
 - updated `CONSULT_TRANSFERRED` to `CONSULT_TRANSFER` and `CONSULT_CONFERENCED` to `CONSULT_CONFERENCE`
+
+==============================================================================================
+
+Version 1.12.2
+- added `managedByRe` field in MediaRoutingDomain Object
