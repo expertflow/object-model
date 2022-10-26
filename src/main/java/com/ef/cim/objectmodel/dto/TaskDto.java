@@ -3,6 +3,7 @@ package com.ef.cim.objectmodel.dto;
 import com.ef.cim.objectmodel.ChannelSession;
 import com.ef.cim.objectmodel.MediaRoutingDomain;
 import com.ef.cim.objectmodel.TaskState;
+import com.ef.cim.objectmodel.TaskType;
 import java.io.Serializable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -41,6 +42,10 @@ public class TaskDto implements Serializable {
      * The State.
      */
     private TaskState state;
+    /**
+     * The Type.
+     */
+    private TaskType type;
     /**
      * The Assigned to.
      */

@@ -4,6 +4,21 @@ package com.ef.cim.objectmodel;
  * Contains all the enums used in the project.
  */
 public class Enums {
+    public enum TaskTypeDirection {
+        CONSULT,
+        CONSULT_TRANSFER,
+        CONSULT_CONFERENCE,
+        DIRECT_TRANSFER,
+        DIRECT_CONFERENCE,
+        INBOUND,
+        OUTBOUND
+    }
+
+    public enum TaskTypeMode {
+        AGENT,
+        QUEUE
+    }
+
     /**
      * Names of a Task State.
      */
@@ -69,7 +84,11 @@ public class Enums {
         /**
          * Agent logout task state reason code.
          */
-        AGENT_LOGOUT
+        AGENT_LOGOUT,
+        /**
+         * Transferred task state reason code.
+         */
+        TRANSFERRED
     }
 
     /**

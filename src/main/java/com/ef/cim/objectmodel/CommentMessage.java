@@ -8,7 +8,6 @@ public class CommentMessage extends MessageBody{
 
     @NotNull(message = "postId is mandatory")
     private String postId;
-    private CommentType commentType;
     private Attachment attachment;
     @NotNull(message = "itemType is mandatory")
     private ItemType itemType;
@@ -21,10 +20,6 @@ public class CommentMessage extends MessageBody{
     // Getters
     public String getPostId() {
         return postId;
-    }
-
-    public CommentType getCommentType() {
-        return commentType;
     }
 
     public Attachment getAttachment() {
@@ -42,10 +37,6 @@ public class CommentMessage extends MessageBody{
     public void setPostId(String postId) {
         this.postId = postId;
     }
-    public void setCommentType(CommentType commentType) {
-        this.commentType = commentType;
-    }
-
     public void setAttachment(Attachment attachment) {
         this.attachment = attachment;
     }
@@ -54,7 +45,6 @@ public class CommentMessage extends MessageBody{
     public String toString() {
         return "CommentMessage{" +
                 "postId='" + postId + '\'' +
-                ", commentType=" + commentType +
                 ", attachment=" + attachment +
                 ", itemType=" + itemType +
                 ", type=" + type +

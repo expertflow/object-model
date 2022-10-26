@@ -12,7 +12,7 @@ import org.springframework.data.annotation.Id;
 /**
  * A {@code ChannelSession} object represents a communication Session associated with a particular
  * channel for a customer. If there are 3 customers conversing on lets say the 'whatsapp' channel,
- * each customer will have their own channel session started. Likewise if there is a single customer
+ * each customer will have their own channel session started.Likewise, if there is a single customer
  * using more than one channels e.g. whatsapp and web, two channel sessions associated with the two
  * channels will be started for this customer.
  */
@@ -47,7 +47,7 @@ public class ChannelSession implements Participant {
         this.id = Utils.getObjectId();
         this.channel = new Channel();
         this.customer = new Customer();
-        this.customerSuggestions = new ArrayList<Customer>();
+        this.customerSuggestions = new ArrayList<>();
         this.channelData = new ChannelData();
         this.customerPresence = new UndefinedObject();
         this.isActive = true;
@@ -71,7 +71,7 @@ public class ChannelSession implements Participant {
     @Override
     @JsonIgnore
     public String getDisplayName() {
-        return "ChannelSession:" + this.id.toString();
+        return "ChannelSession:" + this.id;
     }
 
     /**
@@ -291,18 +291,19 @@ public class ChannelSession implements Participant {
      */
     @Override
     public String toString() {
-        return "ChannelSession{" +
-                "id=" + id +
-                ", participantType='" + participantType + '\'' +
-                ", channel=" + channel +
-                ", customer=" + customer +
-                ", customerSuggestions=" + customerSuggestions +
-                ", channelData=" + channelData +
-                ", latestIntent='" + latestIntent + '\'' +
-                ", customerPresence=" + customerPresence +
-                ", isActive=" + isActive +
-                ", conversationId=" + conversationId +
-                ", state=" + state +
-                '}';
+        final StringBuilder sb = new StringBuilder("ChannelSession{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", participantType='").append(participantType).append('\'');
+        sb.append(", channel=").append(channel);
+        sb.append(", customer=").append(customer);
+        sb.append(", customerSuggestions=").append(customerSuggestions);
+        sb.append(", channelData=").append(channelData);
+        sb.append(", latestIntent='").append(latestIntent).append('\'');
+        sb.append(", customerPresence=").append(customerPresence);
+        sb.append(", isActive=").append(isActive);
+        sb.append(", conversationId='").append(conversationId).append('\'');
+        sb.append(", state=").append(state);
+        sb.append('}');
+        return sb.toString();
     }
 }

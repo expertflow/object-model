@@ -244,7 +244,7 @@ Version 1.8.1
 
 -- Add VOICE in MessageType enum
 
--- Add START_VIOCE & END_VOICE in MessageIntent enum
+-- Add START_VOICE & END_VOICE in MessageIntent enum
 
 =========================================================================================
 
@@ -287,7 +287,7 @@ Version 1.8.7
 Version 1.8.8
 
 
--- Getter Setters added in ConversationMontior
+-- Getter Setters added in ConversationMonitor
 
 -- Setter added for id in ConversationParticipant
 
@@ -312,21 +312,89 @@ Version 1.9.1
 added new messageType 'WrapUpMessage'
 
 =============================================================================================
+
+
 Version 1.9.8
 added CommentMessage, CommentType, ItemType and MessageType. All for Facebook connector
+
+
 =============================================================================================
+
+
 Version 1.9.9
 added CommentMessage, CommentType, ItemType and MessageType. All for Facebook connector
+
+
 =============================================================================================
+
+
 Version 1.10.0
 added 'defaultOutbound' attribute in Channel Class
+
+
 =============================================================================================
+
+
 Version 1.10.1
 added 'AGENT_OUTBOUND' in MessageIntent
 removed 'channelTypeCode' from ChannelData
+
 =============================================================================================
+
 Version 1.10.2
 updated VoiceMessage Type
 added 'CALL_LEG_STARTED' and 'CALL_LEG_ENDED' in MessageIntent and CimEventName
 removed 'START_VOICE' and 'END_VOICE'
 added 'STARTED' in Enums
+
+
+=============================================================================================
+
+Version 1.10.4
+updated ChannelSessionState in ChannelSession
+added ReasonCodeEnum
+added ChannelSessionStateEnum
+
+
+=============================================================================================
+
+Version 1.10.5
+added 'STARTED' in Enums
+=============================================================================================
+
+Version 1.10.9
+removed commentType from CommentMessage. Also deleted CommentType.java class
+
+=============================================================================================
+
+Version 1.11.1
+- updated attribute `channelSesson` to `channelSessonId` in `AgentOutboundDto`
+- removed `agentId` from `AgentOutboundDto`
+
+
+==============================================================================================
+
+Version 1.11.2
+- updated `AgentOutboundDto`
+- added `agentId` in `AgentOutboundDto`
+
+==============================================================================================
+
+Version 1.11.7
+- added `NETWORK_DISCONNECT` in MessageIntent Enum
+
+==============================================================================================
+
+Version 1.11.9
+- added `CONSULT_TRANSFERRED` and `CONSULT_CONFERENCED` in NotificationType
+
+==============================================================================================
+
+Version 1.12.0
+- refer to the story http://project.expertflow.com:8080/browse/CIM-7418 and it's subtasks
+
+==============================================================================================
+
+Version 1.12.1
+- added `DIRECT_TRANSFER` and `NO_AGENT_AVAILABLE` in NotificationType
+- updated `CONSULT_TRANSFERRED` to `CONSULT_TRANSFER` and `CONSULT_CONFERENCED` to `CONSULT_CONFERENCE`

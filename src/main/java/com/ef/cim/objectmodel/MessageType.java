@@ -2,6 +2,7 @@ package com.ef.cim.objectmodel;
 
 public enum MessageType {
     ACTIVITY,
+    ACTION,
     NOTIFICATION,
     PLAIN,
     BUTTON,

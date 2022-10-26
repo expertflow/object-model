@@ -1,7 +1,6 @@
 package com.ef.cim.objectmodel.dto;
 
-import com.ef.cim.objectmodel.ConversationParticipant;
-import java.io.Serializable;
+import com.ef.cim.objectmodel.TaskType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +12,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class AgentSubUnSubDTO implements Serializable {
-    private ConversationParticipant agentParticipant;
-    private String reason;
+public class NoAgentAvailableDto {
+    private TaskType requestType;
 }
