@@ -403,3 +403,8 @@ Version 1.12.1
 
 Version 1.12.2
 - added `managedByRe` field in MediaRoutingDomain Object
+
+==============================================================================================
+
+Version 1.12.3
+- set `managedByRe` field true by default in MediaRoutingDomain Object

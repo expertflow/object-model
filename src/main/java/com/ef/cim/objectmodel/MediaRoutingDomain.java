@@ -48,7 +48,7 @@ public class MediaRoutingDomain implements Serializable {
     /**
      * The Managed by re.
      */
-    private boolean managedByRe;
+    private boolean managedByRe = true;
 
     @Override
     public boolean equals(Object o) {
