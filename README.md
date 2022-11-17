@@ -408,3 +408,9 @@ Version 1.12.2
 
 Version 1.12.3
 - set `managedByRe` field true by default in MediaRoutingDomain Object
+
+==============================================================================================
+
+Version 1.12.4
+- `CallLegStartedDto` added
+- `CallLegEndedDto` added
