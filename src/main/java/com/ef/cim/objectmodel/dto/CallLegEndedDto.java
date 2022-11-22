@@ -16,6 +16,7 @@ import lombok.ToString;
 @ToString
 public class CallLegEndedDto {
     private String leg;
+    private String channelSessionId;
     private Map<String, Object> dialog;
     private KeycloakUser agent;
     private Customer customer;
