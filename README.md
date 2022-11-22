@@ -414,3 +414,8 @@ Version 1.12.3
 Version 1.12.4
 - `CallLegStartedDto` added
 - `CallLegEndedDto` added
+
+==============================================================================================
+
+Version 1.12.5
+- `Direction` added in `ChannelSession` and `Conversation`
