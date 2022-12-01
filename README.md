@@ -419,3 +419,15 @@ Version 1.12.4
 
 Version 1.12.5
 - `Direction` added in `ChannelSession` and `Conversation`
+
+==============================================================================================
+
+Version 1.12.6
+ 
+ Changes in Message Header
+   - removed `channelSession`
+   - updated `sender` dataType to `Sender`
+   - added `channelSessionId` `conversationId` and `customer`
+ 
+ Changes in CIM Event 
+   - added `eventEmitter` and `channelSession`
