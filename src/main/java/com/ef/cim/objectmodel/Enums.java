@@ -23,6 +23,9 @@ public class Enums {
      * Names of a Task State.
      */
     public enum TaskStateName {
+        /**
+         * Started task state name.
+         */
         STARTED,
         /**
          * Queued task state name.

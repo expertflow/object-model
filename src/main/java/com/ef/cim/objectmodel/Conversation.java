@@ -7,11 +7,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.bson.types.ObjectId;
 
 @Getter
 @Setter
@@ -21,6 +19,7 @@ public class Conversation implements Serializable {
     private Customer customer;
     private List<ConversationParticipant> participants;
     private TopicState state;
+    private Direction conversationDirection;
     private ChannelSession channelSession;
     private Timestamp creationTime;
     private Timestamp endTime;
@@ -38,6 +37,7 @@ public class Conversation implements Serializable {
         this.customer = channelSession.getCustomer();
         this.state = state;
         this.channelSession = channelSession;
+        this.conversationDirection = channelSession.getChannelSessionDirection();
         this.creationTime = new Timestamp(System.currentTimeMillis());
         this.metadata = new TopicMetadata(channelSession);
         this.participants = new ArrayList<>();

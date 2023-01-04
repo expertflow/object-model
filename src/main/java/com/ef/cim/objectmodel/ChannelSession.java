@@ -36,6 +36,7 @@ public class ChannelSession implements Participant {
     private boolean isActive;
     private String conversationId;
     private ChannelSessionState state;
+    private Direction channelSessionDirection;
 
 
     /**
@@ -220,10 +221,6 @@ public class ChannelSession implements Participant {
     public String getParticipantType() {
         return participantType;
     }
-//
-//    public void setParticipantType(String participantType) {
-//        this.participantType = participantType;
-//    }
 
     /**
      * Adds a suggested customer to the list of customer suggestions
@@ -268,6 +265,14 @@ public class ChannelSession implements Participant {
         this.state = state;
     }
 
+    public Direction getChannelSessionDirection() {
+        return channelSessionDirection;
+    }
+
+    public void setChannelSessionDirection(Direction channelSessionDirection) {
+        this.channelSessionDirection = channelSessionDirection;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -303,6 +308,7 @@ public class ChannelSession implements Participant {
         sb.append(", isActive=").append(isActive);
         sb.append(", conversationId='").append(conversationId).append('\'');
         sb.append(", state=").append(state);
+        sb.append(", direction=").append(channelSessionDirection);
         sb.append('}');
         return sb.toString();
     }

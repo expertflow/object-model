@@ -244,7 +244,7 @@ Version 1.8.1
 
 -- Add VOICE in MessageType enum
 
--- Add START_VIOCE & END_VOICE in MessageIntent enum
+-- Add START_VOICE & END_VOICE in MessageIntent enum
 
 =========================================================================================
 
@@ -287,7 +287,7 @@ Version 1.8.7
 Version 1.8.8
 
 
--- Getter Setters added in ConversationMontior
+-- Getter Setters added in ConversationMonitor
 
 -- Setter added for id in ConversationParticipant
 
@@ -338,6 +338,14 @@ added 'defaultOutbound' attribute in Channel Class
 Version 1.10.1
 added 'AGENT_OUTBOUND' in MessageIntent
 removed 'channelTypeCode' from ChannelData
+
+=============================================================================================
+
+Version 1.10.2
+updated VoiceMessage Type
+added 'CALL_LEG_STARTED' and 'CALL_LEG_ENDED' in MessageIntent and CimEventName
+removed 'START_VOICE' and 'END_VOICE'
+added 'STARTED' in Enums
 
 
 =============================================================================================
@@ -390,3 +398,24 @@ Version 1.12.0
 Version 1.12.1
 - added `DIRECT_TRANSFER` and `NO_AGENT_AVAILABLE` in NotificationType
 - updated `CONSULT_TRANSFERRED` to `CONSULT_TRANSFER` and `CONSULT_CONFERENCED` to `CONSULT_CONFERENCE`
+
+==============================================================================================
+
+Version 1.12.2
+- added `managedByRe` field in MediaRoutingDomain Object
+
+==============================================================================================
+
+Version 1.12.3
+- set `managedByRe` field true by default in MediaRoutingDomain Object
+
+==============================================================================================
+
+Version 1.12.4
+- `CallLegStartedDto` added
+- `CallLegEndedDto` added
+
+==============================================================================================
+
+Version 1.12.5
+- `Direction` added in `ChannelSession` and `Conversation`

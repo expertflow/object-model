@@ -4,8 +4,10 @@ public enum MessageIntent {
     NONE,
     START_CHAT,
     END_CHAT,
+    CALL_LEG_STARTED,
+    CALL_LEG_ENDED,
+    AGENT_OUTBOUND,
     START_VOICE,
     END_VOICE,
-    AGENT_OUTBOUND,
     NETWORK_DISCONNECT
 }
