@@ -419,3 +419,9 @@ Version 1.12.4
 
 Version 1.12.5
 - `Direction` added in `ChannelSession` and `Conversation`
+
+==============================================================================================
+
+Version 1.12.7
+- `reasonCode` added in `CallLegStartedDto`
+- `FORCE_CLOSED` added in `TaskStateReasonCode`

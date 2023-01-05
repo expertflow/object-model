@@ -88,7 +88,8 @@ public class Enums {
         /**
          * Transferred task state reason code.
          */
-        TRANSFERRED
+        TRANSFERRED,
+        FORCE_CLOSED
     }
 
     /**

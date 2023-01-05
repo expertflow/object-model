@@ -20,4 +20,5 @@ public class CallLegStartedDto {
     private Map<String, Object> dialog;
     private KeycloakUser agent;
     private Customer customer;
+    private String reasonCode;
 }
