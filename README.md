@@ -425,3 +425,9 @@ Version 1.12.5
 Version 1.12.7
 - `reasonCode` added in `CallLegStartedDto`
 - `FORCE_CLOSED` added in `TaskStateReasonCode`
+
+==============================================================================================
+
+Version 1.12.8
+- `constructor` updated in `DeliveryNotification`
+- `PENDING` removed from `DeliveryStatus`
