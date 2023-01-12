@@ -431,3 +431,9 @@ Version 1.12.7
 Version 1.12.8
 - `constructor` updated in `DeliveryNotification`
 - `PENDING` removed from `DeliveryStatus`
+
+==============================================================================================
+
+Version 1.13.0
+- `constructor` updated in `CimMessage`
+- `Setter` added for `messageId` in `DeliveryNotification`

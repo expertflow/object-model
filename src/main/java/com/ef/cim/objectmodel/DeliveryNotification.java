@@ -3,7 +3,7 @@ package com.ef.cim.objectmodel;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeliveryNotification extends MessageBody {
-    private final String messageId;
+    private String messageId;
     private DeliveryStatus status;
     private int reasonCode;
 
@@ -17,6 +17,10 @@ public class DeliveryNotification extends MessageBody {
     // Getters
     public String getMessageId() {
         return this.messageId;
+    }
+
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
     }
 
     public DeliveryStatus getStatus() {
