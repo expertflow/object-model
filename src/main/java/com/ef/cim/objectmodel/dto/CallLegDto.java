@@ -14,7 +14,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class CallLegStartedDto {
+public class CallLegDto {
     private String leg;
     private String channelSessionId;
     private Map<String, Object> dialog;
