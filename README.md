@@ -437,3 +437,8 @@ Version 1.12.8
 Version 1.13.0
 - `constructor` updated in `CimMessage`
 - `Setter` added for `messageId` in `DeliveryNotification`
+
+==============================================================================================
+
+Version 1.13.2
+- `constructor` updated in `DeliveryNotification`
