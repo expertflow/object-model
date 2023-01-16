@@ -16,7 +16,6 @@ public class CimEvent implements Serializable {
     private Object data;
 
     public CimEvent() {
-
         this.id = Utils.getObjectId();
     }
 
