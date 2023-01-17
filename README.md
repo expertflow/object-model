@@ -442,3 +442,8 @@ Version 1.13.0
 
 Version 1.13.2
 - `constructor` updated in `DeliveryNotification`
+  
+==============================================================================================
+
+Version 1.13.3
+- `@JsonIgnore` added in `displayName` method in KeycloakUser
