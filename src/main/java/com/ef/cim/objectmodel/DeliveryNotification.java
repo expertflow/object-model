@@ -8,7 +8,7 @@ public class DeliveryNotification extends MessageBody {
     private int reasonCode;
 
     // Constructor 1
-    public DeliveryNotification(String messageId, @JsonProperty("status") DeliveryStatus status) {
+    public DeliveryNotification(@JsonProperty("messageId") String messageId, @JsonProperty("status") DeliveryStatus status) {
         super(MessageType.DELIVERYNOTIFICATION);
         this.messageId = messageId;
         this.status = status;

@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +40,8 @@ public class KeycloakUser {
         return this.roles.remove(role);
     }
 
-    public String getDisplayName() {
+    @JsonIgnore
+    public String displayName() {
         if (!StringUtils.isBlank(firstName) && !StringUtils.isBlank(lastName)) {
             return firstName + " " + lastName;
         } else if (!StringUtils.isBlank(firstName)) {
