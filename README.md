@@ -447,3 +447,11 @@ Version 1.13.2
 
 Version 1.13.3
 - `@JsonIgnore` added in `displayName` method in KeycloakUser
+
+==============================================================================================
+
+Version 1.13.4
+- `constructor` updated in `CutomMessage`
+- `TYPING_STARTED` and `TYPING_STOPPED` added in `NotificationType`
+- `TYPING_INDICATOR` added in `CimEventName`
+- `TWITTER` added in `ChannelTypeEnum`

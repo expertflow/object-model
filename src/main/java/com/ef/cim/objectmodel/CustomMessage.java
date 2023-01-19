@@ -4,10 +4,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class CustomMessage extends MessageBody {
+
     private JsonNode jsonNode;
 
-    public CustomMessage(@JsonProperty("type") MessageType type) {
-        super(type);
+    public CustomMessage() {
+        super(MessageType.CUSTOM);
     }
 
     public JsonNode getJsonNode() {

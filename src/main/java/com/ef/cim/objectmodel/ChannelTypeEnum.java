@@ -7,5 +7,6 @@ public enum ChannelTypeEnum {
     SMS,
     WEB,
     VOICE,
-    GENERIC
+    GENERIC,
+    TWITTER
 }
