@@ -14,5 +14,6 @@ public enum NotificationType {
     DIRECT_TRANSFER,
     NO_AGENT_AVAILABLE,
     TYPING_STARTED,
-    TYPING_STOPPED
+    TYPING_STOPPED,
+    AGENT_RESERVED
 }
