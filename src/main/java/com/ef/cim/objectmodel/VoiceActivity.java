@@ -15,12 +15,14 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class VoiceActivity {
+
     private Timestamp startTime;
     private Timestamp endTime;
     private List<CallLeg> callLegs = new ArrayList<>();
 
     public CimEvent toCimEvent(String conversationId) {
-        CimEvent cimEvent = new CimEvent(this, CimEventName.VOICE_ACTIVITY, CimEventType.ACTIVITY, conversationId);
+        CimEvent cimEvent =
+                new CimEvent(this, CimEventName.VOICE_ACTIVITY, CimEventType.ACTIVITY, conversationId, null, null);
         cimEvent.setTimestamp(this.endTime);
         return cimEvent;
     }

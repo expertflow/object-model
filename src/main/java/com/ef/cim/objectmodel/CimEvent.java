@@ -5,8 +5,6 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 public class CimEvent implements Serializable {
-
-
     private String id;
     private CimEventName name;
     private CimEventType type;
