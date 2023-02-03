@@ -21,6 +21,12 @@ public class CimMessage implements ICimMessage {
         this.body = body;
     }
 
+    public CimMessage(String id, MessageHeader header, MessageBody body) {
+        this.id = id;
+        this.header = header;
+        this.body = body;
+    }
+
     // Getters
     public String getId() {
         return this.id;
