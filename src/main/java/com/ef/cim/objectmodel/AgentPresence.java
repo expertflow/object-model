@@ -28,6 +28,10 @@ public class AgentPresence implements Serializable {
      * The Agent mrd states.
      */
     private List<AgentMrdState> agentMrdStates;
+    /**
+     * The Agent Login Time.
+     */
+    private Timestamp agentLoginTime;
 
     /**
      * Default constructor.
@@ -48,6 +52,24 @@ public class AgentPresence implements Serializable {
         this.state = state;
         this.stateChangeTime = new Timestamp(System.currentTimeMillis());
         this.agentMrdStates = agentMrdStates;
+    }
+
+    /**
+     * Gets Agent Login Time.
+     *
+     * @return
+     */
+    public Timestamp getAgentLoginTime() {
+        return agentLoginTime;
+    }
+
+    /**
+     * Sets Agent login time.
+     *
+     * @param agentLoginTime
+     */
+    public void setAgentLoginTime(Timestamp agentLoginTime) {
+        this.agentLoginTime = agentLoginTime;
     }
 
     /**
