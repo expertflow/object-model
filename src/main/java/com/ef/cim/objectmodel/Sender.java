@@ -17,6 +17,8 @@ public class Sender {
     @NotBlank
     private String id;
     @NotBlank
+    private Enums.SenderType type;
+    @NotBlank
     private String senderName;
     private JsonNode additionalDetail;
 

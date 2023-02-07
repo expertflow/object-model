@@ -489,3 +489,13 @@ Version 1.13.4
 - `TYPING_STARTED` and `TYPING_STOPPED` added in `NotificationType`
 - `TYPING_INDICATOR` added in `CimEventName`
 - `TWITTER` added in `ChannelTypeEnum`
+
+==============================================================================================
+
+Version 1.13.8
+- `SenderType` added in `Enums`
+
+==============================================================================================
+
+Version 1.13.9
+- `type` added in `Sender`
