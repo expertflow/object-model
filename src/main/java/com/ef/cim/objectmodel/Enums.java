@@ -238,6 +238,7 @@ public class Enums {
         BOT,
         CUSTOMER,
         APP,
-        CONNECTOR
+        CONNECTOR,
+        SYSTEM
     }
 }
