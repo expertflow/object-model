@@ -8,5 +8,6 @@ public enum ChannelTypeEnum {
     WEB,
     VOICE,
     GENERIC,
-    TWITTER
+    TWITTER,
+    TELEGRAM
 }

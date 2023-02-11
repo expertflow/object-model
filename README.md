@@ -504,3 +504,9 @@ Version 1.13.9
 
 Version 1.14.0
 - `SYSTEM` added in `SenderType`
+
+==============================================================================================
+
+Version 1.14.1
+- updated validation on `SenderType`
+- `TELEGRAM` added in `ChannelTypeEnum`
