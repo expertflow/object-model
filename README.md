@@ -1,9 +1,11 @@
 # object-model
+
 CIM object-model repository
 
 Object-Model version updated to 1.4.9
 
-Previous Structured Messages have been taken out and new Structured Message model is introduced in this version.
+Previous Structured Messages have been taken out and new Structured Message model is introduced in
+this version.
 Please refer to the Object-Model Diagram to see the objects in details.
 Below is the list of new added objects.
 
@@ -22,9 +24,6 @@ Below is the list of new added objects.
 - ButtonMessage
 - CarouselMessage
 - CustomMessage
-
-
-
 
 Version 1.4.8:
 
@@ -46,11 +45,9 @@ Version 1.5.0:
 
 -- `CREATED`  and `INACTIVE` states added inTopicState enum
 
-
 ===================================================================
 
 Version 1.5.1:
-
 
 -- renamed 'channelConnectorData' to 'connectorConfig' in ChannelConnector Class
 
@@ -60,22 +57,17 @@ Version 1.5.1:
 
 -- corrected FormData attribute name from 'form' to 'formId'
 
-
 ===================================================================
 
 Version 1.5.2
-
 
 -- Updated FormData 'id' type to ObjectId
 
 -- Updated FormData Constructor
 
-
-
 ====================================================================
 
 Version 1.5.3
-
 
 -- removed 'channelConfigSchema' from ChannelType
 
@@ -83,11 +75,9 @@ Version 1.5.3
 
 -- added 'channelType' as Referenced Object in Channel
 
-
 ==================================================================
 
 Version 1.5.4
-
 
 -- added 'CustomerWidgetConfig' Class
 
@@ -106,8 +96,6 @@ Version 1.5.5
 -- `MessageType` enum item `NOTIFICATIONS` changed to `NOTIFICATION`
 
 -- `MessageIntent` enum added
-
-
 
 ======================================================================
 
@@ -145,31 +133,24 @@ Version 1.5.8
 
 Version 1.5.9
 
--- `additionalAttributesa` variable type changed from `List<KeyValuePair>` to `List<Attribute>` in `ChannelData` Class
-
+-- `additionalAttributesa` variable type changed from `List<KeyValuePair>` to `List<Attribute>`
+in `ChannelData` Class
 
 ===============================================================================
 
 Version 1.6.0
 
-
 -- Added 'channelTypeCode' attribute in ChannelData Class
-
-
 
 =======================================================================================
 
 Version 1.6.1
 
-
 -- Added @Id annotation on 'id' attribute in Channel Class
-
-
 
 ==========================================================================================
 
 Version 1.6.2
-
 
 -- Updated Setter of 'value' in Attribute Class
 
@@ -181,24 +162,20 @@ Version 1.6.5
 --Added Validations in Action,Body,Button,ButtonMessage,Contact,Interactive,ListMessage,
 Location,LocationMessage,Name,Row and Section CLass
 
-
 ===========================================================================================
 Version 1.6.6
 
 -- 'intent' attribute type updated to NLUIntent in MessageHeader Class
-
 
 ===========================================================================================
 Version 1.6.7
 
 -- 'intent' attribute type Changed to String in MessageHeader Class
 
-
 ====================================================================================
 Version 1.6.8
 
 -- Added @JsonProperty in all constructor of the child classes of MessageBody
-
 
 =====================================================================================
 Version 1.6.9
@@ -209,18 +186,15 @@ Version 1.6.9
 
 -- Removed LIST from MessageType Enum
 
-
 =======================================================================================
 Version 1.7.0
 
 -- added default constructor in Location and Name CLass
 
-
 =======================================================================================
 Version 1.7.1
 
 -- added 'replyToMessageId' and 'providerMessageId' in MessageHeader Class
-
 
 ========================================================================================
 Version 1.7.2
@@ -230,7 +204,6 @@ Version 1.7.2
 Version 1.7.7
 
 -- added attribute NotificationType in NotificationMessage Class
-
 
 =========================================================================================
 Version 1.8.0
@@ -278,7 +251,6 @@ Version 1.8.6
 
 Version 1.8.7
 
-
 -- type of 'theme' changed from WidgetTheme to String in CustomerWidgetConfig.
 -- WidgetTheme removed.
 
@@ -286,11 +258,9 @@ Version 1.8.7
 
 Version 1.8.8
 
-
 -- Getter Setters added in ConversationMonitor
 
 -- Setter added for id in ConversationParticipant
-
 
 ===========================================================================================
 Version 1.8.9
@@ -313,27 +283,20 @@ added new messageType 'WrapUpMessage'
 
 =============================================================================================
 
-
 Version 1.9.8
 added CommentMessage, CommentType, ItemType and MessageType. All for Facebook connector
 
-
 =============================================================================================
-
 
 Version 1.9.9
 added CommentMessage, CommentType, ItemType and MessageType. All for Facebook connector
 
-
 =============================================================================================
-
 
 Version 1.10.0
 added 'defaultOutbound' attribute in Channel Class
 
-
 =============================================================================================
-
 
 Version 1.10.1
 added 'AGENT_OUTBOUND' in MessageIntent
@@ -347,14 +310,12 @@ added 'CALL_LEG_STARTED' and 'CALL_LEG_ENDED' in MessageIntent and CimEventName
 removed 'START_VOICE' and 'END_VOICE'
 added 'STARTED' in Enums
 
-
 =============================================================================================
 
 Version 1.10.4
 updated ChannelSessionState in ChannelSession
 added ReasonCodeEnum
 added ChannelSessionStateEnum
-
 
 =============================================================================================
 
@@ -368,123 +329,144 @@ removed commentType from CommentMessage. Also deleted CommentType.java class
 =============================================================================================
 
 Version 1.11.1
+
 - updated attribute `channelSesson` to `channelSessonId` in `AgentOutboundDto`
 - removed `agentId` from `AgentOutboundDto`
-
 
 ==============================================================================================
 
 Version 1.11.2
+
 - updated `AgentOutboundDto`
 - added `agentId` in `AgentOutboundDto`
 
 ==============================================================================================
 
 Version 1.11.7
+
 - added `NETWORK_DISCONNECT` in MessageIntent Enum
 
 ==============================================================================================
 
 Version 1.11.9
+
 - added `CONSULT_TRANSFERRED` and `CONSULT_CONFERENCED` in NotificationType
 
 ==============================================================================================
 
 Version 1.12.0
+
 - refer to the story http://project.expertflow.com:8080/browse/CIM-7418 and it's subtasks
 
 ==============================================================================================
 
 Version 1.12.1
+
 - added `DIRECT_TRANSFER` and `NO_AGENT_AVAILABLE` in NotificationType
-- updated `CONSULT_TRANSFERRED` to `CONSULT_TRANSFER` and `CONSULT_CONFERENCED` to `CONSULT_CONFERENCE`
+- updated `CONSULT_TRANSFERRED` to `CONSULT_TRANSFER` and `CONSULT_CONFERENCED`
+  to `CONSULT_CONFERENCE`
 
 ==============================================================================================
 
 Version 1.12.2
+
 - added `managedByRe` field in MediaRoutingDomain Object
 
 ==============================================================================================
 
 Version 1.12.3
+
 - set `managedByRe` field true by default in MediaRoutingDomain Object
 
 ==============================================================================================
 
 Version 1.12.4
+
 - `CallLegStartedDto` added
 - `CallLegEndedDto` added
 
 ==============================================================================================
 
 Version 1.12.5
+
 - `Direction` added in `ChannelSession` and `Conversation`
 
 ==============================================================================================
 
 Version 1.12.6
- 
- Changes in Message Header
-   - removed `channelSession`
-   - updated `sender` dataType to `Sender`
-   - added `channelSessionId` `conversationId` and `customer`
- 
- Changes in CIM Event 
-   - added `eventEmitter` and `channelSession`
 
+Changes in Message Header
+
+- removed `channelSession`
+- updated `sender` dataType to `Sender`
+- added `channelSessionId` `conversationId` and `customer`
+
+Changes in CIM Event
+
+- added `eventEmitter` and `channelSession`
 
 ==============================================================================================
 
 Version 1.12.2
+
 - added `managedByRe` field in MediaRoutingDomain Object
 
 ==============================================================================================
 
 Version 1.12.3
+
 - set `managedByRe` field true by default in MediaRoutingDomain Object
 
 ==============================================================================================
 
 Version 1.12.4
+
 - `CallLegStartedDto` added
 - `CallLegEndedDto` added
 
 ==============================================================================================
 
 Version 1.12.5
+
 - `Direction` added in `ChannelSession` and `Conversation`
 
 ==============================================================================================
 
 Version 1.12.7
+
 - `reasonCode` added in `CallLegStartedDto`
 - `FORCE_CLOSED` added in `TaskStateReasonCode`
 
 ==============================================================================================
 
 Version 1.12.8
+
 - `constructor` updated in `DeliveryNotification`
 - `PENDING` removed from `DeliveryStatus`
 
 ==============================================================================================
 
 Version 1.13.0
+
 - `constructor` updated in `CimMessage`
 - `Setter` added for `messageId` in `DeliveryNotification`
 
 ==============================================================================================
 
 Version 1.13.2
+
 - `constructor` updated in `DeliveryNotification`
-  
+
 ==============================================================================================
 
 Version 1.13.3
+
 - `@JsonIgnore` added in `displayName` method in KeycloakUser
 
 ==============================================================================================
 
 Version 1.13.4
+
 - `constructor` updated in `CutomMessage`
 - `TYPING_STARTED` and `TYPING_STOPPED` added in `NotificationType`
 - `TYPING_INDICATOR` added in `CimEventName`
@@ -493,20 +475,32 @@ Version 1.13.4
 ==============================================================================================
 
 Version 1.13.8
+
 - `SenderType` added in `Enums`
 
 ==============================================================================================
 
 Version 1.13.9
+
 - `type` added in `Sender`
 
 ==============================================================================================
 
 Version 1.14.0
+
 - `SYSTEM` added in `SenderType`
 
 ==============================================================================================
 
 Version 1.14.1
+
 - updated validation on `SenderType`
 - `TELEGRAM` added in `ChannelTypeEnum`
+
+==============================================================================================
+
+Version 1.14.2
+
+- `TASK_ENQUEUED` and `PARTICIPANT_ROLE_CHANGED` added in `NotificationType` 
+- `CONSULT_TRANSFER` `CONSULT_CONFERENCE` and `DIRECT_TRANSFER` removed from `NotificationType`
+- `@Document` removed from `ChannelType` `ChannelProviderInterface` `ChannelConnector` and `Channel`

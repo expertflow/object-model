@@ -3,17 +3,10 @@ package com.ef.cim.objectmodel;
 import com.ef.cim.objectmodel.common.Utils;
 import java.util.List;
 import javax.validation.constraints.NotBlank;
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 
 public class ChannelProviderInterface {
-
-
-    @Id
     private String id;
     private String name;
-    @DBRef
     private List<ChannelType> supportedChannelTypes;
     @NotBlank(message = "providerWebhook cannot be blank")
     private String providerWebhook;
