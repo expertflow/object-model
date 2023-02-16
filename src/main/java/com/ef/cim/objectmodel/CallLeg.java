@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel;
 
+import java.sql.Timestamp;
 import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,5 +18,7 @@ public class CallLeg {
     private Map<String, Object> dialog;
     private String startDirection;
     private String endDirection;
+    private Timestamp startTime;
+    private Timestamp endTime;
     private long duration;
 }

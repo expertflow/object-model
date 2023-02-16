@@ -1,6 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import java.util.Map;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -21,6 +21,6 @@ public class Sender {
     private Enums.SenderType type;
     @NotBlank
     private String senderName;
-    private JsonNode additionalDetail;
+    private Map<String, Object> additionalDetail;
 
 }
