@@ -3,21 +3,12 @@ package com.ef.cim.objectmodel;
 import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import javax.validation.constraints.NotBlank;
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
- * A {@code ChannelType} object represents the type of a particular channel e.g. whatsapp, web, viber e.t.c.
+ * A {@code ChannelType} object represents the type of particular channel e.g. whatsapp, web, viber e.t.c.
  */
-@Document(collection = "ChannelType")
 public class ChannelType implements Serializable {
-
-
-    @Id
     private String id;
-    @Indexed(unique = true)
     @NotBlank
     private String name;
     private String channelLogo;

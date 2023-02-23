@@ -5,19 +5,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.NotBlank;
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "ChannelConnector")
 public class ChannelConnector implements Serializable {
 
-    @Id
     private String id;
     @NotBlank
     private String name;
-    @DBRef
     private ChannelProviderInterface channelProviderInterface;
     private List<Attribute> channelProviderConfigs;
     private Tenant tenant;

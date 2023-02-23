@@ -5,33 +5,23 @@ import java.io.Serializable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * A {@code Channel} object represents a specific channel (e.g whatsapp, facebook)
  */
-@Document(collection = "Channel")
 public class Channel implements Serializable {
-
-    @Id
     private String id;
     @NotBlank
     private String name;
     // Class ServiceIdentifier Empty | not in object model yet
     @NotBlank(message = "serviceIdentifier can not be blank")
-    @Indexed(unique = true)
     private String serviceIdentifier;
     @NotNull
     private boolean defaultOutbound;
     private Tenant tenant;
     @Valid
     private ChannelConfig channelConfig;
-    @DBRef
     private ChannelConnector channelConnector;
-    @DBRef
     private ChannelType channelType;
 
     /**

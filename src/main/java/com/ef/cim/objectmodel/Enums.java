@@ -229,4 +229,16 @@ public class Enums {
          */
         AGENT_STATE_UNCHANGED
     }
+
+    /**
+     * Names of Sender of CimMessage or CimEvent
+     */
+    public enum SenderType {
+        AGENT,
+        BOT,
+        CUSTOMER,
+        APP,
+        CONNECTOR,
+        SYSTEM
+    }
 }

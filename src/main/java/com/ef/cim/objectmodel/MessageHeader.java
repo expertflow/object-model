@@ -8,7 +8,8 @@ import java.util.Map;
 import javax.validation.Valid;
 
 public class MessageHeader implements Serializable {
-    private ConversationParticipant sender;
+    @Valid
+    private Sender sender;
     @Valid
     private ChannelData channelData;
     private LanguageCode language; // Class LanguageCode Empty | not in object model
@@ -17,7 +18,9 @@ public class MessageHeader implements Serializable {
     private List<String> stamps;
     private String intent;
     private Map<String, Object> entities;
-    private ChannelSession channelSession;
+    private String channelSessionId;
+    private String conversationId;
+    private Customer customer;
     private String replyToMessageId;
     private String providerMessageId;
 
@@ -27,12 +30,12 @@ public class MessageHeader implements Serializable {
     }
 
     // Getters
-    public ConversationParticipant getSender() {
+    public Sender getSender() {
         return this.sender;
     }
 
     // Setters
-    public void setSender(ConversationParticipant sender) {
+    public void setSender(Sender sender) {
         this.sender = sender;
     }
 
@@ -92,12 +95,28 @@ public class MessageHeader implements Serializable {
         this.entities = entities;
     }
 
-    public ChannelSession getChannelSession() {
-        return this.channelSession;
+    public String getChannelSessionId() {
+        return this.channelSessionId;
     }
 
-    public void setChannelSession(ChannelSession channelSession) {
-        this.channelSession = channelSession;
+    public void setChannelSessionId(String channelSessionId) {
+        this.channelSessionId = channelSessionId;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public String getConversationId() {
+        return conversationId;
+    }
+
+    public void setConversationId(String conversationId) {
+        this.conversationId = conversationId;
     }
 
     public void addStamp(String stamp) {
@@ -169,7 +188,7 @@ public class MessageHeader implements Serializable {
                 ", stamps=" + stamps +
                 ", intent='" + intent + '\'' +
                 ", entities=" + entities +
-                ", channelSession=" + channelSession +
+                ", channelSessionId=" + channelSessionId +
                 ", replyToMessageId=" + replyToMessageId +
                 ", providerMessageId='" + providerMessageId + '\'' +
                 '}';

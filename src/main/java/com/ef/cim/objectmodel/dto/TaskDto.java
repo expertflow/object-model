@@ -2,6 +2,7 @@ package com.ef.cim.objectmodel.dto;
 
 import com.ef.cim.objectmodel.ChannelSession;
 import com.ef.cim.objectmodel.MediaRoutingDomain;
+import com.ef.cim.objectmodel.TaskQueue;
 import com.ef.cim.objectmodel.TaskState;
 import com.ef.cim.objectmodel.TaskType;
 import java.io.Serializable;
@@ -33,7 +34,7 @@ public class TaskDto implements Serializable {
     /**
      * The Queue.
      */
-    private String queue;
+    private TaskQueue queue;
     /**
      * The Priority.
      */
