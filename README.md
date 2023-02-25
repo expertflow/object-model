@@ -504,3 +504,10 @@ Version 1.14.2
 - `TASK_ENQUEUED` and `PARTICIPANT_ROLE_CHANGED` added in `NotificationType` 
 - `CONSULT_TRANSFER` `CONSULT_CONFERENCE` and `DIRECT_TRANSFER` removed from `NotificationType`
 - `@Document` removed from `ChannelType` `ChannelProviderInterface` `ChannelConnector` and `Channel`
+
+==============================================================================================
+
+Version 1.14.5
+
+- removed validation from `firstname` and `isAnonymous` in `Customer`
+- removed validation from `senderName` in `Sender`

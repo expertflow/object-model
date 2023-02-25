@@ -10,10 +10,9 @@ import javax.validation.constraints.NotEmpty;
 
 public class Customer implements Serializable {
     private String _id;
-    @NotEmpty(message = "Customer First Name is Mandatory")
     private String firstName;
     private List<String> phoneNumber;
-    @NotEmpty(message = "Is Anonymous Flag is Mandatory")
+
     private boolean isAnonymous;
     private int __v;
 
