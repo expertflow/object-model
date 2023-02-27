@@ -22,6 +22,8 @@ public class CustomerWidgetConfig {
     private boolean enableDownloadTranscript;
     private int customerReconnectTime;
     private Language language;
+    private String form;
+    private WebRtcConfigurations webRtc;
 
     public CustomerWidgetConfig() {
         this.id = new ObjectId();
@@ -123,21 +125,40 @@ public class CustomerWidgetConfig {
         this.language = language;
     }
 
+    public String getForm() {
+        return form;
+    }
+
+    public void setForm(String form) {
+        this.form = form;
+    }
+
+    public WebRtcConfigurations getWebRtc() {
+        return webRtc;
+    }
+
+    public void setWebRtc(WebRtcConfigurations webRtc) {
+        this.webRtc = webRtc;
+    }
+
     @Override
     public String toString() {
-        return "CustomerWidgetConfig{" +
-                "id=" + id +
-                ", widgetIdentifier='" + widgetIdentifier + '\'' +
-                ", theme=" + theme +
-                ", title='" + title + '\'' +
-                ", subTitle='" + subTitle + '\'' +
-                ", enableFontResize=" + enableFontResize +
-                ", enableEmoji=" + enableEmoji +
-                ", enableFileTransfer=" + enableFileTransfer +
-                ", enableDynamicLink=" + enableDynamicLink +
-                ", enableDownloadTranscript=" + enableDownloadTranscript +
-                ", customerReconnectTime=" + customerReconnectTime +
-                ", language=" + language +
-                '}';
+        final StringBuilder sb = new StringBuilder("CustomerWidgetConfig{");
+        sb.append("id=").append(id);
+        sb.append(", widgetIdentifier='").append(widgetIdentifier).append('\'');
+        sb.append(", theme='").append(theme).append('\'');
+        sb.append(", title='").append(title).append('\'');
+        sb.append(", subTitle='").append(subTitle).append('\'');
+        sb.append(", enableFontResize=").append(enableFontResize);
+        sb.append(", enableEmoji=").append(enableEmoji);
+        sb.append(", enableFileTransfer=").append(enableFileTransfer);
+        sb.append(", enableDynamicLink=").append(enableDynamicLink);
+        sb.append(", enableDownloadTranscript=").append(enableDownloadTranscript);
+        sb.append(", customerReconnectTime=").append(customerReconnectTime);
+        sb.append(", language=").append(language);
+        sb.append(", form='").append(form).append('\'');
+        sb.append(", webRtc=").append(webRtc);
+        sb.append('}');
+        return sb.toString();
     }
 }

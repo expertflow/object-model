@@ -511,3 +511,11 @@ Version 1.14.5
 
 - removed validation from `firstname` and `isAnonymous` in `Customer`
 - removed validation from `senderName` in `Sender`
+
+==============================================================================================
+
+Version 1.14.6
+
+- added `WebRtcConfigurations` class
+- added `webRTC` in `CustomerWidgetConfig`
+- updated `KeycloakUser` 
