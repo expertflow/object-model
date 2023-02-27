@@ -2,7 +2,9 @@ package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -27,6 +29,7 @@ public class KeycloakUser {
     private String username;
     private Resources permittedResources;
     private String realm;
+    private Map<String, Object> attributes = new HashMap<>();
 
     public boolean containsRole(String role) {
         return this.roles.contains(role);
