@@ -30,6 +30,7 @@ public class KeycloakUser {
     private Resources permittedResources;
     private String realm;
     private Map<String, Object> attributes = new HashMap<>();
+    private Team userTeam;
 
     public boolean containsRole(String role) {
         return this.roles.contains(role);
