@@ -519,3 +519,11 @@ Version 1.14.6
 - added `WebRtcConfigurations` class
 - added `webRTC` in `CustomerWidgetConfig`
 - updated `KeycloakUser` 
+
+==============================================================================================
+
+Version 1.14.8
+
+- added `agentRequestStatus` field in `Conversation.metadata`
+- added `supervisedTeams` field in `KeycloakUser`
+- added `REMOVE_CHANNEL_SESSION` cim event
