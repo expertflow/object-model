@@ -4,5 +4,6 @@ public enum ReasonCodeEnum {
     CUSTOMER,
     INACTIVITY,
     NETWORK,
-    AGENT
+    AGENT,
+    FORCE_CLOSED
 }
