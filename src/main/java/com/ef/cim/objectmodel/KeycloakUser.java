@@ -31,6 +31,7 @@ public class KeycloakUser {
     private String realm;
     private Map<String, Object> attributes = new HashMap<>();
     private Team userTeam;
+    private List<Team> supervisedTeams = new ArrayList<>();
 
     public boolean containsRole(String role) {
         return this.roles.contains(role);
