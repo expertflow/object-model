@@ -13,7 +13,7 @@ public class CommentMessage extends MessageBody{
     private ItemType itemType;
 
     // Constructor
-    public CommentMessage(@JsonProperty("type") MessageType type){
+    public CommentMessage(){
         super(MessageType.COMMENT);
     }
 

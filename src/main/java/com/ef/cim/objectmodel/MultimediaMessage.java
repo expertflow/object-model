@@ -17,7 +17,7 @@ public class MultimediaMessage extends StructuredMessage {
     }
 
     // parameterized constructor
-    protected MultimediaMessage(@JsonProperty("type") MessageType type, @JsonProperty("caption") String caption,
+    protected MultimediaMessage(@JsonProperty("type") String type, @JsonProperty("caption") String caption,
                                 @JsonProperty("attachment") Attachment attachment) {
         super(type);
         this.caption = caption;

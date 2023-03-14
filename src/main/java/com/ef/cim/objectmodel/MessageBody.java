@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import java.io.Serializable;
 import javax.validation.constraints.NotNull;
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", defaultImpl = GenericMessage.class, visible = true)
 @JsonSubTypes({@Type(value = DeliveryNotification.class, name = "DELIVERYNOTIFICATION"),
         @Type(value = CustomMessage.class, name = "CUSTOM"),
         @Type(value = StructuredMessage.class, name = "StructuredMessage"),
@@ -26,7 +26,7 @@ import javax.validation.constraints.NotNull;
 public class MessageBody implements Serializable {
     @NotNull
     @JsonProperty("type")
-    protected MessageType type;
+    protected String type;
     protected String markdownText;
 
     public MessageBody() {
@@ -38,12 +38,12 @@ public class MessageBody implements Serializable {
      *
      * @param type value of MessageType
      */
-    public MessageBody(MessageType type) {
+    public MessageBody(@JsonProperty("type") String type) {
         this.type = type;
     }
 
     // Getters
-    public MessageType getType() {
+    public String getType() {
         return this.type;
     }
 

@@ -7,7 +7,7 @@ public class StructuredMessage extends MessageBody {
     protected JsonNode additionalDetails;
 
     // Constructor --> Args: markdownText - from parent class
-    public StructuredMessage(@JsonProperty("type") MessageType type) {
+    public StructuredMessage(@JsonProperty("type") String type) {
         super(type);
     }
 
