@@ -527,3 +527,17 @@ Version 1.14.8
 - added `agentRequestStatus` field in `Conversation.metadata`
 - added `supervisedTeams` field in `KeycloakUser`
 - added `REMOVE_CHANNEL_SESSION` cim event
+
+==============================================================================================
+
+Version 1.14.8.1
+
+- updated `ChannelSessionState` object to implement `serializable`
+- updated `ChannelProviderInterface` object to implement `serializable`
+
+==============================================================================================
+
+Version 1.14.8.3
+
+- added `TASK_STATE_CHANGED` in `NotificationType`
+

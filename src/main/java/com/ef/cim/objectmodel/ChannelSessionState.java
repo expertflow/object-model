@@ -1,6 +1,8 @@
 package com.ef.cim.objectmodel;
 
-public class ChannelSessionState {
+import java.io.Serializable;
+
+public class ChannelSessionState implements Serializable {
 
     private ChannelSessionStateEnum name;
     private ReasonCodeEnum reasonCode;
