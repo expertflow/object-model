@@ -2,6 +2,7 @@ package com.ef.cim.objectmodel.dto;
 
 import com.ef.cim.objectmodel.ChannelSession;
 import com.ef.cim.objectmodel.MediaRoutingDomain;
+import com.ef.cim.objectmodel.TaskAgent;
 import com.ef.cim.objectmodel.TaskQueue;
 import com.ef.cim.objectmodel.TaskState;
 import com.ef.cim.objectmodel.TaskType;
@@ -50,7 +51,7 @@ public class TaskDto implements Serializable {
     /**
      * The Assigned to.
      */
-    private String assignedTo;
+    private TaskAgent assignedTo;
     /**
      * The Enqueue time.
      */
