@@ -541,3 +541,9 @@ Version 1.14.8.3
 
 - added `TASK_STATE_CHANGED` in `NotificationType`
 
+==============================================================================================
+
+Version 1.15.3
+
+- added `SILENT_MONITOR` in `ParticipantRole`
+
