@@ -9,7 +9,6 @@ public class ChannelProviderInterface implements Serializable {
     private String id;
     private String name;
     private List<ChannelType> supportedChannelTypes;
-    @NotBlank(message = "providerWebhook cannot be blank")
     private String providerWebhook;
     private List<AttributeSchema> channelProviderConfigSchema;
 

@@ -6,7 +6,8 @@ public enum ChannelTypeEnum {
     WHATSAPP,
     SMS,
     WEB,
-    VOICE,
+    CX_VOICE,
+    CISCO_CC,
     GENERIC,
     TWITTER,
     TELEGRAM

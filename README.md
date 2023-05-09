@@ -547,3 +547,11 @@ Version 1.15.3
 
 - added `SILENT_MONITOR` in `ParticipantRole`
 
+==============================================================================================
+
+Version 1.15.4
+
+- marked `providerWebhook` optional in `ChannelProviderInterface`
+- added `CX_VOICE` and `CISCO_CC` in `ChannelTypeEnum`
+- removed `VOICE` from `ChannelTypeEnum`
+
