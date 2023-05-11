@@ -18,7 +18,7 @@ public class Sender {
     @NotBlank
     private String id;
     @NotNull
-    private Enums.SenderType type;
+    private String type;
     private String senderName;
     private Map<String, Object> additionalDetail;
 

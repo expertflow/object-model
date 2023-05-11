@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import java.sql.Timestamp;
+import java.util.HashMap;
 import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,11 +15,11 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class CallLeg {
-    private KeycloakUser agent;
-    private Map<String, Object> dialog;
+    private Sender sender;
     private String startDirection;
     private String endDirection;
+    private long duration;
     private Timestamp startTime;
     private Timestamp endTime;
-    private long duration;
+    private Map<String, Object> additionalDetail = new HashMap<>();
 }

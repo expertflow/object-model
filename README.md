@@ -555,3 +555,11 @@ Version 1.15.4
 - added `CX_VOICE` and `CISCO_CC` in `ChannelTypeEnum`
 - removed `VOICE` from `ChannelTypeEnum`
 
+==============================================================================================
+
+Version 1.15.5
+
+- Removed `CallLegDto`, `CallLegEndedDto`, and `CallLegStartedDto`.
+- Updated the `VoiceMessage`, `CallLeg`, and `Sender` objects.
+- Added the interface `SenderType` to make the 'Sender.type' in `Sender` an open ENUM.
+

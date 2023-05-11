@@ -1,34 +1,39 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import java.util.HashMap;
+import java.util.Map;
 
 public class VoiceMessage extends MessageBody {
 
-    private KeycloakUser agent;
-    private JsonNode dialog;
-    private String reasonCode;
+    private String callId;
     private String leg;
-    private Customer customer;
+    private String reasonCode;
+
+    private Map<String, Object> additionalDetail = new HashMap<>();
+
 
     public VoiceMessage() {
         super(MessageType.VOICE);
     }
 
-
-    public KeycloakUser getAgent() {
-        return agent;
+    @JsonAnySetter
+    public void setAdditionalDetail(String key, Object value) {
+        additionalDetail.put(key, value);
     }
 
-    public void setAgent(KeycloakUser agent) {
-        this.agent = agent;
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalDetail() {
+        return additionalDetail;
     }
 
-    public JsonNode getDialog() {
-        return dialog;
+    public String getCallId() {
+        return callId;
     }
 
-    public void setDialog(JsonNode dialog) {
-        this.dialog = dialog;
+    public void setCallId(String callId) {
+        this.callId = callId;
     }
 
     public String getReasonCode() {
@@ -47,24 +52,16 @@ public class VoiceMessage extends MessageBody {
         this.leg = leg;
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("VoiceMessage{");
-        sb.append("agent=").append(agent);
-        sb.append(", dialog=").append(dialog);
+        sb.append("callId=").append(callId);
         sb.append(", reasonCode='").append(reasonCode).append('\'');
         sb.append(", leg='").append(leg).append('\'');
-        sb.append(", customer=").append(customer);
         sb.append(", type=").append(type);
         sb.append(", markdownText='").append(markdownText).append('\'');
+        sb.append(", additionalDetail=").append(additionalDetail);
         sb.append('}');
         return sb.toString();
     }
