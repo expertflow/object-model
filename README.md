@@ -568,3 +568,9 @@ Version 1.15.5
 Version 1.15.6
 
 - Added `IVR_AGGREGATED_ACTIVITY` in CimEventName
+
+==============================================================================================
+
+Version 1.15.7
+
+- Added `IVR_AGGREGATED_ACTIVITY` in `MessageIntent`
