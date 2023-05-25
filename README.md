@@ -563,3 +563,8 @@ Version 1.15.5
 - Updated the `VoiceMessage`, `CallLeg`, and `Sender` objects.
 - Added the interface `SenderType` to make the 'Sender.type' in `Sender` an open ENUM.
 
+==============================================================================================
+
+Version 1.15.6
+
+- Added `IVR_AGGREGATED_ACTIVITY` in CimEventName
