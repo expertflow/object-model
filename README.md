@@ -574,3 +574,11 @@ Version 1.15.6
 Version 1.15.7
 
 - Added `IVR_AGGREGATED_ACTIVITY` in `MessageIntent`
+
+==============================================================================================
+
+Version 1.15.8
+
+- Added `schedulingMetaData` field in `MessageHeader`
+
+==============================================================================================

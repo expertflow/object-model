@@ -1,8 +1,11 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.validation.Valid;
@@ -23,6 +26,7 @@ public class MessageHeader implements Serializable {
     private Customer customer;
     private String replyToMessageId;
     private String providerMessageId;
+    private Map<String,Object> schedulingMetaData = null;
 
     // Default Constructor
     public MessageHeader() {
@@ -171,6 +175,18 @@ public class MessageHeader implements Serializable {
 
     public void setProviderMessageId(String providerMessageId) {
         this.providerMessageId = providerMessageId;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getSchedulingMetaData() {
+        return schedulingMetaData;
+    }
+    @JsonAnySetter
+    public void setSchedulingMetaData(String key, Object value) {
+        if (schedulingMetaData == null){
+            schedulingMetaData = new HashMap<String,Object>();
+        }
+        this.schedulingMetaData.put(key, value);
     }
 
     /***
