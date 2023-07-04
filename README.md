@@ -582,3 +582,7 @@ Version 1.15.8
 - Added `schedulingMetaData` field in `MessageHeader`
 
 ==============================================================================================
+
+Version 1.15.9
+
+- Added `INSTAGRAM` in `ChannelTypeEnum`
