@@ -10,5 +10,6 @@ public enum ChannelTypeEnum {
     CISCO_CC,
     GENERIC,
     TWITTER,
-    TELEGRAM
+    TELEGRAM,
+    INSTAGRAM
 }
