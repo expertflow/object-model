@@ -586,3 +586,9 @@ Version 1.15.8
 Version 1.15.9
 
 - Added `INSTAGRAM` in `ChannelTypeEnum`
+
+==============================================================================================
+
+Version 1.15.10
+
+- Added `PRIVATE_REPLY` in `ItemTypeEnum`
