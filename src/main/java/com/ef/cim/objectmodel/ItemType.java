@@ -8,5 +8,6 @@ public enum ItemType {
     LIKE,
     UNLIKE,
     DELETE,
-    HIDE
+    HIDE,
+    PRIVATE_REPLY
 }
