@@ -595,6 +595,6 @@ Version 1.15.10
 
 ==============================================================================================
 
-Version 1.15.10.1
+Version 1.16.0
 
-- Fix `schedulingMetaData` field in `MessageHeader` added missing @JsonProperty("schedulingMetaData") annotation
+- Added `@JsonProperty("schedulingMetaData")` annotation in `schedulingMetaData` field in `MessageHeader`
