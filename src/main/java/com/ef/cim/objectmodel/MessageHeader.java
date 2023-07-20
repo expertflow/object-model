@@ -2,6 +2,7 @@ package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class MessageHeader implements Serializable {
     private Customer customer;
     private String replyToMessageId;
     private String providerMessageId;
+    @JsonProperty("schedulingMetaData")
     private Map<String,Object> schedulingMetaData = null;
 
     // Default Constructor
@@ -204,9 +206,12 @@ public class MessageHeader implements Serializable {
                 ", stamps=" + stamps +
                 ", intent='" + intent + '\'' +
                 ", entities=" + entities +
-                ", channelSessionId=" + channelSessionId +
-                ", replyToMessageId=" + replyToMessageId +
+                ", channelSessionId='" + channelSessionId + '\'' +
+                ", conversationId='" + conversationId + '\'' +
+                ", customer=" + customer +
+                ", replyToMessageId='" + replyToMessageId + '\'' +
                 ", providerMessageId='" + providerMessageId + '\'' +
+                ", schedulingMetaData=" + schedulingMetaData +
                 '}';
     }
 }

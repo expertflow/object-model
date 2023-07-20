@@ -592,3 +592,9 @@ Version 1.15.9
 Version 1.15.10
 
 - Added `PRIVATE_REPLY` in `ItemTypeEnum`
+
+==============================================================================================
+
+Version 1.16.0
+
+- Added `@JsonProperty("schedulingMetaData")` annotation in `schedulingMetaData` field in `MessageHeader`
