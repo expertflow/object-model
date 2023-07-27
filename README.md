@@ -598,3 +598,9 @@ Version 1.15.10
 Version 1.16.0
 
 - Added `@JsonProperty("schedulingMetaData")` annotation in `schedulingMetaData` field in `MessageHeader`
+
+==============================================================================================
+
+Version 1.16.1
+
+- Added `SocialMediaPost.class` and  `SocialMediaComment.class` files
