@@ -604,3 +604,9 @@ Version 1.16.0
 Version 1.16.1
 
 - Added `SocialMediaPost.class` and  `SocialMediaComment.class` files
+
+==============================================================================================
+
+Version 1.16.2
+
+- Added `QueueDto` and  `QueueHistoricalStatsDto` files
