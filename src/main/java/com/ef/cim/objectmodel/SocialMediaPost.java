@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +23,7 @@ import lombok.ToString;
 public class SocialMediaPost implements Serializable {
 
     /**
-     * Post Id must be passed in order to create object of this class
+     * Post Id should be passed in order to create valid object of this class
      */
     public SocialMediaPost(String postId) {
         this.id = postId;
@@ -37,7 +38,7 @@ public class SocialMediaPost implements Serializable {
     private String text;
     @Getter
     @Setter
-    private Attachment attachment;
+    private List<Attachment> attachments = new ArrayList<>();
     @Getter
     @Setter
     private Timestamp timestamp;

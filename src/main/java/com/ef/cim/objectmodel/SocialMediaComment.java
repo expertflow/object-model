@@ -22,7 +22,7 @@ import lombok.ToString;
 public class SocialMediaComment implements Serializable {
 
     /**
-     * Comment Id must be passed in order to create object of this class
+     * Comment Id should be passed in order to create valid object of this class
      */
     public SocialMediaComment(String commentId) {
         this.id = commentId;

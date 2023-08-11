@@ -610,3 +610,9 @@ Version 1.16.1
 Version 1.16.2
 
 - Added `QueueDto` and  `QueueHistoricalStatsDto` files
+
+==============================================================================================
+
+Version 1.16.3
+
+- Updated `SocialMediaPost.class` to support multiple attachments
