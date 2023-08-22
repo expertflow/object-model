@@ -616,3 +616,10 @@ Version 1.16.2
 Version 1.16.3
 
 - Updated `SocialMediaPost.class` to support multiple attachments
+
+==============================================================================================
+
+Version 1.16.4
+
+- Added `setter` for `schedulingMetaData` field in `MessageHeader.class`
+- Added `CHANNEL_SESSION_DATA_UPDATED` enum in `CimEventName.class` and `NotificationType.class`.
