@@ -1,7 +1,5 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -27,8 +25,7 @@ public class MessageHeader implements Serializable {
     private Customer customer;
     private String replyToMessageId;
     private String providerMessageId;
-    @JsonProperty("schedulingMetaData")
-    private Map<String,Object> schedulingMetaData = null;
+    private Map<String, Object> schedulingMetaData = null;
 
     // Default Constructor
     public MessageHeader() {
@@ -179,14 +176,18 @@ public class MessageHeader implements Serializable {
         this.providerMessageId = providerMessageId;
     }
 
-    @JsonAnyGetter
     public Map<String, Object> getSchedulingMetaData() {
         return schedulingMetaData;
     }
-    @JsonAnySetter
+
+    @JsonProperty("schedulingMetaData")
+    public void setSchedulingMetaData(Map<String, Object> schedulingMetaData) {
+        this.schedulingMetaData = schedulingMetaData;
+    }
+
     public void setSchedulingMetaData(String key, Object value) {
-        if (schedulingMetaData == null){
-            schedulingMetaData = new HashMap<String,Object>();
+        if (schedulingMetaData == null) {
+            schedulingMetaData = new HashMap<String, Object>();
         }
         this.schedulingMetaData.put(key, value);
     }
