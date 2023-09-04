@@ -7,5 +7,6 @@ public enum TopicState {
     CLOSING,
     CLOSED,
     ON_HOLD,
+    CUSTOMER_LEFT,
     WRAP_UP
 }

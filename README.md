@@ -631,3 +631,8 @@ Version 1.16.5
 - Added `CUSTOMER_LEFT` in CimEventName
 - Added `WRAP_UP` in TopicState
 - Added `WRAP_UP` in ParticipantRole
+
+==============================================================================================
+
+Version 1.16.6
+- Added `CUSTOMER_LEFT` in TopicState
