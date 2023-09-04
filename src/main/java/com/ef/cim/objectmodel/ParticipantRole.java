@@ -4,5 +4,6 @@ public enum ParticipantRole {
     ASSISTANT,
     PRIMARY,
     CUSTOMER,
-    SILENT_MONITOR
+    SILENT_MONITOR,
+    WRAP_UP
 }
