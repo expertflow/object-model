@@ -1,10 +1,7 @@
 package com.ef.cim.objectmodel;
 
-import java.io.Serializable;
+import com.ef.cim.objectmodel.enums.MrdTypeName;
 import java.util.Objects;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,40 +11,36 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
- * The type Media routing domain.
+ * The type Mrd type.
  */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Document(value = "mediaRoutingDomains")
-public class MediaRoutingDomain implements Serializable {
+@Document(value = "mrdTypes")
+public class MrdType {
     /**
      * The ID.
      */
     @Id
     private String id;
     /**
-     * The Type.
-     */
-    private String type;
-    /**
      * The Name.
      */
-    @NotNull
-    @Size(min = 3, max = 110)
-    private String name;
+    private MrdTypeName name;
     /**
-     * The Description.
+     * The Managed by re.
      */
-    @Size(max = 500)
-    private String description;
+    private boolean managedByRe;
     /**
-     * The Max requests.
+     * The Auto join.
      */
-    @Min(value = 1, message = "Maximum requests should be greater than 0")
-    private int maxRequests;
+    private boolean autoJoin;
+    /**
+     * The Interruptible.
+     */
+    private boolean interruptible;
 
     @Override
     public boolean equals(Object o) {
@@ -57,7 +50,7 @@ public class MediaRoutingDomain implements Serializable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        MediaRoutingDomain that = (MediaRoutingDomain) o;
+        MrdType that = (MrdType) o;
         return Objects.equals(id, that.id);
     }
 

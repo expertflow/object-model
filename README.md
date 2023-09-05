@@ -636,3 +636,10 @@ Version 1.16.5
 
 Version 1.16.6
 - Added `CUSTOMER_LEFT` in TopicState
+
+==============================================================================================
+
+Version 1.16.7
+- Added `MrdType` Object
+- Added `MrdTypeName` Enum
+- Updated `MediaRoutingDomain` Object 
