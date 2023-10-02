@@ -23,26 +23,11 @@ public class Enums {
      * Names of a Task State.
      */
     public enum TaskStateName {
-        /**
-         * Started task state name.
-         */
-        STARTED,
-        /**
-         * Queued task state name.
-         */
-        QUEUED,
-        /**
-         * Reserved task state name.
-         */
         RESERVED,
         /**
          * Active task state name.
          */
         ACTIVE,
-        /**
-         * Paused task state name.
-         */
-        PAUSED,
         /**
          * Wrap up task state name.
          */
@@ -89,6 +74,9 @@ public class Enums {
          * Transferred task state reason code.
          */
         TRANSFERRED,
+        /**
+         * Force closed task state reason code.
+         */
         FORCE_CLOSED
     }
 

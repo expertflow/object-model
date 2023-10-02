@@ -1,12 +1,10 @@
-package com.ef.cim.objectmodel.dto;
+package com.ef.cim.objectmodel;
 
-import com.ef.cim.objectmodel.ChannelSession;
-import com.ef.cim.objectmodel.TaskQueue;
-import com.ef.cim.objectmodel.TaskType;
 import com.ef.cim.objectmodel.enums.TaskMediaState;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,7 +19,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class TaskMediaDto {
+public class TaskMedia {
     /**
      * The ID.
      */
@@ -54,6 +52,27 @@ public class TaskMediaDto {
      * The Channel sessions.
      */
     private List<ChannelSession> channelSessions = new ArrayList<>();
+    /**
+     * The Marked for deletion.
+     */
+    private boolean markedForDeletion;
+
+    public static TaskMedia instanceOnReRoute(TaskMedia media) {
+        String id = UUID.randomUUID().toString();
+        TaskMediaState state;
+        int priority;
+
+        if (media.getState().equals(TaskMediaState.RESERVED)) {
+            state = TaskMediaState.QUEUED;
+            priority = 11;
+        } else {
+            state = TaskMediaState.AUTO_JOINED;
+            priority = media.getPriority();
+        }
+
+        return new TaskMedia(id, media.getMrdId(), media.getQueue(), media.getType(), priority, state,
+                media.getRequestedSession(), media.getChannelSessions(), false);
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -63,7 +82,7 @@ public class TaskMediaDto {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        TaskMediaDto that = (TaskMediaDto) o;
+        TaskMedia that = (TaskMedia) o;
         return Objects.equals(id, that.id);
     }
 
