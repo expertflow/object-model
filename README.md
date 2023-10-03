@@ -640,5 +640,5 @@ Version 1.16.6
 ==============================================================================================
 
 Version 1.16.7
-- Added `DELETED` `CONNECTED` in `DeliveryStatus`
+- Added `CONNECTED` in `DeliveryStatus`
 - Changed dataType of `reasonCode` in `DeliveryNotification` from _int_ to _String_
