@@ -636,3 +636,8 @@ Version 1.16.5
 
 Version 1.16.6
 - Added `CUSTOMER_LEFT` in TopicState
+
+==============================================================================================
+
+Version 1.16.8
+- Added `START_CONVERSATION` in MessageIntent
