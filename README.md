@@ -636,3 +636,9 @@ Version 1.16.5
 
 Version 1.16.6
 - Added `CUSTOMER_LEFT` in TopicState
+
+==============================================================================================
+
+Version 1.16.7
+- Added `CONNECTED` in `DeliveryStatus`
+- Changed dataType of `reasonCode` in `DeliveryNotification` from _int_ to _String_
