@@ -648,3 +648,11 @@ Version 1.16.7
 Version 1.16.8
 - Added `START_CONVERSATION` in MessageIntent
 
+==============================================================================================
+
+Version 1.16.9
+- Added `DeletedNotification` class
+- Added `DELETEDNOTIFICATION` in `MessageType` interface
+- Added @Type for `DeletedNotification` in `MessageBody`
+- Renamed `replyToMessageId` to `originalMessageId` property in `MessageHeader`
+- Added `REPLY_TO` and `UPDATE` in `MessageIntent` enum

@@ -23,7 +23,7 @@ public class MessageHeader implements Serializable {
     private String channelSessionId;
     private String conversationId;
     private Customer customer;
-    private String replyToMessageId;
+    private String originalMessageId;
     private String providerMessageId;
     private Map<String, Object> schedulingMetaData = null;
 
@@ -160,12 +160,12 @@ public class MessageHeader implements Serializable {
         }
     }
 
-    public String getReplyToMessageId() {
-        return replyToMessageId;
+    public String getOriginalMessageId() {
+        return originalMessageId;
     }
 
-    public void setReplyToMessageId(String replyToMessageId) {
-        this.replyToMessageId = replyToMessageId;
+    public void setOriginalMessageId(String originalMessageId) {
+        this.originalMessageId = originalMessageId;
     }
 
     public String getProviderMessageId() {
@@ -210,7 +210,7 @@ public class MessageHeader implements Serializable {
                 ", channelSessionId='" + channelSessionId + '\'' +
                 ", conversationId='" + conversationId + '\'' +
                 ", customer=" + customer +
-                ", replyToMessageId='" + replyToMessageId + '\'' +
+                ", originalMessageId='" + originalMessageId + '\'' +
                 ", providerMessageId='" + providerMessageId + '\'' +
                 ", schedulingMetaData=" + schedulingMetaData +
                 '}';

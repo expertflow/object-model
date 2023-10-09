@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", defaultImpl = GenericMessage.class, visible = true)
 @JsonSubTypes({@Type(value = DeliveryNotification.class, name = "DELIVERYNOTIFICATION"),
+        @Type(value = DeletedNotification.class, name = "DELETEDNOTIFICATION"),
         @Type(value = CustomMessage.class, name = "CUSTOM"),
         @Type(value = StructuredMessage.class, name = "StructuredMessage"),
         @Type(value = NotificationMessage.class, name = "NOTIFICATION"),
@@ -19,7 +20,8 @@ import javax.validation.constraints.NotNull;
         @Type(value = CarouselMessage.class, name = "CAROUSEL"), @Type(value = ButtonMessage.class, name = "BUTTON"),
         @Type(value = MessageBody.class, name = "PLAIN"), @Type(value = VoiceMessage.class, name = "VOICE"),
         @Type(value = UrlMessage.class, name = "URL"), @Type(value = StickerMessage.class, name = "STICKER"),
-        @Type(value = ReceiptTemplateMessage.class, name = "RECEIPT"),@Type(value = WrapUpMessage.class, name = "WRAPUP"),
+        @Type(value = ReceiptTemplateMessage.class, name = "RECEIPT"),
+        @Type(value = WrapUpMessage.class, name = "WRAPUP"),
         @Type(value = TemplateMessage.class, name = "TEMPLATE"),
         @Type(value = ActionMessageBody.class, name = "ACTION"),
         @Type(value = CommentMessage.class, name = "COMMENT")})
