@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeliveryNotification extends MessageBody {
     private String messageId;
     private DeliveryStatus status;
-    private int reasonCode;
+    private String reasonCode;
 
     // Constructor 1
     public DeliveryNotification(@JsonProperty("messageId") String messageId, @JsonProperty("status") DeliveryStatus status) {
@@ -32,11 +32,11 @@ public class DeliveryNotification extends MessageBody {
         this.status = status;
     }
 
-    public int getReasonCode() {
+    public String getReasonCode() {
         return this.reasonCode;
     }
 
-    public void setReasonCode(int reasonCode) {
+    public void setReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
     }
 

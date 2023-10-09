@@ -639,5 +639,12 @@ Version 1.16.6
 
 ==============================================================================================
 
+Version 1.16.7
+- Added `CONNECTED` in `DeliveryStatus`
+- Changed dataType of `reasonCode` in `DeliveryNotification` from _int_ to _String_
+
+==============================================================================================
+
 Version 1.16.8
 - Added `START_CONVERSATION` in MessageIntent
+
