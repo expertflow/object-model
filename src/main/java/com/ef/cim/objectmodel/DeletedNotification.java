@@ -7,12 +7,15 @@ public class DeletedNotification extends MessageBody {
 
     private String messageId;
 
-    private Timestamp timestamp;
+    private Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
+    public DeletedNotification() {
+        super(MessageType.DELETEDNOTIFICATION);
+    }
 
     public DeletedNotification(@JsonProperty("messageId") String messageId) {
         super(MessageType.DELETEDNOTIFICATION);
         this.messageId = messageId;
-        this.timestamp = new Timestamp(System.currentTimeMillis());
     }
 
     public String getMessageId() {
