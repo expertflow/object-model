@@ -16,6 +16,7 @@ public interface MessageType {
    String IMAGE = "IMAGE";
    String FILE = "FILE";
    String DELIVERYNOTIFICATION = "DELIVERYNOTIFICATION";
+   String DELETEDNOTIFICATION = "DELETEDNOTIFICATION";
    String CUSTOM = "CUSTOM";
    String STICKER = "STICKER";
 
@@ -25,9 +26,6 @@ public interface MessageType {
    String VOICE = "VOICE";
    String WRAPUP = "WRAPUP";
    String COMMENT= "COMMENT";
-
-
-
 
 
 //    BUTTON,

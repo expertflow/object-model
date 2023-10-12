@@ -2,6 +2,8 @@ package com.ef.cim.objectmodel;
 
 public enum MessageIntent {
     NONE,
+    REPLY_TO,
+    UPDATE,
     START_CHAT,
     END_CHAT,
     CALL_LEG_STARTED,
@@ -11,5 +13,6 @@ public enum MessageIntent {
     END_VOICE,
     NETWORK_DISCONNECT,
     ASSIGN_RESOURCE_REQUESTED,
-    IVR_AGGREGATED_ACTIVITY
+    IVR_AGGREGATED_ACTIVITY,
+    START_CONVERSATION
 }
