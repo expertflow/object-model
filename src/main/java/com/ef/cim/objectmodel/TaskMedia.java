@@ -3,6 +3,7 @@ package com.ef.cim.objectmodel;
 import com.ef.cim.objectmodel.enums.TaskMediaState;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Objects;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
@@ -28,6 +29,10 @@ public class TaskMedia {
      * The Mrd id.
      */
     private String mrdId;
+    /**
+     * The Task id.
+     */
+    private String taskId;
     /**
      * The Queue.
      */
@@ -57,6 +62,12 @@ public class TaskMedia {
      */
     private boolean markedForDeletion;
 
+    /**
+     * Instance on reroute task media.
+     *
+     * @param media the media
+     * @return the task media
+     */
     public static TaskMedia instanceOnReRoute(TaskMedia media) {
         String id = UUID.randomUUID().toString();
         TaskMediaState state;
@@ -70,8 +81,45 @@ public class TaskMedia {
             priority = media.getPriority();
         }
 
-        return new TaskMedia(id, media.getMrdId(), media.getQueue(), media.getType(), priority, state,
-                media.getRequestedSession(), media.getChannelSessions(), false);
+        return new TaskMedia(id, media.getMrdId(), media.getTaskId(), media.getQueue(), media.getType(), priority,
+                state, media.getRequestedSession(), media.getChannelSessions(), false);
+    }
+
+    /**
+     * Channel session exists boolean.
+     *
+     * @param channelSessionId the channel session id
+     * @return the boolean
+     */
+    public boolean channelSessionExists(String channelSessionId) {
+        return this.channelSessions.stream()
+                .anyMatch(c -> c.getId().equals(channelSessionId));
+    }
+
+    /**
+     * Add channel session.
+     *
+     * @param channelSession the channel session
+     */
+    public void addChannelSession(ChannelSession channelSession) {
+        if (!channelSessionExists(channelSession.getId())) {
+            this.channelSessions.add(channelSession);
+        }
+    }
+
+    /**
+     * Remove channel session.
+     *
+     * @param channelSessionId the channel session id
+     */
+    public void removeChannelSession(String channelSessionId) {
+        ListIterator<ChannelSession> iter = this.channelSessions.listIterator();
+        while (iter.hasNext()) {
+            if (iter.next().getId().equals(channelSessionId)) {
+                iter.remove();
+                break;
+            }
+        }
     }
 
     @Override

@@ -23,7 +23,6 @@ public class Enums {
      * Names of a Task State.
      */
     public enum TaskStateName {
-        RESERVED,
         /**
          * Active task state name.
          */
@@ -78,48 +77,6 @@ public class Enums {
          * Force closed task state reason code.
          */
         FORCE_CLOSED
-    }
-
-    /**
-     * Names of internal events (fired internally).
-     */
-    public enum EventName {
-        /**
-         * New task event name.
-         */
-        NEW_TASK,
-        /**
-         * Task removed event name.
-         */
-        TASK_REMOVED,
-        /**
-         * Agent state event name.
-         */
-        AGENT_STATE,
-        /**
-         * Agent mrd state event name.
-         */
-        AGENT_MRD_STATE,
-        /**
-         * Ewt request event name.
-         */
-        EWT_REQUEST_EVENT,
-        /**
-         * Step timeout event name.
-         */
-        STEP_TIMEOUT,
-        /**
-         * Task state event name.
-         */
-        TASK_STATE,
-        /**
-         * Conference event name.
-         */
-        CONFERENCE,
-        /**
-         * Task accepted event name.
-         */
-        TASK_ACCEPTED
     }
 
     /**
