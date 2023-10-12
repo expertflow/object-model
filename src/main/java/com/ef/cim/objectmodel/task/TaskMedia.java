@@ -1,6 +1,6 @@
-package com.ef.cim.objectmodel;
+package com.ef.cim.objectmodel.task;
 
-import com.ef.cim.objectmodel.enums.TaskMediaState;
+import com.ef.cim.objectmodel.ChannelSession;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
@@ -52,7 +52,7 @@ public class TaskMedia {
     /**
      * The Requested session.
      */
-    private ChannelSession requestedSession;
+    private ChannelSession requestSession;
     /**
      * The Channel sessions.
      */
@@ -61,6 +61,28 @@ public class TaskMedia {
      * The Marked for deletion.
      */
     private boolean markedForDeletion;
+    /**
+     * The Enqueue time.
+     */
+    private long enqueueTime;
+
+    /**
+     * Instantiates a new Task media.
+     *
+     * @param mrdId           the mrd id
+     * @param taskId          the task id
+     * @param queue           the queue
+     * @param type            the type
+     * @param priority        the priority
+     * @param state           the state
+     * @param requestSession  the request session
+     * @param channelSessions the channel sessions
+     */
+    public TaskMedia(String mrdId, String taskId, TaskQueue queue, TaskType type, int priority, TaskMediaState state,
+                     ChannelSession requestSession, List<ChannelSession> channelSessions) {
+        this(UUID.randomUUID().toString(), mrdId, taskId, queue, type, priority, state, requestSession,
+                channelSessions, false, System.currentTimeMillis());
+    }
 
     /**
      * Instance on reroute task media.
@@ -69,7 +91,6 @@ public class TaskMedia {
      * @return the task media
      */
     public static TaskMedia instanceOnReRoute(TaskMedia media) {
-        String id = UUID.randomUUID().toString();
         TaskMediaState state;
         int priority;
 
@@ -81,8 +102,8 @@ public class TaskMedia {
             priority = media.getPriority();
         }
 
-        return new TaskMedia(id, media.getMrdId(), media.getTaskId(), media.getQueue(), media.getType(), priority,
-                state, media.getRequestedSession(), media.getChannelSessions(), false);
+        return new TaskMedia(media.getMrdId(), media.getTaskId(), media.getQueue(), media.getType(), priority,
+                state, media.getRequestSession(), media.getChannelSessions());
     }
 
     /**

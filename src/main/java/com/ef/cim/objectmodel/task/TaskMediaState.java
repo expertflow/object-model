@@ -1,4 +1,4 @@
-package com.ef.cim.objectmodel.enums;
+package com.ef.cim.objectmodel.task;
 
 /**
  * The enum Task media state.

@@ -1,10 +1,6 @@
-package com.ef.cim.objectmodel.dto;
+package com.ef.cim.objectmodel.task;
 
 import com.ef.cim.objectmodel.Enums;
-import com.ef.cim.objectmodel.TaskAgent;
-import com.ef.cim.objectmodel.TaskMedia;
-import com.ef.cim.objectmodel.TaskState;
-import com.ef.cim.objectmodel.enums.TaskMediaState;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -26,7 +22,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class TaskDto implements Serializable {
+public class Task implements Serializable {
     /**
      * The ID.
      */
@@ -85,7 +81,7 @@ public class TaskDto implements Serializable {
                 .orElse(null);
     }
 
-    public static TaskDto instanceOnReroute(TaskDto task) {
+    public static Task instanceOnReroute(Task task) {
         List<TaskMedia> newMediaList = new ArrayList<>();
 
         for (TaskMedia media : task.getActiveMedia()) {
@@ -94,7 +90,7 @@ public class TaskDto implements Serializable {
 
         String id = UUID.randomUUID().toString();
         TaskState state = new TaskState(Enums.TaskStateName.ACTIVE, null);
-        return new TaskDto(id, task.getConversationId(), state, null, newMediaList);
+        return new Task(id, task.getConversationId(), state, null, newMediaList);
     }
 
     @JsonIgnore
@@ -130,7 +126,7 @@ public class TaskDto implements Serializable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        TaskDto that = (TaskDto) o;
+        Task that = (Task) o;
         return Objects.equals(id, that.id);
     }
 

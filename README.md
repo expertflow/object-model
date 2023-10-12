@@ -660,6 +660,9 @@ Version 1.16.9
 ==============================================================================================
 
 Version 1.17.0
-- Added `MrdType` Object
-- Added `MrdTypeName` Enum
+- Added `MrdType`, `MrdTypeName`
 - Updated `MediaRoutingDomain` Object
+- Updated `TaskDto` Object and Changed its name to `Task`
+- Added `TaskMedia`, `TaskMediaState`
+- Updated `AssignResourceRequest` Object
+- Moved the task related Objects to the `task` package 
