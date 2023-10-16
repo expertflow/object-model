@@ -656,3 +656,8 @@ Version 1.16.9
 - Added @Type for `DeletedNotification` in `MessageBody`
 - Renamed `replyToMessageId` to `originalMessageId` property in `MessageHeader`
 - Added `REPLY_TO` and `UPDATE` in `MessageIntent` enum
+
+==============================================================================================
+
+Version 1.16.9.1
+- Added `recordingUrl` field in `VoiceActivity`
