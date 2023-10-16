@@ -659,10 +659,15 @@ Version 1.16.9
 
 ==============================================================================================
 
+Version 1.16.9.1
+- Added `recordingUrl` field in `VoiceActivity`
+
+==============================================================================================
+
 Version 1.17.0
 - Added `MrdType`, `MrdTypeName`
 - Updated `MediaRoutingDomain` Object
 - Updated `TaskDto` Object and Changed its name to `Task`
 - Added `TaskMedia`, `TaskMediaState`
 - Updated `AssignResourceRequest` Object
-- Moved the task related Objects to the `task` package 
+- Moved the task related Objects to the `task` package

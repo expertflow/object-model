@@ -19,6 +19,7 @@ public class VoiceActivity {
     private Timestamp startTime;
     private Timestamp endTime;
     private long duration;
+    private String recordingUrl;
     private List<CallLeg> callLegs = new ArrayList<>();
 
     public CimEvent toCimEvent(String conversationId) {
