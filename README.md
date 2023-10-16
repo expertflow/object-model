@@ -671,3 +671,10 @@ Version 1.17.0
 - Added `TaskMedia`, `TaskMediaState`
 - Updated `AssignResourceRequest` Object
 - Moved the task related Objects to the `task` package
+
+Note: 1.16.9.1 is not merged in 1.17.0. Use 1.17.1 for stable usage
+
+==============================================================================================
+
+Version 1.17.1
+- Added `agentRequestTtlTimerId` field in `Task`
