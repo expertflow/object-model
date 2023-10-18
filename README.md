@@ -661,3 +661,9 @@ Version 1.16.9
 
 Version 1.16.9.1
 - Added `recordingUrl` field in `VoiceActivity`
+
+==============================================================================================
+Version 1.17.2
+- Modified `WebRtcConfigurations` class.
+- Added `CallbackConfigurations` class.
+- Added `WebhookConfigurations` class.
