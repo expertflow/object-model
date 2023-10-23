@@ -678,3 +678,9 @@ Note: 1.16.9.1 is not merged in 1.17.0. Use 1.17.1 for stable usage
 
 Version 1.17.1
 - Added `agentRequestTtlTimerId` field in `Task`
+
+==============================================================================================
+
+Version 1.17.1.1
+- Revision of v-1.17.1 for multichannel implementation after testing for Chat media cases
+- Use this release instead of v-1.17.0 and v-1.17.1

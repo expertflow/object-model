@@ -90,19 +90,16 @@ public class TaskMedia {
      * @param media the media
      * @return the task media
      */
-    public static TaskMedia instanceOnReRoute(TaskMedia media) {
-        TaskMediaState state;
-        int priority;
+    public static TaskMedia instanceOnReRoute(String taskId, TaskMedia media) {
+        TaskMediaState state = media.getState();
+        int priority = media.getPriority();
 
         if (media.getState().equals(TaskMediaState.RESERVED)) {
             state = TaskMediaState.QUEUED;
             priority = 11;
-        } else {
-            state = TaskMediaState.AUTO_JOINED;
-            priority = media.getPriority();
         }
 
-        return new TaskMedia(media.getMrdId(), media.getTaskId(), media.getQueue(), media.getType(), priority,
+        return new TaskMedia(media.getMrdId(), taskId, media.getQueue(), media.getType(), priority,
                 state, media.getRequestSession(), media.getChannelSessions());
     }
 
@@ -133,14 +130,15 @@ public class TaskMedia {
      *
      * @param channelSessionId the channel session id
      */
-    public void removeChannelSession(String channelSessionId) {
+    public boolean removeChannelSession(String channelSessionId) {
         ListIterator<ChannelSession> iter = this.channelSessions.listIterator();
         while (iter.hasNext()) {
             if (iter.next().getId().equals(channelSessionId)) {
                 iter.remove();
-                break;
+                return true;
             }
         }
+        return false;
     }
 
     @Override

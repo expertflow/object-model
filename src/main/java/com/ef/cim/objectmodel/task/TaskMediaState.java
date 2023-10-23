@@ -5,10 +5,6 @@ package com.ef.cim.objectmodel.task;
  */
 public enum TaskMediaState {
     /**
-     * Auto joined task media state.
-     */
-    AUTO_JOINED,
-    /**
      * Started task state name.
      */
     STARTED,

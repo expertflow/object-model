@@ -5,7 +5,7 @@ import com.ef.cim.objectmodel.Enums;
 import com.ef.cim.objectmodel.task.TaskType;
 import java.util.List;
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -33,12 +33,12 @@ public class AssignResourceRequest {
     /**
      * The Channel sessions.
      */
-    @NotBlank
+    @NotEmpty
     private List<ChannelSession> channelSessions;
     /**
      * Information regarding the type of the Task.
      */
-    private TaskType type = new TaskType(Enums.TaskTypeDirection.INBOUND, Enums.TaskTypeMode.QUEUE, null);
+    private TaskType type;
     /**
      * The Priority.
      */
@@ -50,5 +50,13 @@ public class AssignResourceRequest {
 
     public void setPriority(int priority) {
         this.priority = priority > 10 ? 10 : Math.max(priority, 1);
+    }
+
+    public void setType(TaskType type) {
+        if (type == null) {
+            this.type = new TaskType(Enums.TaskTypeDirection.INBOUND, Enums.TaskTypeMode.QUEUE, null);
+        } else {
+            this.type = type;
+        }
     }
 }

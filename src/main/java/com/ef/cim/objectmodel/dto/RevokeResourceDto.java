@@ -36,14 +36,4 @@ public class RevokeResourceDto {
      * The Conversation id.
      */
     private String conversationId;
-
-//    public static RevokeResourceDto createForReservedTask(String taskId, String agentId, String conversationId) {
-//        return new RevokeResourceDto(taskId, Enums.TaskStateName.RESERVED, Enums.TaskStateReasonCode.CANCELLED,
-//                agentId, conversationId);
-//    }
-//
-//    public static RevokeResourceDto createForActiveTask(String agentId, String conversationId,
-//                                                        Enums.TaskStateReasonCode reason) {
-//        return new RevokeResourceDto(null, Enums.TaskStateName.ACTIVE, reason, agentId, conversationId);
-//    }
 }

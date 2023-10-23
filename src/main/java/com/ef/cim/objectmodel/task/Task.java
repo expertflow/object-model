@@ -103,7 +103,7 @@ public class Task implements Serializable {
      */
     public TaskMedia findMediaByState(TaskMediaState state) {
         return this.activeMedia.stream()
-                .filter(t -> state.equals(TaskMediaState.QUEUED)).findFirst().orElse(null);
+                .filter(m -> m.getState().equals(state)).findFirst().orElse(null);
     }
 
     /**
@@ -113,10 +113,7 @@ public class Task implements Serializable {
      * @return the task media
      */
     public TaskMedia findMediaByMrdId(String mrdId) {
-        return this.activeMedia.stream()
-                .filter(m -> m.getMrdId().equals(mrdId))
-                .findFirst()
-                .orElse(null);
+        return this.activeMedia.stream().filter(m -> m.getMrdId().equals(mrdId)).findFirst().orElse(null);
     }
 
     /**
@@ -128,11 +125,12 @@ public class Task implements Serializable {
     public static Task instanceOnReroute(Task task) {
         List<TaskMedia> newMediaList = new ArrayList<>();
 
+        String id = UUID.randomUUID().toString();
+
         for (TaskMedia media : task.getActiveMedia()) {
-            newMediaList.add(TaskMedia.instanceOnReRoute(media));
+            newMediaList.add(TaskMedia.instanceOnReRoute(id, media));
         }
 
-        String id = UUID.randomUUID().toString();
         TaskState state = new TaskState(Enums.TaskStateName.ACTIVE, null);
         return new Task(id, task.getConversationId(), state, null, task.getAgentRequestTtlTimerId(), newMediaList);
     }
@@ -144,13 +142,7 @@ public class Task implements Serializable {
      */
     @JsonIgnore
     public boolean isRemovable() {
-        for (TaskMedia media : this.activeMedia) {
-            if (!media.getState().equals(TaskMediaState.AUTO_JOINED)) {
-                return false;
-            }
-        }
-
-        return true;
+        return this.activeMedia.isEmpty();
     }
 
     /**

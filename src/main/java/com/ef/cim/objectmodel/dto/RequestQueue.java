@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel.dto;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +17,7 @@ public class RequestQueue {
     /**
      * The Type.
      */
-    @NotBlank
+    @NotNull
     private Type type;
     /**
      * The Value.
