@@ -664,7 +664,7 @@ Version 1.16.9.1
 
 ==============================================================================================
 
-Version 1.17.2
+Version 1.16.9.2
 - Modified `CustomerWidgetConfig` class.
 - Modified `WebRtcConfigurations` class.
 - Added `CallbackConfigurations` class.
