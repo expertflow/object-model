@@ -24,6 +24,8 @@ public class CustomerWidgetConfig {
     private Language language;
     private String form;
     private WebRtcConfigurations webRtc;
+    private CallbackConfigurations callback;
+    private WebhookConfigurations webhook;
 
     public CustomerWidgetConfig() {
         this.id = new ObjectId();
@@ -141,6 +143,14 @@ public class CustomerWidgetConfig {
         this.webRtc = webRtc;
     }
 
+    public void setCallback(CallbackConfigurations callback) { this.callback = callback; }
+
+    public CallbackConfigurations getCallback() { return callback; }
+
+    public void setWebhook(WebhookConfigurations webhook) { this.webhook = webhook; }
+
+    public WebhookConfigurations getWebhook() { return webhook; }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("CustomerWidgetConfig{");
@@ -158,6 +168,8 @@ public class CustomerWidgetConfig {
         sb.append(", language=").append(language);
         sb.append(", form='").append(form).append('\'');
         sb.append(", webRtc=").append(webRtc);
+        sb.append(", callback=").append(callback);
+        sb.append(", webhook=").append(webhook);
         sb.append('}');
         return sb.toString();
     }
