@@ -696,3 +696,13 @@ Version 1.17.1.1
 - Use this release instead of v-1.17.0 and v-1.17.1
 
 Note: 1.16.9.2 is not merged in 1.17.1.1 Use 1.17.1.2 for stable usage
+
+==============================================================================================
+
+Version 1.17.1.2
+- Revision of v-1.17.1.1 for multichannel implementation
+- v-1.16.9.2 is merged
+- `TASK_MEDIA_STATE_CHANGED` removed from `CimEventName` enum 
+- New Class `TaskStateChangedDto` added
+- Added a couple of methods in the `Task` Class
+- Use this release instead of v-1.17.0, v-1.17.1 and v-1.17.1.1 for multichannel
