@@ -116,6 +116,13 @@ public class Task implements Serializable {
         return this.activeMedia.stream().filter(m -> m.getMrdId().equals(mrdId)).findFirst().orElse(null);
     }
 
+    public TaskMedia findInProcessMedia() {
+        return this.activeMedia.stream()
+                .filter(m -> m.getState().equals(TaskMediaState.QUEUED) || m.getState().equals(TaskMediaState.RESERVED))
+                .findFirst()
+                .orElse(null);
+    }
+
     /**
      * Instance on reroute task.
      *
@@ -142,7 +149,12 @@ public class Task implements Serializable {
      */
     @JsonIgnore
     public boolean isRemovable() {
-        return this.activeMedia.isEmpty();
+        for (TaskMedia media : this.activeMedia) {
+            if (!media.getState().equals(TaskMediaState.CLOSED)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
