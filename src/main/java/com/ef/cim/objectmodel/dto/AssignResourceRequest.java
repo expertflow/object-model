@@ -13,6 +13,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * The type Assign resource request.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -47,11 +50,25 @@ public class AssignResourceRequest {
      * The Offer to agent.
      */
     private boolean offerToAgent = true;
+    /**
+     * The Cc user.
+     */
+    private String lastAssignedAgentId;
 
+    /**
+     * Sets priority.
+     *
+     * @param priority the priority
+     */
     public void setPriority(int priority) {
         this.priority = priority > 10 ? 10 : Math.max(priority, 1);
     }
 
+    /**
+     * Sets type.
+     *
+     * @param type the type
+     */
     public void setType(TaskType type) {
         if (type == null) {
             this.type = new TaskType(Enums.TaskTypeDirection.INBOUND, Enums.TaskTypeMode.QUEUE, null);

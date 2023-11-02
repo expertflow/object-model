@@ -680,14 +680,14 @@ Version 1.17.0
 - Updated `AssignResourceRequest` Object
 - Moved the task related Objects to the `task` package
 
-Note: 1.16.9.1 and 1.16.9.2 are not merged in 1.17.0. Use 1.17.1.2 for stable usage
+Note: 1.16.9.1 and 1.16.9.2 are not merged in 1.17.0. Use 1.17.1.3 for stable usage
 
 ==============================================================================================
 
 Version 1.17.1
 - Added `agentRequestTtlTimerId` field in `Task`
 
-Note: 1.16.9.2 is not merged in 1.17.1 Use 1.17.1.2 for stable usage
+Note: 1.16.9.2 is not merged in 1.17.1 Use 1.17.1.3 for stable usage
 
 ==============================================================================================
 
@@ -695,7 +695,7 @@ Version 1.17.1.1
 - Revision of v-1.17.1 for multichannel implementation after testing for Chat media cases
 - Use this release instead of v-1.17.0 and v-1.17.1
 
-Note: 1.16.9.2 is not merged in 1.17.1.1 Use 1.17.1.2 for stable usage
+Note: 1.16.9.2 is not merged in 1.17.1.1 Use 1.17.1.3 for stable usage
 
 ==============================================================================================
 
@@ -705,4 +705,12 @@ Version 1.17.1.2
 - `TASK_MEDIA_STATE_CHANGED` removed from `CimEventName` enum 
 - New Class `TaskStateChangedDto` added
 - Added a couple of methods in the `Task` Class
-- Use this release instead of v-1.17.0, v-1.17.1 and v-1.17.1.1 for multichannel
+
+Note: Use 1.17.1.3 for stable usage
+
+==============================================================================================
+
+Version 1.17.1.3
+- Revision of v-1.17.1.2 for multichannel implementation
+- Added `lastAssignedAgentId` field in `AssignResourceRequest` class
+- Use this release instead of v-1.17.0, v-1.17.1, v-1.17.1.1, v-1.17.1.2 for multichannel
