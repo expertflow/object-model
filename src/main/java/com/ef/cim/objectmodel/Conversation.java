@@ -25,6 +25,7 @@ public class Conversation implements Serializable {
     private Timestamp endTime;
     private Map<String, String> conversationData = new HashMap<>();
     private TopicMetadata metadata;
+    private Integer agentSlaDuration;
 
     public Conversation() {
         this.id = Utils.getObjectId();

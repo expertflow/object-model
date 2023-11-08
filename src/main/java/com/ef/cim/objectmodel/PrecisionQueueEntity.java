@@ -46,6 +46,11 @@ public class PrecisionQueueEntity {
     @NotNull
     private int serviceLevelThreshold;
     /**
+     * The Agent service level duration.
+     */
+    @NotNull
+    private int agentSlaDuration;
+    /**
      * The Steps.
      */
     @NotNull
