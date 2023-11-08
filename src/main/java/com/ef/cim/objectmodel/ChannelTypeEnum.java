@@ -11,5 +11,6 @@ public enum ChannelTypeEnum {
     GENERIC,
     TWITTER,
     TELEGRAM,
-    INSTAGRAM
+    INSTAGRAM,
+    EMAIL
 }

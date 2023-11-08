@@ -714,3 +714,11 @@ Version 1.17.1.3
 - Revision of v-1.17.1.2 for multichannel implementation
 - Added `lastAssignedAgentId` field in `AssignResourceRequest` class
 - Use this release instead of v-1.17.0, v-1.17.1, v-1.17.1.1, v-1.17.1.2 for multichannel
+
+==============================================================================================
+
+Version 1.17.3
+- Added `EMAIL` in `ChannelTypeEnum`
+- Added `EmailMessage` class
+- Added `EMAIL` in `MessageType` interface
+- Added @Type for `EmailMessage` in `MessageBody`
