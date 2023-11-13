@@ -14,14 +14,14 @@ import lombok.ToString;
 @ToString
 public class WebRtcConfigurations {
     private boolean enableWebRtc;
-    private String wssServerIp;
-    private String wssServerPort;
     private String diallingUri;
     private String sipExtension;
     private boolean enabledSipLogs;
     private String extensionPassword;
     private String channel;
     private String websocket;
+    private String wssFs;
+    private String uriFs;
     private List<Object> iceServers;
 
 

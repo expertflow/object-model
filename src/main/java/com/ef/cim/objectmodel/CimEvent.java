@@ -3,9 +3,11 @@ package com.ef.cim.objectmodel;
 import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 public class CimEvent implements Serializable {
     private String id;
+    @Indexed
     private CimEventName name;
     private CimEventType type;
     private Timestamp timestamp;
