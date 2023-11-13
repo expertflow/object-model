@@ -13,13 +13,26 @@ public class CimEvent implements Serializable {
     private Sender eventEmitter;
     private ChannelSession channelSession;
     private Object data;
+    private String roomId;
 
     public CimEvent() {
         this.id = Utils.getObjectId();
     }
 
     public CimEvent(Object data, CimEventName name, CimEventType type, String conversationId, Sender eventEmitter,
-            ChannelSession channelSession) {
+            ChannelSession channelSession, String roomId) {
+        this.id = Utils.getObjectId();
+        this.data = data;
+        this.name = name;
+        this.type = type;
+        this.conversationId = conversationId;
+        this.timestamp = new Timestamp(System.currentTimeMillis());
+        this.eventEmitter = eventEmitter;
+        this.channelSession = channelSession;
+        this.roomId = roomId;
+    }
+    public CimEvent(Object data, CimEventName name, CimEventType type, String conversationId, Sender eventEmitter,
+                    ChannelSession channelSession) {
         this.id = Utils.getObjectId();
         this.data = data;
         this.name = name;

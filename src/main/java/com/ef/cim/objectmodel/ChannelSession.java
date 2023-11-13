@@ -35,6 +35,7 @@ public class ChannelSession implements Participant {
     @NotNull(message = "Is Active is Mandatory")
     private boolean isActive;
     private String conversationId;
+    private String roomId;
     private ChannelSessionState state;
     private Direction channelSessionDirection;
 
@@ -218,6 +219,23 @@ public class ChannelSession implements Participant {
         this.conversationId = conversationId;
     }
 
+    /**
+     * Getter for roomId
+     *
+     * @return roomId
+     */
+    public String getRoomId() {
+        return roomId;
+    }
+    /**
+     * Setter for roomId
+     *
+     * @param roomId roomId
+     */
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
+    }
+
     public String getParticipantType() {
         return participantType;
     }
@@ -307,6 +325,7 @@ public class ChannelSession implements Participant {
         sb.append(", customerPresence=").append(customerPresence);
         sb.append(", isActive=").append(isActive);
         sb.append(", conversationId='").append(conversationId).append('\'');
+        sb.append(", roomId=").append(roomId);
         sb.append(", state=").append(state);
         sb.append(", direction=").append(channelSessionDirection);
         sb.append('}');

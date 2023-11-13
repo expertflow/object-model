@@ -38,7 +38,7 @@ public class Channel implements Serializable {
     }
 
     public Channel(String name, String serviceIdentifier, ChannelConfig channelConfig,
-                   ChannelConnector channelConnector, Tenant tenant, ChannelType channelType) {
+                   ChannelConnector channelConnector, Tenant tenant, ChannelType channelType, String roomLabel) {
         this.id = Utils.getObjectId();
         this.name = name;
         this.serviceIdentifier = serviceIdentifier;

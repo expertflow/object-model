@@ -26,6 +26,7 @@ public class MessageHeader implements Serializable {
     private String originalMessageId;
     private String providerMessageId;
     private Map<String, Object> schedulingMetaData = null;
+    private String roomId;
 
     // Default Constructor
     public MessageHeader() {
@@ -192,6 +193,15 @@ public class MessageHeader implements Serializable {
         this.schedulingMetaData.put(key, value);
     }
 
+
+    public String getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
+    }
+
     /***
      * String Representation of MessageHeader
      * @return String
@@ -212,7 +222,8 @@ public class MessageHeader implements Serializable {
                 ", customer=" + customer +
                 ", originalMessageId='" + originalMessageId + '\'' +
                 ", providerMessageId='" + providerMessageId + '\'' +
-                ", schedulingMetaData=" + schedulingMetaData +
+                ", schedulingMetaData=" + schedulingMetaData + '\'' +
+                ", roomId=" + roomId +
                 '}';
     }
 }
