@@ -37,8 +37,17 @@ public class Channel implements Serializable {
         this.defaultOutbound = false;
     }
 
+    /**
+     * parameterized constructor.
+     * @param name channel name
+     * @param serviceIdentifier channel serviceIdentifier
+     * @param channelConfig channelConfig
+     * @param channelConnector channelConnector
+     * @param tenant tenant
+     * @param channelType channelType
+     */
     public Channel(String name, String serviceIdentifier, ChannelConfig channelConfig,
-                   ChannelConnector channelConnector, Tenant tenant, ChannelType channelType, String roomLabel) {
+                   ChannelConnector channelConnector, Tenant tenant, ChannelType channelType) {
         this.id = Utils.getObjectId();
         this.name = name;
         this.serviceIdentifier = serviceIdentifier;
