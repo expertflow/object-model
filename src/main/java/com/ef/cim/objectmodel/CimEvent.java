@@ -111,4 +111,12 @@ public class CimEvent implements Serializable {
     public void setChannelSession(ChannelSession channelSession) {
         this.channelSession = channelSession;
     }
+
+    public String getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
+    }
 }
