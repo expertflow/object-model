@@ -16,6 +16,8 @@ public class ChannelData implements Serializable {
     @NotBlank(message = "serviceIdentifier is mandatory")
     private String serviceIdentifier;
     private int requestPriority;
+    private String customerFirstName;
+    private String customerLastName;
 
     // This field should be List<KeyValuePair>. Changed it for initial integration
     // with Agent Manager
@@ -69,6 +71,20 @@ public class ChannelData implements Serializable {
         this.requestPriority = requestPriority;
     }
 
+    public String getCustomerFirstName() {
+        return customerFirstName;
+    }
+    public void setCustomerFirstName(String customerFirstName) {
+        this.customerFirstName = customerFirstName;
+    }
+
+    public String getCustomerLastName() {
+        return customerLastName;
+    }
+    public void setCustomerLastName(String customerLastName) {
+        this.customerLastName = customerLastName;
+    }
+
     /**
      * String Representation of ChannelData
      *
@@ -79,6 +95,8 @@ public class ChannelData implements Serializable {
         return "ChannelData{" +
                 "channelCustomerIdentifier='" + channelCustomerIdentifier + '\'' +
                 ", serviceIdentifier='" + serviceIdentifier + '\'' +
+                ", customerFirstName='" + customerFirstName + '\'' +
+                ", customerLastName='" + customerLastName + '\'' +
                 ", requestPriority=" + requestPriority +
                 ", additionalAttributes=" + additionalAttributes +
                 '}';

@@ -669,3 +669,8 @@ Version 1.16.9.2
 - Modified `WebRtcConfigurations` class.
 - Added `CallbackConfigurations` class.
 - Added `WebhookConfigurations` class.
+
+==============================================================================================
+
+Version 1.16.9.3 -> 1.16.9.3.1
+- Modified `ChannelData` class. Added `firstName` and `lastName` attribute in it.
