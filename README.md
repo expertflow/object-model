@@ -673,4 +673,4 @@ Version 1.16.9.2
 ==============================================================================================
 
 Version 1.16.9.3 -> 1.16.9.3.1
-- Modified `ChannelData` class. Added `firstName` and `lastName` attribute in it.
+- Modified `ChannelData` class. Added `customerFirstName` and `customerLastName` attribute in it.
