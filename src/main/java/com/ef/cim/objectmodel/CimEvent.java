@@ -16,13 +16,14 @@ public class CimEvent implements Serializable {
     private ChannelSession channelSession;
     private Object data;
     private String roomId;
+    private String roomLabel;
 
     public CimEvent() {
         this.id = Utils.getObjectId();
     }
 
     public CimEvent(Object data, CimEventName name, CimEventType type, String conversationId, Sender eventEmitter,
-            ChannelSession channelSession, String roomId) {
+            ChannelSession channelSession, String roomId, String roomLabel) {
         this.id = Utils.getObjectId();
         this.data = data;
         this.name = name;
@@ -32,17 +33,7 @@ public class CimEvent implements Serializable {
         this.eventEmitter = eventEmitter;
         this.channelSession = channelSession;
         this.roomId = roomId;
-    }
-    public CimEvent(Object data, CimEventName name, CimEventType type, String conversationId, Sender eventEmitter,
-                    ChannelSession channelSession) {
-        this.id = Utils.getObjectId();
-        this.data = data;
-        this.name = name;
-        this.type = type;
-        this.conversationId = conversationId;
-        this.timestamp = new Timestamp(System.currentTimeMillis());
-        this.eventEmitter = eventEmitter;
-        this.channelSession = channelSession;
+        this.roomLabel = roomLabel;
     }
 
     public void setId(String id) {
@@ -118,5 +109,13 @@ public class CimEvent implements Serializable {
 
     public void setRoomId(String roomId) {
         this.roomId = roomId;
+    }
+
+    public String getRoomLabel() {
+        return roomLabel;
+    }
+
+    public void setRoomLabel(String roomLabel) {
+        this.roomLabel = roomLabel;
     }
 }

@@ -24,7 +24,8 @@ public class VoiceActivity {
 
     public CimEvent toCimEvent(String conversationId) {
         CimEvent cimEvent =
-                new CimEvent(this, CimEventName.VOICE_ACTIVITY, CimEventType.ACTIVITY, conversationId, null, null);
+                new CimEvent(this, CimEventName.VOICE_ACTIVITY, CimEventType.ACTIVITY, conversationId,
+                        null, null, null, null);
         cimEvent.setTimestamp(this.endTime);
         return cimEvent;
     }

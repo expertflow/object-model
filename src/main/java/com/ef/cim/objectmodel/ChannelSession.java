@@ -38,6 +38,7 @@ public class ChannelSession implements Participant {
     private String roomId;
     private ChannelSessionState state;
     private Direction channelSessionDirection;
+    private String roomLabel;
 
 
     /**
@@ -291,6 +292,18 @@ public class ChannelSession implements Participant {
         this.channelSessionDirection = channelSessionDirection;
     }
 
+    public void setParticipantType(String participantType) {
+        this.participantType = participantType;
+    }
+
+    public String getRoomLabel() {
+        return roomLabel;
+    }
+
+    public void setRoomLabel(String roomLabel) {
+        this.roomLabel = roomLabel;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -328,6 +341,7 @@ public class ChannelSession implements Participant {
         sb.append(", roomId=").append(roomId);
         sb.append(", state=").append(state);
         sb.append(", direction=").append(channelSessionDirection);
+        sb.append(", roomLabel=").append(roomLabel);
         sb.append('}');
         return sb.toString();
     }

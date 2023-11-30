@@ -22,7 +22,6 @@ public class Room implements Serializable {
     private List<RoomMember> members;
     private RoomType type;
     private String roomLabel;
-    private List<ChannelSession> channelSessionList;
     private Boolean isDeleted;
     private String createdBy;
     private Timestamp createdOn;
@@ -37,9 +36,15 @@ public class Room implements Serializable {
         this.members = members;
         this.type = type;
         this.roomLabel = roomLabel;
-        this.channelSessionList = new ArrayList<>();
         this.isDeleted = isDeleted;
         this.createdBy = createdBy;
         this.createdOn = new Timestamp(System.currentTimeMillis());;
+    }
+
+    public void setMembers(List<RoomMember> members) {
+        if (this.members == null) {
+            this.members = new ArrayList<>();
+        }
+        this.members.addAll(members);
     }
 }
