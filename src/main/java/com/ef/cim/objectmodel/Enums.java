@@ -4,18 +4,51 @@ package com.ef.cim.objectmodel;
  * Contains all the enums used in the project.
  */
 public class Enums {
+    /**
+     * The enum Task type direction.
+     */
     public enum TaskTypeDirection {
+        /**
+         * Consult task type direction.
+         */
         CONSULT,
+        /**
+         * Consult transfer task type direction.
+         */
         CONSULT_TRANSFER,
+        /**
+         * Consult conference task type direction.
+         */
         CONSULT_CONFERENCE,
+        /**
+         * Direct transfer task type direction.
+         */
         DIRECT_TRANSFER,
+        /**
+         * Direct conference task type direction.
+         */
         DIRECT_CONFERENCE,
+        /**
+         * Inbound task type direction.
+         */
         INBOUND,
+        /**
+         * Outbound task type direction.
+         */
         OUTBOUND
     }
 
+    /**
+     * The enum Task type mode.
+     */
     public enum TaskTypeMode {
+        /**
+         * Agent task type mode.
+         */
         AGENT,
+        /**
+         * Queue task type mode.
+         */
         QUEUE
     }
 
@@ -76,7 +109,19 @@ public class Enums {
         /**
          * Force closed task state reason code.
          */
-        FORCE_CLOSED
+        FORCE_CLOSED,
+        /**
+         * Wrap up applied task state reason code.
+         */
+        WRAP_UP_APPLIED,
+        /**
+         * Wrap up not applied task state reason code.
+         */
+        WRAP_UP_NOT_APPLIED,
+        /**
+         * Wrap up expired task state reason code.
+         */
+        WRAP_UP_EXPIRED
     }
 
     /**
@@ -179,11 +224,29 @@ public class Enums {
      * Names of Sender of CimMessage or CimEvent
      */
     public enum SenderType {
+        /**
+         * Agent sender type.
+         */
         AGENT,
+        /**
+         * Bot sender type.
+         */
         BOT,
+        /**
+         * Customer sender type.
+         */
         CUSTOMER,
+        /**
+         * App sender type.
+         */
         APP,
+        /**
+         * Connector sender type.
+         */
         CONNECTOR,
+        /**
+         * System sender type.
+         */
         SYSTEM
     }
 }
