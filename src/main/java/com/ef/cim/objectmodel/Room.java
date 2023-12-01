@@ -40,11 +40,4 @@ public class Room implements Serializable {
         this.createdBy = createdBy;
         this.createdOn = new Timestamp(System.currentTimeMillis());;
     }
-
-    public void setMembers(List<RoomMember> members) {
-        if (this.members == null) {
-            this.members = new ArrayList<>();
-        }
-        this.members.addAll(members);
-    }
 }
