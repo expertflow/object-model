@@ -48,8 +48,7 @@ public class PrecisionQueueEntity {
     /**
      * The Agent service level duration.
      */
-    @NotNull
-    private int agentSlaDuration;
+    private Integer agentSlaDuration;
     /**
      * The Steps.
      */

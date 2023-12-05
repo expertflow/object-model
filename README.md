@@ -718,5 +718,9 @@ Version 1.17.1.3
 ==============================================================================================
 
 Version 1.17.2
-- Add `agentSlaDuration` in `Conversation` class.
+- Add `agentSla` object in `Conversation` class.
+- ADD `cachedAgentSlaDuration` in `Conversation` class
 - Add `agentSlaDuration` in `PrecisionQueueEntity` class.
+- ADD `AGENT_SLA_STARTED`, `AGENT_SLA_STOPPED`, `AGENT_SLA_EXPIRED`, `REMOVE_ALL_AGENTS`,
+      `RESET_AGENT_SLA` in `CimEventName` class.
+- ADD `AgentSla` object class.
