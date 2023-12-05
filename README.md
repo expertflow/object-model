@@ -680,14 +680,14 @@ Version 1.17.0
 - Updated `AssignResourceRequest` Object
 - Moved the task related Objects to the `task` package
 
-Note: 1.16.9.1 and 1.16.9.2 are not merged in 1.17.0. Use 1.17.1.3 for stable usage
+Note: 1.16.9.1 and 1.16.9.2 are not merged in 1.17.0. Use 1.17.1.4 for stable usage
 
 ==============================================================================================
 
 Version 1.17.1
 - Added `agentRequestTtlTimerId` field in `Task`
 
-Note: 1.16.9.2 is not merged in 1.17.1 Use 1.17.1.3 for stable usage
+Note: 1.16.9.2 is not merged in 1.17.1 Use 1.17.1.4 for stable usage
 
 ==============================================================================================
 
@@ -695,7 +695,7 @@ Version 1.17.1.1
 - Revision of v-1.17.1 for multichannel implementation after testing for Chat media cases
 - Use this release instead of v-1.17.0 and v-1.17.1
 
-Note: 1.16.9.2 is not merged in 1.17.1.1 Use 1.17.1.3 for stable usage
+Note: 1.16.9.2 is not merged in 1.17.1.1 Use 1.17.1.4 for stable usage
 
 ==============================================================================================
 
@@ -706,21 +706,35 @@ Version 1.17.1.2
 - New Class `TaskStateChangedDto` added
 - Added a couple of methods in the `Task` Class
 
-Note: Use 1.17.1.3 for stable usage
+Note: Use 1.17.1.4 for stable usage
 
 ==============================================================================================
 
 Version 1.17.1.3
 - Revision of v-1.17.1.2 for multichannel implementation
 - Added `lastAssignedAgentId` field in `AssignResourceRequest` class
-- Use this release instead of v-1.17.0, v-1.17.1, v-1.17.1.1, v-1.17.1.2 for multichannel
+
+Note: Use 1.17.1.4 for stable usage
 
 ==============================================================================================
 
-Version 1.17.2
+Version 1.17.1.4
+- Revision of v-1.17.1.3 for multichannel implementation
+- Removed `markedForDeletion` field from `TaskMedia` class
+- Added `answerTime` field in `TaskMedia` class
+- Added wrap up reason codes in `Enums.TaskStateReasonCode` enum
+
+Note: Use this release instead of v-1.17.0, v-1.17.1, v-1.17.1.1, v-1.17.1.2, v-1-17.1.3 for multichannel
+
+==============================================================================================
+
+Version 1.17.2.x
 - Add `agentSla` object in `Conversation` class.
 - ADD `cachedAgentSlaDuration` in `Conversation` class
 - Add `agentSlaDuration` in `PrecisionQueueEntity` class.
 - ADD `AGENT_SLA_STARTED`, `AGENT_SLA_STOPPED`, `AGENT_SLA_EXPIRED`, `REMOVE_ALL_AGENTS`,
       `RESET_AGENT_SLA` in `CimEventName` class.
 - ADD `AgentSla` object class.
+- 1.17.1.4 is merged 
+
+Note: Use 1.17.2.4 for stable usage
