@@ -58,13 +58,13 @@ public class TaskMedia {
      */
     private List<ChannelSession> channelSessions = new ArrayList<>();
     /**
-     * The Marked for deletion.
-     */
-    private boolean markedForDeletion;
-    /**
      * The Enqueue time.
      */
     private long enqueueTime;
+    /**
+     * The Answer time.
+     */
+    private long answerTime;
 
     /**
      * Instantiates a new Task media.
@@ -81,13 +81,14 @@ public class TaskMedia {
     public TaskMedia(String mrdId, String taskId, TaskQueue queue, TaskType type, int priority, TaskMediaState state,
                      ChannelSession requestSession, List<ChannelSession> channelSessions) {
         this(UUID.randomUUID().toString(), mrdId, taskId, queue, type, priority, state, requestSession,
-                channelSessions, false, System.currentTimeMillis());
+                channelSessions, System.currentTimeMillis(), 0L);
     }
 
     /**
      * Instance on reroute task media.
      *
-     * @param media the media
+     * @param taskId the task id
+     * @param media  the media
      * @return the task media
      */
     public static TaskMedia instanceOnReRoute(String taskId, TaskMedia media) {
@@ -129,6 +130,7 @@ public class TaskMedia {
      * Remove channel session.
      *
      * @param channelSessionId the channel session id
+     * @return the boolean
      */
     public boolean removeChannelSession(String channelSessionId) {
         ListIterator<ChannelSession> iter = this.channelSessions.listIterator();

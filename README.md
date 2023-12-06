@@ -680,14 +680,14 @@ Version 1.17.0
 - Updated `AssignResourceRequest` Object
 - Moved the task related Objects to the `task` package
 
-Note: 1.16.9.1 and 1.16.9.2 are not merged in 1.17.0. Use 1.17.1.3 for stable usage
+Note: 1.16.9.1 and 1.16.9.2 are not merged in 1.17.0. Use 1.17.1.5 for stable usage
 
 ==============================================================================================
 
 Version 1.17.1
 - Added `agentRequestTtlTimerId` field in `Task`
 
-Note: 1.16.9.2 is not merged in 1.17.1 Use 1.17.1.3 for stable usage
+Note: 1.16.9.2 is not merged in 1.17.1 Use 1.17.1.5 for stable usage
 
 ==============================================================================================
 
@@ -695,7 +695,7 @@ Version 1.17.1.1
 - Revision of v-1.17.1 for multichannel implementation after testing for Chat media cases
 - Use this release instead of v-1.17.0 and v-1.17.1
 
-Note: 1.16.9.2 is not merged in 1.17.1.1 Use 1.17.1.3 for stable usage
+Note: 1.16.9.2 is not merged in 1.17.1.1 Use 1.17.1.5 for stable usage
 
 ==============================================================================================
 
@@ -706,14 +706,15 @@ Version 1.17.1.2
 - New Class `TaskStateChangedDto` added
 - Added a couple of methods in the `Task` Class
 
-Note: Use 1.17.1.3 for stable usage
+Note: Use 1.17.1.5 for stable usage
 
 ==============================================================================================
 
 Version 1.17.1.3
 - Revision of v-1.17.1.2 for multichannel implementation
 - Added `lastAssignedAgentId` field in `AssignResourceRequest` class
-- Use this release instead of v-1.17.0, v-1.17.1, v-1.17.1.1, v-1.17.1.2 for multichannel
+
+Note: Use 1.17.1.5 for stable usage
 
 ==============================================================================================
 
@@ -722,3 +723,24 @@ Version 1.17.3
 - Added `EmailMessage` class
 - Added `EMAIL` in `MessageType` interface
 - Added @Type for `EmailMessage` in `MessageBody`
+
+Note: 1.17.1.4 is not merged in this, Please use 1.17.1.5 for stable use.
+
+==============================================================================================
+
+Version 1.17.1.4
+- Revision of v-1.17.1.3 for multichannel implementation
+- Removed `markedForDeletion` field from `TaskMedia` class
+- Added `answerTime` field in `TaskMedia` class
+- Added wrap up reason codes in `Enums.TaskStateReasonCode` enum
+
+Note: 1.17.3 is not merged in this, Use 1.17.1.5 for stable usage
+
+==============================================================================================
+
+Version 1.17.1.5
+- 1.17.3 and 1.17.1.4 are merged
+
+Note: Use this release instead of v-1.17.0, v-1.17.1, v-1.17.1.1, v-1.17.1.2, v-1-17.1.3, v-1.17.3, v-1.17.1.4
+
+
