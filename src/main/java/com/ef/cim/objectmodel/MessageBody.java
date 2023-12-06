@@ -24,7 +24,8 @@ import javax.validation.constraints.NotNull;
         @Type(value = WrapUpMessage.class, name = "WRAPUP"),
         @Type(value = TemplateMessage.class, name = "TEMPLATE"),
         @Type(value = ActionMessageBody.class, name = "ACTION"),
-        @Type(value = CommentMessage.class, name = "COMMENT")})
+        @Type(value = CommentMessage.class, name = "COMMENT"),
+        @Type(value = EmailMessage.class, name = "EMAIL")})
 public class MessageBody implements Serializable {
     @NotNull
     @JsonProperty("type")
