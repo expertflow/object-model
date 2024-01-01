@@ -14,7 +14,7 @@ import lombok.ToString;
 @ToString
 public class RoomMember implements Serializable {
     private String name;
-    private String status;
+    private AgentState status;
     private MemberType memberType;
     private String memberId;
     private String roomId;
