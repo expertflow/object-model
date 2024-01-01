@@ -672,6 +672,11 @@ Version 1.16.9.2
 
 ==============================================================================================
 
+Version 1.16.9.3 -> 1.16.9.3.1
+- Modified `ChannelData` class. Added `customerFirstName` and `customerLastName` attribute in it.
+
+==============================================================================================
+
 Version 1.17.0
 - Added `MrdType`, `MrdTypeName`
 - Updated `MediaRoutingDomain` Object
@@ -753,6 +758,7 @@ Version 1.17.2.x
       `RESET_AGENT_SLA` in `CimEventName` class.
 - ADD `AgentSla` object class.
 - 1.17.1.4 is merged 
-- 1.17.1.5 is merged
+- 1.17.1.5 is merged (v-1.17.2.5)
+- 1.16.9.3.1 is merged, (v-1.17.2.6)
 
-Note: Use 1.17.2.5 for stable use
+latest: 1.17.2.6
