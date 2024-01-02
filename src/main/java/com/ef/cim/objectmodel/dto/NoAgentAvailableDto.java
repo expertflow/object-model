@@ -1,6 +1,6 @@
 package com.ef.cim.objectmodel.dto;
 
-import com.ef.cim.objectmodel.TaskType;
+import com.ef.cim.objectmodel.task.TaskType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,5 +1,6 @@
-package com.ef.cim.objectmodel;
+package com.ef.cim.objectmodel.task;
 
+import com.ef.cim.objectmodel.Enums;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.AllArgsConstructor;

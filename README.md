@@ -669,3 +669,103 @@ Version 1.16.9.2
 - Modified `WebRtcConfigurations` class.
 - Added `CallbackConfigurations` class.
 - Added `WebhookConfigurations` class.
+
+==============================================================================================
+
+Version 1.16.9.3 -> 1.16.9.3.1
+- Modified `ChannelData` class. Added `customerFirstName` and `customerLastName` attribute in it.
+
+==============================================================================================
+
+Version 1.17.0
+- Added `MrdType`, `MrdTypeName`
+- Updated `MediaRoutingDomain` Object
+- Updated `TaskDto` Object and Changed its name to `Task`
+- Added `TaskMedia`, `TaskMediaState`
+- Updated `AssignResourceRequest` Object
+- Moved the task related Objects to the `task` package
+
+Note: 1.16.9.1 and 1.16.9.2 are not merged in 1.17.0. Use 1.17.1.5 for stable usage
+
+==============================================================================================
+
+Version 1.17.1
+- Added `agentRequestTtlTimerId` field in `Task`
+
+Note: 1.16.9.2 is not merged in 1.17.1 Use 1.17.1.5 for stable usage
+
+==============================================================================================
+
+Version 1.17.1.1
+- Revision of v-1.17.1 for multichannel implementation after testing for Chat media cases
+- Use this release instead of v-1.17.0 and v-1.17.1
+
+Note: 1.16.9.2 is not merged in 1.17.1.1 Use 1.17.1.5 for stable usage
+
+==============================================================================================
+
+Version 1.17.1.2
+- Revision of v-1.17.1.1 for multichannel implementation
+- v-1.16.9.2 is merged
+- `TASK_MEDIA_STATE_CHANGED` removed from `CimEventName` enum 
+- New Class `TaskStateChangedDto` added
+- Added a couple of methods in the `Task` Class
+
+Note: Use 1.17.1.5 for stable usage
+
+==============================================================================================
+
+Version 1.17.1.3
+- Revision of v-1.17.1.2 for multichannel implementation
+- Added `lastAssignedAgentId` field in `AssignResourceRequest` class
+
+Note: Use 1.17.1.5 for stable usage
+
+==============================================================================================
+
+Version 1.17.3
+- Added `EMAIL` in `ChannelTypeEnum`
+- Added `EmailMessage` class
+- Added `EMAIL` in `MessageType` interface
+- Added @Type for `EmailMessage` in `MessageBody`
+
+Note: 1.17.1.4 is not merged in this, Please use 1.17.1.5 for stable use.
+
+==============================================================================================
+
+Version 1.17.1.4
+- Revision of v-1.17.1.3 for multichannel implementation
+- Removed `markedForDeletion` field from `TaskMedia` class
+- Added `answerTime` field in `TaskMedia` class
+- Added wrap up reason codes in `Enums.TaskStateReasonCode` enum
+
+Note: 1.17.3 is not merged into this, use 1.17.1.5 for stable use
+
+==============================================================================================
+
+Version 1.17.1.5
+- 1.17.3 and 1.17.1.4 are merged
+
+Note: Use this release instead of v-1.17.0, v-1.17.1, v-1.17.1.1, v-1.17.1.2, v-1-17.1.3, v-1.17.3, v-1.17.1.4
+
+==============================================================================================
+
+Version 1.17.2.x
+- Add `agentSla` object in `Conversation` class.
+- ADD `cachedAgentSlaDuration` in `Conversation` class
+- Add `agentSlaDuration` in `PrecisionQueueEntity` class.
+- ADD `AGENT_SLA_STARTED`, `AGENT_SLA_STOPPED`, `AGENT_SLA_EXPIRED`, `REMOVE_ALL_AGENTS`,
+      `RESET_AGENT_SLA` in `CimEventName` class.
+- ADD `AgentSla` object class.
+- 1.17.1.4 is merged 
+- 1.17.1.5 is merged (v-1.17.2.5)
+- 1.16.9.3.1 is merged, (v-1.17.2.6)
+
+latest: 1.17.2.6
+
+==============================================================================================
+
+Version 1.17.3.x (merge 1.17.2.x into rooms feature)
+- Merge 1.17.2.6 (v-1.17.3.1)
+
+latest 1.17.3.1

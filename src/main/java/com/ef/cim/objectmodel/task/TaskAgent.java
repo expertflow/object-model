@@ -1,4 +1,4 @@
-package com.ef.cim.objectmodel.dto;
+package com.ef.cim.objectmodel.task;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class AssignResourceRequestQueue {
-    private String type;
+public class TaskAgent {
+    private String id;
     private String name;
 }

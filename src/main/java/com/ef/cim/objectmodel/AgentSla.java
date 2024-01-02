@@ -6,12 +6,16 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Agent SLA type.
+ */
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
-public class TaskQueue {
-    private String id;
-    private String name;
+public class AgentSla {
+    private Integer totalDuration;
+    private String action;
+    private String startTime;
 }

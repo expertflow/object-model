@@ -26,6 +26,7 @@ public interface MessageType {
    String VOICE = "VOICE";
    String WRAPUP = "WRAPUP";
    String COMMENT= "COMMENT";
+   String EMAIL = "EMAIL";
 
 
 //    BUTTON,

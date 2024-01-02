@@ -4,18 +4,51 @@ package com.ef.cim.objectmodel;
  * Contains all the enums used in the project.
  */
 public class Enums {
+    /**
+     * The enum Task type direction.
+     */
     public enum TaskTypeDirection {
+        /**
+         * Consult task type direction.
+         */
         CONSULT,
+        /**
+         * Consult transfer task type direction.
+         */
         CONSULT_TRANSFER,
+        /**
+         * Consult conference task type direction.
+         */
         CONSULT_CONFERENCE,
+        /**
+         * Direct transfer task type direction.
+         */
         DIRECT_TRANSFER,
+        /**
+         * Direct conference task type direction.
+         */
         DIRECT_CONFERENCE,
+        /**
+         * Inbound task type direction.
+         */
         INBOUND,
+        /**
+         * Outbound task type direction.
+         */
         OUTBOUND
     }
 
+    /**
+     * The enum Task type mode.
+     */
     public enum TaskTypeMode {
+        /**
+         * Agent task type mode.
+         */
         AGENT,
+        /**
+         * Queue task type mode.
+         */
         QUEUE
     }
 
@@ -24,25 +57,9 @@ public class Enums {
      */
     public enum TaskStateName {
         /**
-         * Started task state name.
-         */
-        STARTED,
-        /**
-         * Queued task state name.
-         */
-        QUEUED,
-        /**
-         * Reserved task state name.
-         */
-        RESERVED,
-        /**
          * Active task state name.
          */
         ACTIVE,
-        /**
-         * Paused task state name.
-         */
-        PAUSED,
         /**
          * Wrap up task state name.
          */
@@ -89,49 +106,22 @@ public class Enums {
          * Transferred task state reason code.
          */
         TRANSFERRED,
-        FORCE_CLOSED
-    }
-
-    /**
-     * Names of internal events (fired internally).
-     */
-    public enum EventName {
         /**
-         * New task event name.
+         * Force closed task state reason code.
          */
-        NEW_TASK,
+        FORCE_CLOSED,
         /**
-         * Task removed event name.
+         * Wrap up applied task state reason code.
          */
-        TASK_REMOVED,
+        WRAP_UP_APPLIED,
         /**
-         * Agent state event name.
+         * Wrap up not applied task state reason code.
          */
-        AGENT_STATE,
+        WRAP_UP_NOT_APPLIED,
         /**
-         * Agent mrd state event name.
+         * Wrap up expired task state reason code.
          */
-        AGENT_MRD_STATE,
-        /**
-         * Ewt request event name.
-         */
-        EWT_REQUEST_EVENT,
-        /**
-         * Step timeout event name.
-         */
-        STEP_TIMEOUT,
-        /**
-         * Task state event name.
-         */
-        TASK_STATE,
-        /**
-         * Conference event name.
-         */
-        CONFERENCE,
-        /**
-         * Task accepted event name.
-         */
-        TASK_ACCEPTED
+        WRAP_UP_EXPIRED
     }
 
     /**
@@ -234,11 +224,29 @@ public class Enums {
      * Names of Sender of CimMessage or CimEvent
      */
     public enum SenderType {
+        /**
+         * Agent sender type.
+         */
         AGENT,
+        /**
+         * Bot sender type.
+         */
         BOT,
+        /**
+         * Customer sender type.
+         */
         CUSTOMER,
+        /**
+         * App sender type.
+         */
         APP,
+        /**
+         * Connector sender type.
+         */
         CONNECTOR,
+        /**
+         * System sender type.
+         */
         SYSTEM
     }
 }
