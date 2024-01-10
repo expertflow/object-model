@@ -1,10 +1,17 @@
 package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
+import com.ef.cim.objectmodel.room.RoomInfo;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.mongodb.core.index.Indexed;
 
+@Getter
+@Setter
+@ToString
 public class CimEvent implements Serializable {
     private String id;
     @Indexed
@@ -15,15 +22,14 @@ public class CimEvent implements Serializable {
     private Sender eventEmitter;
     private ChannelSession channelSession;
     private Object data;
-    private String roomId;
-    private String roomLabel;
+    private RoomInfo roomInfo;
 
     public CimEvent() {
         this.id = Utils.getObjectId();
     }
 
     public CimEvent(Object data, CimEventName name, CimEventType type, String conversationId, Sender eventEmitter,
-            ChannelSession channelSession, String roomId, String roomLabel) {
+                    ChannelSession channelSession, RoomInfo roomInfo) {
         this.id = Utils.getObjectId();
         this.data = data;
         this.name = name;
@@ -32,90 +38,6 @@ public class CimEvent implements Serializable {
         this.timestamp = new Timestamp(System.currentTimeMillis());
         this.eventEmitter = eventEmitter;
         this.channelSession = channelSession;
-        this.roomId = roomId;
-        this.roomLabel = roomLabel;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    // Getters
-    public String getId() {
-        return id;
-    }
-
-
-    public CimEventName getName() {
-        return name;
-    }
-
-    public CimEventType getType() {
-        return type;
-    }
-
-    public Timestamp getTimestamp() {
-        return timestamp;
-    }
-
-    public Object getData() {
-        return data;
-    }
-
-    // Setters
-    public void setName(CimEventName name) {
-        this.name = name;
-    }
-
-    public void setType(CimEventType type) {
-        this.type = type;
-    }
-
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
-    }
-
-    public String getConversationId() {
-        return conversationId;
-    }
-
-    public void setConversationId(String conversationId) {
-        this.conversationId = conversationId;
-    }
-
-    public Sender getEventEmitter() {
-        return eventEmitter;
-    }
-
-    public void setEventEmitter(Sender eventEmitter) {
-        this.eventEmitter = eventEmitter;
-    }
-
-    public ChannelSession getChannelSession() {
-        return channelSession;
-    }
-
-    public void setChannelSession(ChannelSession channelSession) {
-        this.channelSession = channelSession;
-    }
-
-    public String getRoomId() {
-        return roomId;
-    }
-
-    public void setRoomId(String roomId) {
-        this.roomId = roomId;
-    }
-
-    public String getRoomLabel() {
-        return roomLabel;
-    }
-
-    public void setRoomLabel(String roomLabel) {
-        this.roomLabel = roomLabel;
+        this.roomInfo = roomInfo;
     }
 }

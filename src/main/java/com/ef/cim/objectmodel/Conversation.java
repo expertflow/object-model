@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
+import com.ef.cim.objectmodel.room.RoomInfo;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class Conversation implements Serializable {
     private Timestamp endTime;
     private Map<String, String> conversationData = new HashMap<>();
     private TopicMetadata metadata;
-    private String roomId;
+    private RoomInfo roomInfo;
     private AgentSla agentSla = new AgentSla();
     private int cachedAgentSlaDuration;
 
@@ -35,7 +36,7 @@ public class Conversation implements Serializable {
         this.metadata = new TopicMetadata();
     }
 
-    public Conversation(String topicId, TopicState state, ChannelSession channelSession, String roomId) {
+    public Conversation(String topicId, TopicState state, ChannelSession channelSession, RoomInfo roomInfo) {
         this.id = topicId;
         this.customer = channelSession.getCustomer();
         this.state = state;
@@ -44,7 +45,7 @@ public class Conversation implements Serializable {
         this.creationTime = new Timestamp(System.currentTimeMillis());
         this.metadata = new TopicMetadata(channelSession);
         this.participants = new ArrayList<>();
-        this.roomId = roomId;
+        this.roomInfo = roomInfo;
     }
 
     public void addParticipant(ConversationParticipant participant) {

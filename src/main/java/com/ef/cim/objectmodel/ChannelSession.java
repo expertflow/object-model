@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
+import com.ef.cim.objectmodel.room.RoomInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,10 +36,9 @@ public class ChannelSession implements Participant {
     @NotNull(message = "Is Active is Mandatory")
     private boolean isActive;
     private String conversationId;
-    private String roomId;
+    private RoomInfo roomInfo;
     private ChannelSessionState state;
     private Direction channelSessionDirection;
-    private String roomLabel;
 
 
     /**
@@ -220,21 +220,12 @@ public class ChannelSession implements Participant {
         this.conversationId = conversationId;
     }
 
-    /**
-     * Getter for roomId
-     *
-     * @return roomId
-     */
-    public String getRoomId() {
-        return roomId;
+    public RoomInfo getRoomInfo() {
+        return roomInfo;
     }
-    /**
-     * Setter for roomId
-     *
-     * @param roomId roomId
-     */
-    public void setRoomId(String roomId) {
-        this.roomId = roomId;
+
+    public void setRoomInfo(RoomInfo roomInfo) {
+        this.roomInfo = roomInfo;
     }
 
     public String getParticipantType() {
@@ -248,7 +239,7 @@ public class ChannelSession implements Participant {
      */
     public void addCustomerSuggestion(Customer customer) {
         if (this.customerSuggestions == null) {
-            this.customerSuggestions = new ArrayList<Customer>();
+            this.customerSuggestions = new ArrayList<>();
         }
         this.customerSuggestions.add(customer);
     }
@@ -296,14 +287,6 @@ public class ChannelSession implements Participant {
         this.participantType = participantType;
     }
 
-    public String getRoomLabel() {
-        return roomLabel;
-    }
-
-    public void setRoomLabel(String roomLabel) {
-        this.roomLabel = roomLabel;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -338,10 +321,9 @@ public class ChannelSession implements Participant {
         sb.append(", customerPresence=").append(customerPresence);
         sb.append(", isActive=").append(isActive);
         sb.append(", conversationId='").append(conversationId).append('\'');
-        sb.append(", roomId=").append(roomId);
+        sb.append(", roomInfo=").append(roomInfo);
         sb.append(", state=").append(state);
         sb.append(", direction=").append(channelSessionDirection);
-        sb.append(", roomLabel=").append(roomLabel);
         sb.append('}');
         return sb.toString();
     }
