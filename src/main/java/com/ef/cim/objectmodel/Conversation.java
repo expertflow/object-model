@@ -48,6 +48,10 @@ public class Conversation implements Serializable {
         this.roomInfo = roomInfo;
     }
 
+    public Conversation(ChannelSession channelSession) {
+        this(channelSession.getConversationId(), TopicState.CREATED, channelSession, channelSession.getRoomInfo());
+    }
+
     public void addParticipant(ConversationParticipant participant) {
         if (this.participants == null) {
             this.participants = new ArrayList<>();

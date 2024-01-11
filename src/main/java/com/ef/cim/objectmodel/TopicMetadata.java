@@ -13,7 +13,6 @@ import lombok.ToString;
 public class TopicMetadata implements Serializable {
     private String botId;
     private ChannelSession lastUsedChannelSession;
-    private AgentRequestStatus agentRequestStatus;
 
     public TopicMetadata(ChannelSession channelSession) {
         this.botId = channelSession.getChannel().getChannelConfig().getBotId();

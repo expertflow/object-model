@@ -14,6 +14,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 @Getter
 @Setter
@@ -21,6 +22,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class Room implements Serializable {
+    @Indexed
     private String id;
     @NotBlank(message = "Field 'name' can not blank")
     private String name;
@@ -29,9 +31,13 @@ public class Room implements Serializable {
     private List<@Valid RoomMember> members;
     @NotNull(message = "Field 'type' can not null")
     private RoomType type;
+    @Indexed
+    @NotBlank(message = "Field 'mode' can not blank")
     private RoomMode mode;
-    @NotBlank(message = "Field 'roomLabel' can not blank")
+    @Indexed
+    @NotBlank(message = "Field 'label' can not blank")
     private String label;
+    @Indexed
     private boolean isDeleted = false;
     private String createdBy;
     private Timestamp createdOn;

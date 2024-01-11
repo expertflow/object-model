@@ -768,5 +768,6 @@ latest: 1.17.2.6
 Version 1.17.3.x (merge 1.17.2.x into rooms feature)
 - Merge 1.17.2.6 (v-1.17.3.1)
 - Refactoring Room Objects (v-1.17.3.2)
+- Add mongo indexes in Room Object (v-1.17.3.3) 
 
-latest 1.17.3.2
+latest 1.17.3.3

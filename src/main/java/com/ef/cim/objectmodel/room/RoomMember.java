@@ -16,11 +16,11 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class RoomMember implements Serializable {
-    @NotNull(message = "Field 'memberId' can not null")
+    @NotNull(message = "Field 'id' can not null")
     private String id;
     @NotNull(message = "Field 'name' can not null")
     private String name;
-    @NotNull(message = "Field 'memberType' can not null")
+    @NotNull(message = "Field 'type' can not null")
     private RoomMemberType type;
     private AgentState status;
     private String roomId;
