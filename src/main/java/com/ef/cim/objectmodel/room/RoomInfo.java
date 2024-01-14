@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel.room;
 
+import java.io.Serializable;
 import java.util.Objects;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +13,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class RoomInfo {
+public class RoomInfo implements Serializable {
     private String id;
     private RoomMode mode;
 

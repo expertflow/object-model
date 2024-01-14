@@ -15,7 +15,7 @@ public class ReasonCode {
     /**
      * The ID.
      */
-    private final String id;
+    private String id;
     /**
      * The Name.
      */

@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel.room;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
@@ -32,12 +33,13 @@ public class Room implements Serializable {
     @NotNull(message = "Field 'type' can not null")
     private RoomType type;
     @Indexed
-    @NotBlank(message = "Field 'mode' can not blank")
+    @NotNull(message = "Field 'mode' can not be blank")
     private RoomMode mode;
     @Indexed
-    @NotBlank(message = "Field 'label' can not blank")
+    @NotBlank(message = "Field 'label' can not be blank")
     private String label;
     @Indexed
+    @JsonProperty("isDeleted")
     private boolean isDeleted = false;
     private String createdBy;
     private Timestamp createdOn;
