@@ -772,3 +772,12 @@ Version 1.17.3.x (merge 1.17.2.x into rooms feature)
 - Minor issues resolved, ConversationDTO added (v-1.17.3.4) 
 
 latest 1.17.3.4
+
+==============================================================================================
+
+Version 1.17.4.1 (Build on top of 1.17.3.4)
+
+- Added `mediaLabel` in `Attachment` class
+- Added `mediaName` in `Attachment` class
+
+Used specifically for EMAIL development. Not a release version.
