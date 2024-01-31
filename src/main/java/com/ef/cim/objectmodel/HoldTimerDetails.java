@@ -1,19 +1,18 @@
 package com.ef.cim.objectmodel;
 
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.io.Serializable;
-
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
-public class Team implements Serializable {
-    private String teamId;
-    private String teamName;
+public class HoldTimerDetails implements Serializable {
+    private Integer totalDuration;
+    private String startTime;
 }

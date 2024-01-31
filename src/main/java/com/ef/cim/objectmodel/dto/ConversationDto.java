@@ -6,6 +6,7 @@ import com.ef.cim.objectmodel.CimEvent;
 import com.ef.cim.objectmodel.Conversation;
 import com.ef.cim.objectmodel.ConversationParticipant;
 import com.ef.cim.objectmodel.Customer;
+import com.ef.cim.objectmodel.HoldTimerDetails;
 import com.ef.cim.objectmodel.ParticipantType;
 import com.ef.cim.objectmodel.TopicState;
 import java.util.ArrayList;
@@ -36,6 +37,7 @@ public class ConversationDto {
     private AgentSla agentSla;
     private List<Customer> customerSuggestions = new ArrayList<>();
     private List<CimEvent> topicEvents;
+    private HoldTimerDetails holdTimerDetails;
 
 
     /**
@@ -54,6 +56,7 @@ public class ConversationDto {
         this.setCustomerSuggestionsFrom(conversation);
         this.agentSla = conversation.getAgentSla();
         this.topicEvents = conversationEvents;
+        this.holdTimerDetails = conversation.getHoldTimerDetails();
     }
 
     private void setCustomerSuggestionsFrom(Conversation conversation) {

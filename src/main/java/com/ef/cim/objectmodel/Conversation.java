@@ -29,6 +29,7 @@ public class Conversation implements Serializable {
     private RoomInfo roomInfo;
     private AgentSla agentSla = new AgentSla();
     private int cachedAgentSlaDuration;
+    private HoldTimerDetails holdTimerDetails = new HoldTimerDetails();
 
     public Conversation() {
         this.id = Utils.getObjectId();

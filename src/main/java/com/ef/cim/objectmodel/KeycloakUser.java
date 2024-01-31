@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +20,7 @@ import org.apache.commons.lang3.StringUtils;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class KeycloakUser {
+public class KeycloakUser implements Serializable {
     private String id;
     @NotNull
     private String firstName;
