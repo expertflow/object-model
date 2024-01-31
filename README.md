@@ -777,7 +777,6 @@ latest 1.17.3.4
 
 Version 1.17.5.0 (On top of 1.17.3.x)
 - ADD `CONVERSATION_PAUSED`, `CONVERSATION_RESUMED` in `CimEventName` class.
-- ADD `ewtMinValue`, `ewtMaxValue` in `PrecisionQueueEntity.java`
 - ADD `HoldTimerDetails` class.
 - Add `HoldTimerDetails` in `ConversationDto` and `Conversation` object.
 - Implement `Serializable` in multiple classes.
