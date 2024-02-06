@@ -50,6 +50,14 @@ public class PrecisionQueueEntity {
      */
     private Integer agentSlaDuration;
     /**
+     * Minimum value cap for EWT.
+     */
+    private Integer ewtMinValue;
+    /**
+     * Maximum value cap for EWT.
+     */
+    private Integer ewtMaxValue;
+    /**
      * The Steps.
      */
     @NotNull
