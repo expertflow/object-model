@@ -1,8 +1,9 @@
 package com.ef.cim.objectmodel;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Resource {
+public class Resource implements Serializable {
     private String rsid;
     private String rsname;
     private List<String> scopes;
