@@ -2,6 +2,7 @@ package com.ef.cim.objectmodel.room;
 
 import com.ef.cim.objectmodel.AgentState;
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.Objects;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -24,6 +25,8 @@ public class RoomMember implements Serializable {
     private RoomMemberType type;
     private AgentState status;
     private String roomId;
+    private Timestamp joinTime;
+    private int unReadCount;
 
     @Override
     public boolean equals(Object o) {
