@@ -26,7 +26,7 @@ public class RoomMember implements Serializable {
     private AgentState status;
     private String roomId;
     private Timestamp joinTime;
-    private int unReadCount;
+    private int unreadCount;
 
     @Override
     public boolean equals(Object o) {
@@ -43,5 +43,13 @@ public class RoomMember implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public RoomMember(String id, String name, RoomMemberType type, AgentState status, String roomId) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.status = status;
+        this.roomId = roomId;
     }
 }

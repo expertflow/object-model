@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel.room;
 
+import com.ef.cim.objectmodel.CimMessage;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
@@ -38,6 +39,7 @@ public class Room implements Serializable {
     @Indexed
     @NotBlank(message = "Field 'label' can not be blank")
     private String label;
+    private CimMessage lastMessage;
     @Indexed
     @JsonProperty("isDeleted")
     private boolean isDeleted = false;
@@ -47,7 +49,7 @@ public class Room implements Serializable {
     private Timestamp updatedOn;
 
     public Room(String id, String name, String description, List<RoomMember> members, RoomType type,
-                RoomMode mode, String label, Boolean isDeleted, String createdBy) {
+                RoomMode mode, String label, CimMessage lastMessage, Boolean isDeleted, String createdBy) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -55,6 +57,7 @@ public class Room implements Serializable {
         this.mode = mode;
         this.type = type;
         this.label = label;
+        this.lastMessage = lastMessage;
         this.isDeleted = isDeleted;
         this.createdBy = createdBy;
         this.createdOn = new Timestamp(System.currentTimeMillis());
