@@ -44,7 +44,7 @@ public class Room implements Serializable {
     @JsonProperty("isDeleted")
     private boolean isDeleted = false;
     private String createdBy;
-    private Timestamp createdOn;
+    private Timestamp createdOn = new Timestamp(System.currentTimeMillis());
     private String updatedBy;
     private Timestamp updatedOn;
 
