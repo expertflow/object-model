@@ -39,17 +39,17 @@ public class Room implements Serializable {
     @Indexed
     @NotBlank(message = "Field 'label' can not be blank")
     private String label;
-    private CimMessage lastMessage;
+    private Object lastMessage;
     @Indexed
     @JsonProperty("isDeleted")
     private boolean isDeleted = false;
     private String createdBy;
-    private Timestamp createdOn = new Timestamp(System.currentTimeMillis());
+    private Timestamp createdOn;
     private String updatedBy;
     private Timestamp updatedOn;
 
     public Room(String id, String name, String description, List<RoomMember> members, RoomType type,
-                RoomMode mode, String label, CimMessage lastMessage, Boolean isDeleted, String createdBy) {
+                RoomMode mode, String label, Object lastMessage, Boolean isDeleted, String createdBy) {
         this.id = id;
         this.name = name;
         this.description = description;
