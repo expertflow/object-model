@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 @Getter
 @Setter
@@ -26,6 +27,7 @@ public class RoomMember implements Serializable {
     private AgentState status;
     private String roomId;
     private Timestamp joinTime;
+    @Indexed
     private int unreadCount;
 
     @Override
