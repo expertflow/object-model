@@ -1,6 +1,5 @@
 package com.ef.cim.objectmodel.room;
 
-import com.ef.cim.objectmodel.CimMessage;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
@@ -16,15 +15,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Document("rooms")
 public class Room implements Serializable {
     @Indexed
+    @Id
     private String id;
     @NotBlank(message = "Field 'name' can not blank")
     private String name;
@@ -44,10 +47,23 @@ public class Room implements Serializable {
     @JsonProperty("isDeleted")
     private boolean isDeleted = false;
     private String createdBy;
-    private Timestamp createdOn;
+    private Timestamp createdOn = new Timestamp(System.currentTimeMillis());
     private String updatedBy;
     private Timestamp updatedOn;
 
+    /**
+     * parametrized constructor.
+     * @param id id
+     * @param name name
+     * @param description description
+     * @param members members
+     * @param type type
+     * @param mode mode
+     * @param label label
+     * @param lastMessage lastMessage
+     * @param isDeleted isDeleted
+     * @param createdBy createdBy
+     */
     public Room(String id, String name, String description, List<RoomMember> members, RoomType type,
                 RoomMode mode, String label, Object lastMessage, Boolean isDeleted, String createdBy) {
         this.id = id;

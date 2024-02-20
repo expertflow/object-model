@@ -19,6 +19,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 @ToString
 public class RoomMember implements Serializable {
     @NotNull(message = "Field 'id' can not null")
+    @Indexed
     private String id;
     @NotNull(message = "Field 'name' can not null")
     private String name;
