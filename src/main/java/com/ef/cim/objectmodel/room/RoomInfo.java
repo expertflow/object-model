@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 @Getter
 @Setter
@@ -15,6 +16,7 @@ import lombok.ToString;
 @ToString
 public class RoomInfo implements Serializable {
     private String id;
+    @Indexed
     private RoomMode mode;
 
     @Override

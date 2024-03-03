@@ -16,6 +16,7 @@ public class CimEvent implements Serializable {
     private String id;
     @Indexed
     private CimEventName name;
+    @Indexed
     private CimEventType type;
     private Timestamp timestamp;
     private String conversationId;
