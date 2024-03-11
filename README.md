@@ -781,3 +781,12 @@ Version 1.17.5.0 (On top of 1.17.3.x)
 - Add `HoldTimerDetails` in `ConversationDto` and `Conversation` object.
 - Implement `Serializable` in multiple classes.
 
+==============================================================================================
+
+Version 1.17.6.0
+- Added `EMAIL` as new MRD TYPE
+- Added `Email Signatures` class
+- Added `queuePriority` attribute in `PrecisionQueueEntity` class
+- Added `mediaLebel` and `mediaName` in Attachment class
+
+==============================================================================================
