@@ -781,3 +781,9 @@ Version 1.17.5.0 (On top of 1.17.3.x)
 - Add `HoldTimerDetails` in `ConversationDto` and `Conversation` object.
 - Implement `Serializable` in multiple classes.
 
+==============================================================================================
+
+Version 1.17.5.1
+- ADD `ewtMaxValue` and `ewtMaxValue` in `PrecisionQueueEntity` class
+
+
