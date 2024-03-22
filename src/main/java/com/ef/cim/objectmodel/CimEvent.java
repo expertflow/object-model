@@ -14,8 +14,9 @@ import org.springframework.data.mongodb.core.index.Indexed;
 @ToString
 public class CimEvent implements Serializable {
     private String id;
-    @Indexed
+    @Indexed(name = "name_1")
     private CimEventName name;
+    @Indexed(name = "type_1")
     private CimEventType type;
     private Timestamp timestamp;
     private String conversationId;

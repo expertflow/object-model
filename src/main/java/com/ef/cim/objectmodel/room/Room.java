@@ -15,15 +15,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Document("rooms")
 public class Room implements Serializable {
     @Indexed
+    @Id
     private String id;
     @NotBlank(message = "Field 'name' can not blank")
     private String name;
@@ -38,16 +42,30 @@ public class Room implements Serializable {
     @Indexed
     @NotBlank(message = "Field 'label' can not be blank")
     private String label;
+    private Object lastMessage;
     @Indexed
     @JsonProperty("isDeleted")
     private boolean isDeleted = false;
     private String createdBy;
-    private Timestamp createdOn;
+    private Timestamp createdOn = new Timestamp(System.currentTimeMillis());
     private String updatedBy;
     private Timestamp updatedOn;
 
+    /**
+     * parametrized constructor.
+     * @param id id
+     * @param name name
+     * @param description description
+     * @param members members
+     * @param type type
+     * @param mode mode
+     * @param label label
+     * @param lastMessage lastMessage
+     * @param isDeleted isDeleted
+     * @param createdBy createdBy
+     */
     public Room(String id, String name, String description, List<RoomMember> members, RoomType type,
-                RoomMode mode, String label, Boolean isDeleted, String createdBy) {
+                RoomMode mode, String label, Object lastMessage, Boolean isDeleted, String createdBy) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -55,6 +73,7 @@ public class Room implements Serializable {
         this.mode = mode;
         this.type = type;
         this.label = label;
+        this.lastMessage = lastMessage;
         this.isDeleted = isDeleted;
         this.createdBy = createdBy;
         this.createdOn = new Timestamp(System.currentTimeMillis());
