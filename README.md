@@ -783,7 +783,7 @@ Version 1.17.5.0 (On top of 1.17.3.x)
 
 ==============================================================================================
 
-Version 1.17.5.1
-- ADD `ewtMaxValue` and `ewtMaxValue` in `PrecisionQueueEntity` class
+Version 1.17.7.0
+- ADD `ewtMaxValue` and `ewtMinValue` in `PrecisionQueueEntity` class
 
 
