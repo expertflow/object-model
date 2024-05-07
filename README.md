@@ -786,4 +786,12 @@ Version 1.17.5.0 (On top of 1.17.3.x)
 Version 1.17.7.0
 - ADD `ewtMaxValue` and `ewtMinValue` in `PrecisionQueueEntity` class
 
+==============================================================================================
+
+Version 1.17.7.1
+- ADD `AGENT_HAND_RAISED` and `CONVERSATION_HAND_DOWN` in `CimEventName` class
+- ADD `AgentHandRaise` class
+- ADD `AgentHandRaise` field in `Conversation` class
+
+
 

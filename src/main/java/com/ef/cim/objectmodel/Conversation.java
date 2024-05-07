@@ -30,6 +30,8 @@ public class Conversation implements Serializable {
     private AgentSla agentSla = new AgentSla();
     private int cachedAgentSlaDuration;
     private HoldTimerDetails holdTimerDetails = new HoldTimerDetails();
+    private AgentHandRaise agentHandRaise;
+
 
     public Conversation() {
         this.id = Utils.getObjectId();
@@ -47,6 +49,21 @@ public class Conversation implements Serializable {
         this.metadata = new TopicMetadata(channelSession);
         this.participants = new ArrayList<>();
         this.roomInfo = roomInfo;
+    }
+
+    public void setHandRaise(boolean handRaised, String agentName) {
+        if (agentName == null) {
+            this.agentHandRaise.setAgentNames(new ArrayList<>());
+            this.agentHandRaise.setHandRaised(handRaised);
+            return;
+        }
+
+        if (agentHandRaise.getAgentNames() == null) {
+            this.agentHandRaise.setAgentNames(new ArrayList<>());
+        }
+
+        this.agentHandRaise.setHandRaised(handRaised);
+        this.agentHandRaise.getAgentNames().add(agentName);
     }
 
     public Conversation(ChannelSession channelSession) {
