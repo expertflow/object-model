@@ -2,7 +2,6 @@ package com.ef.cim.objectmodel;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -55,12 +54,6 @@ public class PrecisionQueueEntity {
      */
     @NotNull
     private List<StepEntity> steps = new ArrayList<>();
-    /**
-     * The Queue Priority.
-     */
-    @Min(1)
-    @Max(10)
-    private int queuePriority;
 
     /**
      * Contains step boolean.

@@ -790,3 +790,9 @@ Version 1.17.6.0
 - Added `mediaLebel` and `mediaName` in Attachment class
 
 ==============================================================================================
+
+Version 1.17.6.1
+- Removed `queuePriority` attribute in `PrecisionQueueEntity` class
+- This version contains all the EMAIL related changes till April End 2024
+
+==============================================================================================
