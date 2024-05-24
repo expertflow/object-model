@@ -22,6 +22,7 @@ public class ChannelConfig implements Serializable {
     private int responseSla;
     @NotNull(message = "Customer Inactivity Timeout is mandatory")
     private int customerActivityTimeout;
+    private CustomerSla customerSla = new CustomerSla();
     @NotNull(message = "Customer Identification Criteria is mandatory")
     private UndefinedObject customerIdentificationCriteria;
     @NotNull(message = "Routing Policy is mandatory")
@@ -174,10 +175,13 @@ public class ChannelConfig implements Serializable {
         this.botId = botId;
     }
 
-    /***
-     * String Representation of ChannelConfig
-     * @return String
-     */
+    public void setCustomerSla(CustomerSla customerSla) {
+        this.customerSla = customerSla;
+    }
+    public CustomerSla getCustomerSla() {
+        return this.customerSla;
+    }
+
     @Override
     public String toString() {
         return "ChannelConfig{" +
@@ -189,6 +193,7 @@ public class ChannelConfig implements Serializable {
                 ", customerIdentificationCriteria=" + customerIdentificationCriteria +
                 ", routingPolicy=" + routingPolicy +
                 ", botId='" + botId + '\'' +
+                ", customerSla='" + customerSla +'\'' +
                 '}';
     }
 }
