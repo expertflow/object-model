@@ -1,0 +1,31 @@
+<settings>
+    <servers>
+        <server>
+            <id>ossrh</id>
+            <username>ahmad.bappi</username>
+            <password>Angry@birds922</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>ossrh</id>
+            <repositories>
+                <repository>
+                    <id>ossrh</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                </repository>
+                <repository>
+                    <id>ossrh</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </repositories>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <gpg.executable>gpg2</gpg.executable>
+                <gpg.passphrase>angry@birds3405</gpg.passphrase>
+            </properties>
+        </profile>
+    </profiles>
+</settings>
