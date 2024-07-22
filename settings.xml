@@ -2,8 +2,8 @@
     <servers>
         <server>
             <id>ossrh</id>
-            <username>ahmad.bappi</username>
-            <password>Angry@birds922</password>
+            <username>pYqJNiId</username>
+            <password>dGUDVaz1QeJw5N5taviTWRJR84UpUYGnqNPQvFONXtjY</password>
         </server>
     </servers>
     <profiles>
@@ -24,7 +24,7 @@
             </activation>
             <properties>
                 <gpg.executable>gpg2</gpg.executable>
-                <gpg.passphrase>angry@birds3405</gpg.passphrase>
+                <gpg.passphrase>Gmalikg@12</gpg.passphrase>
             </properties>
         </profile>
     </profiles>
