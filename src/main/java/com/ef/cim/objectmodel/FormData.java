@@ -1,72 +1,79 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
-import org.bson.types.ObjectId;
 
-public class FormData implements Serializable {
-    @JsonSerialize(using = ToStringSerializer.class)
-    private ObjectId id;
-    @JsonSerialize(using = ToStringSerializer.class)
-    private ObjectId formId;
-    private String filledBy;
-    private Date createdOn;
-    private List<Attribute> attributes;
+import javax.validation.constraints.NotNull;
+
+public class FormData {
+    @NotNull(message = "Form id cannot be null")
+    private String formId;
+    @NotNull(message = "Form type cannot be null")
+    private String type;
+    @NotNull(message = "Form title cannot be null")
+    private String formTitle;
+    @NotNull(message = "Form type cannot be null")
+    private String formType;
+    private String markdownText;
+    private List<AttributeData> attributes;
 
     public FormData() {
-        this.id = new ObjectId();
+    }
+    public String getType() {
+        return type;
     }
 
-    public ObjectId getId() {
-        return id;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public void setId(ObjectId id) {
-        this.id = id;
+    public String getMarkdownText() {
+        return markdownText;
     }
 
-    public ObjectId getFormId() {
+    public void setMarkdownText(String markdownText) {
+        this.markdownText = markdownText;
+    }
+
+    public String getFormId() {
         return formId;
     }
 
-    public void setFormId(ObjectId formId) {
+    public void setFormId(String formId) {
         this.formId = formId;
     }
 
-    public String getFilledBy() {
-        return filledBy;
+    public String getFormTitle() {
+        return formTitle;
     }
 
-    public void setFilledBy(String filledBy) {
-        this.filledBy = filledBy;
+    public void setFormTitle(String formTitle) {
+        this.formTitle = formTitle;
     }
 
-    public Date getCreatedOn() {
-        return createdOn;
+    public String getFormType() {
+        return formType;
     }
 
-    public void setCreatedOn(Date createdOn) {
-        this.createdOn = createdOn;
+    public void setFormType(String formType) {
+        this.formType = formType;
     }
 
-    public List<Attribute> getAttributes() {
+    public List<AttributeData> getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(List<Attribute> attributes) {
+    public void setAttributes(List<AttributeData> attributes) {
         this.attributes = attributes;
     }
 
     @Override
     public String toString() {
-        return "FormData{" +
-                "id=" + id +
-                ", formId=" + formId +
-                ", filledBy='" + filledBy + '\'' +
-                ", createdOn=" + createdOn +
+        return "FormDataBody{" +
+                "type='" + type + '\'' +
+                ", markdownText='" + markdownText + '\'' +
+                ", formId='" + formId + '\'' +
+                ", formTitle='" + formTitle + '\'' +
+                ", formType='" + formType + '\'' +
                 ", attributes=" + attributes +
                 '}';
     }

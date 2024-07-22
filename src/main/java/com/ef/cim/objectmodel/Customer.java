@@ -1,11 +1,7 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import javax.validation.constraints.NotEmpty;
 import org.springframework.data.mongodb.core.index.Indexed;
 
@@ -14,23 +10,9 @@ public class Customer implements Serializable {
     private String _id;
     private String firstName;
     private List<String> phoneNumber;
-
     private boolean isAnonymous;
     private int __v;
-
-
-    private Map<String, Object> additionalDetail = new HashMap<>();
-
-    @JsonAnySetter
-    public void setAdditionalDetail(String key, Object value) {
-        additionalDetail.put(key, value);
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalDetail() {
-        return additionalDetail;
-    }
-
+    private List<String> voice;
 
     // Default Constructor
     public Customer() {
@@ -77,6 +59,14 @@ public class Customer implements Serializable {
         this.__v = __v;
     }
 
+    public List<String> getVoice() {
+        return voice;
+    }
+
+    public void setVoice(List<String> voice) {
+        this.voice = voice;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
@@ -85,7 +75,7 @@ public class Customer implements Serializable {
                 ", phoneNumber=" + phoneNumber +
                 ", isAnonymous=" + isAnonymous +
                 ", __v=" + __v +
-                ", additionalDetail=" + additionalDetail +
+                ", voice=" + voice +
                 '}';
     }
 }

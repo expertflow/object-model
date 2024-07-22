@@ -5,9 +5,7 @@ import com.ef.cim.objectmodel.room.RoomInfo;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -24,7 +22,7 @@ public class Conversation implements Serializable {
     private ChannelSession channelSession;
     private Timestamp creationTime;
     private Timestamp endTime;
-    private Map<String, String> conversationData = new HashMap<>();
+    private ConversationData conversationData;
     private TopicMetadata metadata;
     private RoomInfo roomInfo;
     private AgentSla agentSla = new AgentSla();
