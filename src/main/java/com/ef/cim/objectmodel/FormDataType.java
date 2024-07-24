@@ -12,5 +12,5 @@ import lombok.Setter;
 
 public class FormDataType extends ConversationData {
     private String key;
-    private FormDataValue value;
+    private ExtendedFormData value;
 }

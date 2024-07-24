@@ -1,6 +1,5 @@
 package com.ef.cim.objectmodel;
 
-import com.mongodb.annotations.ThreadSafe;
 import lombok.*;
 
 @Getter
@@ -8,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class FormDataValue extends FormData{
+public class ExtendedFormData extends FormData{
     private Object reviewDetail;
     private Sentiment sentiment;
 
