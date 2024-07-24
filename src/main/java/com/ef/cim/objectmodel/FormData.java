@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import lombok.*;
+import org.bson.types.ObjectId;
 
 import java.util.List;
 import java.util.Map;
@@ -13,7 +14,7 @@ import javax.validation.constraints.NotNull;
 @ToString
 public class FormData {
     @NotNull(message = "Form id cannot be null")
-    private String formId;
+    private ObjectId formId;
     @NotNull(message = "Form type cannot be null")
     private String type;
     @NotNull(message = "Form title cannot be null")
