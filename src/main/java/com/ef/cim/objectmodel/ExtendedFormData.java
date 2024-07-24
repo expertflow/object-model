@@ -10,5 +10,4 @@ import lombok.*;
 public class ExtendedFormData extends FormData{
     private Object reviewDetail;
     private Sentiment sentiment;
-
 }

@@ -11,6 +11,5 @@ import lombok.Setter;
 @AllArgsConstructor
 
 public class IntegerDatatype extends ConversationData {
-    private String key;
     private Integer value;
 }

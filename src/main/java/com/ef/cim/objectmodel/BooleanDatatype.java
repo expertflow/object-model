@@ -8,6 +8,5 @@ import lombok.*;
 @AllArgsConstructor
 
 public class BooleanDatatype extends ConversationData {
-    private String key;
     private Boolean value;
 }

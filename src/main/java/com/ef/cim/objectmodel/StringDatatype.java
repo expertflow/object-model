@@ -11,6 +11,5 @@ import lombok.Setter;
 @AllArgsConstructor
 
 public class StringDatatype extends ConversationData {
-    private String key;
     private String value;
 }

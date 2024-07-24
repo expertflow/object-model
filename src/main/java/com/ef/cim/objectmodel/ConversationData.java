@@ -14,8 +14,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
         @JsonSubTypes.Type(value = UrlDatatype.class, name = "URL")
 })
 public class ConversationData {
+
+    private String key;
     @JsonProperty("type")
     private ConversationTypeEnum type;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
 
     public ConversationTypeEnum getType() {
         return type;
@@ -24,5 +34,4 @@ public class ConversationData {
     public void setType(ConversationTypeEnum type) {
         this.type = type;
     }
-
 }

@@ -27,6 +27,6 @@ public class FormData {
     private Boolean enableSections;
     private Boolean enableWeightage;
     private Object formWeightage;
-    private Map<String, Object> sections;
+    private List<Object> sections;
 
 }

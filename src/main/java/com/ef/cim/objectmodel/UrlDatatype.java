@@ -11,7 +11,6 @@ import java.net.URL;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UrlDatatype {
-    private String key;
     private URL value;
 }
 

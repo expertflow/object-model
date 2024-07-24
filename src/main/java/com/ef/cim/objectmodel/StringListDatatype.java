@@ -13,6 +13,5 @@ import java.util.List;
 @AllArgsConstructor
 
 public class StringListDatatype extends ConversationData {
-    private String key;
     private List<String> value;
 }

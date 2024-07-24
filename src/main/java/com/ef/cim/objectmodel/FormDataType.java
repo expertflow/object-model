@@ -9,8 +9,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class FormDataType extends ConversationData {
-    private String key;
     private ExtendedFormData value;
 }
