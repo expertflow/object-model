@@ -1,18 +1,12 @@
 package com.ef.cim.objectmodel.dto;
 
-import com.ef.cim.objectmodel.AgentSla;
-import com.ef.cim.objectmodel.ChannelSession;
-import com.ef.cim.objectmodel.CimEvent;
-import com.ef.cim.objectmodel.Conversation;
-import com.ef.cim.objectmodel.ConversationParticipant;
-import com.ef.cim.objectmodel.Customer;
-import com.ef.cim.objectmodel.HoldTimerDetails;
-import com.ef.cim.objectmodel.ParticipantType;
-import com.ef.cim.objectmodel.TopicState;
+import com.ef.cim.objectmodel.*;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,7 +25,7 @@ public class ConversationDto {
     private String id;
     private Customer customer;
     private ChannelSession channelSession;
-    private Map<String, String> conversationData = new HashMap<>();
+    private Map<String, ConversationData> conversationData = new HashMap<>();
     private TopicState state;
     private List<ConversationParticipant> participants;
     private AgentSla agentSla;

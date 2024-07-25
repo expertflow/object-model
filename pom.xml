@@ -7,7 +7,7 @@
     <groupId>io.github.expertflow</groupId>
     <artifactId>objectmodel</artifactId>
     <packaging>jar</packaging>
-    <version>1.17.6.2</version>
+    <version>1.18.0.0</version>
     <name>objectmodel</name>
     <url>https://github.com/expertflow/object-model</url>
     <description>This dependency contains object model classes for expert flow's CIM project</description>
@@ -21,8 +21,8 @@
 
     <developers>
         <developer>
-            <name>Ahmad Bappi</name>
-            <email>ahmad.bappi@experflow.com</email>
+            <name>Amna Zahid</name>
+            <email>amna.zahid@experflow.com</email>
             <organization>ExpertFlow</organization>
             <organizationUrl>https://www.expertflow.com/</organizationUrl>
         </developer>

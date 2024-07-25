@@ -2,72 +2,31 @@ package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
+import lombok.*;
 import org.bson.types.ObjectId;
 
-public class FormData implements Serializable {
+import java.util.List;
+import java.util.Map;
+
+import javax.validation.constraints.NotNull;
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class FormData {
     @JsonSerialize(using = ToStringSerializer.class)
-    private ObjectId id;
-    @JsonSerialize(using = ToStringSerializer.class)
+    @NotNull(message = "Form id cannot be null")
     private ObjectId formId;
-    private String filledBy;
-    private Date createdOn;
-    private List<Attribute> attributes;
+    @NotNull(message = "Form type cannot be null")
+    private String type;
+    @NotNull(message = "Form title cannot be null")
+    private String formTitle;
+    @NotNull(message = "Form type cannot be null")
+    private String formType;
+    private Boolean enableSections;
+    private Boolean enableWeightage;
+    private Object formWeightage;
+    private List<Object> sections;
 
-    public FormData() {
-        this.id = new ObjectId();
-    }
-
-    public ObjectId getId() {
-        return id;
-    }
-
-    public void setId(ObjectId id) {
-        this.id = id;
-    }
-
-    public ObjectId getFormId() {
-        return formId;
-    }
-
-    public void setFormId(ObjectId formId) {
-        this.formId = formId;
-    }
-
-    public String getFilledBy() {
-        return filledBy;
-    }
-
-    public void setFilledBy(String filledBy) {
-        this.filledBy = filledBy;
-    }
-
-    public Date getCreatedOn() {
-        return createdOn;
-    }
-
-    public void setCreatedOn(Date createdOn) {
-        this.createdOn = createdOn;
-    }
-
-    public List<Attribute> getAttributes() {
-        return attributes;
-    }
-
-    public void setAttributes(List<Attribute> attributes) {
-        this.attributes = attributes;
-    }
-
-    @Override
-    public String toString() {
-        return "FormData{" +
-                "id=" + id +
-                ", formId=" + formId +
-                ", filledBy='" + filledBy + '\'' +
-                ", createdOn=" + createdOn +
-                ", attributes=" + attributes +
-                '}';
-    }
 }

@@ -780,6 +780,13 @@ Version 1.17.5.0 (On top of 1.17.3.x)
 - ADD `HoldTimerDetails` class.
 - Add `HoldTimerDetails` in `ConversationDto` and `Conversation` object.
 - Implement `Serializable` in multiple classes.
+  
+==============================================================================================
+
+Version 1.18.0.0 (On top of 1.17.5.3)
+- ADD `FormData`, and `ExtendedFormData` class.
+- ADD `ConversationData` class and its subclasses like `BooleanDataType`, `IntDataType`, `FormDataType`.
+- ADD `FormDataMessage`class as body of `CimMessage` class.
 
 ==============================================================================================
 
