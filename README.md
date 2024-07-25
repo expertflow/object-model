@@ -796,7 +796,7 @@ Version 1.17.6.1
 - This version contains all the EMAIL related changes till April End 2024
 
 ==============================================================================================
-Version 1.17.6.x
+Version 1.17.6.2
 
 - Added `customerSLa` in channel config for customer sla implementation'
 - Added   `AGENT_SLA`,`CUSTOMER_SLA_STARTED`,`CUSTOMER_SLA_EXPIRED`,`CUSTOMER_SLA_STOPPED`,
