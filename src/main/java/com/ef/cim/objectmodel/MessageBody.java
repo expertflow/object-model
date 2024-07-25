@@ -13,19 +13,27 @@ import javax.validation.constraints.NotNull;
         @Type(value = CustomMessage.class, name = "CUSTOM"),
         @Type(value = StructuredMessage.class, name = "StructuredMessage"),
         @Type(value = NotificationMessage.class, name = "NOTIFICATION"),
-        @Type(value = MultimediaMessage.class, name = "MULTIMEDIA"), @Type(value = VideoMessage.class, name = "VIDEO"),
-        @Type(value = ImageMessage.class, name = "IMAGE"), @Type(value = AudioMessage.class, name = "AUDIO"),
-        @Type(value = FileMessage.class, name = "FILE"), @Type(value = ContactMessage.class, name = "CONTACT"),
+        @Type(value = MultimediaMessage.class, name = "MULTIMEDIA"),
+        @Type(value = VideoMessage.class, name = "VIDEO"),
+        @Type(value = ImageMessage.class, name = "IMAGE"),
+        @Type(value = AudioMessage.class, name = "AUDIO"),
+        @Type(value = FileMessage.class, name = "FILE"),
+        @Type(value = ContactMessage.class, name = "CONTACT"),
         @Type(value = LocationMessage.class, name = "LOCATION"),
-        @Type(value = CarouselMessage.class, name = "CAROUSEL"), @Type(value = ButtonMessage.class, name = "BUTTON"),
-        @Type(value = MessageBody.class, name = "PLAIN"), @Type(value = VoiceMessage.class, name = "VOICE"),
-        @Type(value = UrlMessage.class, name = "URL"), @Type(value = StickerMessage.class, name = "STICKER"),
+        @Type(value = CarouselMessage.class, name = "CAROUSEL"),
+        @Type(value = ButtonMessage.class, name = "BUTTON"),
+        @Type(value = MessageBody.class, name = "PLAIN"),
+        @Type(value = VoiceMessage.class, name = "VOICE"),
+        @Type(value = UrlMessage.class, name = "URL"),
+        @Type(value = StickerMessage.class, name = "STICKER"),
         @Type(value = ReceiptTemplateMessage.class, name = "RECEIPT"),
         @Type(value = WrapUpMessage.class, name = "WRAPUP"),
         @Type(value = TemplateMessage.class, name = "TEMPLATE"),
         @Type(value = ActionMessageBody.class, name = "ACTION"),
         @Type(value = CommentMessage.class, name = "COMMENT"),
-        @Type(value = EmailMessage.class, name = "EMAIL")})
+        @Type(value = EmailMessage.class, name = "EMAIL"),
+        @Type(value = FormDataMessage.class, name = "FORMDATA")
+})
 public class MessageBody implements Serializable {
     @NotNull
     @JsonProperty("type")
