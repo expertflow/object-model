@@ -7,7 +7,8 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class ExtendedFormData extends FormData{
-    private Object reviewDetail;
-    private Sentiment sentiment;
+public class User {
+    private String id;
+    private String name;
+    private String type;
 }

@@ -27,6 +27,7 @@ public class FormData {
     private Boolean enableSections;
     private Boolean enableWeightage;
     private Object formWeightage;
+    private AdditionalDetail additionalDetail;
+    private Sentiment sentiment;
     private List<Object> sections;
-
 }
