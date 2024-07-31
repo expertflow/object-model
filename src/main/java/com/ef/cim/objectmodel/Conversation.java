@@ -24,7 +24,7 @@ public class Conversation implements Serializable {
     private ChannelSession channelSession;
     private Timestamp creationTime;
     private Timestamp endTime;
-    private Map<String, ConversationData> conversationData = new HashMap<>();
+    private List<ConversationData> conversationData ;
     private TopicMetadata metadata;
     private RoomInfo roomInfo;
     private AgentSla agentSla = new AgentSla();
@@ -35,6 +35,7 @@ public class Conversation implements Serializable {
         this.id = Utils.getObjectId();
         this.participants = new ArrayList<>();
         this.metadata = new TopicMetadata();
+        this.conversationData =new ArrayList<>();
     }
 
     public Conversation(String topicId, TopicState state, ChannelSession channelSession, RoomInfo roomInfo) {
@@ -46,6 +47,7 @@ public class Conversation implements Serializable {
         this.creationTime = new Timestamp(System.currentTimeMillis());
         this.metadata = new TopicMetadata(channelSession);
         this.participants = new ArrayList<>();
+        this.conversationData = new ArrayList<>();
         this.roomInfo = roomInfo;
     }
 

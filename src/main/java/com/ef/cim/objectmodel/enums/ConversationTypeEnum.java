@@ -6,5 +6,10 @@ public enum ConversationTypeEnum {
     FORM_DATA,
     STRING,
     STRING_LIST,
-    URL
+    URL;
+
+    public static String fromString(String type) {
+        ConversationTypeEnum enumValue = ConversationTypeEnum.valueOf(type.toUpperCase());
+        return enumValue.name();
+    }
 }

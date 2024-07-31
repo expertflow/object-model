@@ -1,10 +1,10 @@
 package com.ef.cim.objectmodel;
-import com.ef.cim.objectmodel.enums.ConversationTypeEnum;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true, defaultImpl = StringDatatype.class)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", defaultImpl = StringDatatype.class)
 @JsonSubTypes({
         @JsonSubTypes.Type(value = BooleanDatatype.class, name = "BOOLEAN"),
         @JsonSubTypes.Type(value = IntegerDatatype.class, name = "INT"),
@@ -13,11 +13,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
         @JsonSubTypes.Type(value = StringListDatatype.class, name = "STRING_LIST"),
         @JsonSubTypes.Type(value = UrlDatatype.class, name = "URL")
 })
-public class ConversationData {
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
+//@JsonDeserialize(using = ConversationDataDeserializer.class)
+public abstract class ConversationData<T> {
     private String key;
-    @JsonProperty("type")
-    private ConversationTypeEnum type;
 
     public String getKey() {
         return key;
@@ -27,11 +26,8 @@ public class ConversationData {
         this.key = key;
     }
 
-    public ConversationTypeEnum getType() {
-        return type;
-    }
+    public abstract T getValue();
 
-    public void setType(ConversationTypeEnum type) {
-        this.type = type;
-    }
+    public abstract void setValue(T value);
+
 }

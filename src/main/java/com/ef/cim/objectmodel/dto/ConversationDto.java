@@ -25,7 +25,7 @@ public class ConversationDto {
     private String id;
     private Customer customer;
     private ChannelSession channelSession;
-    private Map<String, ConversationData> conversationData = new HashMap<>();
+    private List<ConversationData> conversationData  = new ArrayList<>();
     private TopicState state;
     private List<ConversationParticipant> participants;
     private AgentSla agentSla;
@@ -47,6 +47,7 @@ public class ConversationDto {
         this.conversationData = conversation.getConversationData();
         this.state = conversation.getState();
         this.participants = conversation.getParticipants();
+        this.conversationData=conversation.getConversationData();
         this.setCustomerSuggestionsFrom(conversation);
         this.agentSla = conversation.getAgentSla();
         this.topicEvents = conversationEvents;
