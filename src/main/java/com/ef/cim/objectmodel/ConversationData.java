@@ -14,7 +14,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = UrlDatatype.class, name = "URL")
 })
 @JsonInclude(JsonInclude.Include.NON_NULL)
-//@JsonDeserialize(using = ConversationDataDeserializer.class)
 public abstract class ConversationData<T> {
     private String key;
 
@@ -25,7 +24,6 @@ public abstract class ConversationData<T> {
     public void setKey(String key) {
         this.key = key;
     }
-
     public abstract T getValue();
 
     public abstract void setValue(T value);

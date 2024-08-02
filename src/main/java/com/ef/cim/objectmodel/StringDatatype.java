@@ -1,16 +1,21 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+
+import java.io.IOException;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonTypeName("STRING")
 public class StringDatatype extends ConversationData<String>{
+
+    @JsonDeserialize(using = ValueDeserializer.class)
     private String value;
 
 
@@ -19,25 +24,19 @@ public class StringDatatype extends ConversationData<String>{
         return value;
     }
 
-    public void setObjectValue(JsonNode node) {
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            // Extract the "value" node from the payload
-            JsonNode valueNode = node.get("value");
-            if (valueNode != null) {
-                // Convert the value node to a JSON string
-                this.value = mapper.writeValueAsString(valueNode);
-            } else {
-                // If "value" node is not present, fallback to a string representation
-                this.value = node.toString();
-            }
-        } catch (JsonProcessingException e) {
-            this.value = node.toString(); // Fallback in case of an error
-        }
-    }
-
     @Override
     public void setValue(String value) {
         this.value=value;
+    }
+
+    public static class ValueDeserializer extends JsonDeserializer<String> {
+        @Override
+        public String deserialize(JsonParser p, DeserializationContext ctxt)
+                throws IOException {
+            if (p.isExpectedStartObjectToken() || p.isExpectedStartArrayToken()) {
+                return p.readValueAsTree().toString();
+            }
+            return p.getValueAsString();
+        }
     }
 }
