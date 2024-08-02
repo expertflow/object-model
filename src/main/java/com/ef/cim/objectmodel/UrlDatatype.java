@@ -1,12 +1,8 @@
 package com.ef.cim.objectmodel;
-import com.ef.cim.objectmodel.enums.ConversationTypeEnum;
-import com.fasterxml.jackson.annotation.JsonTypeName;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-import javax.validation.Valid;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import javax.validation.constraints.NotNull;
 import java.net.URL;
 
 
@@ -14,8 +10,9 @@ import java.net.URL;
 @AllArgsConstructor
 public class UrlDatatype extends ConversationData <URL>{
 
+    @NotNull(message = "URL value cannot be null")
     private URL value;
-   @Override
+    @Override
     public URL getValue() {
         return value;
     }

@@ -8,13 +8,16 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.io.IOException;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonTypeName("STRING")
 public class StringDatatype extends ConversationData<String>{
-
+    @NotNull(message = "value cannot be null")
+    @NotBlank(message = "value cannot be blank")
     @JsonDeserialize(using = ValueDeserializer.class)
     private String value;
 

@@ -1,13 +1,10 @@
 package com.ef.cim.objectmodel;
 
-import com.ef.cim.objectmodel.enums.ConversationTypeEnum;
-import com.sun.org.apache.xerces.internal.xs.StringList;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 
@@ -15,8 +12,9 @@ import java.util.List;
 @AllArgsConstructor
 
 public class StringListDatatype extends ConversationData <List<String>> {
-
-        private List<String> value;
+        @NotNull(message = "value cannot be null")
+        @Size(min = 1, message = "value must contain at least one element")
+        private List<@NotBlank(message = "List element cannot be blank") String> value;
 
         @Override
         public List<String> getValue() {
