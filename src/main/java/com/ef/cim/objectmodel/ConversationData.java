@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+import javax.validation.Valid;
+
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", defaultImpl = StringDatatype.class)
 @JsonSubTypes({
         @JsonSubTypes.Type(value = BooleanDatatype.class, name = "BOOLEAN"),
@@ -25,7 +27,6 @@ public abstract class ConversationData<T> {
         this.key = key;
     }
     public abstract T getValue();
-
     public abstract void setValue(T value);
 
 }

@@ -12,7 +12,6 @@ public class Customer implements Serializable {
     private List<String> phoneNumber;
     private boolean isAnonymous;
     private int __v;
-    private List<String> voice;
 
     // Default Constructor
     public Customer() {
@@ -59,13 +58,6 @@ public class Customer implements Serializable {
         this.__v = __v;
     }
 
-    public List<String> getVoice() {
-        return voice;
-    }
-
-    public void setVoice(List<String> voice) {
-        this.voice = voice;
-    }
 
     @Override
     public String toString() {
@@ -75,7 +67,6 @@ public class Customer implements Serializable {
                 ", phoneNumber=" + phoneNumber +
                 ", isAnonymous=" + isAnonymous +
                 ", __v=" + __v +
-                ", voice=" + voice +
                 '}';
     }
 }

@@ -2,6 +2,8 @@ package com.ef.cim.objectmodel;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.net.URL;
 
@@ -9,7 +11,7 @@ import java.net.URL;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UrlDatatype extends ConversationData <URL>{
-
+    @Valid
     @NotNull(message = "URL value cannot be null")
     private URL value;
     @Override

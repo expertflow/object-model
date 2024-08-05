@@ -4,10 +4,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.IOException;
@@ -18,7 +18,8 @@ import java.io.IOException;
 public class StringDatatype extends ConversationData<String>{
     @NotNull(message = "value cannot be null")
     @NotBlank(message = "value cannot be blank")
-    @JsonDeserialize(using = ValueDeserializer.class)
+//    @JsonDeserialize(using = ValueDeserializer.class)
+    @Valid
     private String value;
 
 
@@ -31,6 +32,11 @@ public class StringDatatype extends ConversationData<String>{
     public void setValue(String value) {
         this.value=value;
     }
+
+//    @Override
+//    public void setValue(Object value) {
+//
+//    }
 
     public static class ValueDeserializer extends JsonDeserializer<String> {
         @Override

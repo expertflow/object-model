@@ -4,26 +4,27 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.List;
 
-
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class FormDataType extends ConversationData<FormData> {
-
+public class FormDataType extends ConversationData<List<FormData>> {
+    @Valid
     @NotNull(message = "FormData object value cannot be null")
-    private FormData value;
+    @Size(min = 1, message = "FormData must contain at least one element")
+    private List<FormData> value;
 
     @Override
-    public FormData getValue() {
+    public List<FormData> getValue() {
         return value;
     }
 
     @Override
-    public void setValue(FormData value) {
-        this.value=value;
-
+    public void setValue(List<FormData> value) {
+        this.value = value;
     }
 }

@@ -20,14 +20,12 @@ import org.springframework.data.annotation.Id;
 public class ChannelSession implements Participant {
     @Id
     private String id;
-
     //@JsonIgnore
     private String participantType;
     @Valid
     private Channel channel;
     @Valid
     private Customer customer;
-
     private List<Customer> customerSuggestions;
     @Valid
     private ChannelData channelData;

@@ -13,27 +13,31 @@ import java.util.Map;
 
 import javax.validation.constraints.NotNull;
 public class FormData {
+
     @JsonSerialize(using = ToStringSerializer.class)
     @NotNull(message = "Form id cannot be null")
-    private ObjectId formId;
+    private String formId;
     @NotNull(message = "Form type cannot be null")
     private String type;
     @NotNull(message = "Form title cannot be null")
     private String formTitle;
     @NotNull(message = "Form type cannot be null")
     private String formType;
+    @NotNull(message = "Form type cannot be null")
     private Boolean enableSections;
+    @NotNull(message = "Form type cannot be null")
     private Boolean enableWeightage;
+    @NotNull(message = "Form type cannot be null")
     private Object formWeightage;
-    private Map<String, Object> additionalDetail = new HashMap<>();
+    private Map<String, Object> additionalDetail = new HashMap<>();;
     private Sentiment sentiment;
     private List<Object> sections;
 
-    public ObjectId getFormId() {
+    public String getFormId() {
         return formId;
     }
 
-    public void setFormId(ObjectId formId) {
+    public void setFormId(String formId) {
         this.formId = formId;
     }
 
@@ -91,10 +95,9 @@ public class FormData {
     }
 
     @JsonAnySetter
-    public void setAdditionalDetail(Map<String, Object> additionalDetail) {
-        this.additionalDetail = additionalDetail;
+    public void setAdditionalDetail(String key, Object value) {
+        this.additionalDetail.put(key, value);
     }
-
     public Sentiment getSentiment() {
         return sentiment;
     }
