@@ -29,7 +29,7 @@ public class FormData {
     private Boolean enableWeightage;
     @NotNull(message = "Form type cannot be null")
     private Object formWeightage;
-    private Map<String, Object> additionalDetail = new HashMap<>();;
+    private Map<String, Object> additionalDetail = new HashMap<>();
     private Sentiment sentiment;
     private List<Object> sections;
 

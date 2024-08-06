@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -16,9 +17,10 @@ import java.io.IOException;
 @AllArgsConstructor
 @JsonTypeName("STRING")
 public class StringDatatype extends ConversationData<String>{
+
     @NotNull(message = "value cannot be null")
     @NotBlank(message = "value cannot be blank")
-//    @JsonDeserialize(using = ValueDeserializer.class)
+    @JsonDeserialize(using = ValueDeserializer.class)
     @Valid
     private String value;
 
@@ -33,11 +35,7 @@ public class StringDatatype extends ConversationData<String>{
         this.value=value;
     }
 
-//    @Override
-//    public void setValue(Object value) {
-//
-//    }
-
+    //Todo : Need to check if this can be done with default deserializer
     public static class ValueDeserializer extends JsonDeserializer<String> {
         @Override
         public String deserialize(JsonParser p, DeserializationContext ctxt)

@@ -9,6 +9,9 @@ import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.Value;
+
+import javax.validation.Valid;
 
 @Getter
 @Setter
@@ -22,7 +25,7 @@ public class Conversation implements Serializable {
     private ChannelSession channelSession;
     private Timestamp creationTime;
     private Timestamp endTime;
-    private List<ConversationData> conversationData ;
+    private @Valid List<ConversationData> conversationData ;
     private TopicMetadata metadata;
     private RoomInfo roomInfo;
     private AgentSla agentSla = new AgentSla();
