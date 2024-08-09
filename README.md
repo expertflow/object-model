@@ -783,7 +783,16 @@ Version 1.17.5.0 (On top of 1.17.3.x)
 
 ==============================================================================================
 
-Version 1.17.9 (On top of 1.17.5.3)
+Version 1.17.8.0 (On top of 1.17.5.3)
+- ADDED `WEB_RTC` in `ChannelTypeEnum` class.
+- ADDED `SILENT_MONITOR` and `BARGE_IN` in `Enums` class for TaskTypeDirection.
+- ADDED `CALL_HOLD` and `CALL_RESUME` in `MessageIntent` and `CimEventName` class.
+- ADDED `WHISPER` type Participant Role in `ParticipantRole` class.
+- ADDED `WRAPUPS` List<Object> and `HOLDTIME` double in `VoiceActivity` class.
+
+==============================================================================================
+
+Version 1.17.9.0 (On top of 1.17.8.0)
 - ADDED `EXTERNAL_GADGET_REQUESTED` in `CimEventName` class.
 - ADDED `externalGadgetDetails` object in `ConversationDto` class.
 - ADDED `externalGadgetDetails` object in `Conversation` class.

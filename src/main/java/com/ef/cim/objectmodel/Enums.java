@@ -35,7 +35,15 @@ public class Enums {
         /**
          * Outbound task type direction.
          */
-        OUTBOUND
+        OUTBOUND,
+        /**
+         * Silent Monitor task type direction.
+         */
+        SILENT_MONITOR,
+        /**
+         * Barge In task type direction.
+         */
+        BARGE_IN
     }
 
     /**
