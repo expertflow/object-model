@@ -783,6 +783,14 @@ Version 1.17.5.0 (On top of 1.17.3.x)
 
 ==============================================================================================
 
+Version 1.17.8.0 (On top of 1.17.5.3)
+- ADDED `WEB_RTC` in `ChannelTypeEnum` class.
+- ADDED `SILENT_MONITOR` and `BARGE_IN` in `Enums` class for TaskTypeDirection.
+- ADDED `CALL_HOLD` and `CALL_RESUME` in `MessageIntent` and `CimEventName` class.
+- ADDED `WHISPER` type Participant Role in `ParticipantRole` class.
+- ADDED `WRAPUPS` List<Object> and `HOLDTIME` double in `VoiceActivity` class.
+==============================================================================================
+
 Version 1.17.6.0
 - Added `EMAIL` as new MRD TYPE
 - Added `Email Signatures` class
@@ -794,5 +802,24 @@ Version 1.17.6.0
 Version 1.17.6.1
 - Removed `queuePriority` attribute in `PrecisionQueueEntity` class
 - This version contains all the EMAIL related changes till April End 2024
+
+==============================================================================================
+
+Version 1.17.5.4 (On top of 1.17.5.3)
+- ADDED `permalinkUrl` field in `SocialMediaPost` class.
+
+==============================================================================================
+
+Version 1.17.5.5 (Merged 1.17.8.0(develop) into 1.17.5.3(FB Changes))
+- ADDED `permalinkUrl` field in `SocialMediaPost` class.
+
+==============================================================================================
+
+Version 1.17.5.6 (Merged develop(1.17.5.5) into 1.17.6.1(Email))
+- Added `EMAIL` as new MRD TYPE
+- Added `Email Signatures` class
+- Added `queuePriority` attribute in `PrecisionQueueEntity` class
+- Added `mediaLebel` and `mediaName` in Attachment class
+- Removed `queuePriority` attribute in `PrecisionQueueEntity` class
 
 ==============================================================================================
