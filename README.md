@@ -780,14 +780,15 @@ Version 1.17.5.0 (On top of 1.17.3.x)
 - ADD `HoldTimerDetails` class.
 - Add `HoldTimerDetails` in `ConversationDto` and `Conversation` object.
 - Implement `Serializable` in multiple classes.
-  
+
 ==============================================================================================
 
-Version 1.18.0.0 (On top of 1.17.5.3)
-- ADD `FormData`, and `ExtendedFormData` class.
-- ADD `ConversationData` class and its subclasses like `BooleanDataType`, `IntDataType`, `FormDataType`.
-- ADD `FormDataMessage`class as body of `CimMessage` class.
-
+Version 1.17.8.0 (On top of 1.17.5.3)
+- ADDED `WEB_RTC` in `ChannelTypeEnum` class.
+- ADDED `SILENT_MONITOR` and `BARGE_IN` in `Enums` class for TaskTypeDirection.
+- ADDED `CALL_HOLD` and `CALL_RESUME` in `MessageIntent` and `CimEventName` class.
+- ADDED `WHISPER` type Participant Role in `ParticipantRole` class.
+- ADDED `WRAPUPS` List<Object> and `HOLDTIME` double in `VoiceActivity` class.
 ==============================================================================================
 
 Version 1.17.6.0
@@ -803,8 +804,41 @@ Version 1.17.6.1
 - This version contains all the EMAIL related changes till April End 2024
 
 ==============================================================================================
-Version 1.17.6.2
 
+Version 1.17.5.4 (On top of 1.17.5.3)
+- ADDED `permalinkUrl` field in `SocialMediaPost` class.
+
+==============================================================================================
+
+Version 1.17.5.5 (Merged 1.17.8.0(develop) into 1.17.5.3(FB Changes))
+- ADDED `permalinkUrl` field in `SocialMediaPost` class.
+
+==============================================================================================
+
+Version 1.17.5.6 (Merged develop(1.17.5.5) into 1.17.6.1(Email))
+- Added `EMAIL` as new MRD TYPE
+- Added `Email Signatures` class
+- Added `queuePriority` attribute in `PrecisionQueueEntity` class
+- Added `mediaLebel` and `mediaName` in Attachment class
+- Removed `queuePriority` attribute in `PrecisionQueueEntity` class
+
+==============================================================================================
+
+Version 1.18.0.0 (On top of 1.17.5.3)
+- ADD `FormData`, and `ExtendedFormData` class.
+- ADD `ConversationData` class and its subclasses like `BooleanDataType`, `IntDataType`, `FormDataType`.
+- ADD `FormDataMessage`class as body of `CimMessage` class.
+
+==============================================================================================
+
+Version 1.17.6.2
 - Added `customerSLa` in channel config for customer sla implementation'
-- Added   `AGENT_SLA`,`CUSTOMER_SLA_STARTED`,`CUSTOMER_SLA_EXPIRED`,`CUSTOMER_SLA_STOPPED`,
+- Added `AGENT_SLA`,`CUSTOMER_SLA_STARTED`,`CUSTOMER_SLA_EXPIRED`,`CUSTOMER_SLA_STOPPED`,
 - `CUSTOMER_SLA`,`HOLD_TIMER` and `NO_RESPONSE_ENTITY` for communication b/w C_manager and C_Monitor
+
+==============================================================================================
+
+Version 1.17.5.7 (Merged develop(1.17.5.6) into (1.17.6.2 and 1.18.0.0))
+- This is just a merged version
+
+==============================================================================================
