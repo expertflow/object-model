@@ -25,7 +25,7 @@ public class Conversation implements Serializable {
     private ChannelSession channelSession;
     private Timestamp creationTime;
     private Timestamp endTime;
-    private @Valid List<ConversationData> conversationData ;
+    private @Valid List<ConversationData> conversationData = new ArrayList<>();
     private TopicMetadata metadata;
     private RoomInfo roomInfo;
     private AgentSla agentSla = new AgentSla();

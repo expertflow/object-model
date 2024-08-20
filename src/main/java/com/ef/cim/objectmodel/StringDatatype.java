@@ -13,11 +13,13 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.IOException;
 
-@NoArgsConstructor
 @AllArgsConstructor
 @JsonTypeName("STRING")
 public class StringDatatype extends ConversationData<String>{
 
+    public StringDatatype() {
+        super();
+    }
     @NotNull(message = "value cannot be null")
     @NotBlank(message = "value cannot be blank")
     @JsonDeserialize(using = ValueDeserializer.class)

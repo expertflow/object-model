@@ -11,10 +11,11 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
 
-@NoArgsConstructor
 @AllArgsConstructor
 public class StringListDatatype extends ConversationData<List<List<String>>> {
-
+        public StringListDatatype() {
+                super();
+        }
         @NotNull(message = "value cannot be null")
         @Size(min = 1, message = "value must contain at least one element")
         @Valid

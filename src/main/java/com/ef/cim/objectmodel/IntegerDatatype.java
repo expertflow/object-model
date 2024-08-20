@@ -1,19 +1,21 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
 import javax.validation.Valid;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
-
-@NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 @AllArgsConstructor
-@JsonTypeName("INT")
 public class IntegerDatatype extends ConversationData<Integer> {
+    public IntegerDatatype() {
+        super();
+    }
+
     @Valid
     @NotNull(message = "Integer value cannot be null")
+    @Min(value = 0, message = "Integer value must be non-negative")
     private Integer value;
 
     @Override

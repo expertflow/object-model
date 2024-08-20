@@ -17,17 +17,17 @@ public class FormData {
     @JsonSerialize(using = ToStringSerializer.class)
     @NotNull(message = "Form id cannot be null")
     private String formId;
-    @NotNull(message = "Form type cannot be null")
+    @NotNull(message = "Type field of form cannot be null")
     private String type;
     @NotNull(message = "Form title cannot be null")
     private String formTitle;
-    @NotNull(message = "Form type cannot be null")
+    @NotNull(message = "formType cannot be null")
     private String formType;
-    @NotNull(message = "Form type cannot be null")
+    @NotNull(message = "enableSections field cannot be null")
     private Boolean enableSections;
-    @NotNull(message = "Form type cannot be null")
+    @NotNull(message = "enableWeightage field cannot be null")
     private Boolean enableWeightage;
-    @NotNull(message = "Form type cannot be null")
+    @NotNull(message = "formWeightage field cannot be null")
     private Object formWeightage;
     private Map<String, Object> additionalDetail = new HashMap<>();
     private Sentiment sentiment;
