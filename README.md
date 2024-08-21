@@ -823,3 +823,8 @@ Version 1.17.5.6 (Merged develop(1.17.5.5) into 1.17.6.1(Email))
 - Removed `queuePriority` attribute in `PrecisionQueueEntity` class
 
 ==============================================================================================
+
+Version 1.17.5.7 (on top of 1.17.5.6)
+- Added `ewtMaxValue` and `ewtMinValue` in `PrecisionQueueEntity` class
+
+==============================================================================================
