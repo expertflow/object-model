@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.validator.conversationdata.ValidBoolean;
 import lombok.*;
 
 import javax.validation.Valid;

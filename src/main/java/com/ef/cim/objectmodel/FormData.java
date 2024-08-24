@@ -25,6 +25,8 @@ public class FormData {
     private String formType;
     @NotNull(message = "enableSections field cannot be null")
     private Boolean enableSections;
+    @NotNull(message = "attributeType cannot be null")
+    private InputAttributeType attributeType;
     @NotNull(message = "enableWeightage field cannot be null")
     private Boolean enableWeightage;
     @NotNull(message = "formWeightage field cannot be null")
@@ -113,4 +115,14 @@ public class FormData {
     public void setSections(List<Object> sections) {
         this.sections = sections;
     }
+
+    public InputAttributeType getAttributeType() {
+        return attributeType;
+    }
+
+    public void setAttributeType(InputAttributeType attributeType) {
+        this.attributeType = attributeType;
+    }
+
+
 }
