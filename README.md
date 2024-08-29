@@ -836,3 +836,6 @@ Version 1.19.0 (on top of 1.17.5.7)
   `CUSTOMER_SLA`,`HOLD_TIMER` and `NO_RESPONSE_ENTITY` in `CimEventName` class
 
 ==============================================================================================
+
+Version 1.19.0-CIM-14605-SNAPSHOT
+- Change `supervisedTeams` type to `Object` from `Team`
