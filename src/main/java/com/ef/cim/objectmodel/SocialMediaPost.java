@@ -47,6 +47,9 @@ public class SocialMediaPost implements Serializable {
     private String username;
     @Getter
     @Setter
+    private String permalinkUrl;
+    @Getter
+    @Setter
     private List<SocialMediaComment> comments = null;
     @JsonProperty("additionalData")
     private Map<String,Object> additionalData = null;
