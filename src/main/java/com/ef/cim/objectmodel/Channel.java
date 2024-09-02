@@ -13,7 +13,6 @@ import javax.validation.constraints.NotNull;
  */
 public class Channel implements Serializable {
     private String id;
-    @Nullable
     private String calendarId;
     @NotBlank
     private String name;
