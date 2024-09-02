@@ -1,8 +1,8 @@
 package com.ef.cim.objectmodel;
 
 import lombok.AllArgsConstructor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import java.net.URL;
 
 @AllArgsConstructor

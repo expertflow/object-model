@@ -1,7 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 public class CimMessage implements ICimMessage {
     private final String id;

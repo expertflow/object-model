@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", defaultImpl = StringDatatype.class)
 @JsonSubTypes({

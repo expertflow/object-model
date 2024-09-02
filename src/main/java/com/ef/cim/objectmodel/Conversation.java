@@ -11,7 +11,7 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.Value;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @Getter
 @Setter

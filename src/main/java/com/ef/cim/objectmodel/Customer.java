@@ -2,7 +2,7 @@ package com.ef.cim.objectmodel;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotEmpty;
 import org.springframework.data.mongodb.core.index.Indexed;
 
 public class Customer implements Serializable {

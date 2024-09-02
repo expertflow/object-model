@@ -2,7 +2,7 @@ package com.ef.cim.objectmodel.task;
 
 import com.ef.cim.objectmodel.Enums;
 import java.io.Serializable;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
