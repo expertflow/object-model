@@ -1,10 +1,13 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+
+import javax.validation.Valid;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", defaultImpl = StringDatatype.class)
 @JsonSubTypes({
@@ -20,10 +23,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public abstract class ConversationData<T> {
     private String key;
-//    @NotNull
-//    @Valid
-//    @JsonProperty("type")
-//    private String type;
+
+    @Valid
+    @JsonProperty("type")
+    private String type;
 
     public String getKey() {
         return key;
@@ -33,12 +36,12 @@ public abstract class ConversationData<T> {
         this.key = key;
     }
 
-//    public String getType() {
-//        return type;
-//    }
-//    public void setType(String type) {
-//        this.type = type;
-//    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
     public abstract T getValue();
     public abstract void setValue(T value);
 

@@ -74,4 +74,13 @@ public class Conversation implements Serializable {
             this.participants.remove(index);
         }
     }
+
+    public void setConversationData(List<ConversationData> conversationData) {
+        this.conversationData = conversationData;
+    }
+
+    public List<ConversationData> getConversationData() {
+        return conversationData;
+    }
+
 }
