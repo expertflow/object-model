@@ -1,6 +1,8 @@
 package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
+import com.mongodb.lang.Nullable;
+
 import java.io.Serializable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
@@ -11,6 +13,8 @@ import javax.validation.constraints.NotNull;
  */
 public class Channel implements Serializable {
     private String id;
+    @Nullable
+    private String calendarId;
     @NotBlank
     private String name;
     // Class ServiceIdentifier Empty | not in object model yet
@@ -30,6 +34,7 @@ public class Channel implements Serializable {
      */
     public Channel() {
         this.id = Utils.getObjectId();
+        this.calendarId = Utils.getObjectId();
         this.tenant = new Tenant();
         this.channelConfig = new ChannelConfig();
         this.channelConnector = new ChannelConnector();
@@ -39,6 +44,7 @@ public class Channel implements Serializable {
 
     /**
      * parameterized constructor.
+     * @param calendarId calendarId
      * @param name channel name
      * @param serviceIdentifier channel serviceIdentifier
      * @param channelConfig channelConfig
@@ -46,9 +52,10 @@ public class Channel implements Serializable {
      * @param tenant tenant
      * @param channelType channelType
      */
-    public Channel(String name, String serviceIdentifier, ChannelConfig channelConfig,
+    public Channel(String name, String calendarId, String serviceIdentifier, ChannelConfig channelConfig,
                    ChannelConnector channelConnector, Tenant tenant, ChannelType channelType) {
         this.id = Utils.getObjectId();
+        this.calendarId = Utils.getObjectId();
         this.name = name;
         this.serviceIdentifier = serviceIdentifier;
         this.channelConfig = channelConfig;
@@ -73,6 +80,24 @@ public class Channel implements Serializable {
      */
     public void setId(String id) {
         this.id = id;
+    }
+
+    /**
+     * Returns the Unique identifier of the calendar
+     *
+     * @return {@code UUID}
+     */
+    public String getCalendarId() {
+        return this.calendarId;
+    }
+
+    /**
+     * Set's id field of Chanel as UUID
+     *
+     * @param calendarId UUID object
+     */
+    public void setCalendarId(String calendarId) {
+        this.calendarId = calendarId;
     }
 
     /**
@@ -169,6 +194,7 @@ public class Channel implements Serializable {
     public String toString() {
         final StringBuilder sb = new StringBuilder("Channel{");
         sb.append("id='").append(id).append('\'');
+        sb.append(", calendarId='").append(calendarId).append('\'');
         sb.append(", name='").append(name).append('\'');
         sb.append(", serviceIdentifier='").append(serviceIdentifier).append('\'');
         sb.append(", defaultOutbound=").append(defaultOutbound);
