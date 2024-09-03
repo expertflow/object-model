@@ -10,6 +10,7 @@ import jakarta.validation.constraints.NotNull;
 public class BooleanDatatype extends ConversationData<Boolean>{
     public BooleanDatatype() {
         super();
+        this.setType("BOOLEAN");
     }
     @Valid
     @NotNull(message = "Boolean value cannot be null")

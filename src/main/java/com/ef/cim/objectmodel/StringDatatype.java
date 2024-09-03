@@ -17,6 +17,7 @@ public class StringDatatype extends ConversationData<String>{
 
     public StringDatatype() {
         super();
+        this.setType("STRING");
     }
     @NotNull(message = "value cannot be null")
     @NotBlank(message = "value cannot be blank")

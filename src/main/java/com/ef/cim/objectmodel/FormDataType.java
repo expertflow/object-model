@@ -10,6 +10,7 @@ import java.util.List;
 public class FormDataType extends ConversationData<List<FormData>> {
     public FormDataType() {
         super();
+        this.setType("FORM_DATA");
     }
     @Valid
     @NotNull(message = "FormData object value cannot be null")

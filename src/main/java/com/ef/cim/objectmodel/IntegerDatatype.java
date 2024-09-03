@@ -11,6 +11,7 @@ import jakarta.validation.constraints.NotNull;
 public class IntegerDatatype extends ConversationData<Integer> {
     public IntegerDatatype() {
         super();
+        this.setType("INT");
     }
 
     @Valid

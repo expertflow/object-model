@@ -15,6 +15,7 @@ import java.util.List;
 public class StringListDatatype extends ConversationData<List<List<String>>> {
         public StringListDatatype() {
                 super();
+                this.setType("STRING_LIST");
         }
         @NotNull(message = "value cannot be null")
         @Size(min = 1, message = "value must contain at least one element")

@@ -9,6 +9,7 @@ import java.net.URL;
 public class UrlDatatype extends ConversationData <URL>{
     public UrlDatatype() {
         super();
+        this.setType("URL");
     }
     @Valid
     @NotNull(message = "URL value cannot be null")
