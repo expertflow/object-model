@@ -1,6 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 public class AssociatedRoutingAttribute {
     @NotNull

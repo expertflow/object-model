@@ -836,3 +836,13 @@ Version 1.19.0 (on top of 1.17.5.7)
   `CUSTOMER_SLA`,`HOLD_TIMER` and `NO_RESPONSE_ENTITY` in `CimEventName` class
 
 ==============================================================================================
+
+Version 1.20.0 (on top of 1.19.0)
+- Dependencies versions updated to support Java 17
+
+==============================================================================================
+
+Version 1.20.1 (on top of 1.20.0)
+- Dependencies versions updated to support Java 17 | Resolved some dependency conflict
+
+==============================================================================================
