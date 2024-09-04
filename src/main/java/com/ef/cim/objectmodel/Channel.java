@@ -13,6 +13,7 @@ import javax.validation.constraints.NotNull;
  */
 public class Channel implements Serializable {
     private String id;
+    @Nullable
     private String calendarId;
     @NotBlank
     private String name;
@@ -33,7 +34,7 @@ public class Channel implements Serializable {
      */
     public Channel() {
         this.id = Utils.getObjectId();
-        this.calendarId = Utils.getObjectId();
+        this.calendarId = "";
         this.tenant = new Tenant();
         this.channelConfig = new ChannelConfig();
         this.channelConnector = new ChannelConnector();
@@ -54,7 +55,7 @@ public class Channel implements Serializable {
     public Channel(String name, String calendarId, String serviceIdentifier, ChannelConfig channelConfig,
                    ChannelConnector channelConnector, Tenant tenant, ChannelType channelType) {
         this.id = Utils.getObjectId();
-        this.calendarId = Utils.getObjectId();
+        this.calendarId = "";
         this.name = name;
         this.serviceIdentifier = serviceIdentifier;
         this.channelConfig = channelConfig;
