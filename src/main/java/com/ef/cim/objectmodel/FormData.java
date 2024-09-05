@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import lombok.*;
-import org.bson.types.ObjectId;
 
 import java.util.HashMap;
 import java.util.List;
@@ -26,7 +24,7 @@ public class FormData {
     @NotNull(message = "enableSections field cannot be null")
     private Boolean enableSections;
     @NotNull(message = "attributeType cannot be null")
-    private InputAttributeType attributeType;
+    private AttributeType attributeType;
     @NotNull(message = "enableWeightage field cannot be null")
     private Boolean enableWeightage;
     @NotNull(message = "formWeightage field cannot be null")
@@ -116,11 +114,11 @@ public class FormData {
         this.sections = sections;
     }
 
-    public InputAttributeType getAttributeType() {
+    public AttributeType getAttributeType() {
         return attributeType;
     }
 
-    public void setAttributeType(InputAttributeType attributeType) {
+    public void setAttributeType(AttributeType attributeType) {
         this.attributeType = attributeType;
     }
 
