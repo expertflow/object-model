@@ -21,13 +21,9 @@ public class FormData {
     private String formTitle;
     @NotNull(message = "formType cannot be null")
     private String formType;
-    @NotNull(message = "enableSections field cannot be null")
     private Boolean enableSections;
-    @NotNull(message = "attributeType cannot be null")
     private AttributeType attributeType;
-    @NotNull(message = "enableWeightage field cannot be null")
     private Boolean enableWeightage;
-    @NotNull(message = "formWeightage field cannot be null")
     private Object formWeightage;
     private Map<String, Object> additionalDetail = new HashMap<>();
     private Sentiment sentiment;
