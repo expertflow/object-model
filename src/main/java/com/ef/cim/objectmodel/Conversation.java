@@ -2,12 +2,14 @@ package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
 import com.ef.cim.objectmodel.room.RoomInfo;
+
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -30,7 +32,7 @@ public class Conversation implements Serializable {
     private AgentSla agentSla = new AgentSla();
     private int cachedAgentSlaDuration;
     private HoldTimerDetails holdTimerDetails = new HoldTimerDetails();
-    private AgentHandRaise agentHandRaise;
+    private AgentHandRaise agentHandRaise = new AgentHandRaise(false, new ArrayList<>());
 
 
     public Conversation() {
@@ -54,12 +56,8 @@ public class Conversation implements Serializable {
     public void setHandRaise(boolean handRaised, String agentName) {
         if (agentName == null) {
             this.agentHandRaise.setAgentNames(new ArrayList<>());
-            this.agentHandRaise.setHandRaised(handRaised);
+            this.agentHandRaise.setHandRaised(false);
             return;
-        }
-
-        if (agentHandRaise.getAgentNames() == null) {
-            this.agentHandRaise.setAgentNames(new ArrayList<>());
         }
 
         this.agentHandRaise.setHandRaised(handRaised);
