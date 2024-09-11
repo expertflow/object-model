@@ -789,10 +789,55 @@ Version 1.17.8.0 (On top of 1.17.5.3)
 - ADDED `CALL_HOLD` and `CALL_RESUME` in `MessageIntent` and `CimEventName` class.
 - ADDED `WHISPER` type Participant Role in `ParticipantRole` class.
 - ADDED `WRAPUPS` List<Object> and `HOLDTIME` double in `VoiceActivity` class.
+==============================================================================================
+
+Version 1.17.6.0
+- Added `EMAIL` as new MRD TYPE
+- Added `Email Signatures` class
+- Added `queuePriority` attribute in `PrecisionQueueEntity` class
+- Added `mediaLebel` and `mediaName` in Attachment class
 
 ==============================================================================================
 
-Version 1.17.9.0 (On top of 1.17.8.0)
+Version 1.17.6.1
+- Removed `queuePriority` attribute in `PrecisionQueueEntity` class
+- This version contains all the EMAIL related changes till April End 2024
+
+==============================================================================================
+
+Version 1.17.5.4 (On top of 1.17.5.3)
+- ADDED `permalinkUrl` field in `SocialMediaPost` class.
+
+==============================================================================================
+
+Version 1.17.5.5 (Merged 1.17.8.0(develop) into 1.17.5.3(FB Changes))
+- ADDED `permalinkUrl` field in `SocialMediaPost` class.
+
+==============================================================================================
+
+Version 1.17.5.6 (Merged develop(1.17.5.5) into 1.17.6.1(Email))
+- Added `EMAIL` as new MRD TYPE
+- Added `Email Signatures` class
+- Added `queuePriority` attribute in `PrecisionQueueEntity` class
+- Added `mediaLebel` and `mediaName` in Attachment class
+- Removed `queuePriority` attribute in `PrecisionQueueEntity` class
+
+==============================================================================================
+
+Version 1.17.5.7 (on top of 1.17.5.6)
+- Added `ewtMaxValue` and `ewtMinValue` in `PrecisionQueueEntity` class
+
+==============================================================================================
+
+Version 1.19.0 (on top of 1.17.5.7)
+- Added a new class file `customerSla`
+- Added `customerSla` in `ChannelConfig` class
+- Added `AGENT_SLA`,`CUSTOMER_SLA_STARTED`,`CUSTOMER_SLA_EXPIRED`,`CUSTOMER_SLA_STOPPED`,
+  `CUSTOMER_SLA`,`HOLD_TIMER` and `NO_RESPONSE_ENTITY` in `CimEventName` class
+
+==============================================================================================
+
+Version 1.19.1
 - ADDED `EXTERNAL_GADGET_REQUESTED` in `CimEventName` class.
 - ADDED `externalGadgetDetails` object in `ConversationDto` class.
 - ADDED `externalGadgetDetails` object in `Conversation` class.
