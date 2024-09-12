@@ -843,3 +843,8 @@ Version 1.19.1
 - ADDED `externalGadgetDetails` object in `Conversation` class.
 - ADDED `ExternalGadgetRequestedDto` class.
 - ADDED `Gadget` class.
+
+==============================================================================================
+
+Version 1.19.2
+- Modified the Gadgets implementation in Conversation.

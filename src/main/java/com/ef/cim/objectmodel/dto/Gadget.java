@@ -8,7 +8,8 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class Gadget {
-    String id;
+    String gadgetId;
+    String agentId;
     String title;
     String value;
 }

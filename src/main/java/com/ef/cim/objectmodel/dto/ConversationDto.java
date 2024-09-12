@@ -38,7 +38,7 @@ public class ConversationDto {
     private List<Customer> customerSuggestions = new ArrayList<>();
     private List<CimEvent> topicEvents;
     private HoldTimerDetails holdTimerDetails;
-    private ExternalGadgetRequestedDto externalGadgetDetails;
+    private List<Gadget> externalGadgets;
 
 
     /**
@@ -58,7 +58,7 @@ public class ConversationDto {
         this.agentSla = conversation.getAgentSla();
         this.topicEvents = conversationEvents;
         this.holdTimerDetails = conversation.getHoldTimerDetails();
-        this.externalGadgetDetails = conversation.getExternalGadgetDetails();
+        this.externalGadgets = conversation.getExternalGadgets();
     }
 
     private void setCustomerSuggestionsFrom(Conversation conversation) {

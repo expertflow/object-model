@@ -1,7 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
-import com.ef.cim.objectmodel.dto.ExternalGadgetRequestedDto;
+import com.ef.cim.objectmodel.dto.Gadget;
 import com.ef.cim.objectmodel.room.RoomInfo;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -31,7 +31,7 @@ public class Conversation implements Serializable {
     private AgentSla agentSla = new AgentSla();
     private int cachedAgentSlaDuration;
     private HoldTimerDetails holdTimerDetails = new HoldTimerDetails();
-    private ExternalGadgetRequestedDto externalGadgetDetails;
+    private List<Gadget> externalGadgets;
 
     public Conversation() {
         this.id = Utils.getObjectId();
