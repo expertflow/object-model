@@ -31,7 +31,7 @@ public class Conversation implements Serializable {
     private AgentSla agentSla = new AgentSla();
     private int cachedAgentSlaDuration;
     private HoldTimerDetails holdTimerDetails = new HoldTimerDetails();
-    private List<Gadget> externalGadgets;
+    private List<Gadget> externalGadgets = new ArrayList<>();
 
     public Conversation() {
         this.id = Utils.getObjectId();
