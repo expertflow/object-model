@@ -841,6 +841,7 @@ Version 1.19.0-CIM-25977-SNAPSHOT (on top of 1.19.0)
 - Added `queuePriority` in `PrecisionQueueEntity` class
 - Added `interruptible` flag in `MediaRoutingDomain` class.
 - Added `MrdInterrupted` class.
+- ADDED `previousState` field in `AgentMrdState` class.
 - Added `AGENT_MRD_INTERRUPTED` event.
 - ADDED `AGENT_HAND_RAISED` and `CONVERSATION_HAND_DOWN` in `CimEventName` class
 - ADDED `AgentHandRaise` class
