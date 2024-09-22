@@ -1,15 +1,14 @@
 package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
+import com.ef.cim.objectmodel.dto.Gadget;
 import com.ef.cim.objectmodel.room.RoomInfo;
-
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -33,7 +32,7 @@ public class Conversation implements Serializable {
     private int cachedAgentSlaDuration;
     private HoldTimerDetails holdTimerDetails = new HoldTimerDetails();
     private AgentHandRaise agentHandRaise = new AgentHandRaise(false, new ArrayList<>());
-
+    private List<Gadget> externalGadgets = new ArrayList<>();
 
     public Conversation() {
         this.id = Utils.getObjectId();
