@@ -836,3 +836,8 @@ Version 1.19.0 (on top of 1.17.5.7)
   `CUSTOMER_SLA`,`HOLD_TIMER` and `NO_RESPONSE_ENTITY` in `CimEventName` class
 
 ==============================================================================================
+
+Version 1.19.0-CIM-13507-SNAPSHOT (on top of 1.19.0)
+- Added `queuePriority` in `PrecisionQueueEntity` class
+
+==============================================================================================
