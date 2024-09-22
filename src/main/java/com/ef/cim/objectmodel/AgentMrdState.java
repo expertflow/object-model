@@ -20,6 +20,10 @@ public class AgentMrdState {
      */
     private Enums.AgentMrdStateName state;
     /**
+     * The previous state.
+     */
+    private Enums.AgentMrdStateName previousState;
+    /**
      * The State change time.
      */
     private Timestamp stateChangeTime;
@@ -124,6 +128,24 @@ public class AgentMrdState {
      */
     public void setLastReadyStateChangeTime(Timestamp lastReadyStateChangeTime) {
         this.lastReadyStateChangeTime = lastReadyStateChangeTime;
+    }
+
+    /**
+     * Gets the previous state of agent MRD.
+     *
+     * @return the previous state object.
+     */
+    public Enums.AgentMrdStateName getPreviousState() {
+        return previousState;
+    }
+
+    /**
+     * Sets the previous state of agent MRD.
+     *
+     * @param previousState the state that needs to be set.
+     */
+    public void setPreviousState(Enums.AgentMrdStateName previousState) {
+        this.previousState = previousState;
     }
 
     public int getMaxAgentTasks() {
