@@ -48,6 +48,10 @@ public class MediaRoutingDomain implements Serializable {
      */
     @Min(value = 1, message = "Maximum requests should be greater than 0")
     private int maxRequests;
+    /**
+     * The interruptible flag.
+     */
+    private boolean interruptible;
 
     @Override
     public boolean equals(Object o) {
