@@ -837,5 +837,22 @@ Version 1.19.0 (on top of 1.17.5.7)
 
 ==============================================================================================
 
-Version 1.19.0-CIM-14605-SNAPSHOT
+Version 1.21.1 (on top of 1.19.0)
+- Added `queuePriority` in `PrecisionQueueEntity` class
+- Added `interruptible` flag in `MediaRoutingDomain` class.
+- Added `MrdInterrupted` class.
+- ADDED `previousState` field in `AgentMrdState` class.
+- Added `AGENT_MRD_INTERRUPTED` event.
+- ADDED `AGENT_HAND_RAISED` and `CONVERSATION_HAND_DOWN` in `CimEventName` class
+- ADDED `AgentHandRaise` class
+- ADDED `AgentHandRaise` field in `Conversation` class
+- ADDED `EXTERNAL_GADGET_REQUESTED` in `CimEventName` class.
+- ADDED `externalGadgetDetails` object in `ConversationDto` class.
+- ADDED `externalGadgetDetails` object in `Conversation` class.
+- ADDED `ExternalGadgetRequestedDto` class.
+- ADDED `Gadget` class.
+
+==============================================================================================
+
+Version 1.19.0-CIM-8601-SNAPSHOT
 - Change `supervisedTeams` type to `Object` from `Team`
