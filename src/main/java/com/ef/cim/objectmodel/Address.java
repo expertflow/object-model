@@ -1,37 +1,39 @@
 package com.ef.cim.objectmodel;
 
 public class Address {
-    private String street;
+    private String street1;
+    private String street2;
     private String city;
+    private String postalCode;
     private String state;
-    private String zip;
     private String country;
-    private String countryCode;
-    private String type;
 
-    //Default Constructor
     public Address() {
     }
 
-    //Parameterized Constructor
-
-    public Address(String street, String city, String state, String zip, String country, String countryCode,
-            String type) {
-        this.street = street;
+    public Address(String street1, String street2, String city, String postalCode, String state, String country) {
+        this.street1 = street1;
+        this.street2 = street2;
         this.city = city;
+        this.postalCode = postalCode;
         this.state = state;
-        this.zip = zip;
         this.country = country;
-        this.countryCode = countryCode;
-        this.type = type;
     }
 
-    public String getStreet() {
-        return street;
+    public String getStreet1() {
+        return street1;
     }
 
-    public void setStreet(String street) {
-        this.street = street;
+    public void setStreet1(String street1) {
+        this.street1 = street1;
+    }
+
+    public String getStreet2() {
+        return street2;
+    }
+
+    public void setStreet2(String street2) {
+        this.street2 = street2;
     }
 
     public String getCity() {
@@ -42,20 +44,20 @@ public class Address {
         this.city = city;
     }
 
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
     public String getState() {
         return state;
     }
 
     public void setState(String state) {
         this.state = state;
-    }
-
-    public String getZip() {
-        return zip;
-    }
-
-    public void setZip(String zip) {
-        this.zip = zip;
     }
 
     public String getCountry() {
@@ -66,32 +68,15 @@ public class Address {
         this.country = country;
     }
 
-    public String getCountryCode() {
-        return countryCode;
-    }
-
-    public void setCountryCode(String countryCode) {
-        this.countryCode = countryCode;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     @Override
     public String toString() {
         return "Address{" +
-                "street='" + street + '\'' +
+                "street1='" + street1 + '\'' +
+                ", street2='" + street2 + '\'' +
                 ", city='" + city + '\'' +
+                ", postalCode='" + postalCode + '\'' +
                 ", state='" + state + '\'' +
-                ", zip='" + zip + '\'' +
                 ", country='" + country + '\'' +
-                ", countryCode='" + countryCode + '\'' +
-                ", type='" + type + '\'' +
                 '}';
     }
 }

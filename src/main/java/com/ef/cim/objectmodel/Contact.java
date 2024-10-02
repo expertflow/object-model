@@ -1,57 +1,24 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import java.util.ArrayList;
 import java.util.List;
+import javax.validation.Valid;
 
 public class Contact {
-
-    private List<Address> addresses;
-    private String birthday;
-    private List<Email> emails;
+    @Valid
     private Name name;
-    private Organization org;
     private List<Phone> phones;
-    private List<URL> urls;
+    private JsonNode additionalContactDetails;
 
     public Contact() {
-        addresses = new ArrayList<>();
-        emails = new ArrayList<>();
-        urls = new ArrayList<>();
+        phones = new ArrayList<>();
     }
 
-    public Contact(List<Address> addresses, String birthday, List<Email> emails, Name name,
-            Organization organization, List<Phone> phones, List<URL> urls) {
-        this.addresses = addresses;
-        this.birthday = birthday;
-        this.emails = emails;
+    public Contact(Name name, List<Phone> phones, JsonNode additionalContactDetails) {
         this.name = name;
-        this.org = organization;
         this.phones = phones;
-        this.urls = urls;
-    }
-
-    public List<Address> getAddresses() {
-        return addresses;
-    }
-
-    public void setAddresses(List<Address> addresses) {
-        this.addresses = addresses;
-    }
-
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
-
-    public List<Email> getEmails() {
-        return emails;
-    }
-
-    public void setEmails(List<Email> emails) {
-        this.emails = emails;
+        this.additionalContactDetails = additionalContactDetails;
     }
 
     public Name getName() {
@@ -62,14 +29,6 @@ public class Contact {
         this.name = name;
     }
 
-    public Organization getOrg() {
-        return org;
-    }
-
-    public void setOrg(Organization org) {
-        this.org = org;
-    }
-
     public List<Phone> getPhones() {
         return phones;
     }
@@ -78,24 +37,20 @@ public class Contact {
         this.phones = phones;
     }
 
-    public List<URL> getUrls() {
-        return urls;
+    public JsonNode getAdditionalContactDetails() {
+        return additionalContactDetails;
     }
 
-    public void setUrls(List<URL> urls) {
-        this.urls = urls;
+    public void setAdditionalContactDetails(JsonNode additionalContactDetails) {
+        this.additionalContactDetails = additionalContactDetails;
     }
 
     @Override
     public String toString() {
         return "Contact{" +
-                "addresses=" + addresses +
-                ", birthday='" + birthday + '\'' +
-                ", emails=" + emails +
-                ", name=" + name +
-                ", organization=" + org +
+                "name=" + name +
                 ", phones=" + phones +
-                ", urls=" + urls +
+                ", additionalContactDetails=" + additionalContactDetails +
                 '}';
     }
 }

@@ -1,23 +1,24 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class SuggestionMessage implements ICimMessage {
-    private final UUID id;
+    private final String id;
     private MessageHeader header;
     private List<BotSuggestion> suggestions;
     private CimMessage requestedMessage;
 
     // Default Constructor
     public SuggestionMessage() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.suggestions = new ArrayList<>();
     }
 
     // Getters
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 

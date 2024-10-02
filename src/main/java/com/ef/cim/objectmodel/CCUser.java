@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
@@ -13,15 +12,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(value = "agents")
 public class CCUser implements Participant {
     @Id
-    private UUID id;
+    private String id;
     @NotNull
     @Valid
     private KeycloakUser keycloakUser;
     private List<AssociatedRoutingAttribute> associatedRoutingAttributes;
     private String participantType;
+    private List<AssociatedMrd> associatedMrds;
 
     public CCUser() {
         this.associatedRoutingAttributes = new ArrayList<>();
+        this.associatedMrds = new ArrayList<>();
         this.participantType = "CCUser";
     }
 
@@ -35,13 +36,12 @@ public class CCUser implements Participant {
     }
 
 
-
     @Override
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -77,6 +77,25 @@ public class CCUser implements Participant {
         return this.associatedRoutingAttributes.remove(associatedRoutingAttribute);
     }
 
+    public boolean containsAssociatedMrd(AssociatedMrd associatedMrd) {
+        return this.associatedMrds.contains(associatedMrd);
+    }
+
+    public boolean addAssociatedMrd(AssociatedMrd associatedMrd) {
+        return this.associatedMrds.add(associatedMrd);
+    }
+
+    public boolean removeAssociatedMrd(AssociatedMrd associatedMrd) {
+        return this.associatedMrds.remove(associatedMrd);
+    }
+    public List<AssociatedMrd> getAssociatedMrds() {
+        return associatedMrds;
+    }
+
+    public void setAssociatedMrds(List<AssociatedMrd> associatedMrds) {
+        this.associatedMrds = associatedMrds;
+    }
+
     public String getParticipantType() {
         return participantType;
     }
@@ -105,6 +124,7 @@ public class CCUser implements Participant {
                 ", keycloakUser=" + keycloakUser +
                 ", associatedRoutingAttributes=" + associatedRoutingAttributes +
                 ", participantType='" + participantType + '\'' +
+                ", associatedMrds=" + associatedMrds +
                 '}';
     }
 }

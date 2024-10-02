@@ -1,7 +1,6 @@
 package com.ef.cim.objectmodel;
 
 import java.util.Objects;
-import java.util.UUID;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.springframework.data.annotation.Id;
@@ -10,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(value = "routingAttributes")
 public class RoutingAttribute {
     @Id
-    private UUID id;
+    private String id;
     @NotNull
     @Size(min = 3, max = 110)
     private String name;
@@ -20,11 +19,11 @@ public class RoutingAttribute {
     private RoutingAttributeType type;
     private int defaultValue;
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 

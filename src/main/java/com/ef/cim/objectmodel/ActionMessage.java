@@ -1,22 +1,22 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 public class ActionMessage implements ICimMessage {
-    private final UUID id;
+    private final String id;
     private MessageHeader header;
     private String name;
     private Map<String, Object> data;
 
     public ActionMessage() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.data = new HashMap<>();
     }
 
     public ActionMessage(String name) {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.name = name;
         this.data = new HashMap<>();
     }
@@ -32,7 +32,7 @@ public class ActionMessage implements ICimMessage {
     }
 
     @Override
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 

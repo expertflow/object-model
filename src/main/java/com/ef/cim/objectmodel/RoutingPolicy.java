@@ -1,12 +1,12 @@
 package com.ef.cim.objectmodel;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 public class RoutingPolicy implements Serializable {
     private AgentSelectionPolicy agentSelectionPolicy;
-    private UUID defaultQueue;
     private boolean routeToLastAgent;
+    private RoutingMode routingMode;
+    private String routingObjectId;
     private int agentRequestTtl;
 
     public AgentSelectionPolicy getAgentSelectionPolicy() {
@@ -15,14 +15,6 @@ public class RoutingPolicy implements Serializable {
 
     public void setAgentSelectionPolicy(AgentSelectionPolicy agentSelectionPolicy) {
         this.agentSelectionPolicy = agentSelectionPolicy;
-    }
-
-    public UUID getDefaultQueue() {
-        return defaultQueue;
-    }
-
-    public void setDefaultQueue(UUID defaultQueue) {
-        this.defaultQueue = defaultQueue;
     }
 
     public boolean isRouteToLastAgent() {
@@ -41,13 +33,26 @@ public class RoutingPolicy implements Serializable {
         this.agentRequestTtl = agentRequestTtl;
     }
 
+    public RoutingMode getRoutingMode() {
+        return routingMode;
+    }
+
+    public void setRoutingMode(RoutingMode routingMode) {
+        this.routingMode = routingMode;
+    }
+
+    public String getRoutingObjectId() {
+        return routingObjectId;
+    }
+
+    public void setRoutingObjectId(String routingObjectId) {
+        this.routingObjectId = routingObjectId;
+    }
+
     @Override
     public String toString() {
-        return "RoutingPolicy{" +
-                "agentSelectionPolicy=" + agentSelectionPolicy +
-                ", defaultQueue=" + defaultQueue +
-                ", routeToLastAgent=" + routeToLastAgent +
-                ", agentRequestTtl=" + agentRequestTtl +
-                '}';
+        return "RoutingPolicy{" + "agentSelectionPolicy=" + agentSelectionPolicy + ", routeToLastAgent=" +
+                routeToLastAgent + ", routingMode=" + routingMode + ", routingObjectId=" + routingObjectId +
+                ", agentRequestTtl=" + agentRequestTtl + '}';
     }
 }

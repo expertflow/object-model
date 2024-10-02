@@ -30,4 +30,12 @@ public class NLUIntent implements Serializable {
     public void setConfidence(double value) {
         this.confidence = value;
     }
+
+    @Override
+    public String toString() {
+        return "NLUIntent{" +
+                "name='" + name + '\'' +
+                ", confidence=" + confidence +
+                '}';
+    }
 }

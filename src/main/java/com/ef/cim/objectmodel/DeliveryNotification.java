@@ -1,22 +1,26 @@
 package com.ef.cim.objectmodel;
 
-import java.util.UUID;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeliveryNotification extends MessageBody {
-    private final UUID messageID;
+    private String messageId;
     private DeliveryStatus status;
-    private int reasonCode;
+    private String reasonCode;
 
     // Constructor 1
-    public DeliveryNotification(DeliveryStatus status) {
+    public DeliveryNotification(@JsonProperty("messageId") String messageId, @JsonProperty("status") DeliveryStatus status) {
         super(MessageType.DELIVERYNOTIFICATION);
-        this.messageID = UUID.randomUUID();
+        this.messageId = messageId;
         this.status = status;
     }
 
     // Getters
-    public UUID getMessageID() {
-        return this.messageID;
+    public String getMessageId() {
+        return this.messageId;
+    }
+
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
     }
 
     public DeliveryStatus getStatus() {
@@ -28,11 +32,22 @@ public class DeliveryNotification extends MessageBody {
         this.status = status;
     }
 
-    public int getReasonCode() {
+    public String getReasonCode() {
         return this.reasonCode;
     }
 
-    public void setReasonCode(int reasonCode) {
+    public void setReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
+    }
+
+    @Override
+    public String toString() {
+        return "DeliveryNotification{" +
+                "messageId=" + messageId +
+                ", status=" + status +
+                ", reasonCode=" + reasonCode +
+                ", type=" + type +
+                ", markdownText='" + markdownText + '\'' +
+                '}';
     }
 }

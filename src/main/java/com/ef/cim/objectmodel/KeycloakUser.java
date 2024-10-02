@@ -1,60 +1,38 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
-import java.util.UUID;
 import javax.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import org.apache.commons.lang3.StringUtils;
 
-public class KeycloakUser {
-    @NotNull
-    private UUID id;
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class KeycloakUser implements Serializable {
+    private String id;
     @NotNull
     private String firstName;
     @NotNull
     private String lastName;
-    private List<String> roles;
-
+    private List<String> roles = new ArrayList<>();
     private String username;
-
     private Resources permittedResources;
     private String realm;
-
-    public KeycloakUser() {
-        roles = new ArrayList<>();
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public List<String> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<String> roles) {
-        this.roles = roles;
-    }
+    private Map<String, Object> attributes = new HashMap<>();
+    private Team userTeam;
+    private List<Team> supervisedTeams = new ArrayList<>();
 
     public boolean containsRole(String role) {
         return this.roles.contains(role);
@@ -68,28 +46,15 @@ public class KeycloakUser {
         return this.roles.remove(role);
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public Resources getPermittedResources() {
-        return permittedResources;
-    }
-
-    public void setPermittedResources(Resources permittedResources) {
-        this.permittedResources = permittedResources;
-    }
-
-    public String getRealm() {
-        return realm;
-    }
-
-    public void setRealm(String realm) {
-        this.realm = realm;
+    @JsonIgnore
+    public String displayName() {
+        if (!StringUtils.isBlank(firstName) && !StringUtils.isBlank(lastName)) {
+            return firstName + " " + lastName;
+        } else if (!StringUtils.isBlank(firstName)) {
+            return firstName;
+        } else {
+            return username;
+        }
     }
 
     @Override
@@ -101,22 +66,12 @@ public class KeycloakUser {
             return false;
         }
         KeycloakUser that = (KeycloakUser) o;
-        return id.equals(that.id) && firstName.equals(that.firstName) &&
-                lastName.equals(that.lastName) && Objects.equals(roles, that.roles);
+        return id.equals(that.id) && firstName.equals(that.firstName) && lastName.equals(that.lastName) &&
+                Objects.equals(roles, that.roles);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, firstName, lastName, roles);
-    }
-
-    @Override
-    public String toString() {
-        return "KeycloakUser{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", roles=" + roles +
-                '}';
     }
 }

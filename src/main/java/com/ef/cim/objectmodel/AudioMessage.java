@@ -1,32 +1,23 @@
 package com.ef.cim.objectmodel;
 
-import java.net.URL;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.validation.Valid;
 
-public class AudioMessage extends MultimediaMessage{
-    private long size;
-
+public class AudioMessage extends MultimediaMessage {
     //Default Constructor
-    public AudioMessage(URL media) {
-        super(MessageType.AUDIO, media);
-    }
-
-    public AudioMessage(URL media,long size) {
-        super(MessageType.AUDIO,media);
-        this.size = size;
-    }
-
-    public long getSize() {
-        return size;
-    }
-
-    public void setSize(long size) {
-        this.size = size;
+    public AudioMessage(@JsonProperty("caption") String caption,
+                        @JsonProperty("attachment") @Valid Attachment attachment) {
+        super(MessageType.AUDIO, caption, attachment);
     }
 
     @Override
     public String toString() {
         return "AudioMessage{" +
-                "size=" + size +
+                "type=" + type +
+                ", markdownText='" + markdownText + '\'' +
+                ", caption='" + caption + '\'' +
+                ", attachment=" + attachment +
+                ", additionalDetails=" + additionalDetails +
                 '}';
     }
 }

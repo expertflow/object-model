@@ -1,28 +1,28 @@
 package com.ef.cim.objectmodel;
 
-import java.util.UUID;
+import com.ef.cim.objectmodel.common.Utils;
 
 public class CustomerChannelManager implements Participant {
-    private UUID id;
+    private String id;
     private String displayName;
 
     // Default Constructor
-    public CustomerChannelManager(UUID id, String displayName) {
+    public CustomerChannelManager(String id, String displayName) {
         this.id = id;
         this.displayName = displayName;
     }
 
     public CustomerChannelManager() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
     }
 
     // Getters
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
     //Setters
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -32,5 +32,13 @@ public class CustomerChannelManager implements Participant {
 
     public void setDisplayName(String displayName) {
         this.displayName = displayName;
+    }
+
+    @Override
+    public String toString() {
+        return "CustomerChannelManager{" +
+                "id=" + id +
+                ", displayName='" + displayName + '\'' +
+                '}';
     }
 }

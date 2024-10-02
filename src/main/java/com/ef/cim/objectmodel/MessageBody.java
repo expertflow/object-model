@@ -1,34 +1,35 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
-import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 import java.io.Serializable;
 import javax.validation.constraints.NotNull;
 
-@JsonTypeInfo(
-        use = JsonTypeInfo.Id.NAME,
-        include = JsonTypeInfo.As.PROPERTY,
-        property = "type")
-@JsonSubTypes({
-        @Type(value = DeliveryNotification.class, name = "DELIVERYNOTIFICATION"),
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", defaultImpl = GenericMessage.class, visible = true)
+@JsonSubTypes({@Type(value = DeliveryNotification.class, name = "DELIVERYNOTIFICATION"),
+        @Type(value = DeletedNotification.class, name = "DELETEDNOTIFICATION"),
+        @Type(value = CustomMessage.class, name = "CUSTOM"),
         @Type(value = StructuredMessage.class, name = "StructuredMessage"),
-        @Type(value = MultimediaMessage.class, name = "MULTIMEDIA"),
-        @Type(value = VideoMessage.class, name = "VIDEO"),
-        @Type(value = ImageMessage.class, name = "IMAGE"),
-        @Type(value = AudioMessage.class, name = "AUDIO"),
-        @Type(value = FileMessage.class, name = "FILE"),
-        @Type(value = ContactMessage.class, name = "CONTACT"),
+        @Type(value = NotificationMessage.class, name = "NOTIFICATION"),
+        @Type(value = MultimediaMessage.class, name = "MULTIMEDIA"), @Type(value = VideoMessage.class, name = "VIDEO"),
+        @Type(value = ImageMessage.class, name = "IMAGE"), @Type(value = AudioMessage.class, name = "AUDIO"),
+        @Type(value = FileMessage.class, name = "FILE"), @Type(value = ContactMessage.class, name = "CONTACT"),
         @Type(value = LocationMessage.class, name = "LOCATION"),
-        @Type(value = CarousalMessage.class, name = "CAROUSAL"),
-        @Type(value = ButtonMessage.class, name = "BUTTON"),
-        @Type(value = MessageBody.class, name = "PLAIN")
-})
+        @Type(value = CarouselMessage.class, name = "CAROUSEL"), @Type(value = ButtonMessage.class, name = "BUTTON"),
+        @Type(value = MessageBody.class, name = "PLAIN"), @Type(value = VoiceMessage.class, name = "VOICE"),
+        @Type(value = UrlMessage.class, name = "URL"), @Type(value = StickerMessage.class, name = "STICKER"),
+        @Type(value = ReceiptTemplateMessage.class, name = "RECEIPT"),
+        @Type(value = WrapUpMessage.class, name = "WRAPUP"),
+        @Type(value = TemplateMessage.class, name = "TEMPLATE"),
+        @Type(value = ActionMessageBody.class, name = "ACTION"),
+        @Type(value = CommentMessage.class, name = "COMMENT"),
+        @Type(value = EmailMessage.class, name = "EMAIL")})
 public class MessageBody implements Serializable {
     @NotNull
-    protected MessageType type;
+    @JsonProperty("type")
+    protected String type;
     protected String markdownText;
 
     public MessageBody() {
@@ -38,14 +39,14 @@ public class MessageBody implements Serializable {
     /**
      * Default Constructor
      *
-     * @param type
+     * @param type value of MessageType
      */
-    protected MessageBody(MessageType type) {
+    public MessageBody(@JsonProperty("type") String type) {
         this.type = type;
     }
 
     // Getters
-    public MessageType getType() {
+    public String getType() {
         return this.type;
     }
 
@@ -64,9 +65,6 @@ public class MessageBody implements Serializable {
      */
     @Override
     public String toString() {
-        return "MessageBody{" +
-                "type=" + type +
-                ", markdownText='" + markdownText + '\'' +
-                '}';
+        return "MessageBody{" + "type=" + type + ", markdownText='" + markdownText + '\'' + '}';
     }
 }

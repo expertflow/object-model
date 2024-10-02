@@ -1,12 +1,10 @@
 package com.ef.cim.objectmodel;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 public class IdentifiedCustomer implements Serializable {
     private Customer associatedCustomer;
-    private UUID lastAssignedAgent;
-
+    private String lastAssignedAgent;
 
     public Customer getAssociatedCustomer() {
         return associatedCustomer;
@@ -16,11 +14,11 @@ public class IdentifiedCustomer implements Serializable {
         this.associatedCustomer = associatedCustomer;
     }
 
-    public UUID getLastAssignedAgent() {
+    public String getLastAssignedAgent() {
         return lastAssignedAgent;
     }
 
-    public void setLastAssignedAgent(UUID lastAssignedAgent) {
+    public void setLastAssignedAgent(String lastAssignedAgent) {
         this.lastAssignedAgent = lastAssignedAgent;
     }
 

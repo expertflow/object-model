@@ -1,39 +1,54 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.io.Serializable;
 import java.util.List;
-import java.util.UUID;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "forms")
 public class Form implements Serializable {
-    private UUID id;
-    private String name;
-    private List<Attribute> attributes;
+    @Id
+    @JsonSerialize(using = ToStringSerializer.class)
+    private String id;
+    private String formTitle;
+    private String formDescription;
+    private List<AttributeSchema> attributes;
 
     public Form() {
-        this.id = UUID.randomUUID();
+
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFormTitle() {
+        return formTitle;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFormTitle(String formTitle) {
+        this.formTitle = formTitle;
     }
 
-    public List<Attribute> getAttributes() {
+    public String getFormDescription() {
+        return formDescription;
+    }
+
+    public void setFormDescription(String formDescription) {
+        this.formDescription = formDescription;
+    }
+
+    public List<AttributeSchema> getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(List<Attribute> attributes) {
+    public void setAttributes(List<AttributeSchema> attributes) {
         this.attributes = attributes;
     }
 
@@ -41,7 +56,8 @@ public class Form implements Serializable {
     public String toString() {
         return "Form{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", formTitle='" + formTitle + '\'' +
+                ", formDescription='" + formDescription + '\'' +
                 ", attributes=" + attributes +
                 '}';
     }

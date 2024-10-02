@@ -1,73 +1,35 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
-import java.net.URL;
-import java.util.UUID;
+import java.util.ArrayList;
+import java.util.List;
 import javax.validation.constraints.NotBlank;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "ChannelConnector")
 public class ChannelConnector implements Serializable {
-    @Id
-    private UUID id;
+
+    private String id;
     @NotBlank
-    private String channelConnectorName;
-    private URL channelWebhook;
-    @DBRef
-    private ChannelType channelType;
-//    private UndefinedObject channelLogo;
-    private FormData channelConnectorData;
+    private String name;
+    private ChannelProviderInterface channelProviderInterface;
+    private List<Attribute> channelProviderConfigs;
     private Tenant tenant;
 
     public ChannelConnector() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
+        this.channelProviderConfigs = new ArrayList<>();
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public String getChannelConnectorName() {
-        return channelConnectorName;
+    public String getName() {
+        return name;
     }
 
-    public void setChannelConnectorName(String channelConnectorName) {
-        this.channelConnectorName = channelConnectorName;
-    }
-
-    public URL getChannelWebhook() {
-        return channelWebhook;
-    }
-
-    public void setChannelWebhook(URL channelWebhook) {
-        this.channelWebhook = channelWebhook;
-    }
-
-    public ChannelType getChannelType() {
-        return channelType;
-    }
-
-    public void setChannelType(ChannelType channelType) {
-        this.channelType = channelType;
-    }
-
-//    public UndefinedObject getChannelLogo() {
-//        return channelLogo;
-//    }
-
-//    public void setChannelLogo(UndefinedObject channelLogo) {
-//        this.channelLogo = channelLogo;
-//    }
-
-
-    public FormData getChannelConnectorData() {
-        return channelConnectorData;
-    }
-
-    public void setChannelConnectorData(FormData channelConnectorData) {
-        this.channelConnectorData = channelConnectorData;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Tenant getTenant() {
@@ -78,21 +40,37 @@ public class ChannelConnector implements Serializable {
         this.tenant = tenant;
     }
 
-    public void setId(UUID id) { this.id = id; }
+    public void setId(String id) {
+        this.id = id;
+    }
 
+    public ChannelProviderInterface getChannelProviderInterface() {
+        return channelProviderInterface;
+    }
+
+    public void setChannelProviderInterface(ChannelProviderInterface channelProviderInterface) {
+        this.channelProviderInterface = channelProviderInterface;
+    }
+
+    public List<Attribute> getChannelProviderConfigs() {
+        return channelProviderConfigs;
+    }
+
+    public void setChannelProviderConfigs(List<Attribute> channelProviderConfigs) {
+        this.channelProviderConfigs = channelProviderConfigs;
+    }
 
     /***
-     * String Representation of ChannelConnector
+     * String Representation of ChannelConnector.
      * @return String
      */
     @Override
     public String toString() {
         return "ChannelConnector{" +
                 "id=" + id +
-                ", channelConnectorName='" + channelConnectorName + '\'' +
-                ", channelWebhook=" + channelWebhook +
-                ", type=" + channelType +
-                ", formData=" + channelConnectorData +
+                ", name='" + name + '\'' +
+                ", channelProviderInterface=" + channelProviderInterface +
+                ", channelProviderConfigs=" + channelProviderConfigs +
                 ", tenant=" + tenant +
                 '}';
     }

@@ -1,40 +1,44 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
+import com.ef.cim.objectmodel.room.RoomInfo;
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.UUID;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.springframework.data.mongodb.core.index.Indexed;
 
+@Getter
+@Setter
+@ToString
 public class CimEvent implements Serializable {
-
-
-    private final UUID id;
+    private String id;
+    @Indexed(name = "name_1")
     private CimEventName name;
+    @Indexed(name = "type_1")
     private CimEventType type;
     private Timestamp timestamp;
-
-
+    private String conversationId;
+    private Sender eventEmitter;
+    private ChannelSession channelSession;
     private Object data;
+    private RoomInfo roomInfo;
 
     public CimEvent() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
     }
-    // Getters
-    public UUID getId() { return id; }
 
-    public CimEventName getName() { return name; }
-
-    public CimEventType getType() { return type; }
-
-    public Timestamp getTimestamp() { return timestamp; }
-
-    public Object getData() { return data; }
-
-    // Setters
-    public void setName(CimEventName name) { this.name = name; }
-
-    public void setType(CimEventType type) { this.type = type; }
-
-    public void setTimestamp(Timestamp timestamp) { this.timestamp = timestamp; }
-
-    public void setData(Object data) { this.data = data; }
+    public CimEvent(Object data, CimEventName name, CimEventType type, String conversationId, Sender eventEmitter,
+                    ChannelSession channelSession, RoomInfo roomInfo) {
+        this.id = Utils.getObjectId();
+        this.data = data;
+        this.name = name;
+        this.type = type;
+        this.conversationId = conversationId;
+        this.timestamp = new Timestamp(System.currentTimeMillis());
+        this.eventEmitter = eventEmitter;
+        this.channelSession = channelSession;
+        this.roomInfo = roomInfo;
+    }
 }

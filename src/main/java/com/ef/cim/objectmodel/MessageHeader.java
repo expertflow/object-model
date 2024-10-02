@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -9,16 +10,23 @@ import java.util.Map;
 import javax.validation.Valid;
 
 public class MessageHeader implements Serializable {
-    private TopicParticipant sender;
+    @Valid
+    private Sender sender;
     @Valid
     private ChannelData channelData;
     private LanguageCode language; // Class LanguageCode Empty | not in object model
     private Timestamp timestamp;
     private MessageSecurity securityInfo; // Class MessageSecurity Empty | not in object model
     private List<String> stamps;
-    private NLUIntent intent;
+    private String intent;
     private Map<String, Object> entities;
-    private ChannelSession channelSession;
+    private String channelSessionId;
+    private String conversationId;
+    private Customer customer;
+    private String originalMessageId;
+    private String providerMessageId;
+    private Map<String, Object> schedulingMetaData = null;
+    private String roomId;
 
     // Default Constructor
     public MessageHeader() {
@@ -26,12 +34,12 @@ public class MessageHeader implements Serializable {
     }
 
     // Getters
-    public TopicParticipant getSender() {
+    public Sender getSender() {
         return this.sender;
     }
 
     // Setters
-    public void setSender(TopicParticipant sender) {
+    public void setSender(Sender sender) {
         this.sender = sender;
     }
 
@@ -75,11 +83,11 @@ public class MessageHeader implements Serializable {
         this.stamps = stamps;
     }
 
-    public NLUIntent getIntent() {
+    public String getIntent() {
         return this.intent;
     }
 
-    public void setIntent(NLUIntent intent) {
+    public void setIntent(String intent) {
         this.intent = intent;
     }
 
@@ -91,12 +99,28 @@ public class MessageHeader implements Serializable {
         this.entities = entities;
     }
 
-    public ChannelSession getChannelSession() {
-        return this.channelSession;
+    public String getChannelSessionId() {
+        return this.channelSessionId;
     }
 
-    public void setChannelSession(ChannelSession channelSession) {
-        this.channelSession = channelSession;
+    public void setChannelSessionId(String channelSessionId) {
+        this.channelSessionId = channelSessionId;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public String getConversationId() {
+        return conversationId;
+    }
+
+    public void setConversationId(String conversationId) {
+        this.conversationId = conversationId;
     }
 
     public void addStamp(String stamp) {
@@ -137,6 +161,47 @@ public class MessageHeader implements Serializable {
         }
     }
 
+    public String getOriginalMessageId() {
+        return originalMessageId;
+    }
+
+    public void setOriginalMessageId(String originalMessageId) {
+        this.originalMessageId = originalMessageId;
+    }
+
+    public String getProviderMessageId() {
+        return providerMessageId;
+    }
+
+    public void setProviderMessageId(String providerMessageId) {
+        this.providerMessageId = providerMessageId;
+    }
+
+    public Map<String, Object> getSchedulingMetaData() {
+        return schedulingMetaData;
+    }
+
+    @JsonProperty("schedulingMetaData")
+    public void setSchedulingMetaData(Map<String, Object> schedulingMetaData) {
+        this.schedulingMetaData = schedulingMetaData;
+    }
+
+    public void setSchedulingMetaData(String key, Object value) {
+        if (schedulingMetaData == null) {
+            schedulingMetaData = new HashMap<String, Object>();
+        }
+        this.schedulingMetaData.put(key, value);
+    }
+
+
+    public String getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
+    }
+
     /***
      * String Representation of MessageHeader
      * @return String
@@ -152,8 +217,13 @@ public class MessageHeader implements Serializable {
                 ", stamps=" + stamps +
                 ", intent='" + intent + '\'' +
                 ", entities=" + entities +
-                ", channelSession=" + channelSession +
+                ", channelSessionId='" + channelSessionId + '\'' +
+                ", conversationId='" + conversationId + '\'' +
+                ", customer=" + customer +
+                ", originalMessageId='" + originalMessageId + '\'' +
+                ", providerMessageId='" + providerMessageId + '\'' +
+                ", schedulingMetaData=" + schedulingMetaData + '\'' +
+                ", roomId=" + roomId +
                 '}';
     }
-
 }

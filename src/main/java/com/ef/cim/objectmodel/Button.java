@@ -1,13 +1,17 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import java.io.Serializable;
+import javax.validation.constraints.NotBlank;
 
 public class Button implements Serializable {
-    protected String title;
-    protected String payload;
-    protected String actionType;
-    protected String bgColor;
-    protected int index;
+    @NotBlank(message = "button title is mandatory")
+    private String title;
+    @NotBlank(message = "button payload is mandatory")
+    private String payload;
+    @NotBlank(message = "button type is mandatory")
+    private String type;
+    private JsonNode additionalButtonDetails;
 
     /**
      * Returns the title of the button
@@ -50,78 +54,39 @@ public class Button implements Serializable {
      *
      * @return {@code String}
      */
-    public String getActionType() {
-        return this.actionType;
+    public String getType() {
+        return this.type;
     }
 
     /**
      * Sets the action type of the button
      *
-     * @param actionType object of type {@code String}
+     * @param type object of type {@code String}
      */
-    public void setActionType(String actionType) {
-        this.actionType = actionType;
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public JsonNode getAdditionalButtonDetails() {
+        return additionalButtonDetails;
+    }
+
+    public void setAdditionalButtonDetails(JsonNode additionalButtonDetails) {
+        this.additionalButtonDetails = additionalButtonDetails;
     }
 
     /**
-     * Returns the bgColor of the button
-     *
-     * @return {@code String}
-     */
-    public String getBgColor() {
-        return this.bgColor;
-    }
-
-    /**
-     * Sets the bgColor of the button
-     *
-     * @param bgColor object of type {@code String}
-     */
-    public void setBgColor(String bgColor) {
-        this.bgColor = bgColor;
-    }
-
-    /**
-     * Returns the index of the button
-     *
-     * @return {@code int}
-     */
-    public int getIndex() {
-        return this.index;
-    }
-
-    /**
-     * Sets the index of the button
-     *
-     * @param index of type {@code int}
-     */
-    public void setIndex(int index) {
-        this.index = index;
-    }
-
-    /**
-     * Converts the {@code Button} object to string
+     * Converts the {@code Button} object to string.
      *
      * @return {@code String}
      */
     @Override
     public String toString() {
-        return "Button{"
-                + "title='"
-                + title
-                + '\''
-                + ", payload='"
-                + payload
-                + '\''
-                + ", actionType='"
-                + actionType
-                + '\''
-                + ", bgColor='"
-                + bgColor
-                + '\''
-                + ", index='"
-                + index
-                + '\''
-                + '}';
+        return "Button{" +
+                "title='" + title + '\'' +
+                ", payload='" + payload + '\'' +
+                ", type='" + type + '\'' +
+                ", additionalButtonDetails=" + additionalButtonDetails +
+                '}';
     }
 }

@@ -1,9 +1,10 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
-import java.util.UUID;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+
 
 /**
  * A {@code ChannelConfig} object represents the configurations for a specific channel (e.g. mode,
@@ -11,15 +12,17 @@ import javax.validation.constraints.NotNull;
  */
 @Valid
 public class ChannelConfig implements Serializable {
-    private UUID id;
+
+    private String id;
     @NotNull(message = "Channel Mode is mandatory")
     private ChannelMode channelMode;
-    @NotNull(message = "SelfServiceBot is mandatory")
+    //    @NotNull(message = "SelfServiceBot is mandatory")
     private String conversationBot;
     @NotNull(message = "Response SLA is mandatory")
     private int responseSla;
     @NotNull(message = "Customer Inactivity Timeout is mandatory")
     private int customerActivityTimeout;
+    private CustomerSla customerSla = new CustomerSla();
     @NotNull(message = "Customer Identification Criteria is mandatory")
     private UndefinedObject customerIdentificationCriteria;
     @NotNull(message = "Routing Policy is mandatory")
@@ -31,7 +34,7 @@ public class ChannelConfig implements Serializable {
      * Default Constructor, Initializes all the objects except Strings and primitive types
      */
     public ChannelConfig() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.customerIdentificationCriteria = new UndefinedObject();
         this.routingPolicy = new RoutingPolicy();
     }
@@ -41,11 +44,11 @@ public class ChannelConfig implements Serializable {
      *
      * @return {@code String}
      */
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -172,6 +175,12 @@ public class ChannelConfig implements Serializable {
         this.botId = botId;
     }
 
+    public void setCustomerSla(CustomerSla customerSla) {
+        this.customerSla = customerSla;
+    }
+    public CustomerSla getCustomerSla() {
+        return this.customerSla;
+    }
     /***
      * String Representation of ChannelConfig
      * @return String
@@ -187,6 +196,7 @@ public class ChannelConfig implements Serializable {
                 ", customerIdentificationCriteria=" + customerIdentificationCriteria +
                 ", routingPolicy=" + routingPolicy +
                 ", botId='" + botId + '\'' +
+                ", customerSla='" + customerSla +'\'' +
                 '}';
     }
 }

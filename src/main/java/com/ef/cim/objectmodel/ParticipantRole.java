@@ -3,5 +3,8 @@ package com.ef.cim.objectmodel;
 public enum ParticipantRole {
     ASSISTANT,
     PRIMARY,
-    CUSTOMER
+    CUSTOMER,
+    SILENT_MONITOR,
+    WRAP_UP,
+    WHISPER
 }

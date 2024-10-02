@@ -1,39 +1,33 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
+import javax.validation.Valid;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString
 public class ButtonMessage extends StructuredMessage {
-    private List<Button> buttons;
-    private String text;
-    private boolean composerInputDisabled;
+    @Valid
+    private List<Button> buttons = new ArrayList<>();
+    private ButtonMessageType buttonMessageType;
 
     /**
      * Default Constructor Initializes an empty buttons list.
      */
-    public ButtonMessage() {
+    public ButtonMessage(@JsonProperty("buttonMessageType") ButtonMessageType buttonMessageType) {
         super(MessageType.BUTTON);
-        buttons = new ArrayList<>();
-        text = "";
-        composerInputDisabled = true;
+        this.buttonMessageType = buttonMessageType;
     }
 
-    /**
-     * Returns the list of buttons
-     *
-     * @return {@code List<Button>}
-     */
-    public List<Button> getButtons() {
-        return this.buttons;
-    }
-
-    /**
-     * Sets the list of buttons
-     *
-     * @param buttons, object of type {@code List<Button>}
-     */
-    public void setButtons(List<Button> buttons) {
+    public ButtonMessage(List<Button> buttons, ButtonMessageType buttonMessageType) {
+        super(MessageType.BUTTON);
         this.buttons = buttons;
+        this.buttonMessageType = buttonMessageType;
     }
 
     /**
@@ -43,7 +37,7 @@ public class ButtonMessage extends StructuredMessage {
      */
     public void addButton(Button button) {
         if (this.buttons == null) {
-            this.buttons = new ArrayList<Button>();
+            this.buttons = new ArrayList<>();
         }
 
         this.buttons.add(button);
@@ -69,52 +63,5 @@ public class ButtonMessage extends StructuredMessage {
         if (this.buttons != null) {
             this.buttons.remove(index);
         }
-    }
-
-    /**
-     * Return the text of button message
-     *
-     * @return {@code String}
-     */
-    public String getText() {
-        return this.text;
-    }
-
-    /**
-     * set the text of button message
-     *
-     * @param text, object of type {@code String}
-     */
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    /**
-     * Return the composerInputDisabled of button message
-     *
-     * @return {@code String}
-     */
-    public boolean getComposerInputDisabled() {
-        return this.composerInputDisabled;
-    }
-
-    /**
-     * set the composerInputDisabled of button message
-     *
-     * @param composerInputDisabled of type {@code boolean}
-     */
-    public void setComposerInputDisabled(boolean composerInputDisabled) {
-        this.composerInputDisabled = composerInputDisabled;
-    }
-
-    /**
-     * Converts the {@code ButtonMessage} object to string
-     *
-     * @return {@code String}
-     */
-    @Override
-    public String toString() {
-        return "ButtonMessage{" + "text=" + text + ", buttons=" + buttons +
-                ", composerInputDisabled='" + composerInputDisabled + '\'' + '}';
     }
 }

@@ -1,86 +1,48 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import javax.validation.constraints.NotBlank;
+
 public class Name {
-    private String formatted_name;
-    private String first_name;
-    private String last_name;
-    private String middle_name;
-    private String suffix;
-    private String prefix;
+    @NotBlank(message = "formattedName is mandatory")
+    private String formattedName;
+    private JsonNode additionalNameDetails;
 
     //Default Constructor
-    public Name() {
+    public Name(String formattedName) {
+        this.formattedName = formattedName;
     }
 
     //Parametrized Constructor
-
-    public Name(String formattedName, String firstName, String lastName, String middleName, String suffix,
-            String prefix) {
-        this.formatted_name = formattedName;
-        this.first_name = firstName;
-        this.last_name = lastName;
-        this.middle_name = middleName;
-        this.suffix = suffix;
-        this.prefix = prefix;
+    public Name(String formattedName, JsonNode additionalNameDetails) {
+        this.formattedName = formattedName;
+        this.additionalNameDetails = additionalNameDetails;
     }
 
-    public String getFormatted_name() {
-        return formatted_name;
+    public Name() {
     }
 
-    public void setFormatted_name(String formatted_name) {
-        this.formatted_name = formatted_name;
+    public String getFormattedName() {
+        return formattedName;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public void setFormattedName(String formattedName) {
+        this.formattedName = formattedName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public JsonNode getAdditionalNameDetails() {
+        return additionalNameDetails;
     }
 
-    public String getLast_name() {
-        return last_name;
-    }
-
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
-    }
-
-    public String getMiddle_name() {
-        return middle_name;
-    }
-
-    public void setMiddle_name(String middle_name) {
-        this.middle_name = middle_name;
-    }
-
-    public String getSuffix() {
-        return suffix;
-    }
-
-    public void setSuffix(String suffix) {
-        this.suffix = suffix;
-    }
-
-    public String getPrefix() {
-        return prefix;
-    }
-
-    public void setPrefix(String prefix) {
-        this.prefix = prefix;
+    public void setAdditionalNameDetails(JsonNode additionalNameDetails) {
+        this.additionalNameDetails = additionalNameDetails;
     }
 
     @Override
     public String toString() {
         return "Name{" +
-                "formattedName='" + formatted_name + '\'' +
-                ", firstName='" + first_name + '\'' +
-                ", lastName='" + last_name + '\'' +
-                ", middleName='" + middle_name + '\'' +
-                ", suffix='" + suffix + '\'' +
-                ", prefix='" + prefix + '\'' +
+                "formattedName='" + formattedName + '\'' +
+                ", additionalDetails=" + additionalNameDetails +
                 '}';
     }
 }

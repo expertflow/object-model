@@ -1,28 +1,25 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
+import com.ef.cim.objectmodel.room.RoomInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 
 /**
  * A {@code ChannelSession} object represents a communication Session associated with a particular
  * channel for a customer. If there are 3 customers conversing on lets say the 'whatsapp' channel,
- * each customer will have their own channel session started. Likewise if there is a single customer
+ * each customer will have their own channel session started.Likewise, if there is a single customer
  * using more than one channels e.g. whatsapp and web, two channel sessions associated with the two
  * channels will be started for this customer.
  */
-
-
 public class ChannelSession implements Participant {
-
     @Id
-    private UUID id;
+    private String id;
 
     //@JsonIgnore
     private String participantType;
@@ -38,9 +35,10 @@ public class ChannelSession implements Participant {
     private UndefinedObject customerPresence;
     @NotNull(message = "Is Active is Mandatory")
     private boolean isActive;
-    @NotBlank
-    private UUID topicId;
+    private String conversationId;
+    private RoomInfo roomInfo;
     private ChannelSessionState state;
+    private Direction channelSessionDirection;
 
 
     /**
@@ -49,17 +47,17 @@ public class ChannelSession implements Participant {
      * session active flag to {@code false}
      */
     public ChannelSession() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.channel = new Channel();
         this.customer = new Customer();
-        this.customerSuggestions = new ArrayList<Customer>();
+        this.customerSuggestions = new ArrayList<>();
         this.channelData = new ChannelData();
         this.customerPresence = new UndefinedObject();
         this.isActive = true;
         this.participantType = "ChannelSession";
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -69,14 +67,14 @@ public class ChannelSession implements Participant {
      * @return {@code UUID}
      */
     @Override
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
     @Override
     @JsonIgnore
     public String getDisplayName() {
-        return "ChannelSession:" + this.id.toString();
+        return "ChannelSession:" + this.id;
     }
 
     /**
@@ -97,9 +95,13 @@ public class ChannelSession implements Participant {
         this.channel = channel;
     }
 
-    public Customer getCustomer() { return customer; }
+    public Customer getCustomer() {
+        return customer;
+    }
 
-    public void setCustomer(Customer customer) { this.customer = customer; }
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
     public boolean isActive() {
         return isActive;
@@ -201,30 +203,34 @@ public class ChannelSession implements Participant {
     }
 
     /**
-     * Getter for topicId
+     * Getter for conversationId
      *
-     * @return topicId
+     * @return conversationId
      */
-    public UUID getTopicId() {
-        return topicId;
+    public String getConversationId() {
+        return conversationId;
     }
 
     /**
-     * Setter for topicId
+     * Setter for conversationId
      *
-     * @param topicId topicId
+     * @param conversationId conversationId
      */
-    public void setTopicId(UUID topicId) {
-        this.topicId = topicId;
+    public void setConversationId(String conversationId) {
+        this.conversationId = conversationId;
+    }
+
+    public RoomInfo getRoomInfo() {
+        return roomInfo;
+    }
+
+    public void setRoomInfo(RoomInfo roomInfo) {
+        this.roomInfo = roomInfo;
     }
 
     public String getParticipantType() {
         return participantType;
     }
-//
-//    public void setParticipantType(String participantType) {
-//        this.participantType = participantType;
-//    }
 
     /**
      * Adds a suggested customer to the list of customer suggestions
@@ -233,7 +239,7 @@ public class ChannelSession implements Participant {
      */
     public void addCustomerSuggestion(Customer customer) {
         if (this.customerSuggestions == null) {
-            this.customerSuggestions = new ArrayList<Customer>();
+            this.customerSuggestions = new ArrayList<>();
         }
         this.customerSuggestions.add(customer);
     }
@@ -269,6 +275,18 @@ public class ChannelSession implements Participant {
         this.state = state;
     }
 
+    public Direction getChannelSessionDirection() {
+        return channelSessionDirection;
+    }
+
+    public void setChannelSessionDirection(Direction channelSessionDirection) {
+        this.channelSessionDirection = channelSessionDirection;
+    }
+
+    public void setParticipantType(String participantType) {
+        this.participantType = participantType;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -292,18 +310,21 @@ public class ChannelSession implements Participant {
      */
     @Override
     public String toString() {
-        return "ChannelSession{" +
-                "id=" + id +
-                ", participantType='" + participantType + '\'' +
-                ", channel=" + channel +
-                ", customer=" + customer +
-                ", customerSuggestions=" + customerSuggestions +
-                ", channelData=" + channelData +
-                ", latestIntent='" + latestIntent + '\'' +
-                ", customerPresence=" + customerPresence +
-                ", isActive=" + isActive +
-                ", topicId=" + topicId +
-                ", state=" + state +
-                '}';
+        final StringBuilder sb = new StringBuilder("ChannelSession{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", participantType='").append(participantType).append('\'');
+        sb.append(", channel=").append(channel);
+        sb.append(", customer=").append(customer);
+        sb.append(", customerSuggestions=").append(customerSuggestions);
+        sb.append(", channelData=").append(channelData);
+        sb.append(", latestIntent='").append(latestIntent).append('\'');
+        sb.append(", customerPresence=").append(customerPresence);
+        sb.append(", isActive=").append(isActive);
+        sb.append(", conversationId='").append(conversationId).append('\'');
+        sb.append(", roomInfo=").append(roomInfo);
+        sb.append(", state=").append(state);
+        sb.append(", direction=").append(channelSessionDirection);
+        sb.append('}');
+        return sb.toString();
     }
 }

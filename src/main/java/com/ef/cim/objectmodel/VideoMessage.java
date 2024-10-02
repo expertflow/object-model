@@ -1,42 +1,13 @@
 package com.ef.cim.objectmodel;
 
-import java.net.URL;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.validation.Valid;
 
 public class VideoMessage extends MultimediaMessage {
-    private URL thumbnail;
-    private long size;
-    private int length;
-
     // Constructor
-    public VideoMessage(URL media, URL thumbnail) {
-        super(MessageType.VIDEO, media);
-        this.thumbnail = thumbnail;
-    }
-
-    // Getters
-    public URL getThumbnail() {
-        return this.thumbnail;
-    }
-
-    // Setters
-    public void setThumbnail(URL thumbnail) {
-        this.thumbnail = thumbnail;
-    }
-
-    public long getSize() {
-        return this.size;
-    }
-
-    public void setSize(long size) {
-        this.size = size;
-    }
-
-    public int getLength() {
-        return this.length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
+    public VideoMessage(@JsonProperty("caption") String caption,
+                        @JsonProperty("attachment") @Valid Attachment attachment) {
+        super(MessageType.VIDEO, caption, attachment);
     }
 
     @Override
@@ -44,10 +15,9 @@ public class VideoMessage extends MultimediaMessage {
         return "VideoMessage{" +
                 "type=" + type +
                 ", markdownText='" + markdownText + '\'' +
-                ", media=" + media +
-                ", thumbnail=" + thumbnail +
-                ", size=" + size +
-                ", length=" + length +
+                ", caption='" + caption + '\'' +
+                ", attachment=" + attachment +
+                ", additionalDetails=" + additionalDetails +
                 '}';
     }
 }

@@ -1,32 +1,26 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
-import java.util.UUID;
 import javax.validation.constraints.NotBlank;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
- * A {@code ChannelType} object represents the type of a particular channel e.g. whatsapp, web, viber e.t.c.
+ * A {@code ChannelType} object represents the type of particular channel e.g. whatsapp, web, viber e.t.c.
  */
-@Document(collection = "ChannelType")
 public class ChannelType implements Serializable {
-
-    @Id
-    private UUID id;
+    private String id;
     @NotBlank
-    private String typeName;
-    private UndefinedObject channelLogo;
+    private String name;
+    private String channelLogo;
     private boolean isInteractive;
-    private Form channelConfigSchema;
-    private UUID mediaRoutingDomain;
+    private String mediaRoutingDomain;
 
     /**
      * Default Constructor, Sets an immutable unique identifier for the channel type object. Sets the is channel type
      * interactive flag as {@code false}
      */
     public ChannelType() {
-        this.id = UUID.randomUUID();
+        this.id = Utils.getObjectId();
         this.isInteractive = false;
     }
 
@@ -35,7 +29,7 @@ public class ChannelType implements Serializable {
      *
      * @return {@code UUID}
      */
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -44,8 +38,8 @@ public class ChannelType implements Serializable {
      *
      * @return {@code String}
      */
-    public String getTypeName() {
-        return this.typeName;
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -53,8 +47,8 @@ public class ChannelType implements Serializable {
      *
      * @param channelTypeName, object of type {@code String}
      */
-    public void setTypeName(String channelTypeName) {
-        this.typeName = channelTypeName;
+    public void setName(String channelTypeName) {
+        this.name = channelTypeName;
     }
 
     /**
@@ -76,32 +70,24 @@ public class ChannelType implements Serializable {
     }
 
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public UndefinedObject getChannelLogo() {
+    public String getChannelLogo() {
         return channelLogo;
     }
 
-    public void setChannelLogo(UndefinedObject channelLogo) {
+    public void setChannelLogo(String channelLogo) {
         this.channelLogo = channelLogo;
     }
 
 
-    public Form getChannelConfigSchema() {
-        return channelConfigSchema;
-    }
-
-    public void setChannelConfigSchema(Form channelConfigSchema) {
-        this.channelConfigSchema = channelConfigSchema;
-    }
-
-    public UUID getMediaRoutingDomain() {
+    public String getMediaRoutingDomain() {
         return mediaRoutingDomain;
     }
 
-    public void setMediaRoutingDomain(UUID mediaRoutingDomain) {
+    public void setMediaRoutingDomain(String mediaRoutingDomain) {
         this.mediaRoutingDomain = mediaRoutingDomain;
     }
 
@@ -113,10 +99,9 @@ public class ChannelType implements Serializable {
     public String toString() {
         return "ChannelType{" +
                 "id=" + id +
-                ", typeName='" + typeName + '\'' +
+                ", name='" + name + '\'' +
                 ", channelLogo=" + channelLogo +
                 ", isInteractive=" + isInteractive +
-                ", channelConfigSchema=" + channelConfigSchema +
                 ", mediaRoutingDomain=" + mediaRoutingDomain +
                 '}';
     }

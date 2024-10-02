@@ -1,53 +1,60 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
-import java.util.UUID;
 import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * A {@code Channel} object represents a specific channel (e.g whatsapp, facebook)
  */
-@Document(collection = "Channel")
 public class Channel implements Serializable {
-
-    private UUID id;
-    //  private ChannelType type;
-    @NotEmpty
-    private String channelName;
+    private String id;
+    @NotBlank
+    private String name;
     // Class ServiceIdentifier Empty | not in object model yet
-    @Id
+    @NotBlank(message = "serviceIdentifier can not be blank")
     private String serviceIdentifier;
+    @NotNull
+    private boolean defaultOutbound;
     private Tenant tenant;
     @Valid
     private ChannelConfig channelConfig;
-    @DBRef
     private ChannelConnector channelConnector;
+    private ChannelType channelType;
 
     /**
      * Default Constructor, Sets an immutable Unique Identifying Number for the channel Initializes all the instance
      * member objects except the Strings
      */
     public Channel() {
-        this.id = UUID.randomUUID();
-        //  this.type = new ChannelType();
-        this.serviceIdentifier = "";
+        this.id = Utils.getObjectId();
         this.tenant = new Tenant();
         this.channelConfig = new ChannelConfig();
         this.channelConnector = new ChannelConnector();
+        this.channelType = new ChannelType();
+        this.defaultOutbound = false;
     }
 
-    public Channel(String channelName, String serviceIdentifier, ChannelConfig channelConfig,
-            ChannelConnector channelConnector, Tenant tenant) {
-        this.id = UUID.randomUUID();
-        this.channelName = channelName;
+    /**
+     * parameterized constructor.
+     * @param name channel name
+     * @param serviceIdentifier channel serviceIdentifier
+     * @param channelConfig channelConfig
+     * @param channelConnector channelConnector
+     * @param tenant tenant
+     * @param channelType channelType
+     */
+    public Channel(String name, String serviceIdentifier, ChannelConfig channelConfig,
+                   ChannelConnector channelConnector, Tenant tenant, ChannelType channelType) {
+        this.id = Utils.getObjectId();
+        this.name = name;
         this.serviceIdentifier = serviceIdentifier;
         this.channelConfig = channelConfig;
         this.channelConnector = channelConnector;
         this.tenant = tenant;
+        this.channelType = channelType;
     }
 
     /**
@@ -55,54 +62,36 @@ public class Channel implements Serializable {
      *
      * @return {@code UUID}
      */
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
     /**
-     * Set's Id field of Chanel as UUID
+     * Set's id field of Chanel as UUID
      *
      * @param id UUID object
      */
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
-
-    /**
-     * Returns the type of the channel
-     *
-     * @return {@code ChannelType}
-     */
-    /** public ChannelType getType() {
-     return this.type;
-     }*/
 
     /**
      * Returns the name of the channel
      *
      * @return {@code String}
      */
-    public String getChannelName() {
-        return this.channelName;
+    public String getName() {
+        return this.name;
     }
 
     /**
      * Sets the name of the channel
      *
-     * @param channelName, object of type {@code String}
+     * @param name, object of type {@code String}
      */
-    public void setChannelName(String channelName) {
-        this.channelName = channelName;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    /**
-     * Returns the tenant of the channel
-     *
-     * @return {@code Tenant}
-     */
-    /** public Tenant getTenant() {
-     return this.tenant;
-     }*/
 
     /**
      * Returns the service identifier of the channel
@@ -112,15 +101,6 @@ public class Channel implements Serializable {
     public String getServiceIdentifier() {
         return this.serviceIdentifier;
     }
-
-    /**
-     * Sets the type of the channel
-     *
-     * @param type, object of type {@code ChannelType}
-     */
-    /** public void setType(ChannelType type) {
-     this.type = type;
-     }*/
 
     /**
      * Sets the service identifier of the channel
@@ -141,15 +121,6 @@ public class Channel implements Serializable {
     }
 
     /**
-     * Sets the tenant of the channel
-     *
-     * @param tenant, object of type {@code Tenant}
-     */
-    /** public void setTenant(Tenant tenant) {
-     this.tenant = tenant;
-     }*/
-
-    /**
      * Sets the configurations of the channel
      *
      * @param channelConfig, object of type {@code ChannelConfig}
@@ -166,16 +137,6 @@ public class Channel implements Serializable {
         this.channelConnector = channelConnector;
     }
 
-
-//    public UUID getChannelConnectorId() {
-//        return channelConnectorId;
-//    }
-//
-//    public void setChannelConnectorId(UUID channelConnectorId) {
-//        this.channelConnectorId = channelConnectorId;
-//    }
-
-
     public Tenant getTenant() {
         return tenant;
     }
@@ -184,19 +145,38 @@ public class Channel implements Serializable {
         this.tenant = tenant;
     }
 
+    public ChannelType getChannelType() {
+        return channelType;
+    }
+
+    public void setChannelType(ChannelType channelType) {
+        this.channelType = channelType;
+    }
+
+    public boolean isDefaultOutbound() {
+        return defaultOutbound;
+    }
+
+    public void setDefaultOutbound(boolean defaultOutbound) {
+        this.defaultOutbound = defaultOutbound;
+    }
+
     /***
      * String Representation of Channel
      * @return String
      */
     @Override
     public String toString() {
-        return "Channel{" +
-                "id=" + id +
-                ", channelName='" + channelName + '\'' +
-                ", serviceIdentifier='" + serviceIdentifier + '\'' +
-                ", channelConfig=" + channelConfig +
-//                ", channelConnector=" + channelConnector +
-                '}';
+        final StringBuilder sb = new StringBuilder("Channel{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", serviceIdentifier='").append(serviceIdentifier).append('\'');
+        sb.append(", defaultOutbound=").append(defaultOutbound);
+        sb.append(", tenant=").append(tenant);
+        sb.append(", channelConfig=").append(channelConfig);
+        sb.append(", channelConnector=").append(channelConnector);
+        sb.append(", channelType=").append(channelType);
+        sb.append('}');
+        return sb.toString();
     }
-
 }

@@ -39,4 +39,11 @@ public class PreChatForm {
             this.attributes.remove(index);
         }
     }
+
+    @Override
+    public String toString() {
+        return "PreChatForm{" +
+                "attributes=" + attributes +
+                '}';
+    }
 }

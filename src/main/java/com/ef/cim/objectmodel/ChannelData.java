@@ -10,18 +10,18 @@ import javax.validation.constraints.NotBlank;
  * example on web channel we have browser id, language e.t.c This is the <strong>parent</strong>
  * object for more specific channels' data objects. e.g. WebChannelData.
  */
-
-
 public class ChannelData implements Serializable {
-    @NotBlank
+    @NotBlank(message = "channelCustomerIdentifier is mandatory")
     private String channelCustomerIdentifier;
-    @NotBlank
+    @NotBlank(message = "serviceIdentifier is mandatory")
     private String serviceIdentifier;
     private int requestPriority;
+    private String customerFirstName;
+    private String customerLastName;
 
     // This field should be List<KeyValuePair>. Changed it for initial integration
     // with Agent Manager
-    private List<KeyValuePair> additionalAttributes;
+    private List<Attribute> additionalAttributes;
 
     public ChannelData() {
         this.additionalAttributes = new ArrayList<>();
@@ -43,16 +43,22 @@ public class ChannelData implements Serializable {
         this.serviceIdentifier = serviceIdentifier;
     }
 
-    public List<KeyValuePair> getAdditionalAttributes() { return additionalAttributes; }
-
-    public void setAdditionalAttributes(List<KeyValuePair> additionalAttributes) { this.additionalAttributes = additionalAttributes; }
-
-    public void addAdditionalAttribute(String key, String value) {
-        this.additionalAttributes.add(new KeyValuePair(key,value));
+    public List<Attribute> getAdditionalAttributes() {
+        return additionalAttributes;
     }
+
+    public void setAdditionalAttributes(List<Attribute> additionalAttributes) {
+        this.additionalAttributes = additionalAttributes;
+    }
+
+    public void addAdditionalAttribute(Attribute attribute) {
+        this.additionalAttributes.add(attribute);
+    }
+
     public void removeAdditionalAttribute(KeyValuePair keyValuePair) {
         this.additionalAttributes.remove(keyValuePair);
     }
+
     public void removeAdditionalAttribute(int index) {
         this.additionalAttributes.remove(index);
     }
@@ -65,6 +71,20 @@ public class ChannelData implements Serializable {
         this.requestPriority = requestPriority;
     }
 
+    public String getCustomerFirstName() {
+        return customerFirstName;
+    }
+    public void setCustomerFirstName(String customerFirstName) {
+        this.customerFirstName = customerFirstName;
+    }
+
+    public String getCustomerLastName() {
+        return customerLastName;
+    }
+    public void setCustomerLastName(String customerLastName) {
+        this.customerLastName = customerLastName;
+    }
+
     /**
      * String Representation of ChannelData
      *
@@ -75,6 +95,8 @@ public class ChannelData implements Serializable {
         return "ChannelData{" +
                 "channelCustomerIdentifier='" + channelCustomerIdentifier + '\'' +
                 ", serviceIdentifier='" + serviceIdentifier + '\'' +
+                ", customerFirstName='" + customerFirstName + '\'' +
+                ", customerLastName='" + customerLastName + '\'' +
                 ", requestPriority=" + requestPriority +
                 ", additionalAttributes=" + additionalAttributes +
                 '}';

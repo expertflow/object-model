@@ -1,8 +1,10 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.databind.JsonNode;
+
 public class Phone {
     private String phone;
-    private String type;
+    private JsonNode additionalPhoneDetails;
 
     //Default Constructor
     public Phone() {
@@ -10,9 +12,9 @@ public class Phone {
 
     //Parameterized Constructor
 
-    public Phone(String phone, String type) {
+    public Phone(String phone, JsonNode additionalPhoneDetails) {
         this.phone = phone;
-        this.type = type;
+        this.additionalPhoneDetails = additionalPhoneDetails;
     }
 
     public String getPhone() {
@@ -23,19 +25,19 @@ public class Phone {
         this.phone = phone;
     }
 
-    public String getType() {
-        return type;
+    public JsonNode getAdditionalPhoneDetails() {
+        return additionalPhoneDetails;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setAdditionalPhoneDetails(JsonNode additionalPhoneDetails) {
+        this.additionalPhoneDetails = additionalPhoneDetails;
     }
 
     @Override
     public String toString() {
         return "Phone{" +
                 "phone='" + phone + '\'' +
-                ", type='" + type + '\'' +
+                ", type='" + additionalPhoneDetails + '\'' +
                 '}';
     }
 }
