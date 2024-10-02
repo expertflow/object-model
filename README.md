@@ -837,7 +837,7 @@ Version 1.19.0 (on top of 1.17.5.7)
 
 ==============================================================================================
 
-Version 1.19.0-CIM-25977-SNAPSHOT (on top of 1.19.0)
+Version 1.21.1 (on top of 1.19.0)
 - Added `queuePriority` in `PrecisionQueueEntity` class
 - Added `interruptible` flag in `MediaRoutingDomain` class.
 - Added `MrdInterrupted` class.
