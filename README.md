@@ -854,5 +854,5 @@ Version 1.21.1 (on top of 1.19.0)
 
 ==============================================================================================
 
-Version 1.19.0-CIM-8601-SNAPSHOT
+Version 1.21.1-CIM-8601-SNAPSHOT
 - Change `supervisedTeams` type to `Object` from `Team`
