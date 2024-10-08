@@ -62,7 +62,11 @@ public class PrecisionQueueEntity {
      */
     @NotNull
     private List<StepEntity> steps = new ArrayList<>();
-
+    /**
+     * The Queue Priority.
+     */
+    @Min(1)
+    private int queuePriority;
     /**
      * Contains step boolean.
      *
