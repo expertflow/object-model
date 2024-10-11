@@ -5,15 +5,14 @@ import com.ef.cim.objectmodel.AgentHandRaise;
 import com.ef.cim.objectmodel.ChannelSession;
 import com.ef.cim.objectmodel.CimEvent;
 import com.ef.cim.objectmodel.Conversation;
+import com.ef.cim.objectmodel.ConversationData;
 import com.ef.cim.objectmodel.ConversationParticipant;
 import com.ef.cim.objectmodel.Customer;
 import com.ef.cim.objectmodel.HoldTimerDetails;
 import com.ef.cim.objectmodel.ParticipantType;
 import com.ef.cim.objectmodel.TopicState;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
