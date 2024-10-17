@@ -27,6 +27,7 @@ public interface MessageType {
    String WRAPUP = "WRAPUP";
    String COMMENT= "COMMENT";
    String EMAIL = "EMAIL";
+   String FORMDATA = "FORMDATA";
 
 
 //    BUTTON,

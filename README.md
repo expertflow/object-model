@@ -860,3 +860,20 @@ Version 1.21.1 (on top of 1.19.0)
 - ADDED `Gadget` class.
 
 ==============================================================================================
+
+Version 1.21.2 (on top of 1.19.0)
+- Added `ConversationTypeEnum` Enum
+- Added `BooleanDataType` class.
+- Added `IntegerDataType` class.
+- Added `StringDataType` class.
+- Added `StringListDataType` class.
+- Added `UrlDataType` class.
+- Added `FormDataType` class.
+- Added `FormData` class.
+- Added `FormDataMessage` class.
+- ADDED `FormDataMessage` as message type in `MessageBody` class.
+- UPDATED `conversationData` field in `Conversation` class.
+- ADDED `ConversationData` class.
+- ADDED `FORMDATA` as message type in `MessageType` interface.
+
+==============================================================================================
