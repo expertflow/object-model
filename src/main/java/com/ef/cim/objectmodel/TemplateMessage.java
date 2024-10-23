@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 import javax.validation.Valid;
-import javax
-
-.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 public class TemplateMessage extends StructuredMessage {
     @NotBlank(message = "namespace of the template is mandatory")

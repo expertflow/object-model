@@ -4,9 +4,7 @@ import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import javax
-
-.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 public class ChannelConnector implements Serializable {
 

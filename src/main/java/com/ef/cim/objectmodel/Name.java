@@ -1,9 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import javax
-
-.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 public class Name {
     @NotBlank(message = "formattedName is mandatory")

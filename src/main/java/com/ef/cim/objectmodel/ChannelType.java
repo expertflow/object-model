@@ -2,9 +2,7 @@ package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
-import javax
-
-.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 /**
  * A {@code ChannelType} object represents the type of particular channel e.g. whatsapp, web, viber e.t.c.

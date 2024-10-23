@@ -6,9 +6,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax
-
-.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotEmpty;
 import org.springframework.data.mongodb.core.index.Indexed;
 
 public class Customer implements Serializable {

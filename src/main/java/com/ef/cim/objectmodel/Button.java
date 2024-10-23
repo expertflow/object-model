@@ -2,9 +2,7 @@ package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import java.io.Serializable;
-import javax
-
-.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 public class Button implements Serializable {
     @NotBlank(message = "button title is mandatory")
