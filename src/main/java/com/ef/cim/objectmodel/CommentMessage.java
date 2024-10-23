@@ -2,9 +2,7 @@ package com.ef.cim.objectmodel;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import javax
-
-.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 
 public class CommentMessage extends MessageBody{
 

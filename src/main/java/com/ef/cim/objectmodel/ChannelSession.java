@@ -7,9 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import javax.validation.Valid;
-import javax
-
-.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 
 /**

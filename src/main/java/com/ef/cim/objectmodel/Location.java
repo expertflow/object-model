@@ -1,8 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import javax
-
-.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 
 public class Location {
     @NotNull(message = "latitude is mandatory")
