@@ -5,12 +5,14 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.validation.constraints.NotNull;
-public class FormData {
+
+public class FormData implements Serializable {
 
     @JsonSerialize(using = ToStringSerializer.class)
     @NotNull(message = "Form id cannot be null")
@@ -117,6 +119,4 @@ public class FormData {
     public void setAttributeType(AttributeType attributeType) {
         this.attributeType = attributeType;
     }
-
-
 }
