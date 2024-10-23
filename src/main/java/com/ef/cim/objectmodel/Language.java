@@ -1,6 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import jakarta
+import javax
 
 .validation.constraints.NotBlank;
 

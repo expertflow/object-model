@@ -6,14 +6,14 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Objects;
-import jakarta.validation.Valid;
-import jakarta
+import javax.validation.Valid;
+import javax
 
 .validation.constraints.NotBlank;
-import jakarta
+import javax
 
 .validation.constraints.NotEmpty;
-import jakarta
+import javax
 
 .validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

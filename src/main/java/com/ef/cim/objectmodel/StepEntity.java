@@ -4,7 +4,7 @@ import com.ef.cim.objectmodel.common.Utils;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import jakarta
+import javax
 
 .validation.constraints.Min;
 import lombok.Getter;

@@ -4,7 +4,7 @@ import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import jakarta
+import javax
 
 .validation.constraints.NotBlank;
 

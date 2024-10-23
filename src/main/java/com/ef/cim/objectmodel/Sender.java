@@ -1,10 +1,10 @@
 package com.ef.cim.objectmodel;
 
 import java.util.Map;
-import jakarta
+import javax
 
 .validation.constraints.NotBlank;
-import jakarta
+import javax
 
 .validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

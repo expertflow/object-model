@@ -3,7 +3,7 @@ package com.ef.cim.objectmodel;
 import com.fasterxml.jackson.databind.JsonNode;
 import java.util.ArrayList;
 import java.util.List;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 
 public class Contact {
     @Valid

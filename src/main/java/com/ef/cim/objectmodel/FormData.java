@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 public class FormData {
 
     @JsonSerialize(using = ToStringSerializer.class)

@@ -2,13 +2,13 @@ package com.ef.cim.objectmodel;
 
 import java.util.ArrayList;
 import java.util.List;
-import jakarta
+import javax
 
 .validation.constraints.Min;
-import jakarta
+import javax
 
 .validation.constraints.NotNull;
-import jakarta
+import javax
 
 .validation.constraints.Size;
 import lombok.Getter;

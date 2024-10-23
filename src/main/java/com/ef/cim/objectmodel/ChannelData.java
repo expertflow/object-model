@@ -3,7 +3,7 @@ package com.ef.cim.objectmodel;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 /**
  * A {@code ChannelData} object represents the data available on different type of channels. For

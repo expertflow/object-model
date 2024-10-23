@@ -4,7 +4,7 @@ import com.ef.cim.objectmodel.AgentState;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Objects;
-import jakarta
+import javax
 
 .validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

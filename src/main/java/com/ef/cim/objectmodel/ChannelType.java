@@ -2,7 +2,7 @@ package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
-import jakarta
+import javax
 
 .validation.constraints.NotBlank;
 

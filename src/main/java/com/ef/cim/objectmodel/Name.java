@@ -1,7 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import jakarta
+import javax
 
 .validation.constraints.NotBlank;
 

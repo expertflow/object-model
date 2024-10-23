@@ -1,9 +1,9 @@
 package com.ef.cim.objectmodel.dto;
 
-import jakarta
+import javax
 
 .validation.constraints.NotBlank;
-import jakarta
+import javax
 
 .validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

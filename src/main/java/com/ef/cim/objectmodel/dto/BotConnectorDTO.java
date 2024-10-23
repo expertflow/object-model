@@ -1,13 +1,13 @@
 package com.ef.cim.objectmodel.dto;
 
 import com.ef.cim.objectmodel.BotType;
-import jakarta
+import javax
 
 .validation.constraints.NotBlank;
-import jakarta
+import javax
 
 .validation.constraints.NotNull;
-import jakarta
+import javax
 
 .validation.constraints.Null;
 import lombok.AllArgsConstructor;

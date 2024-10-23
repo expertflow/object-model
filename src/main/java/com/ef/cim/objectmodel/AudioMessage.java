@@ -1,7 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 
 public class AudioMessage extends MultimediaMessage {
     //Default Constructor

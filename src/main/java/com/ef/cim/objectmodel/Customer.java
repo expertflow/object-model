@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import jakarta
+import javax
 
 .validation.constraints.NotEmpty;
 import org.springframework.data.mongodb.core.index.Indexed;

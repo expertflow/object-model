@@ -2,7 +2,7 @@ package com.ef.cim.objectmodel;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta
+import javax
 
 .validation.constraints.NotNull;
 
