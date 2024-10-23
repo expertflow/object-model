@@ -853,3 +853,14 @@ Version 1.21.1 (on top of 1.19.0)
 - ADDED `Gadget` class.
 
 ==============================================================================================
+Version 1.21.2 is published but contains un-tested code so we are ignoring it.
+==============================================================================================
+
+Version 1.21.3 (on top of 1.21.1)
+- Added `FormData` class.
+- Added `FormDataMessage`class as body of `CimMessage` class.
+- Added `TEXTAREA` value in `AttributeType` class.
+- Added `FORMDATA` in `MessageType` class.
+- Added `Sentiment` class.
+
+==============================================================================================
