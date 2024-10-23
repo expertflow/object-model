@@ -3,7 +3,9 @@ package com.ef.cim.objectmodel;
 import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import java.util.List;
-import javax.validation.constraints.NotBlank;
+import jakarta
+
+.validation.constraints.NotBlank;
 
 public class ChannelProviderInterface implements Serializable {
     private String id;

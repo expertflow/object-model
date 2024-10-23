@@ -2,8 +2,10 @@ package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.Valid;
+import jakarta
+
+.validation.constraints.NotNull;
 
 
 /**

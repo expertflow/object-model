@@ -1,6 +1,8 @@
 package com.ef.cim.objectmodel;
 
-import javax.validation.constraints.NotBlank;
+import jakarta
+
+.validation.constraints.NotBlank;
 
 public class Language {
     @NotBlank(message = "language code is mandatory")

@@ -1,73 +1,122 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import java.io.Serializable;
-import java.util.Date;
+
+import java.util.HashMap;
 import java.util.List;
-import org.bson.types.ObjectId;
+import java.util.Map;
 
-public class FormData implements Serializable {
+import jakarta.validation.constraints.NotNull;
+public class FormData {
+
     @JsonSerialize(using = ToStringSerializer.class)
-    private ObjectId id;
-    @JsonSerialize(using = ToStringSerializer.class)
-    private ObjectId formId;
-    private String filledBy;
-    private Date createdOn;
-    private List<Attribute> attributes;
+    @NotNull(message = "Form id cannot be null")
+    private String formId;
+    @NotNull(message = "Type field of form cannot be null")
+    private String type;
+    @NotNull(message = "Form title cannot be null")
+    private String formTitle;
+    @NotNull(message = "formType cannot be null")
+    private String formType;
+    private Boolean enableSections;
+    private AttributeType attributeType;
+    private Boolean enableWeightage;
+    private Object formWeightage;
+    private Map<String, Object> additionalDetail = new HashMap<>();
+    private Sentiment sentiment;
+    private List<Object> sections;
 
-    public FormData() {
-        this.id = new ObjectId();
-    }
-
-    public ObjectId getId() {
-        return id;
-    }
-
-    public void setId(ObjectId id) {
-        this.id = id;
-    }
-
-    public ObjectId getFormId() {
+    public String getFormId() {
         return formId;
     }
 
-    public void setFormId(ObjectId formId) {
+    public void setFormId(String formId) {
         this.formId = formId;
     }
 
-    public String getFilledBy() {
-        return filledBy;
+    public String getType() {
+        return type;
     }
 
-    public void setFilledBy(String filledBy) {
-        this.filledBy = filledBy;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public Date getCreatedOn() {
-        return createdOn;
+    public String getFormTitle() {
+        return formTitle;
     }
 
-    public void setCreatedOn(Date createdOn) {
-        this.createdOn = createdOn;
+    public void setFormTitle(String formTitle) {
+        this.formTitle = formTitle;
     }
 
-    public List<Attribute> getAttributes() {
-        return attributes;
+    public String getFormType() {
+        return formType;
     }
 
-    public void setAttributes(List<Attribute> attributes) {
-        this.attributes = attributes;
+    public void setFormType(String formType) {
+        this.formType = formType;
     }
 
-    @Override
-    public String toString() {
-        return "FormData{" +
-                "id=" + id +
-                ", formId=" + formId +
-                ", filledBy='" + filledBy + '\'' +
-                ", createdOn=" + createdOn +
-                ", attributes=" + attributes +
-                '}';
+    public Boolean getEnableSections() {
+        return enableSections;
     }
+
+    public void setEnableSections(Boolean enableSections) {
+        this.enableSections = enableSections;
+    }
+
+    public Boolean getEnableWeightage() {
+        return enableWeightage;
+    }
+
+    public void setEnableWeightage(Boolean enableWeightage) {
+        this.enableWeightage = enableWeightage;
+    }
+
+    public Object getFormWeightage() {
+        return formWeightage;
+    }
+
+    public void setFormWeightage(Object formWeightage) {
+        this.formWeightage = formWeightage;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalDetail() {
+        return additionalDetail;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalDetail(String key, Object value) {
+        this.additionalDetail.put(key, value);
+    }
+    public Sentiment getSentiment() {
+        return sentiment;
+    }
+
+    public void setSentiment(Sentiment sentiment) {
+        this.sentiment = sentiment;
+    }
+
+    public List<Object> getSections() {
+        return sections;
+    }
+
+    public void setSections(List<Object> sections) {
+        this.sections = sections;
+    }
+
+    public AttributeType getAttributeType() {
+        return attributeType;
+    }
+
+    public void setAttributeType(AttributeType attributeType) {
+        this.attributeType = attributeType;
+    }
+
+
 }
