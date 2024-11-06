@@ -1,6 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
