@@ -864,3 +864,10 @@ Version 1.21.3 (on top of 1.21.1)
 - Added `Sentiment` class.
 
 ==============================================================================================
+
+Version 1.21.4_1 (on top of 1.21.3)
+- Added a new cim event name `CANCEL_RESOURCE_REQUESTED` in `CimEventName` class.
+- Added a new message intent `CANCEL_RESOURCE_REQUESTED` in `MessageIntent` class.
+- Added a new method `findInProcessCxVoiceMedia` in `Task` class.
+
+==============================================================================================
