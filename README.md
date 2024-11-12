@@ -865,7 +865,7 @@ Version 1.21.3 (on top of 1.21.1)
 
 ==============================================================================================
 
-Version 1.21.4 (on top of 1.21.3)
+Version 1.21.4 (on top of 1.21.3 & Version 1.21.1.1 also published with same changes for another release on top of 1.21.1)
 - Updated `Spring boot` dependency version to `3.1.11`.
 - Updated `Json` dependency version to `20231013`.
 - Updated `lombok` dependency version to `1.18.30`.
