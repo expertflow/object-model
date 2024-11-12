@@ -872,3 +872,8 @@ Version 1.21.4 (on top of 1.21.3 & Version 1.21.1.1 also published with same cha
 - Changed `javax.validation` dependency to `jakarta.validation`.
 
 ==============================================================================================
+
+Version 1.21.5 (on top of 1.21.4)
+- Added `additionalData` attribute in `MessageHeader` class.
+
+==============================================================================================
