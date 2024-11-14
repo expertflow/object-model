@@ -5,11 +5,13 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.mongodb.core.index.Indexed;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @ToString
-public class AgentParticipant {
-    @Indexed(unique = true)
+public class AgentParticipant implements Serializable {
+    @Indexed(name = "agentParticipant_id_1")
     private String id;
     private String firsName;
     private String lastName;
