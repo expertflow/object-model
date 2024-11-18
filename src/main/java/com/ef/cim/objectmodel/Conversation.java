@@ -54,6 +54,7 @@ public class Conversation implements Serializable {
         this.participants = new ArrayList<>();
         this.agentParticipants = new ArrayList<>();
         this.roomInfo = roomInfo;
+        this.wrapUps = new ArrayList<>();
     }
 
     public void setHandRaise(boolean handRaised, String agentName) {
