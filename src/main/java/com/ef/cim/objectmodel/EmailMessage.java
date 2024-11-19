@@ -2,7 +2,7 @@ package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import java.util.List;
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

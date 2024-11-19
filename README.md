@@ -865,6 +865,14 @@ Version 1.21.3 (on top of 1.21.1)
 
 ==============================================================================================
 
+Version 1.21.4 (on top of 1.21.3 & Version 1.21.1.1 also published with same changes for another release on top of 1.21.1)
+- Updated `Spring boot` dependency version to `3.1.11`.
+- Updated `Json` dependency version to `20231013`.
+- Updated `lombok` dependency version to `1.18.30`.
+- Changed `javax.validation` dependency to `jakarta.validation`.
+
+==============================================================================================
+
 Version 1.21.4_1 (on top of 1.21.3)
 - Added a new cim event name `CANCEL_RESOURCE_REQUESTED` in `CimEventName` class.
 - Added a new message intent `CANCEL_RESOURCE_REQUESTED` in `MessageIntent` class.
