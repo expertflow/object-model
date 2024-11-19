@@ -879,3 +879,8 @@ Version 1.21.4_1 (on top of 1.21.3)
 - Added a new method `findInProcessCxVoiceMedia` in `Task` class.
 
 ==============================================================================================
+
+Version 1.21.5 (on top of 1.21.4_1 + MERGED with 1.21.4)
+- Pom.xml updated with latest version after merging.
+
+==============================================================================================
