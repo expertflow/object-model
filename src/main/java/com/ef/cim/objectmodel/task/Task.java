@@ -123,6 +123,14 @@ public class Task implements Serializable {
                 .orElse(null);
     }
 
+    public TaskMedia findInProcessCxVoiceMedia(String cxVoiceMrdId) {
+        return this.activeMedia.stream()
+                .filter(m -> m.getMrdId().equalsIgnoreCase(cxVoiceMrdId)
+                        && (m.getState().equals(TaskMediaState.QUEUED) || m.getState().equals(TaskMediaState.RESERVED)))
+                .findFirst()
+                .orElse(null);
+    }
+
     /**
      * Instance on reroute task.
      *
