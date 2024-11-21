@@ -889,3 +889,7 @@ Version 1.21.6 (on top of 1.21.5)
 - Added `additionalData` attribute in `MessageHeader` class.
 
 ==============================================================================================
+
+Version 1.21.7-CIM-8601-SNAPSHOT (on top of 1.21.6)
+- Change `supervisedTeams` type to `Object` from `Team`
+==============================================================================================
