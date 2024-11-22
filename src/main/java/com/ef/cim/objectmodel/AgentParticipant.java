@@ -15,15 +15,15 @@ public class AgentParticipant implements Serializable {
     private String id;
     private String firsName;
     private String lastName;
-    @Indexed(name = "userName_1")
-    private String userName;
+    @Indexed(name = "username_1")
+    private String username;
     private String teamId;
 
-    public AgentParticipant(String id, String firsName, String lastName, String userName, String teamId) {
+    public AgentParticipant(String id, String firsName, String lastName, String username, String teamId) {
         this.id = id;
         this.firsName = firsName;
         this.lastName = lastName;
-        this.userName = userName;
+        this.username = username;
         this.teamId = teamId;
     }
 }

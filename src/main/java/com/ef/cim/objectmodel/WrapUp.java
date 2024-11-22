@@ -10,7 +10,6 @@ import java.io.Serializable;
 @Setter
 @ToString
 public class WrapUp implements Serializable {
-    private String id;
     private String categoryName;
     @Indexed(name = "wrapup_value_1")
     private String value;
