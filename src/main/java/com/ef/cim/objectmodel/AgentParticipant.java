@@ -6,6 +6,7 @@ import lombok.ToString;
 import org.springframework.data.mongodb.core.index.Indexed;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -25,5 +26,17 @@ public class AgentParticipant implements Serializable {
         this.lastName = lastName;
         this.username = username;
         this.teamId = teamId;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj) return true;
+        if(!(obj instanceof AgentParticipant agentParticipant)) return false;
+        return Objects.equals(getId(), agentParticipant.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
     }
 }
