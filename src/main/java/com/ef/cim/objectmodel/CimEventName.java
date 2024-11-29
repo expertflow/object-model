@@ -67,5 +67,6 @@ public enum CimEventName {
     NO_RESPONSE_ENTITY,
     AGENT_MRD_INTERRUPTED,
     HAND_RAISED,
-    HAND_DOWN
+    HAND_DOWN,
+    VOICE_CALL_RECORDING
 }
