@@ -895,8 +895,8 @@ Version 1.21.7 (on top of 1.21.6)
 ==============================================================================================
 
 Version 1.21.8 (on top of 1.21.7)
-- Added `agentParticipants` attribute in `Conversation` and `ConversationDto` class.
-- Added `durationInSeconds` attribute in `Conversation` and `ConversationDto` class.
-- Added `wrapUps` attribute in `Conversation` and `ConversationDto` class.
+- Add `agentParticipants` attribute in `Conversation` and `ConversationDto` class.
+- Add `durationInSeconds` attribute in `Conversation` and `ConversationDto` class.
+- Add `wrapUps` attribute in `Conversation` and `ConversationDto` class.
 
 ==============================================================================================
