@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel.dto;
 
 import com.ef.cim.objectmodel.AgentSla;
+import com.ef.cim.objectmodel.AgentHandRaise;
 import com.ef.cim.objectmodel.ChannelSession;
 import com.ef.cim.objectmodel.CimEvent;
 import com.ef.cim.objectmodel.Conversation;
@@ -38,6 +39,8 @@ public class ConversationDto {
     private List<Customer> customerSuggestions = new ArrayList<>();
     private List<CimEvent> topicEvents;
     private HoldTimerDetails holdTimerDetails;
+    private AgentHandRaise agentHandRaise;
+    private List<Gadget> externalGadgets;
 
 
     /**
@@ -57,6 +60,8 @@ public class ConversationDto {
         this.agentSla = conversation.getAgentSla();
         this.topicEvents = conversationEvents;
         this.holdTimerDetails = conversation.getHoldTimerDetails();
+        this.agentHandRaise = conversation.getAgentHandRaise();
+        this.externalGadgets = conversation.getExternalGadgets();
     }
 
     private void setCustomerSuggestionsFrom(Conversation conversation) {

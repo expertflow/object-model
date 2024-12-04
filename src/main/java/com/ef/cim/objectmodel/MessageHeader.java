@@ -1,13 +1,13 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.Valid;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.validation.Valid;
 
 public class MessageHeader implements Serializable {
     @Valid
@@ -27,6 +27,7 @@ public class MessageHeader implements Serializable {
     private String providerMessageId;
     private Map<String, Object> schedulingMetaData = null;
     private String roomId;
+    private Map<String, Object> additionalData = null;
 
     // Default Constructor
     public MessageHeader() {
@@ -200,6 +201,22 @@ public class MessageHeader implements Serializable {
 
     public void setRoomId(String roomId) {
         this.roomId = roomId;
+    }
+
+    public Map<String, Object> getAdditionalData() {
+        return additionalData;
+    }
+
+    @JsonProperty("additionalData")
+    public void setAdditionalData(Map<String, Object> additionalData) {
+        this.additionalData = additionalData;
+    }
+
+    public void setAdditionalData(String key, Object value) {
+        if (additionalData == null) {
+            additionalData = new HashMap<>();
+        }
+        this.additionalData.put(key, value);
     }
 
     /***

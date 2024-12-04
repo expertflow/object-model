@@ -4,9 +4,9 @@ import com.ef.cim.objectmodel.common.Utils;
 import com.mongodb.lang.Nullable;
 
 import java.io.Serializable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * A {@code Channel} object represents a specific channel (e.g whatsapp, facebook)

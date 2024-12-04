@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,7 +32,7 @@ public class KeycloakUser implements Serializable {
     private String realm;
     private Map<String, Object> attributes = new HashMap<>();
     private Team userTeam;
-    private List<Team> supervisedTeams = new ArrayList<>();
+    private List<Object> supervisedTeams = new ArrayList<>();
 
     public boolean containsRole(String role) {
         return this.roles.contains(role);

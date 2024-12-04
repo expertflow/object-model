@@ -836,3 +836,60 @@ Version 1.19.0 (on top of 1.17.5.7)
   `CUSTOMER_SLA`,`HOLD_TIMER` and `NO_RESPONSE_ENTITY` in `CimEventName` class
 
 ==============================================================================================
+
+Version 1.21.1 (on top of 1.19.0)
+- Added `queuePriority` in `PrecisionQueueEntity` class
+- Added `interruptible` flag in `MediaRoutingDomain` class.
+- Added `MrdInterrupted` class.
+- ADDED `previousState` field in `AgentMrdState` class.
+- Added `AGENT_MRD_INTERRUPTED` event.
+- ADDED `AGENT_HAND_RAISED` and `CONVERSATION_HAND_DOWN` in `CimEventName` class
+- ADDED `AgentHandRaise` class
+- ADDED `AgentHandRaise` field in `Conversation` class
+- ADDED `EXTERNAL_GADGET_REQUESTED` in `CimEventName` class.
+- ADDED `externalGadgetDetails` object in `ConversationDto` class.
+- ADDED `externalGadgetDetails` object in `Conversation` class.
+- ADDED `ExternalGadgetRequestedDto` class.
+- ADDED `Gadget` class.
+
+==============================================================================================
+Version 1.21.2 is published but contains un-tested code so we are ignoring it.
+==============================================================================================
+
+Version 1.21.3 (on top of 1.21.1)
+- Added `FormData` class.
+- Added `FormDataMessage`class as body of `CimMessage` class.
+- Added `TEXTAREA` value in `AttributeType` class.
+- Added `FORMDATA` in `MessageType` class.
+- Added `Sentiment` class.
+
+==============================================================================================
+
+Version 1.21.4 (on top of 1.21.3 & Version 1.21.1.1 also published with same changes for another release on top of 1.21.1)
+- Updated `Spring boot` dependency version to `3.1.11`.
+- Updated `Json` dependency version to `20231013`.
+- Updated `lombok` dependency version to `1.18.30`.
+- Changed `javax.validation` dependency to `jakarta.validation`.
+
+==============================================================================================
+
+Version 1.21.4_1 (on top of 1.21.3)
+- Added a new cim event name `CANCEL_RESOURCE_REQUESTED` in `CimEventName` class.
+- Added a new message intent `CANCEL_RESOURCE_REQUESTED` in `MessageIntent` class.
+- Added a new method `findInProcessCxVoiceMedia` in `Task` class.
+
+==============================================================================================
+
+Version 1.21.5 (on top of 1.21.4_1 + MERGED with 1.21.4)
+- Pom.xml updated with latest version after merging.
+
+==============================================================================================
+
+Version 1.21.6 (on top of 1.21.5)
+- Added `additionalData` attribute in `MessageHeader` class.
+
+==============================================================================================
+
+Version 1.21.7 (on top of 1.21.6)
+- Change `supervisedTeams` type to `Object` from `Team`
+==============================================================================================

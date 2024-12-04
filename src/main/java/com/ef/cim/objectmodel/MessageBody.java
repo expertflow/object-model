@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import java.io.Serializable;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", defaultImpl = GenericMessage.class, visible = true)
 @JsonSubTypes({@Type(value = DeliveryNotification.class, name = "DELIVERYNOTIFICATION"),
@@ -25,7 +25,9 @@ import javax.validation.constraints.NotNull;
         @Type(value = TemplateMessage.class, name = "TEMPLATE"),
         @Type(value = ActionMessageBody.class, name = "ACTION"),
         @Type(value = CommentMessage.class, name = "COMMENT"),
-        @Type(value = EmailMessage.class, name = "EMAIL")})
+        @Type(value = EmailMessage.class, name = "EMAIL"),
+        @Type(value = FormDataMessage.class, name = "FORMDATA")
+        })
 public class MessageBody implements Serializable {
     @NotNull
     @JsonProperty("type")
