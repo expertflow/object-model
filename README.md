@@ -893,3 +893,10 @@ Version 1.21.6 (on top of 1.21.5)
 Version 1.21.7 (on top of 1.21.6)
 - Change `supervisedTeams` type to `Object` from `Team`
 ==============================================================================================
+
+Version 1.21.8 (on top of 1.21.7)
+- Add `agentParticipants` attribute in `Conversation` and `ConversationDto` class.
+- Add `durationInSeconds` attribute in `Conversation` and `ConversationDto` class.
+- Add `wrapUps` attribute in `Conversation` and `ConversationDto` class.
+
+==============================================================================================

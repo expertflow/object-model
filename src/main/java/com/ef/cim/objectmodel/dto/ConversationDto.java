@@ -1,15 +1,7 @@
 package com.ef.cim.objectmodel.dto;
 
-import com.ef.cim.objectmodel.AgentSla;
-import com.ef.cim.objectmodel.AgentHandRaise;
-import com.ef.cim.objectmodel.ChannelSession;
-import com.ef.cim.objectmodel.CimEvent;
-import com.ef.cim.objectmodel.Conversation;
-import com.ef.cim.objectmodel.ConversationParticipant;
-import com.ef.cim.objectmodel.Customer;
-import com.ef.cim.objectmodel.HoldTimerDetails;
-import com.ef.cim.objectmodel.ParticipantType;
-import com.ef.cim.objectmodel.TopicState;
+import com.ef.cim.objectmodel.*;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,12 +27,15 @@ public class ConversationDto {
     private Map<String, String> conversationData = new HashMap<>();
     private TopicState state;
     private List<ConversationParticipant> participants;
+    private List<AgentParticipant> agentParticipants;
     private AgentSla agentSla;
+    private Long durationInSeconds;
     private List<Customer> customerSuggestions = new ArrayList<>();
     private List<CimEvent> topicEvents;
     private HoldTimerDetails holdTimerDetails;
     private AgentHandRaise agentHandRaise;
     private List<Gadget> externalGadgets;
+    private List<WrapUp> wrapUps;
 
 
     /**
@@ -62,6 +57,9 @@ public class ConversationDto {
         this.holdTimerDetails = conversation.getHoldTimerDetails();
         this.agentHandRaise = conversation.getAgentHandRaise();
         this.externalGadgets = conversation.getExternalGadgets();
+        this.agentParticipants = conversation.getAgentParticipants();
+        this.wrapUps = conversation.getWrapUps();
+        this.durationInSeconds = conversation.getDurationInSeconds();
     }
 
     private void setCustomerSuggestionsFrom(Conversation conversation) {
