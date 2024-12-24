@@ -900,3 +900,8 @@ Version 1.21.8 (on top of 1.21.7)
 - Add `wrapUps` attribute in `Conversation` and `ConversationDto` class.
 
 ==============================================================================================
+
+Version 1.21.9 (on top of 1.21.8)
+- Add `calendarId` attribute in `Channel` class.
+- 
+==============================================================================================
