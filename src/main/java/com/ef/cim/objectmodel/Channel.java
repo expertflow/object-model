@@ -1,9 +1,11 @@
 package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
-import com.mongodb.lang.Nullable;
+
 
 import java.io.Serializable;
+
+import jakarta.annotation.Nullable;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
