@@ -1,16 +1,7 @@
 package com.ef.cim.objectmodel.dto;
 
-import com.ef.cim.objectmodel.AgentSla;
-import com.ef.cim.objectmodel.AgentHandRaise;
-import com.ef.cim.objectmodel.ChannelSession;
-import com.ef.cim.objectmodel.CimEvent;
-import com.ef.cim.objectmodel.Conversation;
-import com.ef.cim.objectmodel.ConversationData;
-import com.ef.cim.objectmodel.ConversationParticipant;
-import com.ef.cim.objectmodel.Customer;
-import com.ef.cim.objectmodel.HoldTimerDetails;
-import com.ef.cim.objectmodel.ParticipantType;
-import com.ef.cim.objectmodel.TopicState;
+import com.ef.cim.objectmodel.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;

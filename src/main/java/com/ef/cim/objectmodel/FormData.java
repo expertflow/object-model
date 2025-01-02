@@ -83,16 +83,6 @@ public class FormData implements Serializable {
 
     public void setFormWeightage(Object formWeightage) {
         this.formWeightage = formWeightage;
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getFormTitle() {
-        return formTitle;
     }
 
     @JsonAnyGetter
@@ -127,6 +117,4 @@ public class FormData implements Serializable {
     public void setAttributeType(AttributeType attributeType) {
         this.attributeType = attributeType;
     }
-
-
 }
