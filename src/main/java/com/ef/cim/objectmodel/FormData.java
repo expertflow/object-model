@@ -4,13 +4,13 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import jakarta.validation.constraints.NotNull;
-public class FormData {
+
+public class FormData implements Serializable {
 
     @JsonSerialize(using = ToStringSerializer.class)
     @NotNull(message = "Form id cannot be null")
@@ -83,6 +83,16 @@ public class FormData {
 
     public void setFormWeightage(Object formWeightage) {
         this.formWeightage = formWeightage;
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getFormTitle() {
+        return formTitle;
     }
 
     @JsonAnyGetter

@@ -13,7 +13,6 @@ import com.ef.cim.objectmodel.ParticipantType;
 import com.ef.cim.objectmodel.TopicState;
 import java.util.ArrayList;
 import java.util.List;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,12 +34,15 @@ public class ConversationDto {
     private List<ConversationData> conversationData  = new ArrayList<>();
     private TopicState state;
     private List<ConversationParticipant> participants;
+    private List<AgentParticipant> agentParticipants;
     private AgentSla agentSla;
+    private Long durationInSeconds;
     private List<Customer> customerSuggestions = new ArrayList<>();
     private List<CimEvent> topicEvents;
     private HoldTimerDetails holdTimerDetails;
     private AgentHandRaise agentHandRaise;
     private List<Gadget> externalGadgets;
+    private List<WrapUp> wrapUps;
 
 
     /**
@@ -63,6 +65,9 @@ public class ConversationDto {
         this.holdTimerDetails = conversation.getHoldTimerDetails();
         this.agentHandRaise = conversation.getAgentHandRaise();
         this.externalGadgets = conversation.getExternalGadgets();
+        this.agentParticipants = conversation.getAgentParticipants();
+        this.wrapUps = conversation.getWrapUps();
+        this.durationInSeconds = conversation.getDurationInSeconds();
     }
 
     private void setCustomerSuggestionsFrom(Conversation conversation) {

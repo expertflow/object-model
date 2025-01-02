@@ -11,7 +11,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.Value;
-
 import jakarta.validation.Valid;
 
 @Getter
@@ -21,8 +20,10 @@ public class Conversation implements Serializable {
     private final String id;
     private Customer customer;
     private List<ConversationParticipant> participants;
+    private List<AgentParticipant> agentParticipants;
     private TopicState state;
     private Direction conversationDirection;
+    private Long durationInSeconds;
     private ChannelSession channelSession;
     private Timestamp creationTime;
     private Timestamp endTime;
@@ -34,6 +35,7 @@ public class Conversation implements Serializable {
     private HoldTimerDetails holdTimerDetails = new HoldTimerDetails();
     private AgentHandRaise agentHandRaise = new AgentHandRaise(false, new ArrayList<>());
     private List<Gadget> externalGadgets = new ArrayList<>();
+    private List<WrapUp> wrapUps;
 
     public Conversation() {
         this.id = Utils.getObjectId();
@@ -52,7 +54,9 @@ public class Conversation implements Serializable {
         this.metadata = new TopicMetadata(channelSession);
         this.participants = new ArrayList<>();
         this.conversationData = new ArrayList<>();
+        this.agentParticipants = new ArrayList<>();
         this.roomInfo = roomInfo;
+        this.wrapUps = new ArrayList<>();
     }
 
     public void setHandRaise(boolean handRaised, String agentName) {

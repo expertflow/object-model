@@ -14,9 +14,9 @@ public class Customer implements Serializable {
     private String _id;
     private String firstName;
     private List<String> phoneNumber;
+
     private boolean isAnonymous;
     private int __v;
-
 
 
     private Map<String, Object> additionalDetail = new HashMap<>();
@@ -30,6 +30,7 @@ public class Customer implements Serializable {
     public Map<String, Object> getAdditionalDetail() {
         return additionalDetail;
     }
+
 
     // Default Constructor
     public Customer() {
@@ -85,6 +86,7 @@ public class Customer implements Serializable {
                 ", phoneNumber=" + phoneNumber +
                 ", isAnonymous=" + isAnonymous +
                 ", __v=" + __v +
+                ", additionalDetail=" + additionalDetail +
                 '}';
     }
 }
