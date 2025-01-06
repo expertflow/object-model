@@ -19,7 +19,6 @@ public interface MessageType {
    String DELETEDNOTIFICATION = "DELETEDNOTIFICATION";
    String CUSTOM = "CUSTOM";
    String STICKER = "STICKER";
-
    String URL = "URL";
    String RECEIPT = "RECEIPT";
    String TEMPLATE = "TEMPLATE";
@@ -28,7 +27,6 @@ public interface MessageType {
    String COMMENT= "COMMENT";
    String EMAIL = "EMAIL";
    String FORMDATA = "FORMDATA";
-
 
 //    BUTTON,
 //    CAROUSEL,

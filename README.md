@@ -780,13 +780,6 @@ Version 1.17.5.0 (On top of 1.17.3.x)
 - ADD `HoldTimerDetails` class.
 - Add `HoldTimerDetails` in `ConversationDto` and `Conversation` object.
 - Implement `Serializable` in multiple classes.
-  
-==============================================================================================
-
-Version 1.18.0.0 (On top of 1.17.5.3)
-- ADD `FormData` class.
-- ADD `ConversationData` class and its subclasses like `BooleanDataType`, `IntDataType`, `FormDataType`.
-- ADD `FormDataMessage`class as body of `CimMessage` class.
 
 ==============================================================================================
 
@@ -860,23 +853,6 @@ Version 1.21.1 (on top of 1.19.0)
 - ADDED `Gadget` class.
 
 ==============================================================================================
-
-Version 1.21.2 (on top of 1.19.0)
-- Added `ConversationTypeEnum` Enum
-- Added `BooleanDataType` class.
-- Added `IntegerDataType` class.
-- Added `StringDataType` class.
-- Added `StringListDataType` class.
-- Added `UrlDataType` class.
-- Added `FormDataType` class.
-- Added `FormData` class.
-- Added `FormDataMessage` class.
-- ADDED `FormDataMessage` as message type in `MessageBody` class.
-- UPDATED `conversationData` field in `Conversation` class.
-- ADDED `ConversationData` class.
-- ADDED `FORMDATA` as message type in `MessageType` interface.
-
-==============================================================================================
 Version 1.21.2 is published but contains un-tested code so we are ignoring it.
 ==============================================================================================
 
@@ -930,6 +906,17 @@ Version 1.21.9 (on top of 1.21.8)
 ==============================================================================================
 
 Version 1.22.0 (on top of 1.21.9)
-- Add `calendarId` attribute in `Channel` class.
+
+- Added `ConversationTypeEnum` Enum
+- Added `BooleanDataType` class.
+- Added `IntegerDataType` class.
+- Added `StringDataType` class.
+- Added `StringListDataType` class.
+- Added `UrlDataType` class.
+- Added `FormData` class.
+- Added `FormDataMessage` class.
+- UPDATED `conversationData` field in `Conversation` class.
+- UPDATED `conversationData` type from `Map<String, String>` to `List<ConversationData>` class.
+- ADDED `ConversationData` class.
 -
 ==============================================================================================
