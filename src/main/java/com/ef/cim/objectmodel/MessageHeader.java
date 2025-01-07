@@ -25,7 +25,7 @@ public class MessageHeader implements Serializable {
     private Customer customer;
     private String originalMessageId;
     private String providerMessageId;
-    private Map<String, Object> schedulingMetaData = null;
+    private SchedulingMetaData schedulingMetaData = null;
     private String roomId;
     private Map<String, Object> additionalData = null;
 
@@ -178,21 +178,21 @@ public class MessageHeader implements Serializable {
         this.providerMessageId = providerMessageId;
     }
 
-    public Map<String, Object> getSchedulingMetaData() {
+    public SchedulingMetaData getSchedulingMetaData() {
         return schedulingMetaData;
     }
 
     @JsonProperty("schedulingMetaData")
-    public void setSchedulingMetaData(Map<String, Object> schedulingMetaData) {
+    public void setSchedulingMetaData(SchedulingMetaData schedulingMetaData) {
         this.schedulingMetaData = schedulingMetaData;
     }
 
-    public void setSchedulingMetaData(String key, Object value) {
-        if (schedulingMetaData == null) {
-            schedulingMetaData = new HashMap<String, Object>();
-        }
-        this.schedulingMetaData.put(key, value);
-    }
+//    public void setSchedulingMetaData(String key, Object value) {
+//        if (schedulingMetaData == null) {
+//            schedulingMetaData = new SchedulingMetaData();
+//        }
+//        this.schedulingMetaData.put(key, value);
+//    }
 
 
     public String getRoomId() {
