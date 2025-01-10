@@ -1,17 +1,56 @@
 package com.ef.cim.objectmodel;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.*;
+import jakarta.validation.constraints.NotBlank;
+import lombok.NonNull;
+import org.springframework.data.mongodb.core.index.Indexed;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Map;
+import static org.springframework.data.mongodb.core.index.IndexDirection.ASCENDING;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class SchedulingMetaData {
+public class SchedulingMetaData implements Serializable {
+
+    @Indexed(direction = ASCENDING, name = "scheduledDatetime_1")
+    @NotBlank(message = "scheduledDatetime is mandatory.")
     private Timestamp scheduledDatetime;
-    private String webhookId;
-    private Map<String, Object> metadata;
+    @JsonProperty("additionalData")
+    private Map<String, Object> additionalData;
+
+    public SchedulingMetaData(Timestamp scheduledDatetime, Map<String, Object> additionalData) {
+        this.scheduledDatetime = scheduledDatetime;
+        this.additionalData = additionalData;
+    }
+
+    public Timestamp getScheduledDatetime() {
+        return scheduledDatetime;
+    }
+
+    public void setScheduledDatetime(Timestamp scheduledDatetime) {
+        this.scheduledDatetime = scheduledDatetime;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalData(Map<String, Object> additionalData) {
+        this.additionalData = additionalData;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalData(String key, Object value) {
+        this.additionalData.put(key, value);
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalData() {
+        return additionalData;
+    }
+
+    @Override
+    public String toString() {
+        return "SchedulingMetaData{" +
+                "scheduledDatetime=" + scheduledDatetime +
+                ", additionalData=" + additionalData +
+                '}';
+    }
 }

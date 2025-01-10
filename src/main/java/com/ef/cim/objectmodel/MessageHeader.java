@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.mongodb.lang.Nullable;
 import jakarta.validation.Valid;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -25,7 +26,9 @@ public class MessageHeader implements Serializable {
     private Customer customer;
     private String originalMessageId;
     private String providerMessageId;
-    private SchedulingMetaData schedulingMetaData = null;
+    @Valid
+    @Nullable
+    private SchedulingMetaData schedulingMetaData;
     private String roomId;
     private Map<String, Object> additionalData = null;
 
@@ -186,14 +189,6 @@ public class MessageHeader implements Serializable {
     public void setSchedulingMetaData(SchedulingMetaData schedulingMetaData) {
         this.schedulingMetaData = schedulingMetaData;
     }
-
-//    public void setSchedulingMetaData(String key, Object value) {
-//        if (schedulingMetaData == null) {
-//            schedulingMetaData = new SchedulingMetaData();
-//        }
-//        this.schedulingMetaData.put(key, value);
-//    }
-
 
     public String getRoomId() {
         return roomId;
