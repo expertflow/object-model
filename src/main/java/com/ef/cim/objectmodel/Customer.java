@@ -1,12 +1,11 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
 import org.springframework.data.mongodb.core.index.Indexed;
 
 public class Customer implements Serializable {
@@ -76,7 +75,6 @@ public class Customer implements Serializable {
     public void set__v(int __v) {
         this.__v = __v;
     }
-
 
     @Override
     public String toString() {
