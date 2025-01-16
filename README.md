@@ -906,7 +906,6 @@ Version 1.21.9 (on top of 1.21.8)
 ==============================================================================================
 
 Version 1.22.0 (on top of 1.21.9)
-
 - Added `ConversationTypeEnum` Enum
 - Added `BooleanDataType` class.
 - Added `IntegerDataType` class.
@@ -915,8 +914,7 @@ Version 1.22.0 (on top of 1.21.9)
 - Added `UrlDataType` class.
 - Added `FormData` class.
 - Added `FormDataMessage` class.
-- UPDATED `conversationData` field in `Conversation` class.
-- UPDATED `conversationData` type from `Map<String, String>` to `List<ConversationData>` class.
-- ADDED `ConversationData` class.
--
+- Updated `conversationData` attribute type to `List<ConversationData>` in `Conversation` class.
+- Updated `conversationData` attribute type to `List<ConversationData>` in `ConversationDto` class.
+- Added `ConversationData` class.
 ==============================================================================================
