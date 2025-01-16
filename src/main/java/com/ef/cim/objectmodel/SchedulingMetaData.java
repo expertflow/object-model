@@ -18,7 +18,11 @@ public class SchedulingMetaData implements Serializable {
     @JsonProperty("additionalData")
     private Map<String, Object> additionalData;
 
-    public SchedulingMetaData(Timestamp scheduledDatetime, Map<String, Object> additionalData) {
+    public SchedulingMetaData(){
+
+    }
+    @JsonCreator
+    public SchedulingMetaData(@JsonProperty("scheduledDatetime") Timestamp scheduledDatetime, @JsonProperty("additionalData") Map<String, Object> additionalData) {
         this.scheduledDatetime = scheduledDatetime;
         this.additionalData = additionalData;
     }
