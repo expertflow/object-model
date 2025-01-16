@@ -6,12 +6,12 @@ import com.ef.cim.objectmodel.room.RoomInfo;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.Value;
+import jakarta.validation.Valid;
 
 @Getter
 @Setter
@@ -27,7 +27,7 @@ public class Conversation implements Serializable {
     private ChannelSession channelSession;
     private Timestamp creationTime;
     private Timestamp endTime;
-    private Map<String, String> conversationData = new HashMap<>();
+    private @Valid List<ConversationData> conversationData = new ArrayList<>();
     private TopicMetadata metadata;
     private RoomInfo roomInfo;
     private AgentSla agentSla = new AgentSla();
@@ -41,6 +41,7 @@ public class Conversation implements Serializable {
         this.id = Utils.getObjectId();
         this.participants = new ArrayList<>();
         this.metadata = new TopicMetadata();
+        this.conversationData =new ArrayList<>();
     }
 
     public Conversation(String topicId, TopicState state, ChannelSession channelSession, RoomInfo roomInfo) {
@@ -52,6 +53,7 @@ public class Conversation implements Serializable {
         this.creationTime = new Timestamp(System.currentTimeMillis());
         this.metadata = new TopicMetadata(channelSession);
         this.participants = new ArrayList<>();
+        this.conversationData = new ArrayList<>();
         this.agentParticipants = new ArrayList<>();
         this.roomInfo = roomInfo;
         this.wrapUps = new ArrayList<>();
@@ -90,4 +92,13 @@ public class Conversation implements Serializable {
             this.participants.remove(index);
         }
     }
+
+    public void setConversationData(List<ConversationData> conversationData) {
+        this.conversationData = conversationData;
+    }
+
+    public List<ConversationData> getConversationData() {
+        return conversationData;
+    }
+
 }

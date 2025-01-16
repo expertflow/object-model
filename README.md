@@ -903,5 +903,18 @@ Version 1.21.8 (on top of 1.21.7)
 
 Version 1.21.9 (on top of 1.21.8)
 - Add `calendarId` attribute in `Channel` class.
-- 
+==============================================================================================
+
+Version 1.22.0 (on top of 1.21.9)
+- Added `ConversationTypeEnum` Enum
+- Added `BooleanDataType` class.
+- Added `IntegerDataType` class.
+- Added `StringDataType` class.
+- Added `StringListDataType` class.
+- Added `UrlDataType` class.
+- Added `FormData` class.
+- Added `FormDataMessage` class.
+- Updated `conversationData` attribute type to `List<ConversationData>` in `Conversation` class.
+- Updated `conversationData` attribute type to `List<ConversationData>` in `ConversationDto` class.
+- Added `ConversationData` class.
 ==============================================================================================
