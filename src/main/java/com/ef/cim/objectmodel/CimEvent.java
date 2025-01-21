@@ -2,11 +2,11 @@ package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.common.Utils;
 import com.ef.cim.objectmodel.room.RoomInfo;
-import java.io.Serializable;
-import java.sql.Timestamp;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import java.io.Serializable;
+import java.sql.Timestamp;
 import org.springframework.data.mongodb.core.index.Indexed;
 
 @Getter

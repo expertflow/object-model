@@ -1,8 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.*;
-import jakarta.validation.constraints.NotBlank;
-import lombok.NonNull;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.data.mongodb.core.index.Indexed;
 
 import java.io.Serializable;
@@ -13,7 +12,7 @@ import static org.springframework.data.mongodb.core.index.IndexDirection.ASCENDI
 public class SchedulingMetaData implements Serializable {
 
     @Indexed(direction = ASCENDING, name = "scheduledDatetime_1")
-    @NotBlank(message = "scheduledDatetime is mandatory.")
+    @NotNull(message = "scheduledDatetime is mandatory.")
     private Timestamp scheduledDatetime;
     @JsonProperty("additionalData")
     private Map<String, Object> additionalData;
