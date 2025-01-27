@@ -918,3 +918,9 @@ Version 1.22.0 (on top of 1.21.9)
 - Updated `conversationData` attribute type to `List<ConversationData>` in `ConversationDto` class.
 - Added `ConversationData` class.
 ==============================================================================================
+
+Version 1.22.1 (on top of 1.22.0)
+- Added a new cim event name `VOICE_CALL_RECORDING` in `CimEventName` class.
+- Added a new message intent `VOICE_CALL_RECORDING` in `MessageIntent` class.
+
+==============================================================================================
