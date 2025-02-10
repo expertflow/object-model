@@ -3,7 +3,9 @@ package com.ef.cim.objectmodel.dto;
 import com.ef.cim.objectmodel.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +24,7 @@ public class ConversationDto {
     private String id;
     private Customer customer;
     private ChannelSession channelSession;
-    private List<ConversationData> conversationData  = new ArrayList<>();
+    private Map<String, String> conversationData = new HashMap<>();
     private TopicState state;
     private List<ConversationParticipant> participants;
     private List<AgentParticipant> agentParticipants;
@@ -46,10 +48,9 @@ public class ConversationDto {
         this.id = conversation.getId();
         this.customer = conversation.getCustomer();
         this.channelSession = conversation.getChannelSession();
-        this.conversationData = conversation.getConversationData();
         this.state = conversation.getState();
         this.participants = conversation.getParticipants();
-        this.conversationData=conversation.getConversationData();
+        this.conversationData = conversation.getConversationData();
         this.setCustomerSuggestionsFrom(conversation);
         this.agentSla = conversation.getAgentSla();
         this.topicEvents = conversationEvents;
