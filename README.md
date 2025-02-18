@@ -901,7 +901,54 @@ Version 1.21.8 (on top of 1.21.7)
 
 ==============================================================================================
 
-Version 1.21.8-CIM-26997-SNAPSHOT (on top of 1.21.8)
-- Add `RESERVED` state in `AgentMrdStateName`
+Version 1.21.9 (on top of 1.21.8)
+- Add `calendarId` attribute in `Channel` class.
+==============================================================================================
+
+[NOTE]: This [1.22.0] is NOT a valid version to use. Please DO NOT use it. It's changes are already added in 1.22.2 
+Version 1.22.0 (on top of 1.21.9)
+- Added `ConversationTypeEnum` Enum
+- Added `BooleanDataType` class.
+- Added `IntegerDataType` class.
+- Added `StringDataType` class.
+- Added `StringListDataType` class.
+- Added `UrlDataType` class.
+- X Added `FormData` class. X
+- X Added `FormDataMessage` class. X
+- Updated `conversationData` attribute type to `List<ConversationData>` in `Conversation` class.
+- Updated `conversationData` attribute type to `List<ConversationData>` in `ConversationDto` class.
+- Added `ConversationData` class.
+==============================================================================================
+
+[NOTE]: This [1.22.1] is NOT a valid version to use. Please DO NOT use it. It's changes are already added in 1.21.9.1
+Version 1.22.1 (on top of 1.22.0)
+- Added a new cim event name `VOICE_CALL_RECORDING` in `CimEventName` class.
+- Added a new message intent `VOICE_CALL_RECORDING` in `MessageIntent` class.
 
 ==============================================================================================
+
+Version 1.21.9.1 on top of 1.21.9 (It has same changes as 1.22.1 but on top of 1.21.9 instead of 1.22.0)
+Removed Version 1.22.0 in this commit because it has some issues (temp) and updated 1.22.1 to 1.21.9.1 
+to un-block it from 1.22.0. Later on, once 1.22.0 is cleared, we will use 1.22.0 again and will publish in code again.
+
+- Added a new cim event name `VOICE_CALL_RECORDING` in `CimEventName` class.
+- Added a new message intent `VOICE_CALL_RECORDING` in `MessageIntent` class.
+
+==============================================================================================
+
+Version 1.22.2 (on top of 1.21.9.1)
+- Added `ConversationTypeEnum` Enum
+- Added `BooleanDataType` class.
+- Added `IntegerDataType` class.
+- Added `StringDataType` class.
+- Added `StringListDataType` class.
+- Added `UrlDataType` class.
+- Added `FormDataType` class.
+- Updated `conversationData` attribute type to `List<ConversationData>` in `Conversation` class.
+- Updated `conversationData` attribute type to `List<ConversationData>` in `ConversationDto` class.
+- Added `ConversationData` class.
+
+==============================================================================================
+
+Version 1.22.2-CIM-26997-SNAPSHOT (on top of 1.22.2)
+- Add `RESERVED` state in `AgentMrdStateName`

@@ -14,3 +14,4 @@ public class FormDataMessage extends MessageBody {
     @Valid
     private FormData formData;
 }
+
