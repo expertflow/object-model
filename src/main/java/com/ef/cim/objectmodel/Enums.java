@@ -207,7 +207,11 @@ public class Enums {
         /**
          * Unknown agent mrd state name.
          */
-        UNKNOWN
+        UNKNOWN,
+        /**
+         * Reserved agent mrd state name.
+         */
+        RESERVED
     }
 
     /**

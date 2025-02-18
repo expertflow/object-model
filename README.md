@@ -900,3 +900,8 @@ Version 1.21.8 (on top of 1.21.7)
 - Add `wrapUps` attribute in `Conversation` and `ConversationDto` class.
 
 ==============================================================================================
+
+Version 1.21.8-CIM-26997-SNAPSHOT (on top of 1.21.8)
+- Add `RESERVED` state in `AgentMrdStateName`
+
+==============================================================================================
