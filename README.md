@@ -952,3 +952,9 @@ Version 1.22.2 (on top of 1.21.9.1)
 
 Version 1.22.3 (on top of 1.22.2)
 - Added `EXTERNAL_CONSULT_TRANSFER` and `EXTERNAL_DIRECT_TRANSFER` in Enums class.
+
+==============================================================================================
+
+Version 1.22.4 (on top of 1.22.3)
+- Added a new message intent `WRAPUP` in `MessageIntent` class.
+- Added Getter for property `id` and removed final keyword from it, in `CimMessage` class.
