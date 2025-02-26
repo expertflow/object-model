@@ -957,4 +957,4 @@ Version 1.22.3 (on top of 1.22.2)
 
 Version 1.22.4 (on top of 1.22.3)
 - Added a new message intent `WRAPUP` in `MessageIntent` class.
-- Added Getter for property `id` and removed final keyword from it, in `CimMessage` class.
+- Added Setter for property `id` and removed final keyword from it, in `CimMessage` class.
