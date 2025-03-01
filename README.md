@@ -947,3 +947,8 @@ Version 1.22.2 (on top of 1.21.9.1)
 - Updated `conversationData` attribute type to `List<ConversationData>` in `Conversation` class.
 - Updated `conversationData` attribute type to `List<ConversationData>` in `ConversationDto` class.
 - Added `ConversationData` class.
+
+==============================================================================================
+
+Version 1.22.3 (on top of 1.22.2)
+- Added `EXTERNAL_CONSULT_TRANSFER` and `EXTERNAL_DIRECT_TRANSFER` in Enums class.
