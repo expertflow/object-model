@@ -905,6 +905,7 @@ Version 1.21.9 (on top of 1.21.8)
 - Add `calendarId` attribute in `Channel` class.
 ==============================================================================================
 
+[NOTE]: This [1.22.0] is NOT a valid version to use. Please DO NOT use it. It's changes are already added in 1.22.2 
 Version 1.22.0 (on top of 1.21.9)
 - Added `ConversationTypeEnum` Enum
 - Added `BooleanDataType` class.
@@ -919,6 +920,7 @@ Version 1.22.0 (on top of 1.21.9)
 - Added `ConversationData` class.
 ==============================================================================================
 
+[NOTE]: This [1.22.1] is NOT a valid version to use. Please DO NOT use it. It's changes are already added in 1.21.9.1
 Version 1.22.1 (on top of 1.22.0)
 - Added a new cim event name `VOICE_CALL_RECORDING` in `CimEventName` class.
 - Added a new message intent `VOICE_CALL_RECORDING` in `MessageIntent` class.
@@ -934,3 +936,14 @@ to un-block it from 1.22.0. Later on, once 1.22.0 is cleared, we will use 1.22.0
 
 ==============================================================================================
 
+Version 1.22.2 (on top of 1.21.9.1)
+- Added `ConversationTypeEnum` Enum
+- Added `BooleanDataType` class.
+- Added `IntegerDataType` class.
+- Added `StringDataType` class.
+- Added `StringListDataType` class.
+- Added `UrlDataType` class.
+- Added `FormDataType` class.
+- Updated `conversationData` attribute type to `List<ConversationData>` in `Conversation` class.
+- Updated `conversationData` attribute type to `List<ConversationData>` in `ConversationDto` class.
+- Added `ConversationData` class.
