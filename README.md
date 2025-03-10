@@ -957,3 +957,8 @@ Version 1.22.3 (on top of 1.22.2)
 
 Version 1.22.4 (on top of 1.22.3)
 - Added a new message intent `WRAPUP` in `MessageIntent` class.
+
+==============================================================================================
+
+Version 1.22.5 (on top of 1.22.4)
+- Added a new Channel Type `YOUTUBE` in `ChannelTypeEnum` class.
