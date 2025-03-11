@@ -960,6 +960,5 @@ Version 1.22.4 (on top of 1.22.3)
 
 ==============================================================================================
 
-Version 1.22.5 (on top of 1.22.4)
-
-Added a new flag `isAutoSync` in `MediaRoutingDomain` class.
+Version 1.22.6 (on top of 1.22.5)
+- Added a new flag `isAutoSync` in `MediaRoutingDomain` class.
