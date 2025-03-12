@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.util.Objects;
 import jakarta.validation.constraints.Min;
@@ -52,6 +53,14 @@ public class MediaRoutingDomain implements Serializable {
      * The interruptible flag.
      */
     private boolean interruptible;
+
+
+    /**
+     * The isAutoSync flag.
+     */
+
+    @JsonProperty("isAutoSync")
+    private boolean isAutoSync;
 
     @Override
     public boolean equals(Object o) {
