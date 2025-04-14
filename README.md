@@ -966,5 +966,14 @@ Version 1.22.5 (on top of 1.22.4)
 ==============================================================================================
 
 Version 1.22.6 (on top of 1.22.5)
+- Added a new flag `isAutoSync` in MediaRoutingDomain class.
 
-Added a new flag `isAutoSync` in `MediaRoutingDomain` class.
+==============================================================================================
+
+Version 1.22.5.1 (on top of 1.22.5)
+- Added a new Channel Type `LINKEDIN` in `ChannelTypeEnum` class.
+
+==============================================================================================
+
+Version 1.22.6.1 (on top of 1.22.5.1) (Merging 1.22.5.1 and 1.22.6)
+- Added a new flag `isAutoSync` in MediaRoutingDomain class.

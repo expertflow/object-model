@@ -54,7 +54,6 @@ public class MediaRoutingDomain implements Serializable {
      */
     private boolean interruptible;
 
-
     /**
      * The isAutoSync flag.
      */

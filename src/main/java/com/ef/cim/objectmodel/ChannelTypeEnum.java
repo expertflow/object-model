@@ -14,5 +14,6 @@ public enum ChannelTypeEnum {
     INSTAGRAM,
     EMAIL,
     WEB_RTC,
-    YOUTUBE
+    YOUTUBE,
+    LINKEDIN
 }
