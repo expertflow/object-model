@@ -977,3 +977,8 @@ Version 1.22.5.1 (on top of 1.22.5)
 
 Version 1.22.6.1 (on top of 1.22.5.1) (Merging 1.22.5.1 and 1.22.6)
 - Added a new flag `isAutoSync` in MediaRoutingDomain class.
+
+==============================================================================================
+
+Version 1.22.7 (on top of 1.22.6.1)
+- Added `EXTERNAL_CONSULT_CONFERENCE`, `CONFERENCE_CUSTOMER_LEFT` and `CONFERENCE_ENDED` in Enums class for Task State Reason Code.
