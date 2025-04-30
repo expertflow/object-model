@@ -19,8 +19,6 @@ public class FormData implements Serializable {
     private String type;
     @NotNull(message = "Form title cannot be null")
     private String formTitle;
-    @NotNull(message = "formType cannot be null")
-    private String formType;
     private Boolean enableSections;
     private AttributeType attributeType;
     private Boolean enableWeightage;
@@ -51,14 +49,6 @@ public class FormData implements Serializable {
 
     public void setFormTitle(String formTitle) {
         this.formTitle = formTitle;
-    }
-
-    public String getFormType() {
-        return formType;
-    }
-
-    public void setFormType(String formType) {
-        this.formType = formType;
     }
 
     public Boolean getEnableSections() {
