@@ -129,7 +129,27 @@ public class Enums {
         /**
          * Wrap up expired task state reason code.
          */
-        WRAP_UP_EXPIRED
+        WRAP_UP_EXPIRED,
+        /**
+         * External Consult Transfer task state reason code.
+         */
+        EXTERNAL_CONSULT_TRANSFER,
+        /**
+         * External Direct Transfer task state reason code.
+         */
+        EXTERNAL_DIRECT_TRANSFER,
+        /**
+         * External Consult Conference task state reason code.
+         */
+        EXTERNAL_CONSULT_CONFERENCE,
+        /**
+         * Conference Ended task state reason code.
+         */
+        CONFERENCE_ENDED,
+        /**
+         * Conference Customer Left task state reason code.
+         */
+        CONFERENCE_CUSTOMER_LEFT
     }
 
     /**

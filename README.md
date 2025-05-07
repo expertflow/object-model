@@ -950,5 +950,39 @@ Version 1.22.2 (on top of 1.21.9.1)
 
 ==============================================================================================
 
-Version 1.22.2-CIM-26997-SNAPSHOT (on top of 1.22.2)
+Version 1.22.3 (on top of 1.22.2)
+- Added `EXTERNAL_CONSULT_TRANSFER` and `EXTERNAL_DIRECT_TRANSFER` in Enums class.
+
+==============================================================================================
+
+Version 1.22.4 (on top of 1.22.3)
+- Added a new message intent `WRAPUP` in `MessageIntent` class.
+
+==============================================================================================
+
+Version 1.22.5 (on top of 1.22.4)
+- Added a new Channel Type `YOUTUBE` in `ChannelTypeEnum` class.
+
+==============================================================================================
+
+Version 1.22.6 (on top of 1.22.5)
+- Added a new flag `isAutoSync` in MediaRoutingDomain class.
+
+==============================================================================================
+
+Version 1.22.5.1 (on top of 1.22.5)
+- Added a new Channel Type `LINKEDIN` in `ChannelTypeEnum` class.
+
+==============================================================================================
+
+Version 1.22.6.1 (on top of 1.22.5.1) (Merging 1.22.5.1 and 1.22.6)
+- Added a new flag `isAutoSync` in MediaRoutingDomain class.
+
+==============================================================================================
+
+Version 1.22.7 (on top of 1.22.6.1)
+- Added `EXTERNAL_CONSULT_CONFERENCE`, `CONFERENCE_CUSTOMER_LEFT` and `CONFERENCE_ENDED` in Enums class for Task State Reason Code.
+==============================================================================================
+
+Version 1.22.7-CIM-26997-SNAPSHOT (on top of 1.22.7)
 - Add `RESERVED` state in `AgentMrdStateName`
