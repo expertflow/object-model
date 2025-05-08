@@ -982,3 +982,9 @@ Version 1.22.6.1 (on top of 1.22.5.1) (Merging 1.22.5.1 and 1.22.6)
 
 Version 1.22.7 (on top of 1.22.6.1)
 - Added `EXTERNAL_CONSULT_CONFERENCE`, `CONFERENCE_CUSTOMER_LEFT` and `CONFERENCE_ENDED` in Enums class for Task State Reason Code.
+
+==============================================================================================
+
+Version 1.22.8 (on top of 1.22.7)
+- Added a new dto `FindAgentDto`.
+- Added a new event `FIND_AGENT` in CimEventName class.
