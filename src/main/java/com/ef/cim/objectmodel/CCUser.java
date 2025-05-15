@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.audit.AuditMetadata;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(value = "agents")
-public class CCUser implements Participant {
+public class CCUser  extends AuditMetadata implements Participant {
     @Id
     private String id;
     @NotNull
