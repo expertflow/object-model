@@ -18,6 +18,7 @@ public class FormData implements Serializable {
     @Indexed
     private String formId;
     @NotNull(message = "Type field of form cannot be null")
+    @Indexed
     private String type;
     @NotNull(message = "Form title cannot be null")
     private String formTitle;
