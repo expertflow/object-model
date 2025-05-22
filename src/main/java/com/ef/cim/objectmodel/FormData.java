@@ -2,6 +2,7 @@ package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import jakarta.validation.constraints.NotNull;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class FormData implements Serializable {
 
     @JsonSerialize(using = ToStringSerializer.class)
