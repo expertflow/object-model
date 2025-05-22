@@ -22,7 +22,7 @@ public class AuditMetadata {
     private String createdBy;
 
     @CreatedDate
-    @Field("createdDate")
+    @Field("createdAt")
     private Date createdDate;
 
     @LastModifiedBy
@@ -30,7 +30,7 @@ public class AuditMetadata {
     private String updatedBy;
 
     @LastModifiedDate
-    @Field("updatedDate")
+    @Field("updatedAt")
     private Date updatedDate;
 
     @Indexed

@@ -1,13 +1,15 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.audit.AuditMetadata;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.domain.Auditable;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "CustomerWidgetConfig")
-public class CustomerWidgetConfig {
+public class CustomerWidgetConfig extends AuditMetadata {
     @JsonSerialize(using = ToStringSerializer.class)
     private ObjectId id;
     @Id
