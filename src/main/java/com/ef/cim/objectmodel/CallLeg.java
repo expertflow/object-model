@@ -18,7 +18,7 @@ import lombok.ToString;
 public class CallLeg {
     private String legId;
     private String voiceRecordingUrl;
-    private List<MediaUrl> mediaUrls;
+    private List<MediaUrl> legMediaUrls;
     private Sender sender;
     private String startDirection;
     private String endDirection;
