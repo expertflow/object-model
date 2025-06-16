@@ -9,6 +9,8 @@ import lombok.AllArgsConstructor;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.data.mongodb.core.index.Indexed;
+
 import java.io.IOException;
 
 @AllArgsConstructor
@@ -23,6 +25,7 @@ public class StringDatatype extends ConversationData<String>{
     @NotBlank(message = "value cannot be blank")
     @JsonDeserialize(using = ValueDeserializer.class)
     @Valid
+    @Indexed
     private String value;
 
 

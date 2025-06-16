@@ -5,6 +5,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @AllArgsConstructor
@@ -17,6 +18,7 @@ public class IntegerDatatype extends ConversationData<Integer> {
     @Valid
     @NotNull(message = "Integer value cannot be null")
     @Min(value = 0, message = "Integer value must be non-negative")
+    @Indexed
     private Integer value;
 
     @Override

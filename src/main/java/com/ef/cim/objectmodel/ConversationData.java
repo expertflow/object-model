@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import jakarta.validation.Valid;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", defaultImpl = StringDatatype.class)
 @JsonSubTypes({
@@ -22,10 +23,12 @@ import jakarta.validation.Valid;
 @AllArgsConstructor
 @NoArgsConstructor
 public abstract class ConversationData<T> {
+    @Indexed
     private String key;
 
     @Valid
     @JsonProperty("type")
+    @Indexed
     private String type;
 
     public String getKey() {
