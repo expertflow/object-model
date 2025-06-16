@@ -993,3 +993,9 @@ Version 1.22.8 (on top of 1.22.7)
 
 Version 1.22.9 (on top of 1.22.8)
 - Added `legId` and `voiceRecordingUrl` in CallLeg class.
+
+==============================================================================================
+
+Version 1.22.10 (on top of 1.22.9)
+- Added indexes on `key`, `type` and `value` in ConversationData class.
+- Added index on `type`  in FormData class.
