@@ -20,7 +20,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @ToString
 @Document(value = "mrdTypes")
-public class MrdType  extends AuditMetadata {
+public class MrdType {
     /**
      * The ID.
      */

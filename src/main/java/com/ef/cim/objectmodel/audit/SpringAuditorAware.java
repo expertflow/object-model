@@ -14,11 +14,6 @@ public class SpringAuditorAware implements AuditorAware<String> {
 
     @Override
     public Optional<String> getCurrentAuditor() {
-
-        String auditor = AuditorContextHolder.getCurrentAuditor();
-        logger.info("SpringAuditorAware returning auditor: {}", auditor);
-
-
         return Optional.ofNullable(AuditorContextHolder.getCurrentAuditor());
     }
 }

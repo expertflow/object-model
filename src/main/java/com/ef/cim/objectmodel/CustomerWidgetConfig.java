@@ -1,15 +1,17 @@
 package com.ef.cim.objectmodel;
 
 import com.ef.cim.objectmodel.audit.AuditMetadata;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.domain.Auditable;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.domain.Persistable;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "CustomerWidgetConfig")
-public class CustomerWidgetConfig extends AuditMetadata {
+public class CustomerWidgetConfig extends AuditMetadata implements Persistable<ObjectId> {
     @JsonSerialize(using = ToStringSerializer.class)
     private ObjectId id;
     @Id
@@ -28,6 +30,20 @@ public class CustomerWidgetConfig extends AuditMetadata {
     private WebRtcConfigurations webRtc;
     private CallbackConfigurations callback;
     private WebhookConfigurations webhook;
+
+    @Transient
+    @JsonIgnore
+    private boolean isNew = false;
+
+    public void markNew() {
+        this.isNew = true;
+    }
+
+    @JsonIgnore
+    @Override
+    public boolean isNew() {
+        return this.isNew;
+    }
 
     public CustomerWidgetConfig() {
         this.id = new ObjectId();
