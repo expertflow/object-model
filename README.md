@@ -982,7 +982,25 @@ Version 1.22.6.1 (on top of 1.22.5.1) (Merging 1.22.5.1 and 1.22.6)
 
 Version 1.22.7 (on top of 1.22.6.1)
 - Added `EXTERNAL_CONSULT_CONFERENCE`, `CONFERENCE_CUSTOMER_LEFT` and `CONFERENCE_ENDED` in Enums class for Task State Reason Code.
+
 ==============================================================================================
 
-Version 1.22.7-CIM-26997-SNAPSHOT (on top of 1.22.7)
+Version 1.22.8 (on top of 1.22.7)
+- Added a new dto `FindAgentDto`.
+- Added a new event `FIND_AGENT` in CimEventName class.
+
+==============================================================================================
+
+Version 1.22.9 (on top of 1.22.8)
+- Added `legId` and `voiceRecordingUrl` in CallLeg class.
+
+==============================================================================================
+
+Version 1.22.10 (on top of 1.22.9)
+- Added indexes on `key`, `type` and `value` in ConversationData class.
+- Added index on `type`  in FormData class.
+- Added `OB_RESERVED` in AgentMrdStateName in Enums class.
+==============================================================================================
+
+Version 1.22.10-CIM-26997-SNAPSHOT (on top of 1.22.10)
 - Add `RESERVED` state in `AgentMrdStateName`
