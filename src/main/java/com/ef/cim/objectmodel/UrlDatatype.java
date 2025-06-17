@@ -3,6 +3,8 @@ package com.ef.cim.objectmodel;
 import lombok.AllArgsConstructor;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.data.mongodb.core.index.Indexed;
+
 import java.net.URL;
 
 @AllArgsConstructor
@@ -13,6 +15,7 @@ public class UrlDatatype extends ConversationData <URL>{
     }
     @Valid
     @NotNull(message = "URL value cannot be null")
+    @Indexed
     private URL value;
     @Override
     public URL getValue() {
