@@ -1006,5 +1006,5 @@ Version 1.22.11 (on top of 1.22.10)
 - Added a new CimEventName SEND_BOT_SUGGESTION.
 ==============================================================================================
 
-Version 1.22.11 (on top of 1.22.11)
+Version 1.22.12 (on top of 1.22.11)
 - Add `RESERVED` state in `AgentMrdStateName`
