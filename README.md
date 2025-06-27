@@ -1002,5 +1002,9 @@ Version 1.22.10 (on top of 1.22.9)
 - Added `OB_RESERVED` in AgentMrdStateName in Enums class.
 ==============================================================================================
 
-Version 1.22.10-CIM-26997-SNAPSHOT (on top of 1.22.10)
+Version 1.22.11 (on top of 1.22.10)
+- Added a new CimEventName SEND_BOT_SUGGESTION.
+==============================================================================================
+
+Version 1.22.11 (on top of 1.22.11)
 - Add `RESERVED` state in `AgentMrdStateName`
