@@ -1000,3 +1000,8 @@ Version 1.22.10 (on top of 1.22.9)
 - Added indexes on `key`, `type` and `value` in ConversationData class.
 - Added index on `type`  in FormData class.
 - Added `OB_RESERVED` in AgentMrdStateName in Enums class.
+==============================================================================================
+
+Version 1.22.11 (on top of 1.22.10)
+
+- Added a new CimEventName SEND_BOT_SUGGESTION.
