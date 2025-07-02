@@ -10,14 +10,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FormData implements Serializable {
 
     @JsonSerialize(using = ToStringSerializer.class)
     @NotNull(message = "Form id cannot be null")
+    @Indexed
     private String formId;
     @NotNull(message = "Type field of form cannot be null")
+    @Indexed
     private String type;
     @NotNull(message = "Form title cannot be null")
     private String formTitle;

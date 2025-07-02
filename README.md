@@ -988,3 +988,20 @@ Version 1.22.7 (on top of 1.22.6.1)
 Version 1.22.8 (on top of 1.22.7)
 - Added a new dto `FindAgentDto`.
 - Added a new event `FIND_AGENT` in CimEventName class.
+
+==============================================================================================
+
+Version 1.22.9 (on top of 1.22.8)
+- Added `legId` and `voiceRecordingUrl` in CallLeg class.
+
+==============================================================================================
+
+Version 1.22.10 (on top of 1.22.9)
+- Added indexes on `key`, `type` and `value` in ConversationData class.
+- Added index on `type`  in FormData class.
+- Added `OB_RESERVED` in AgentMrdStateName in Enums class.
+==============================================================================================
+
+Version 1.22.11 (on top of 1.22.10)
+
+- Added a new CimEventName SEND_BOT_SUGGESTION.
