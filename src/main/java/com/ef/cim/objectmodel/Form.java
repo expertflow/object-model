@@ -1,6 +1,5 @@
 package com.ef.cim.objectmodel;
 
-import com.ef.cim.objectmodel.audit.AuditMetadata;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.io.Serializable;
@@ -9,7 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "forms")
-public class Form extends AuditMetadata {
+public class Form implements Serializable {
     @Id
     @JsonSerialize(using = ToStringSerializer.class)
     private String id;

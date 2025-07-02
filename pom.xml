@@ -7,7 +7,7 @@
     <groupId>io.github.expertflow</groupId>
     <artifactId>objectmodel</artifactId>
     <packaging>jar</packaging>
-    <version>4.9.2_f-CIM-28246-1.22.9-SNAPSHOT</version>
+    <version>4.9.2_f-CIM-28246-V3-1.22.9-SNAPSHOT</version>
     <name>objectmodel</name>
     <url>https://github.com/expertflow/object-model</url>
     <description>This dependency contains object model classes for expert flow's CIM project</description>
@@ -54,7 +54,15 @@
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>

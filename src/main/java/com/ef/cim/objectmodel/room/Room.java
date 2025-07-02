@@ -1,8 +1,9 @@
 package com.ef.cim.objectmodel.room;
 
-import com.ef.cim.objectmodel.audit.AuditMetadata;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.Objects;
 import jakarta.validation.Valid;
@@ -15,8 +16,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Transient;
-import org.springframework.data.domain.Persistable;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -26,7 +25,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @ToString
 @Document("rooms")
-public class Room extends AuditMetadata implements Serializable, Persistable<String> {
+public class Room implements Serializable {
     @Indexed
     @Id
     private String id;
@@ -44,9 +43,13 @@ public class Room extends AuditMetadata implements Serializable, Persistable<Str
     @NotBlank(message = "Field 'label' can not be blank")
     private String label;
     private Object lastMessage;
-    @Transient
-    @JsonIgnore
-    private boolean isNew = false;
+    @Indexed
+    @JsonProperty("isDeleted")
+    private boolean isDeleted = false;
+    private String createdBy;
+    private Timestamp createdOn = new Timestamp(System.currentTimeMillis());
+    private String updatedBy;
+    private Timestamp updatedOn;
 
     /**
      * parametrized constructor.
@@ -58,6 +61,8 @@ public class Room extends AuditMetadata implements Serializable, Persistable<Str
      * @param mode mode
      * @param label label
      * @param lastMessage lastMessage
+     * @param isDeleted isDeleted
+     * @param createdBy createdBy
      */
     public Room(String id, String name, String description, List<RoomMember> members, RoomType type,
                 RoomMode mode, String label, Object lastMessage, Boolean isDeleted, String createdBy) {
@@ -69,6 +74,9 @@ public class Room extends AuditMetadata implements Serializable, Persistable<Str
         this.type = type;
         this.label = label;
         this.lastMessage = lastMessage;
+        this.isDeleted = isDeleted;
+        this.createdBy = createdBy;
+        this.createdOn = new Timestamp(System.currentTimeMillis());
     }
 
     public RoomMember findMemberById(String id) {
@@ -119,15 +127,5 @@ public class Room extends AuditMetadata implements Serializable, Persistable<Str
     @Override
     public int hashCode() {
         return Objects.hash(id);
-    }
-
-    public void markNew() {
-        this.isNew = true;
-    }
-
-    @JsonIgnore
-    @Override
-    public boolean isNew() {
-        return this.isNew;
     }
 }

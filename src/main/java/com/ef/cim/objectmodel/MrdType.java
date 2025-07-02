@@ -1,6 +1,5 @@
 package com.ef.cim.objectmodel;
 
-import com.ef.cim.objectmodel.audit.AuditMetadata;
 import com.ef.cim.objectmodel.enums.MrdTypeName;
 import java.util.Objects;
 import lombok.AllArgsConstructor;
