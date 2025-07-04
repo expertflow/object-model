@@ -137,7 +137,19 @@ public class Enums {
         /**
          * External Direct Transfer task state reason code.
          */
-        EXTERNAL_DIRECT_TRANSFER
+        EXTERNAL_DIRECT_TRANSFER,
+        /**
+         * External Consult Conference task state reason code.
+         */
+        EXTERNAL_CONSULT_CONFERENCE,
+        /**
+         * Conference Ended task state reason code.
+         */
+        CONFERENCE_ENDED,
+        /**
+         * Conference Customer Left task state reason code.
+         */
+        CONFERENCE_CUSTOMER_LEFT
     }
 
     /**
@@ -215,7 +227,15 @@ public class Enums {
         /**
          * Unknown agent mrd state name.
          */
-        UNKNOWN
+        UNKNOWN,
+        /**
+         * OB_RESERVED agent mrd state name.
+         */
+        OB_RESERVED,
+        /**
+         * Reserved agent mrd state name.
+         */
+        RESERVED
     }
 
     /**

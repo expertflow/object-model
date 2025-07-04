@@ -19,5 +19,6 @@ public enum MessageIntent {
     CALL_HOLD,
     CALL_RESUME,
     VOICE_CALL_RECORDING,
-    CALL_ALERTING
+    CALL_ALERTING,
+    WRAPUP
 }

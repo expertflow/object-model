@@ -15,6 +15,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class CallLeg {
+    private String legId;
+    private String voiceRecordingUrl;
     private Sender sender;
     private String startDirection;
     private String endDirection;

@@ -952,3 +952,59 @@ Version 1.22.2 (on top of 1.21.9.1)
 
 Version 1.22.3 (on top of 1.22.2)
 - Added `EXTERNAL_CONSULT_TRANSFER` and `EXTERNAL_DIRECT_TRANSFER` in Enums class.
+
+==============================================================================================
+
+Version 1.22.4 (on top of 1.22.3)
+- Added a new message intent `WRAPUP` in `MessageIntent` class.
+
+==============================================================================================
+
+Version 1.22.5 (on top of 1.22.4)
+- Added a new Channel Type `YOUTUBE` in `ChannelTypeEnum` class.
+
+==============================================================================================
+
+Version 1.22.6 (on top of 1.22.5)
+- Added a new flag `isAutoSync` in MediaRoutingDomain class.
+
+==============================================================================================
+
+Version 1.22.5.1 (on top of 1.22.5)
+- Added a new Channel Type `LINKEDIN` in `ChannelTypeEnum` class.
+
+==============================================================================================
+
+Version 1.22.6.1 (on top of 1.22.5.1) (Merging 1.22.5.1 and 1.22.6)
+- Added a new flag `isAutoSync` in MediaRoutingDomain class.
+
+==============================================================================================
+
+Version 1.22.7 (on top of 1.22.6.1)
+- Added `EXTERNAL_CONSULT_CONFERENCE`, `CONFERENCE_CUSTOMER_LEFT` and `CONFERENCE_ENDED` in Enums class for Task State Reason Code.
+
+==============================================================================================
+
+Version 1.22.8 (on top of 1.22.7)
+- Added a new dto `FindAgentDto`.
+- Added a new event `FIND_AGENT` in CimEventName class.
+
+==============================================================================================
+
+Version 1.22.9 (on top of 1.22.8)
+- Added `legId` and `voiceRecordingUrl` in CallLeg class.
+
+==============================================================================================
+
+Version 1.22.10 (on top of 1.22.9)
+- Added indexes on `key`, `type` and `value` in ConversationData class.
+- Added index on `type`  in FormData class.
+- Added `OB_RESERVED` in AgentMrdStateName in Enums class.
+==============================================================================================
+
+Version 1.22.11 (on top of 1.22.10)
+- Added a new CimEventName SEND_BOT_SUGGESTION.
+==============================================================================================
+
+Version 1.22.12 (on top of 1.22.11)
+- Add `RESERVED` state in `AgentMrdStateName`
