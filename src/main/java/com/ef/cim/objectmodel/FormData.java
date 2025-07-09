@@ -1,8 +1,5 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.io.Serializable;
@@ -12,7 +9,6 @@ import java.util.Map;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.data.mongodb.core.index.Indexed;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class FormData implements Serializable {
 
     @JsonSerialize(using = ToStringSerializer.class)
@@ -80,15 +76,14 @@ public class FormData implements Serializable {
         this.formWeightage = formWeightage;
     }
 
-    @JsonAnyGetter
     public Map<String, Object> getAdditionalDetail() {
         return additionalDetail;
     }
 
-    @JsonAnySetter
     public void setAdditionalDetail(String key, Object value) {
         this.additionalDetail.put(key, value);
     }
+
     public Sentiment getSentiment() {
         return sentiment;
     }
