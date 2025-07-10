@@ -1008,3 +1008,8 @@ Version 1.22.11 (on top of 1.22.10)
 
 Version 1.22.12 (on top of 1.22.11)
 - Add `RESERVED` state in `AgentMrdStateName`
+
+==============================================================================================
+
+Version 1.22.13 (on top of 1.22.12)
+- Removed `formType` field from `ConversationData` class and updated class to remove invalid JsonAnyG/Setter
