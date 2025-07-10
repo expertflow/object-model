@@ -1012,4 +1012,4 @@ Version 1.22.12 (on top of 1.22.11)
 ==============================================================================================
 
 Version 1.22.13 (on top of 1.22.12)
-- Removed `formType` field from `ConversationData` class and updated class to remove invalid JsonAnyG/Setter
+- Removed `formType` field from `FormData` class and updated this class to remove invalid JsonAnyG/Setter
