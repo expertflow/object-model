@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.audit.AuditMetadata;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +8,12 @@ import java.util.Objects;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.domain.Persistable;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(value = "agents")
-public class CCUser implements Participant {
+public class CCUser  extends AuditMetadata implements Participant, Persistable<String> {
     @Id
     private String id;
     @NotNull
@@ -19,6 +22,9 @@ public class CCUser implements Participant {
     private List<AssociatedRoutingAttribute> associatedRoutingAttributes;
     private String participantType;
     private List<AssociatedMrd> associatedMrds;
+    @Transient
+    @JsonIgnore
+    private boolean isNew = false;
 
     public CCUser() {
         this.associatedRoutingAttributes = new ArrayList<>();
@@ -40,6 +46,18 @@ public class CCUser implements Participant {
     public String getId() {
         return this.id;
     }
+
+
+    public void markNew() {
+        this.isNew = true;
+    }
+
+    @JsonIgnore
+    @Override
+    public boolean isNew() {
+        return this.isNew;
+    }
+
 
     public void setId(String id) {
         this.id = id;
