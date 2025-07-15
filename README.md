@@ -1013,3 +1013,11 @@ Version 1.22.12 (on top of 1.22.11)
 
 Version 1.22.13 (on top of 1.22.12)
 - Removed `formType` field from `FormData` class and updated this class to remove invalid JsonAnyG/Setter
+
+==============================================================================================
+
+Version 1.22.14 (on top of 1.22.14)
+- Added Soft Deletion Support in Configuration Classes
+- Added `SpringAuditorAware`, `AuditorContextHolder`, `AuditMetadata` and `AuditorFilter` under `audit` directory
+- Extended `CCUser`, `CustomerWidgetConfig`, `MediaRoutingDomain`, `PrecisionQueueEntity` and `RoutingAttribute` from`AuditMetadata`
+- Implemented `CustomerWidgetConfig`, `CCUser` with `Persistable<String>`

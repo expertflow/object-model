@@ -7,7 +7,7 @@
     <groupId>io.github.expertflow</groupId>
     <artifactId>objectmodel</artifactId>
     <packaging>jar</packaging>
-    <version>CIM-28246_QATest_1.22.13</version>
+    <version>1.22.14</version>
     <name>objectmodel</name>
     <url>https://github.com/expertflow/object-model</url>
     <description>This dependency contains object model classes for expert flow's CIM project</description>
@@ -57,7 +57,7 @@
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
-            <version>6.0.0</version>
+            <version>6.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
