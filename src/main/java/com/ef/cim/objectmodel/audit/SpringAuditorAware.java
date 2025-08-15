@@ -1,0 +1,21 @@
+package com.ef.cim.objectmodel.audit;
+
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.AuditorAware;
+import org.springframework.stereotype.Component;
+
+@Component
+public class SpringAuditorAware implements AuditorAware<String> {
+
+    private static final Logger logger = LoggerFactory.getLogger(SpringAuditorAware.class);
+
+    @Override
+    public Optional<String> getCurrentAuditor() {
+        return Optional.ofNullable(AuditorContextHolder.getCurrentAuditor());
+    }
+}
+
+

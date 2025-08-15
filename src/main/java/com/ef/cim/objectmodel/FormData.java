@@ -1,7 +1,5 @@
 package com.ef.cim.objectmodel;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.io.Serializable;
@@ -22,8 +20,6 @@ public class FormData implements Serializable {
     private String type;
     @NotNull(message = "Form title cannot be null")
     private String formTitle;
-    @NotNull(message = "formType cannot be null")
-    private String formType;
     private Boolean enableSections;
     private AttributeType attributeType;
     private Boolean enableWeightage;
@@ -56,14 +52,6 @@ public class FormData implements Serializable {
         this.formTitle = formTitle;
     }
 
-    public String getFormType() {
-        return formType;
-    }
-
-    public void setFormType(String formType) {
-        this.formType = formType;
-    }
-
     public Boolean getEnableSections() {
         return enableSections;
     }
@@ -88,15 +76,14 @@ public class FormData implements Serializable {
         this.formWeightage = formWeightage;
     }
 
-    @JsonAnyGetter
     public Map<String, Object> getAdditionalDetail() {
         return additionalDetail;
     }
 
-    @JsonAnySetter
     public void setAdditionalDetail(String key, Object value) {
         this.additionalDetail.put(key, value);
     }
+
     public Sentiment getSentiment() {
         return sentiment;
     }

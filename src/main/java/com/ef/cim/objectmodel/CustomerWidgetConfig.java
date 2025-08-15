@@ -1,16 +1,27 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.audit.AuditMetadata;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.domain.Persistable;
+import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+@CompoundIndex(
+        name = "widgetIdentifier",
+        def = "{'widgetIdentifier': 1}",
+        unique = true,
+        partialFilter = "{ 'isDeleted': false }"
+)
 @Document(collection = "CustomerWidgetConfig")
-public class CustomerWidgetConfig {
+public class CustomerWidgetConfig extends AuditMetadata implements Persistable<ObjectId> {
     @JsonSerialize(using = ToStringSerializer.class)
-    private ObjectId id;
     @Id
+    private ObjectId id;
     private String widgetIdentifier;
     private String theme;
     private String title;
@@ -26,6 +37,20 @@ public class CustomerWidgetConfig {
     private WebRtcConfigurations webRtc;
     private CallbackConfigurations callback;
     private WebhookConfigurations webhook;
+
+    @Transient
+    @JsonIgnore
+    private boolean isNew = false;
+
+    public void markNew() {
+        this.isNew = true;
+    }
+
+    @JsonIgnore
+    @Override
+    public boolean isNew() {
+        return this.isNew;
+    }
 
     public CustomerWidgetConfig() {
         this.id = new ObjectId();

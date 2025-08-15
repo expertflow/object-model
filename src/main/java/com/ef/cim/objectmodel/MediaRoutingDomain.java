@@ -1,5 +1,6 @@
 package com.ef.cim.objectmodel;
 
+import com.ef.cim.objectmodel.audit.AuditMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.util.Objects;
@@ -23,7 +24,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @ToString
 @Document(value = "mediaRoutingDomains")
-public class MediaRoutingDomain implements Serializable {
+public class MediaRoutingDomain extends AuditMetadata implements Serializable {
     /**
      * The ID.
      */
