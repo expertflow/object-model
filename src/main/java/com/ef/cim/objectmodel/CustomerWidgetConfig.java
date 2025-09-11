@@ -4,6 +4,10 @@ import com.ef.cim.objectmodel.audit.AuditMetadata;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import java.util.ArrayList;
+import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
@@ -38,6 +42,14 @@ public class CustomerWidgetConfig extends AuditMetadata implements Persistable<O
     private CallbackConfigurations callback;
     private WebhookConfigurations webhook;
 
+    @Getter
+    @Setter
+    private List<Attribute> additionalSchema;
+
+    @Getter
+    @Setter
+    private List<Attribute> additionalValues;
+
     @Transient
     @JsonIgnore
     private boolean isNew = false;
@@ -54,6 +66,8 @@ public class CustomerWidgetConfig extends AuditMetadata implements Persistable<O
 
     public CustomerWidgetConfig() {
         this.id = new ObjectId();
+        this.additionalSchema = new ArrayList<>();
+        this.additionalValues = new ArrayList<>();
     }
 
     public ObjectId getId() {
