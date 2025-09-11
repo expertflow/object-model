@@ -283,6 +283,10 @@ public class Enums {
         /**
          * System sender type.
          */
-        SYSTEM
+        SYSTEM,
+        /**
+         * External sender type
+         */
+        EXTERNAL
     }
 }

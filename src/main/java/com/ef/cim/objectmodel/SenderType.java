@@ -7,4 +7,5 @@ public interface SenderType {
     String APP = "APP";
     String CONNECTOR = "CONNECTOR";
     String SYSTEM = "SYSTEM";
+    String EXTERNAL = "EXTERNAL";
 }

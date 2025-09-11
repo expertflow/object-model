@@ -5,5 +5,6 @@ public enum ParticipantType {
     CUSTOMER,
     AGENT,
     BOT,
-    APP
+    APP,
+    EXTERNAL
 }

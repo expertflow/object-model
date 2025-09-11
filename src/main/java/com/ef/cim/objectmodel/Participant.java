@@ -9,7 +9,8 @@ import java.io.Serializable;
         @JsonSubTypes.Type(value = ConversationMonitor.class, name = "ConversationMonitor"),
         @JsonSubTypes.Type(value = ChannelSession.class, name = "ChannelSession"),
         @JsonSubTypes.Type(value = CCUser.class, name = "CCUser"),
-        @JsonSubTypes.Type(value = BotParticipant.class, name = "Bot")
+        @JsonSubTypes.Type(value = BotParticipant.class, name = "Bot"),
+        @JsonSubTypes.Type(value = ExternalParticipant.class, name = "External")
 })
 public interface Participant extends Serializable {
     String getId();
