@@ -44,7 +44,7 @@ public class CustomerWidgetConfig extends AuditMetadata implements Persistable<O
 
     @Getter
     @Setter
-    private List<Attribute> additionalSchema;
+    private List<AttributeSchema> additionalSchema;
 
     @Getter
     @Setter
