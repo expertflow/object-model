@@ -1,11 +1,10 @@
 package com.ef.cim.objectmodel;
 
-import com.ef.cim.objectmodel.audit.AuditMetadata;
+import java.util.ArrayList;
+import java.util.List;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -19,7 +18,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @ToString
 @Document(value = "precisionQueues")
-public class PrecisionQueueEntity extends AuditMetadata {
+public class PrecisionQueueEntity {
     /**
      * The ID.
      */

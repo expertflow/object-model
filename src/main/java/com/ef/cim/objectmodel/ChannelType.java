@@ -3,7 +3,6 @@ package com.ef.cim.objectmodel;
 import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import jakarta.validation.constraints.NotBlank;
-import org.springframework.data.mongodb.core.index.Indexed;
 
 /**
  * A {@code ChannelType} object represents the type of particular channel e.g. whatsapp, web, viber e.t.c.
@@ -15,8 +14,7 @@ public class ChannelType implements Serializable {
     private String channelLogo;
     private boolean isInteractive;
     private String mediaRoutingDomain;
-    @Indexed
-    private boolean isDeleted;
+
     /**
      * Default Constructor, Sets an immutable unique identifier for the channel type object. Sets the is channel type
      * interactive flag as {@code false}
@@ -91,14 +89,6 @@ public class ChannelType implements Serializable {
 
     public void setMediaRoutingDomain(String mediaRoutingDomain) {
         this.mediaRoutingDomain = mediaRoutingDomain;
-    }
-
-    public boolean isDeleted() {
-        return isDeleted;
-    }
-
-    public void setDeleted(boolean deleted) {
-        isDeleted = deleted;
     }
 
     /***

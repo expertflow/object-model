@@ -1,14 +1,13 @@
 package com.ef.cim.objectmodel;
 
-import com.ef.cim.objectmodel.audit.AuditMetadata;
+import java.util.Objects;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import java.util.Objects;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(value = "routingAttributes")
-public class RoutingAttribute extends AuditMetadata {
+public class RoutingAttribute {
     @Id
     private String id;
     @NotNull
