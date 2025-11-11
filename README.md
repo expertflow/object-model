@@ -1016,7 +1016,7 @@ Version 1.22.13 (on top of 1.22.12)
 
 ==============================================================================================
 
-Version 1.22.14 (on top of 1.22.14)
+Version 1.22.14 (on top of 1.22.13)
 - Added Soft Deletion Support in Configuration Classes
 - Added `SpringAuditorAware`, `AuditorContextHolder`, `AuditMetadata` and `AuditorFilter` under `audit` directory
 - Extended `CCUser`, `CustomerWidgetConfig`, `MediaRoutingDomain`, `PrecisionQueueEntity` and `RoutingAttribute` from`AuditMetadata`
