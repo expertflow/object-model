@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 @Getter
 @Setter
@@ -15,10 +16,13 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class Sender {
+    @Indexed
     @NotBlank
     private String id;
     @NotNull
+    @Indexed
     private String type;
+    @Indexed
     private String senderName;
     private Map<String, Object> additionalDetail;
 
