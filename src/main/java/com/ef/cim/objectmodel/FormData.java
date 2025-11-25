@@ -26,6 +26,9 @@ public class FormData implements Serializable {
     private Object formWeightage;
     private Map<String, Object> additionalDetail = new HashMap<>();
     private Sentiment sentiment;
+    private Double formScore;
+    private Review review;
+    private Subject subject;
     private List<Object> sections;
 
     public String getFormId() {
@@ -106,5 +109,29 @@ public class FormData implements Serializable {
 
     public void setAttributeType(AttributeType attributeType) {
         this.attributeType = attributeType;
+    }
+
+    public Double getFormScore() {
+        return formScore;
+    }
+
+    public void setFormScore(Double formScore) {
+        this.formScore = formScore;
+    }
+
+    public Review getReview() {
+        return review;
+    }
+
+    public void setReview(Review review) {
+        this.review = review;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
     }
 }
