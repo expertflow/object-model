@@ -1007,10 +1007,16 @@ Version 1.22.11 (on top of 1.22.10)
 ==============================================================================================
 
 Version 1.22.12 (on top of 1.22.11)
-- Add `RESERVED` state in `AgentMrdStateName`
+- Added `RESERVED` state in `AgentMrdStateName`
 
 ==============================================================================================
 
 Version 1.22.13 (on top of 1.22.12)
 - Removed `formType` field from `FormData` class and updated this class to remove invalid JsonAnyG/Setter
 
+==============================================================================================
+
+Version 1.22.13.1 (on top of 1.22.13)
+- Added `List<AttributeSchema> additionalSchema` and `List<Attribute> additionalValues` attribute in `CustomerWidgetConfig` class
+- Added `mrdInterruptedAction` attribute in `TopicMetadata` class.
+- Added `AGENT_MRD_UNINTERRUPTED` as enum in `CimEventName` class.
