@@ -27,6 +27,7 @@ public class FormData implements Serializable {
     private Map<String, Object> additionalDetail = new HashMap<>();
     private Sentiment sentiment;
     private Double formScore;
+    private String submissionSource;
     private Review review;
     private Subject subject;
     private List<Object> sections;
@@ -133,5 +134,13 @@ public class FormData implements Serializable {
 
     public void setSubject(Subject subject) {
         this.subject = subject;
+    }
+
+    public String getSubmissionSource() {
+        return submissionSource;
+    }
+
+    public void setSubmissionSource(String submissionSource) {
+        this.submissionSource = submissionSource;
     }
 }
