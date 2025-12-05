@@ -1026,4 +1026,5 @@ Version 1.22.14 (on top of 1.22.13)
 
 Version 1.22.15 (on top of 1.22.14)
 - Added indexes on fields for search activities GraphQL API
-- Added `formScore`, `submissionSource`, `subject` and `review` fields in `FormData` class
+- Removed `FormDataMessage` class
+- Renamed JsonSubType to `FORM_DATA` in `MessageBody` class
