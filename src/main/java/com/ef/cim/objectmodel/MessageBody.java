@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
         @Type(value = ActionMessageBody.class, name = "ACTION"),
         @Type(value = CommentMessage.class, name = "COMMENT"),
         @Type(value = EmailMessage.class, name = "EMAIL"),
-        @Type(value = FormDataMessage.class, name = "FORMDATA")
+        @Type(value = FormData.class, name = "FORM_DATA")
 })
 public class MessageBody implements Serializable {
     @NotNull
