@@ -1021,3 +1021,10 @@ Version 1.22.14 (on top of 1.22.13)
 - Added `SpringAuditorAware`, `AuditorContextHolder`, `AuditMetadata` and `AuditorFilter` under `audit` directory
 - Extended `CCUser`, `CustomerWidgetConfig`, `MediaRoutingDomain`, `PrecisionQueueEntity` and `RoutingAttribute` from`AuditMetadata`
 - Implemented `CustomerWidgetConfig`, `CCUser` with `Persistable<String>`
+
+==============================================================================================
+
+Version 1.22.15 (on top of 1.22.14)
+- Added indexes on fields for search activities GraphQL API
+- Removed `FormDataMessage` class
+- Renamed JsonSubType to `FORM_DATA` in `MessageBody` class

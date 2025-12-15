@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import jakarta.validation.constraints.NotBlank;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 /**
  * A {@code ChannelData} object represents the data available on different type of channels. For
@@ -11,6 +12,7 @@ import jakarta.validation.constraints.NotBlank;
  * object for more specific channels' data objects. e.g. WebChannelData.
  */
 public class ChannelData implements Serializable {
+    @Indexed
     @NotBlank(message = "channelCustomerIdentifier is mandatory")
     private String channelCustomerIdentifier;
     @NotBlank(message = "serviceIdentifier is mandatory")

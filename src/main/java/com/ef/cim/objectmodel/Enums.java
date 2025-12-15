@@ -283,6 +283,19 @@ public class Enums {
         /**
          * System sender type.
          */
-        SYSTEM
+        SYSTEM,
+        /**
+         * Quality Manager sender type.
+         */
+        QUALITY_MANAGER,
+        /**
+         * Supervisor sender type.
+         */
+        SUPERVISOR,
+        /**
+         * UCCE IVR sender type.
+         */
+        UCCE_IVR
+
     }
 }
