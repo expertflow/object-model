@@ -5,12 +5,12 @@ import java.io.Serializable;
 public class ChannelSessionState implements Serializable {
 
     private ChannelSessionStateEnum name;
-    private ReasonCodeEnum reasonCode;
+    private String reasonCode;
 
     public ChannelSessionState() {
     }
 
-    public ChannelSessionState(ChannelSessionStateEnum name, ReasonCodeEnum reasonCode) {
+    public ChannelSessionState(ChannelSessionStateEnum name, String reasonCode) {
         this.name = name;
         this.reasonCode = reasonCode;
     }
@@ -23,11 +23,11 @@ public class ChannelSessionState implements Serializable {
         this.name = name;
     }
 
-    public ReasonCodeEnum getReasonCode() {
+    public String getReasonCode() {
         return reasonCode;
     }
 
-    public void setReasonCode(ReasonCodeEnum reasonCode) {
+    public void setReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
     }
 

@@ -1028,3 +1028,10 @@ Version 1.22.15 (on top of 1.22.14)
 - Added indexes on fields for search activities GraphQL API
 - Removed `FormDataMessage` class
 - Renamed JsonSubType to `FORM_DATA` in `MessageBody` class
+
+==============================================================================================
+
+Version 1.22.16 (on top of 1.22.15)
+- Added `CALL_ALERTING` enum in `CimEventName` class
+- Added `CALL_ALERTING` enum in `MessageIntent` class
+- Updated `reasonCode` type from `ReasonCodeEnum` to `String` in `ChannelSessionState` class
