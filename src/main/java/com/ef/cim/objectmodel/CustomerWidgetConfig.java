@@ -2,10 +2,6 @@ package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import java.util.ArrayList;
-import java.util.List;
-import lombok.Getter;
-import lombok.Setter;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -31,18 +27,8 @@ public class CustomerWidgetConfig {
     private CallbackConfigurations callback;
     private WebhookConfigurations webhook;
 
-    @Getter
-    @Setter
-    private List<AttributeSchema> additionalSchema;
-
-    @Getter
-    @Setter
-    private List<Attribute> additionalValues;
-
     public CustomerWidgetConfig() {
         this.id = new ObjectId();
-        this.additionalSchema = new ArrayList<>();
-        this.additionalValues = new ArrayList<>();
     }
 
     public ObjectId getId() {
