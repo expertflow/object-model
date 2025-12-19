@@ -1021,3 +1021,8 @@ Version 1.22.13.1 (on top of 1.22.13)
 - Added `MediaUrl` class.
 - Added `mediaUrls` field in `VoiceActivity` class.
 - Added `legMediaUrls` field in `CallLeg` class.
+
+==============================================================================================
+
+Version CIM-32105 - Candidate for 1.22.13.2 (on top of 1.22.13.1)
+- Added a new reason code `CALLBACK` in `TaskStateReasonCode`
