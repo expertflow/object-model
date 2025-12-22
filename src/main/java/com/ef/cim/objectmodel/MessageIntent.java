@@ -20,5 +20,6 @@ public enum MessageIntent {
     CALL_RESUME,
     VOICE_CALL_RECORDING,
     WRAPUP,
-    MEDIA_RECORDING
+    MEDIA_RECORDING,
+    QM_ACTIVITY
 }
