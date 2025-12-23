@@ -3,6 +3,7 @@ package com.ef.cim.objectmodel;
 import com.ef.cim.objectmodel.common.Utils;
 import java.io.Serializable;
 import jakarta.validation.constraints.NotBlank;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 /**
  * A {@code ChannelType} object represents the type of particular channel e.g. whatsapp, web, viber e.t.c.
@@ -10,6 +11,7 @@ import jakarta.validation.constraints.NotBlank;
 public class ChannelType implements Serializable {
     private String id;
     @NotBlank
+    @Indexed
     private String name;
     private String channelLogo;
     private boolean isInteractive;
