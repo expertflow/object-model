@@ -1052,3 +1052,9 @@ Version 1.22.16 (on top of 1.22.15)
 - Added `CALL_ALERTING` enum in `CimEventName` class
 - Added `CALL_ALERTING` enum in `MessageIntent` class
 - Updated `reasonCode` type from `ReasonCodeEnum` to `String` in `ChannelSessionState` class
+
+==============================================================================================
+
+Version 1.22.16.1 (on top of 1.22.16)
+- This version contains the changes that were released in v4.10.x patch releases merged with the latest changes on top of v5.0
+
