@@ -2,6 +2,7 @@ package com.ef.cim.objectmodel;
 
 import java.sql.Timestamp;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,6 +18,7 @@ import lombok.ToString;
 public class CallLeg {
     private String legId;
     private String voiceRecordingUrl;
+    private List<MediaUrl> legMediaUrls;
     private Sender sender;
     private String startDirection;
     private String endDirection;

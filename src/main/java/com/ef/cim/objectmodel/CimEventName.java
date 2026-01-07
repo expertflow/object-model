@@ -71,5 +71,7 @@ public enum CimEventName {
     HAND_DOWN,
     VOICE_CALL_RECORDING,
     SEND_BOT_SUGGESTION,
+    MEDIA_RECORDING,
+    QM_ACTIVITY,
     CALL_ALERTING
 }

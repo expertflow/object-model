@@ -11,6 +11,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 public class ChannelType implements Serializable {
     private String id;
     @NotBlank
+    @Indexed
     private String name;
     private String channelLogo;
     private boolean isInteractive;

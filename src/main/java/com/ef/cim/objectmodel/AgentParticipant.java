@@ -19,13 +19,17 @@ public class AgentParticipant implements Serializable {
     @Indexed(name = "username_1")
     private String username;
     private String teamId;
+    @Indexed(name = "teamName_1")
+    private String teamName;
 
-    public AgentParticipant(String id, String firsName, String lastName, String username, String teamId) {
+    public AgentParticipant(String id, String firsName, String lastName,
+                            String username, String teamId, String teamName) {
         this.id = id;
         this.firsName = firsName;
         this.lastName = lastName;
         this.username = username;
         this.teamId = teamId;
+        this.teamName = teamName;
     }
 
     @Override
