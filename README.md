@@ -1056,5 +1056,5 @@ Version 1.22.16 (on top of 1.22.15)
 ==============================================================================================
 
 Version 1.22.16.1 (on top of 1.22.16)
-- This version contains the changes that were released in v4.10.x patch releases merged with the latest changes on top of v5.0
+- This version contains the changes that were released in v4.10.x patch releases merged with the latest changes on top of v5.0. These are mainly 1.22.13.1 and 1.22.13.2 which are mereged on top of 1.22.16
 
