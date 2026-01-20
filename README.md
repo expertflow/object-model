@@ -1021,3 +1021,9 @@ Version 1.22.14 (on top of 1.22.13)
 - Added `SpringAuditorAware`, `AuditorContextHolder`, `AuditMetadata` and `AuditorFilter` under `audit` directory
 - Extended `CCUser`, `CustomerWidgetConfig`, `MediaRoutingDomain`, `PrecisionQueueEntity` and `RoutingAttribute` from`AuditMetadata`
 - Implemented `CustomerWidgetConfig`, `CCUser` with `Persistable<String>`
+
+==============================================================================================
+
+Version 1.22.14.1 (on top of 1.22.14)
+- Added `additionalData` field of type `Map<String,Object>` in `CommentMessage` class
+- Added `APP_STORE` in `ChannelTypeEnum` class

@@ -1,8 +1,8 @@
 package com.ef.cim.objectmodel;
 
 import jakarta.validation.constraints.NotNull;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,7 +17,7 @@ public class CommentMessage extends MessageBody{
     private ItemType itemType;
 
     private Attachment attachment;
-    private List<Attribute> additionalAttributes = new ArrayList<>();
+    private Map<String,Object> additionalData = new HashMap<>();
 
     public CommentMessage(){
         super(MessageType.COMMENT);
@@ -31,7 +31,7 @@ public class CommentMessage extends MessageBody{
                 ", itemType=" + itemType +
                 ", type=" + type +
                 ", markdownText='" + markdownText + '\'' +
-                ", additionalAttributes='" + additionalAttributes + '\'' +
+                ", additionalData='" + additionalData + '\'' +
                 '}';
     }
 }
