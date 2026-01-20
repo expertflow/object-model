@@ -16,5 +16,5 @@ public enum ChannelTypeEnum {
     WEB_RTC,
     YOUTUBE,
     LINKEDIN,
-    APP_STORE
+    PLAY_STORE
 }
