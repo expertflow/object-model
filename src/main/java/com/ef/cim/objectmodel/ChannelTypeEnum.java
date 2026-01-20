@@ -15,5 +15,6 @@ public enum ChannelTypeEnum {
     EMAIL,
     WEB_RTC,
     YOUTUBE,
-    LINKEDIN
+    LINKEDIN,
+    PLAY_STORE
 }

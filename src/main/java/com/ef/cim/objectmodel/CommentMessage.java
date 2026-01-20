@@ -1,43 +1,26 @@
 package com.ef.cim.objectmodel;
 
-
 import jakarta.validation.constraints.NotNull;
+import java.util.HashMap;
+import java.util.Map;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class CommentMessage extends MessageBody{
 
     @NotNull(message = "postId is mandatory")
     private String postId;
-    private Attachment attachment;
+
     @NotNull(message = "itemType is mandatory")
     private ItemType itemType;
 
-    // Constructor
+    private Attachment attachment;
+    private Map<String,Object> additionalData = new HashMap<>();
+
     public CommentMessage(){
         super(MessageType.COMMENT);
-    }
-
-    // Getters
-    public String getPostId() {
-        return postId;
-    }
-
-    public Attachment getAttachment() {
-        return attachment;
-    }
-
-    public ItemType getItemType() {
-        return itemType;
-    }
-
-    // Setters
-    public void setItemType(ItemType itemType) {
-        this.itemType = itemType;
-    }
-    public void setPostId(String postId) {
-        this.postId = postId;
-    }
-    public void setAttachment(Attachment attachment) {
-        this.attachment = attachment;
     }
 
     @Override
@@ -48,6 +31,7 @@ public class CommentMessage extends MessageBody{
                 ", itemType=" + itemType +
                 ", type=" + type +
                 ", markdownText='" + markdownText + '\'' +
+                ", additionalData='" + additionalData + '\'' +
                 '}';
     }
 }

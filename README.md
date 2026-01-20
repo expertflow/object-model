@@ -1041,6 +1041,16 @@ Version 1.22.14 (on top of 1.22.13)
 
 ==============================================================================================
 
+Version 1.22.14.1 (on top of 1.22.14)
+- Added `additionalData` field of type `Map<String,Object>` in `CommentMessage` class
+- Added `APP_STORE` in `ChannelTypeEnum` class
+
+==============================================================================================
+
+Version 1.22.14.2 (on top of 1.22.14.1)
+- Updated `APP_STORE` to `PLAY_STORE` in `ChannelTypeEnum` class
+==============================================================================================
+
 Version 1.22.15 (on top of 1.22.14)
 - Added indexes on fields for search activities GraphQL API
 - Removed `FormDataMessage` class
@@ -1058,3 +1068,7 @@ Version 1.22.16 (on top of 1.22.15)
 Version 1.22.16.1 (on top of 1.22.16)
 - This version contains the changes that were released in v4.10.x patch releases merged with the latest changes on top of v5.0. These are mainly 1.22.13.1 and 1.22.13.2 which are mereged on top of 1.22.16
 
+==============================================================================================
+
+Version 1.22.16.2 (on top of 1.22.16.1 and 1.22.14.2)
+- This version contains the changes that were released in v5.0.2 patch release on top of 1.22.16.1
