@@ -19,6 +19,7 @@ public class VoiceActivity {
     private Timestamp endTime;
     private long duration;
     private String recordingUrl;
+    private List<MediaUrl> mediaUrls;
     private List<Object> wrapUps;
     private double holdTime;
     private List<CallLeg> callLegs = new ArrayList<>();

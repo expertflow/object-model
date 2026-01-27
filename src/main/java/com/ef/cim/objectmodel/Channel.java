@@ -6,6 +6,7 @@ import jakarta.annotation.Nullable;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 /**
  * A {@code Channel} object represents a specific channel (e.g whatsapp, facebook)
@@ -15,6 +16,7 @@ public class Channel implements Serializable {
     @Nullable
     private String calendarId;
     @NotBlank
+    @Indexed
     private String name;
     // Class ServiceIdentifier Empty | not in object model yet
     @NotBlank(message = "serviceIdentifier can not be blank")

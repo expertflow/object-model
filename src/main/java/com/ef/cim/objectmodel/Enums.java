@@ -149,7 +149,11 @@ public class Enums {
         /**
          * Conference Customer Left task state reason code.
          */
-        CONFERENCE_CUSTOMER_LEFT
+        CONFERENCE_CUSTOMER_LEFT,
+        /**
+         * Callback reason when agent changes state to Not Ready - Callback
+         */
+        CALLBACK
     }
 
     /**

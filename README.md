@@ -1016,6 +1016,23 @@ Version 1.22.13 (on top of 1.22.12)
 
 ==============================================================================================
 
-Version 1.22.13.1_f-CIM-30009 (on top of 1.22.13)
+Version 1.22.13.1 (on top of 1.22.13)
+- Added `MEDIA_RECORDING` in `MessageIntent` and `CimEventName` class.
+- Added `MediaUrl` class.
+- Added `mediaUrls` field in `VoiceActivity` class.
+- Added `legMediaUrls` field in `CallLeg` class.
+
+==============================================================================================
+
+Version 1.22.13.2 (on top of 1.22.13.1)
+- Added `teamName` field with index in AgentParticipant
+- Added indexes on `channelCustomerIdentifier`, `name` of `Channel` and `ChannelType` class.
+- Added `QM_ACTIVITY` in `CimEventName` and `MessageIntent` class.
+- Added a new reason code `CALLBACK` in `TaskStateReasonCode`
+- Added `List<AttributeSchema> additionalSchema` and `List<Attribute> additionalValues` in `CustomerWidgetConfig` class
+
+==============================================================================================
+
+Version 1.22.13.1_f-CIM-30009 (on top of 1.22.13.2)
 - Add `mrdInterruptedAction` in `TopicMetadata` object of Conversation.
 - Add `AGENT_MRD_UNINTERRUPTED` in `CimEventName` enum.
