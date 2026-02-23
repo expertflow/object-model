@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-
 import jakarta.validation.Valid;
 import org.springframework.data.mongodb.core.index.Indexed;
 

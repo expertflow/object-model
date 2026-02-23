@@ -1072,3 +1072,8 @@ Version 1.22.16.1 (on top of 1.22.16)
 
 Version 1.22.16.2 (on top of 1.22.16.1 and 1.22.14.2)
 - This version contains the changes that were released in v5.0.2 patch release on top of 1.22.16.1
+
+==============================================================================================
+
+Version 1.22.16.3 (on top of 1.22.16.2)
+- Spring boot and Java version update for vulnerability fixes.
