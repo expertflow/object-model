@@ -1,6 +1,6 @@
 package com.ef.cim.objectmodel;
 
-import tools.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.JsonNode;
 import jakarta.validation.constraints.NotBlank;
 
 public class Name {

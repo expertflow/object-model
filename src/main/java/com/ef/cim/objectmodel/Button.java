@@ -1,8 +1,8 @@
 package com.ef.cim.objectmodel;
 
-import tools.jackson.databind.JsonNode;
-import java.io.Serializable;
+import com.fasterxml.jackson.databind.JsonNode;
 import jakarta.validation.constraints.NotBlank;
+import java.io.Serializable;
 
 public class Button implements Serializable {
     @NotBlank(message = "button title is mandatory")

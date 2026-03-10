@@ -1,6 +1,7 @@
 package com.ef.cim.objectmodel;
 
-import tools.jackson.databind.JsonNode;
+
+import com.fasterxml.jackson.databind.JsonNode;
 
 public class Parameter {
     private ParameterType parameterType;

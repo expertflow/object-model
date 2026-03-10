@@ -1,7 +1,7 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import tools.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.JsonNode;
 
 public class StructuredMessage extends MessageBody {
     protected JsonNode additionalDetails;

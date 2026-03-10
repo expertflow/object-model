@@ -1,13 +1,15 @@
 package com.ef.cim.objectmodel;
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
-import tools.jackson.core.JsonParser;
-import tools.jackson.databind.DeserializationContext;
-import tools.jackson.databind.annotation.JsonDeserialize;
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import java.io.IOException;
+import lombok.AllArgsConstructor;
 import org.springframework.data.mongodb.core.index.Indexed;
 
 @AllArgsConstructor
@@ -37,9 +39,10 @@ public class StringDatatype extends ConversationData<String>{
     }
 
     //Todo : Need to check if this can be done with default deserializer
-    public static class ValueDeserializer extends tools.jackson.databind.ValueDeserializer<String> {
+    public static class ValueDeserializer extends JsonDeserializer<String> {
         @Override
-        public String deserialize(JsonParser p, DeserializationContext ctxt) {
+        public String deserialize(JsonParser p, DeserializationContext ctxt)
+                throws IOException {
             if (p.isExpectedStartObjectToken() || p.isExpectedStartArrayToken()) {
                 return p.readValueAsTree().toString();
             }

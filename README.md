@@ -1075,5 +1075,10 @@ Version 1.22.16.2 (on top of 1.22.16.1 and 1.22.14.2)
 
 ==============================================================================================
 
-Version 1.22.16.3 (on top of 1.22.16.2)
+Version 1.22.16.3 (on top of 1.22.16.2) - DO NOT USE THIS VERSION
 - Spring boot and Java version update for vulnerability fixes.
+
+==============================================================================================
+
+Version 1.22.16.4 (on top of 1.22.16.3)
+- Reverted back Spring boot and Java version update because of major changes.
