@@ -7,13 +7,9 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.index.Indexed;
 
-@AllArgsConstructor
-@NoArgsConstructor
-public class FormData extends MessageBody implements Serializable {
+public class FormData extends StructuredMessage implements Serializable {
 
     @JsonSerialize(using = ToStringSerializer.class)
     @NotNull(message = "Form id cannot be null")
@@ -28,9 +24,34 @@ public class FormData extends MessageBody implements Serializable {
     private AttributeType attributeType;
     private Boolean enableWeightage;
     private Object formWeightage;
+    private String formDescription;
+    private String formScore;
     private Map<String, Object> additionalDetail = new HashMap<>();
     private Sentiment sentiment;
     private List<Object> sections;
+
+    public FormData() {
+        super(MessageType.FORMDATA);
+    }
+
+    public FormData(String type, String formId, String type1, String formTitle, Boolean enableSections,
+                    AttributeType attributeType, Boolean enableWeightage, Object formWeightage, String formDescription,
+                    String formScore, Map<String, Object> additionalDetail, Sentiment sentiment,
+                    List<Object> sections) {
+        super(type);
+        this.formId = formId;
+        this.type = type1;
+        this.formTitle = formTitle;
+        this.enableSections = enableSections;
+        this.attributeType = attributeType;
+        this.enableWeightage = enableWeightage;
+        this.formWeightage = formWeightage;
+        this.formDescription = formDescription;
+        this.formScore = formScore;
+        this.additionalDetail = additionalDetail;
+        this.sentiment = sentiment;
+        this.sections = sections;
+    }
 
     public String getFormId() {
         return formId;
@@ -78,6 +99,22 @@ public class FormData extends MessageBody implements Serializable {
 
     public void setFormWeightage(Object formWeightage) {
         this.formWeightage = formWeightage;
+    }
+
+    public String getFormDescription() {
+        return formDescription;
+    }
+
+    public void setFormDescription(String formDescription) {
+        this.formDescription = formDescription;
+    }
+
+    public String getFormScore() {
+        return formScore;
+    }
+
+    public void setFormScore(String formScore) {
+        this.formScore = formScore;
     }
 
     public Map<String, Object> getAdditionalDetail() {

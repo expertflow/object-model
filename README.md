@@ -1082,3 +1082,9 @@ Version 1.22.16.3 (on top of 1.22.16.2) - DO NOT USE THIS VERSION
 
 Version 1.22.16.4 (on top of 1.22.16.3)
 - Reverted back Spring boot and Java version update because of major changes.
+
+==============================================================================================
+
+Version 1.22.16.5 (on top of 1.22.16.4)
+- Added `formDescription` and `formScore` in FormData.class
+- Now FormData.class is extended from StructuredMessage.class instead of MessageBody.class
