@@ -1088,3 +1088,8 @@ Version 1.22.16.4 (on top of 1.22.16.3)
 Version 1.22.16.5 (on top of 1.22.16.4)
 - Added `formDescription` and `formScore` in FormData.class
 - Now FormData.class is extended from StructuredMessage.class instead of MessageBody.class
+
+==============================================================================================
+
+Version 1.22.16.6 (on top of 1.22.16.5)
+- `formScore` field type is updated to `Object` in FormData.class

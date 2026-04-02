@@ -25,7 +25,7 @@ public class FormData extends StructuredMessage implements Serializable {
     private Boolean enableWeightage;
     private Object formWeightage;
     private String formDescription;
-    private String formScore;
+    private Object formScore;
     private Map<String, Object> additionalDetail = new HashMap<>();
     private Sentiment sentiment;
     private List<Object> sections;
@@ -36,7 +36,7 @@ public class FormData extends StructuredMessage implements Serializable {
 
     public FormData(String type, String formId, String type1, String formTitle, Boolean enableSections,
                     AttributeType attributeType, Boolean enableWeightage, Object formWeightage, String formDescription,
-                    String formScore, Map<String, Object> additionalDetail, Sentiment sentiment,
+                    Object formScore, Map<String, Object> additionalDetail, Sentiment sentiment,
                     List<Object> sections) {
         super(type);
         this.formId = formId;
@@ -109,11 +109,11 @@ public class FormData extends StructuredMessage implements Serializable {
         this.formDescription = formDescription;
     }
 
-    public String getFormScore() {
+    public Object getFormScore() {
         return formScore;
     }
 
-    public void setFormScore(String formScore) {
+    public void setFormScore(Object formScore) {
         this.formScore = formScore;
     }
 
