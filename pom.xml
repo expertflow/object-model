@@ -7,7 +7,7 @@
     <groupId>io.github.expertflow</groupId>
     <artifactId>objectmodel</artifactId>
     <packaging>jar</packaging>
-    <version>1.22.13</version>
+    <version>DEV-1.22.13_b-FN-01</version>
     <name>objectmodel</name>
     <url>https://github.com/expertflow/object-model</url>
     <description>This dependency contains object model classes for expert flow's CIM project</description>

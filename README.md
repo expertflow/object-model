@@ -1014,3 +1014,7 @@ Version 1.22.12 (on top of 1.22.11)
 Version 1.22.13 (on top of 1.22.12)
 - Removed `formType` field from `FormData` class and updated this class to remove invalid JsonAnyG/Setter
 
+==============================================================================================
+
+Version DEV-1.22.13_b-FN-01 (on top of 1.22.13)
+- Added Default No Args Constructor in `AgentParticipant` class
