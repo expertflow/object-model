@@ -1036,3 +1036,8 @@ Version 1.22.13.2 (on top of 1.22.13.1)
 Version 1.22.13.3 (on top of 1.22.13.2)
 - Add `mrdInterruptedAction` in `TopicMetadata` object of Conversation.
 - Add `AGENT_MRD_UNINTERRUPTED` in `CimEventName` enum.
+
+==============================================================================================
+
+Version 1.22.13.4 (on top of 1.22.13.3)
+- Add `NoArgsConstructor` in `AgentParticipant` class.
