@@ -1,16 +1,17 @@
 package com.ef.cim.objectmodel;
 
+import java.io.Serializable;
+import java.util.Objects;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.mongodb.core.index.Indexed;
 
-import java.io.Serializable;
-import java.util.Objects;
-
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
 public class AgentParticipant implements Serializable {
     @Indexed(name = "agentParticipant_id_1")
     private String id;

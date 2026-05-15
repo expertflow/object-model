@@ -1033,6 +1033,17 @@ Version 1.22.13.2 (on top of 1.22.13.1)
 
 ==============================================================================================
 
+Version 1.22.13.3 (on top of 1.22.13.2)
+- Add `mrdInterruptedAction` in `TopicMetadata` object of Conversation.
+- Add `AGENT_MRD_UNINTERRUPTED` in `CimEventName` enum.
+
+==============================================================================================
+
+Version 1.22.13.4 (on top of 1.22.13.3)
+- Add `NoArgsConstructor` in `AgentParticipant` class.
+
+==============================================================================================
+
 Version 1.22.14 (on top of 1.22.13)
 - Added Soft Deletion Support in Configuration Classes
 - Added `SpringAuditorAware`, `AuditorContextHolder`, `AuditMetadata` and `AuditorFilter` under `audit` directory
@@ -1049,6 +1060,7 @@ Version 1.22.14.1 (on top of 1.22.14)
 
 Version 1.22.14.2 (on top of 1.22.14.1)
 - Updated `APP_STORE` to `PLAY_STORE` in `ChannelTypeEnum` class
+  
 ==============================================================================================
 
 Version 1.22.15 (on top of 1.22.14)

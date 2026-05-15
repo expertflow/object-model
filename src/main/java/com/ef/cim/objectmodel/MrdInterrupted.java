@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import java.io.Serializable;
-import java.util.List;
 
 @Getter
 @Setter
@@ -12,5 +11,5 @@ import java.util.List;
 public class MrdInterrupted implements Serializable {
     String mrdId;
     String agentId;
-    List<String> conversations;
+    String conversationId;
 }
