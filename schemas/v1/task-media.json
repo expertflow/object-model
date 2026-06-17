@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/task-media.json",
+  "title": "TaskMedia",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "mrdId": {
+      "type": "string"
+    },
+    "taskId": {
+      "type": "string"
+    },
+    "queue": {
+      "$ref": "task-queue.json"
+    },
+    "type": {
+      "$ref": "task-type.json"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "state": {
+      "$ref": "enums/task-media-state.json"
+    },
+    "requestSession": {
+      "$ref": "channel-session.json"
+    },
+    "channelSessions": {
+      "type": "array",
+      "items": {
+        "$ref": "channel-session.json"
+      }
+    },
+    "enqueueTime": {
+      "type": "integer"
+    },
+    "answerTime": {
+      "type": "integer"
+    }
+  }
+}

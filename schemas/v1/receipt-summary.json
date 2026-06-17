@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/receipt-summary.json",
+  "title": "ReceiptSummary",
+  "type": "object",
+  "properties": {
+    "subtotal": {
+      "type": "integer"
+    },
+    "shippingCost": {
+      "type": "integer"
+    },
+    "totalTax": {
+      "type": "integer"
+    },
+    "totalCost": {
+      "type": "integer"
+    }
+  }
+}

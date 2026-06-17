@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/room-info.json",
+  "title": "RoomInfo",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "mode": {
+      "$ref": "enums/room-mode.json"
+    }
+  }
+}

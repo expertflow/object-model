@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/url-message-body.json",
+  "title": "UrlMessage",
+  "allOf": [
+    {
+      "$ref": "structured-message-body.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "URL"
+        },
+        "mediaUrl": {
+          "type": "string",
+          "minLength": 1
+        },
+        "additionalDetails": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "mediaUrl"
+      ]
+    }
+  ]
+}

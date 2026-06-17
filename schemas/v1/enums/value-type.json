@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/enums/value-type.json",
+  "title": "ValueType",
+  "type": "string",
+  "enum": [
+    "Alphanum100",
+    "AlphanumSpecial200",
+    "String2000",
+    "String50",
+    "String100",
+    "PositiveNumber",
+    "IP",
+    "Number",
+    "PhoneNumber",
+    "URL",
+    "Boolean",
+    "Email",
+    "Password",
+    "StringList",
+    "WebChannelData"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/routing-policy.json",
+  "title": "RoutingPolicy",
+  "type": "object",
+  "properties": {
+    "agentSelectionPolicy": {
+      "$ref": "enums/agent-selection-policy.json"
+    },
+    "routeToLastAgent": {
+      "type": "boolean"
+    },
+    "routingMode": {
+      "$ref": "enums/routing-mode.json"
+    },
+    "routingObjectId": {
+      "type": "string"
+    },
+    "agentRequestTtl": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/customer-sla.json",
+  "title": "CustomerSla",
+  "type": "object",
+  "properties": {
+    "totalDuration": {
+      "type": "integer"
+    },
+    "action": {
+      "type": "string"
+    },
+    "startTime": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/phone.json",
+  "title": "Phone",
+  "type": "object",
+  "properties": {
+    "phone": {
+      "type": "string"
+    },
+    "additionalPhoneDetails": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    }
+  }
+}

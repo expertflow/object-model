@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/channel-connector.json",
+  "title": "ChannelConnector",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "channelProviderInterface": {
+      "$ref": "channel-provider-interface.json"
+    },
+    "channelProviderConfigs": {
+      "type": "array",
+      "items": {
+        "$ref": "attribute.json"
+      }
+    },
+    "tenant": {
+      "$ref": "tenant.json"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/deleted-notification-message-body.json",
+  "title": "DeletedNotification",
+  "allOf": [
+    {
+      "$ref": "message-body-base.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "DELETEDNOTIFICATION"
+        },
+        "messageId": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "type"
+      ]
+    }
+  ]
+}

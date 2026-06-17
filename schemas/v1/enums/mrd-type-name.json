@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/enums/mrd-type-name.json",
+  "title": "MrdTypeName",
+  "type": "string",
+  "enum": [
+    "CHAT",
+    "CX_VOICE",
+    "CISCO_CC",
+    "EMAIL"
+  ]
+}

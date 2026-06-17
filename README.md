@@ -2,6 +2,14 @@
 
 CIM object-model repository
 
+## Schema Contracts
+
+Language-neutral JSON Schema (Draft 2020-12) contracts for decoupling microservices from the compiled Java JAR are published under [`schemas/v1/`](schemas/v1/). See the [Schema Contract Repository Guide](schemas/README.md) for layout rules, consumer instructions, and the PR-based change process.
+
+**Entry points:** `cim-message.json`, `customer.json`, `task.json`
+
+---
+
 Object-Model version updated to 1.4.9
 
 Previous Structured Messages have been taken out and new Structured Message model is introduced in

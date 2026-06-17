@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/delivery-notification-message-body.json",
+  "title": "DeliveryNotification",
+  "allOf": [
+    {
+      "$ref": "message-body-base.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "DELIVERYNOTIFICATION"
+        },
+        "messageId": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "enums/delivery-status.json"
+        },
+        "reasonCode": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ]
+    }
+  ]
+}

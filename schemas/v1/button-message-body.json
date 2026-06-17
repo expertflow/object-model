@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/button-message-body.json",
+  "title": "ButtonMessage",
+  "allOf": [
+    {
+      "$ref": "structured-message-body.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "BUTTON"
+        },
+        "buttons": {
+          "type": "array",
+          "items": {
+            "$ref": "button.json"
+          }
+        },
+        "buttonMessageType": {
+          "$ref": "enums/button-message-type.json"
+        },
+        "additionalDetails": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "type"
+      ]
+    }
+  ]
+}

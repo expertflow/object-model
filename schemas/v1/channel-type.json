@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/channel-type.json",
+  "title": "ChannelType",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "channelLogo": {
+      "type": "string"
+    },
+    "isInteractive": {
+      "type": "boolean"
+    },
+    "mediaRoutingDomain": {
+      "type": "string"
+    },
+    "isDeleted": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

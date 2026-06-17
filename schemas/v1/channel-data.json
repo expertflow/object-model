@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/channel-data.json",
+  "title": "ChannelData",
+  "type": "object",
+  "properties": {
+    "channelCustomerIdentifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "serviceIdentifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requestPriority": {
+      "type": "integer"
+    },
+    "customerFirstName": {
+      "type": "string"
+    },
+    "customerLastName": {
+      "type": "string"
+    },
+    "additionalAttributes": {
+      "type": "array",
+      "items": {
+        "$ref": "attribute.json"
+      }
+    }
+  },
+  "required": [
+    "channelCustomerIdentifier",
+    "serviceIdentifier"
+  ]
+}

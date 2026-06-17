@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/channel-session.json",
+  "title": "ChannelSession",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "participantType": {
+      "type": "string"
+    },
+    "channel": {
+      "$ref": "channel.json"
+    },
+    "customer": {
+      "$ref": "customer.json"
+    },
+    "customerSuggestions": {
+      "type": "array",
+      "items": {
+        "$ref": "customer.json"
+      }
+    },
+    "channelData": {
+      "$ref": "channel-data.json"
+    },
+    "latestIntent": {
+      "type": "string"
+    },
+    "customerPresence": {
+      "$ref": "undefined-object.json"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "conversationId": {
+      "type": "string"
+    },
+    "roomInfo": {
+      "$ref": "room-info.json"
+    },
+    "state": {
+      "$ref": "channel-session-state.json"
+    },
+    "channelSessionDirection": {
+      "$ref": "enums/direction.json"
+    }
+  },
+  "required": [
+    "isActive"
+  ]
+}

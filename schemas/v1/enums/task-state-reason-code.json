@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/enums/task-state-reason-code.json",
+  "title": "TaskStateReasonCode",
+  "type": "string",
+  "enum": [
+    "RONA",
+    "DONE",
+    "RESPONSE_TIMEOUT",
+    "NO_AGENT_AVAILABLE",
+    "REROUTE",
+    "CANCELLED",
+    "AGENT_LOGOUT",
+    "TRANSFERRED",
+    "FORCE_CLOSED",
+    "WRAP_UP_APPLIED",
+    "WRAP_UP_NOT_APPLIED",
+    "WRAP_UP_EXPIRED",
+    "EXTERNAL_CONSULT_TRANSFER",
+    "EXTERNAL_DIRECT_TRANSFER",
+    "EXTERNAL_CONSULT_CONFERENCE",
+    "CONFERENCE_ENDED",
+    "CONFERENCE_CUSTOMER_LEFT",
+    "CALLBACK"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/channel-provider-interface.json",
+  "title": "ChannelProviderInterface",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "supportedChannelTypes": {
+      "type": "array",
+      "items": {
+        "$ref": "channel-type.json"
+      }
+    },
+    "providerWebhook": {
+      "type": "string"
+    },
+    "channelProviderConfigSchema": {
+      "type": "array",
+      "items": {
+        "$ref": "attribute-schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/template-message-body.json",
+  "title": "TemplateMessage",
+  "allOf": [
+    {
+      "$ref": "structured-message-body.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "TEMPLATE"
+        },
+        "namespace": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language": {
+          "$ref": "language.json"
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "$ref": "component.json"
+          }
+        },
+        "additionalDetails": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "namespace",
+        "name"
+      ]
+    }
+  ]
+}

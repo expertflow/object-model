@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/message-body.json",
+  "title": "MessageBodyPolymorphic",
+  "oneOf": [
+    {
+      "$ref": "delivery-notification-message-body.json"
+    },
+    {
+      "$ref": "deleted-notification-message-body.json"
+    },
+    {
+      "$ref": "custom-message-body.json"
+    },
+    {
+      "$ref": "structured-only-message-body.json"
+    },
+    {
+      "$ref": "notification-message-body.json"
+    },
+    {
+      "$ref": "multimedia-only-message-body.json"
+    },
+    {
+      "$ref": "video-message-body.json"
+    },
+    {
+      "$ref": "image-message-body.json"
+    },
+    {
+      "$ref": "audio-message-body.json"
+    },
+    {
+      "$ref": "file-message-body.json"
+    },
+    {
+      "$ref": "contact-message-body.json"
+    },
+    {
+      "$ref": "location-message-body.json"
+    },
+    {
+      "$ref": "carousel-message-body.json"
+    },
+    {
+      "$ref": "button-message-body.json"
+    },
+    {
+      "$ref": "plain-message-body.json"
+    },
+    {
+      "$ref": "voice-message-body.json"
+    },
+    {
+      "$ref": "url-message-body.json"
+    },
+    {
+      "$ref": "sticker-message-body.json"
+    },
+    {
+      "$ref": "receipt-template-message-body.json"
+    },
+    {
+      "$ref": "wrap-up-message-body.json"
+    },
+    {
+      "$ref": "template-message-body.json"
+    },
+    {
+      "$ref": "action-message-body.json"
+    },
+    {
+      "$ref": "comment-message-body.json"
+    },
+    {
+      "$ref": "email-message-body.json"
+    },
+    {
+      "$ref": "form-data-message-body.json"
+    }
+  ]
+}

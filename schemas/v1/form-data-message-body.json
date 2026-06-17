@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/form-data-message-body.json",
+  "title": "FormData",
+  "allOf": [
+    {
+      "$ref": "structured-message-body.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "formId": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "formTitle": {
+          "type": "string"
+        },
+        "enableSections": {
+          "type": "boolean"
+        },
+        "attributeType": {
+          "$ref": "enums/attribute-type.json"
+        },
+        "enableWeightage": {
+          "type": "boolean"
+        },
+        "formWeightage": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "formDescription": {
+          "type": "string"
+        },
+        "formScore": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "additionalDetail": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "sentiment": {
+          "$ref": "sentiment.json"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": [
+              "object",
+              "array",
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "formId",
+        "type",
+        "formTitle"
+      ]
+    }
+  ]
+}

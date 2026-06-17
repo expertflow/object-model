@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/enums/room-mode.json",
+  "title": "RoomMode",
+  "type": "string",
+  "enum": [
+    "PRIVATE",
+    "CONTACT_CENTER"
+  ]
+}

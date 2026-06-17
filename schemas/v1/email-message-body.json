@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/email-message-body.json",
+  "title": "EmailMessage",
+  "allOf": [
+    {
+      "$ref": "message-body-base.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "EMAIL"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "from": {
+          "type": "string"
+        },
+        "replyTo": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receivingDate": {
+          "type": "integer"
+        },
+        "htmlBody": {
+          "type": "string"
+        },
+        "recipientsTo": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "recipientsCc": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "recipientsBcc": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "emailThreads": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "$ref": "attachment.json"
+          }
+        },
+        "additionalDetails": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "type"
+      ]
+    }
+  ]
+}

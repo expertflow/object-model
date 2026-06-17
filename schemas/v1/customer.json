@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/customer.json",
+  "title": "Customer",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "isAnonymous": {
+      "type": "boolean"
+    },
+    "__v": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": true
+}

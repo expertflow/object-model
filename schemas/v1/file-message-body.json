@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/file-message-body.json",
+  "title": "FileMessage",
+  "allOf": [
+    {
+      "$ref": "multimedia-message-body.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "FILE"
+        }
+      },
+      "required": [
+        "type"
+      ]
+    }
+  ]
+}

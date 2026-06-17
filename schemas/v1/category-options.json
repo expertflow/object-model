@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/category-options.json",
+  "title": "CategoryOptions",
+  "type": "object",
+  "properties": {
+    "isMultipleChoice": {
+      "type": "boolean"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "$ref": "category.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/attachment.json",
+  "title": "Attachment",
+  "type": "object",
+  "properties": {
+    "mediaUrl": {
+      "type": "string",
+      "minLength": 1
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "mimeType": {
+      "type": "string"
+    },
+    "size": {
+      "type": "integer"
+    },
+    "mediaLabel": {
+      "type": "string"
+    },
+    "mediaName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "mediaUrl"
+  ]
+}

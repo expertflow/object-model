@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/carousel-message-body.json",
+  "title": "CarouselMessage",
+  "allOf": [
+    {
+      "$ref": "structured-message-body.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "CAROUSEL"
+        },
+        "carouselMessageType": {
+          "$ref": "enums/carousel-message-type.json"
+        },
+        "elements": {
+          "type": "array",
+          "items": {
+            "$ref": "carousel-element.json"
+          }
+        },
+        "additionalDetails": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "type"
+      ]
+    }
+  ]
+}

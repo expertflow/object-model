@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/language-code.json",
+  "title": "LanguageCode",
+  "type": "object",
+  "additionalProperties": true
+}

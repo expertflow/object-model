@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/attribute-schema.json",
+  "title": "AttributeSchema",
+  "type": "object",
+  "properties": {
+    "attributeType": {
+      "$ref": "enums/attribute-type.json"
+    },
+    "categoryOptions": {
+      "$ref": "category-options.json"
+    },
+    "isRequired": {
+      "type": "boolean"
+    },
+    "helpText": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "valueType": {
+      "$ref": "enums/value-type.json"
+    }
+  }
+}

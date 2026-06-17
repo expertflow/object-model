@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/default-action.json",
+  "title": "DefaultAction",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

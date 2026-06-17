@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/enums/routing-mode.json",
+  "title": "RoutingMode",
+  "type": "string",
+  "enum": [
+    "PUSH",
+    "PULL",
+    "EXTERNAL"
+  ]
+}

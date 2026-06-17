@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/task-type.json",
+  "title": "TaskType",
+  "type": "object",
+  "properties": {
+    "direction": {
+      "$ref": "enums/task-type-direction.json"
+    },
+    "mode": {
+      "$ref": "enums/task-type-mode.json"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/channel-session-state.json",
+  "title": "ChannelSessionState",
+  "type": "object",
+  "properties": {
+    "name": {
+      "$ref": "enums/channel-session-state-enum.json"
+    },
+    "reasonCode": {
+      "type": "string"
+    }
+  }
+}

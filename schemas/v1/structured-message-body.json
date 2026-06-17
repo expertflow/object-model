@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/structured-message-body.json",
+  "title": "StructuredMessage",
+  "allOf": [
+    {
+      "$ref": "message-body-base.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "additionalDetails": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    }
+  ]
+}

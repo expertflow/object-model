@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/channel-config.json",
+  "title": "ChannelConfig",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "channelMode": {
+      "$ref": "enums/channel-mode.json"
+    },
+    "conversationBot": {
+      "type": "string"
+    },
+    "responseSla": {
+      "type": "integer"
+    },
+    "customerActivityTimeout": {
+      "type": "integer"
+    },
+    "customerSla": {
+      "$ref": "customer-sla.json"
+    },
+    "customerIdentificationCriteria": {
+      "$ref": "undefined-object.json"
+    },
+    "routingPolicy": {
+      "$ref": "routing-policy.json"
+    },
+    "botId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "channelMode",
+    "responseSla",
+    "customerActivityTimeout",
+    "customerIdentificationCriteria",
+    "routingPolicy",
+    "botId"
+  ]
+}

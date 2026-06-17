@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/multimedia-message-body.json",
+  "title": "MultimediaMessage",
+  "allOf": [
+    {
+      "$ref": "structured-message-body.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "caption": {
+          "type": "string"
+        },
+        "attachment": {
+          "$ref": "attachment.json"
+        }
+      }
+    }
+  ]
+}

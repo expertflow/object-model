@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/message-header.json",
+  "title": "MessageHeader",
+  "type": "object",
+  "properties": {
+    "sender": {
+      "$ref": "sender.json"
+    },
+    "channelData": {
+      "$ref": "channel-data.json"
+    },
+    "language": {
+      "$ref": "language-code.json"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "securityInfo": {
+      "$ref": "message-security.json"
+    },
+    "stamps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "intent": {
+      "$ref": "enums/message-intent.json"
+    },
+    "entities": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "channelSessionId": {
+      "type": "string"
+    },
+    "conversationId": {
+      "type": "string"
+    },
+    "customer": {
+      "$ref": "customer.json"
+    },
+    "originalMessageId": {
+      "type": "string"
+    },
+    "providerMessageId": {
+      "type": "string"
+    },
+    "schedulingMetaData": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "roomId": {
+      "type": "string"
+    },
+    "additionalData": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

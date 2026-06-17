@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/carousel-element.json",
+  "title": "CarouselElement",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "buttons": {
+      "type": "array",
+      "items": {
+        "$ref": "button.json"
+      }
+    },
+    "defaultAction": {
+      "$ref": "default-action.json"
+    },
+    "additionalCarouselElementDetails": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    }
+  }
+}

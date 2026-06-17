@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/task-state.json",
+  "title": "TaskState",
+  "type": "object",
+  "properties": {
+    "name": {
+      "$ref": "enums/task-state-name.json"
+    },
+    "reasonCode": {
+      "$ref": "enums/task-state-reason-code.json"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

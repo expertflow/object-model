@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/component.json",
+  "title": "Component",
+  "type": "object",
+  "properties": {
+    "type": {
+      "$ref": "enums/component-type.json"
+    },
+    "additionalComponentDetails": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "$ref": "parameter.json"
+      }
+    }
+  }
+}

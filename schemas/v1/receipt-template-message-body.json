@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/receipt-template-message-body.json",
+  "title": "ReceiptTemplateMessage",
+  "allOf": [
+    {
+      "$ref": "structured-message-body.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "RECEIPT"
+        },
+        "templateType": {
+          "type": "string",
+          "const": "receipt"
+        },
+        "sharable": {
+          "type": "boolean"
+        },
+        "recipientName": {
+          "type": "string"
+        },
+        "merchantName": {
+          "type": "string"
+        },
+        "orderNumber": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "paymentMethode": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "elements": {
+          "type": "array",
+          "items": {
+            "$ref": "receipt-element.json"
+          }
+        },
+        "address": {
+          "$ref": "address.json"
+        },
+        "summary": {
+          "$ref": "receipt-summary.json"
+        },
+        "adjustments": {
+          "type": "array",
+          "items": {
+            "$ref": "receipt-adjustment.json"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ]
+    }
+  ]
+}

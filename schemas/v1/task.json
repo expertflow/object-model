@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/task.json",
+  "title": "Task",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "conversationId": {
+      "type": "string"
+    },
+    "state": {
+      "$ref": "task-state.json"
+    },
+    "assignedTo": {
+      "$ref": "task-agent.json"
+    },
+    "agentRequestTtlTimerId": {
+      "type": "string"
+    },
+    "activeMedia": {
+      "type": "array",
+      "items": {
+        "$ref": "task-media.json"
+      }
+    }
+  }
+}

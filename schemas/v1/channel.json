@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/expertflow/object-model/schemas/v1/channel.json",
+  "title": "Channel",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "calendarId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "serviceIdentifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "defaultOutbound": {
+      "type": "boolean"
+    },
+    "tenant": {
+      "$ref": "tenant.json"
+    },
+    "channelConfig": {
+      "$ref": "channel-config.json"
+    },
+    "channelConnector": {
+      "$ref": "channel-connector.json"
+    },
+    "channelType": {
+      "$ref": "channel-type.json"
+    }
+  },
+  "required": [
+    "name",
+    "serviceIdentifier",
+    "defaultOutbound"
+  ]
+}
