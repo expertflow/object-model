@@ -2,7 +2,9 @@ package com.ef.cim.objectmodel;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,4 +25,5 @@ public class VoiceActivity {
     private List<Object> wrapUps;
     private double holdTime;
     private List<CallLeg> callLegs = new ArrayList<>();
+    private Map<String, Object> additionalDetails = new HashMap<>();
 }

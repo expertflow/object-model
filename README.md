@@ -1111,3 +1111,10 @@ Version 1.22.16.6 (on top of 1.22.16.5)
 Version 1.22.16.7 (on top of 1.22.16.6 and it contains merge of 1.22.13.3 and 1.22.13.4)
 
 ==============================================================================================
+
+Version 1.22.16.8 (on top of 1.22.16.7)
+- Added `VOICE_MAIL_ACTIVITY` intent in `MessageIntent` class
+- Added `VOICE_MAIL_ACTIVITY` event name in `CimEventName` class
+- Added `additionalDetails` map field in `VoiceActivity` class to handle additional fields.
+
+==============================================================================================
