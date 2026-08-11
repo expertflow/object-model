@@ -1118,3 +1118,10 @@ Version 1.22.16.8 (on top of 1.22.16.7)
 - Added `additionalDetails` map field in `VoiceActivity` class to handle additional fields.
 
 ==============================================================================================
+
+Version 1.22.16.9 (on top of 1.22.16.8)
+- Added `UNSUB` intent in `MessageIntent` class for campaign opt-out on `/message/receive`
+- Added `CAMPAIGN_UNSUBSCRIBED` in `CimEventName` class
+- Added `CampaignUnsubscribeReason` enum and `CampaignUnsubscribedDto`
+
+==============================================================================================
