@@ -1123,5 +1123,6 @@ Version 1.22.16.9 (on top of 1.22.16.8)
 - Added `UNSUB` intent in `MessageIntent` class for campaign opt-out on `/message/receive`
 - Added `CAMPAIGN_UNSUBSCRIBED` in `CimEventName` class
 - Added `CampaignUnsubscribeReason` enum and `CampaignUnsubscribedDto`
+- Added `SENT` and `BOUNCED` in `DeliveryStatus` (`FAILED` already present)
 
 ==============================================================================================
