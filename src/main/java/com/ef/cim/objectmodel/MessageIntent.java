@@ -23,5 +23,6 @@ public enum MessageIntent {
     MEDIA_RECORDING,
     QM_ACTIVITY,
     CALL_ALERTING,
-    VOICE_MAIL_ACTIVITY
+    VOICE_MAIL_ACTIVITY,
+    UNSUB
 }
